@@ -13,6 +13,9 @@ needs.
 /plugin install finance@agents-v1
 ```
 
+This repository is **private**, so the installing machine must be authenticated to it. Visibility is
+an open question — see D16.
+
 Skills are addressed as `department:skill` — `finance:unit-economics`, `revenue:pricing-and-packaging`.
 
 All content in this repository is original. See [`docs/org-chart.md`](docs/org-chart.md) for the
@@ -177,6 +180,7 @@ Adding a department: create the directory pair, write the manifest, add it to
 
 ## Related docs
 
+- [`docs/DECISION-LOG.md`](docs/DECISION-LOG.md) — open decisions, numbered, with recommendations
 - [`docs/org-chart.md`](docs/org-chart.md) — reporting structure and remaining gaps
 - [`docs/cross-org-sweep-prompt.md`](docs/cross-org-sweep-prompt.md) — sweeping other GitHub orgs
 - `executive:agent-hierarchy` — the method behind this structure

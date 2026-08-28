@@ -51,6 +51,13 @@ Do not start writing charters early; the order is the method.
 - **Never remove a shared-core export because it looks unused.** You cannot see the consumers
   from inside the core. Deprecate, announce, then remove.
 
+## This repository's own log
+
+`docs/DECISION-LOG.md` is the live instance of the decision log described in the playbook. When a
+decision is raised, assign it the next number immediately — before it is answered — and give it
+lettered options with an explicit recommendation. Never renumber, never reuse a number, and record
+resolutions in place rather than deleting them.
+
 ## References
 
 - `references/playbook.md` — the full 415-line playbook: surface splitting, the guard, the
