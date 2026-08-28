@@ -40,6 +40,35 @@ people to opt out.
 Explicit opt-in, honored opt-out, sending hours respected in the recipient's timezone. These are
 legal requirements in most jurisdictions, not preferences.
 
+## SMS compliance is not optional
+
+> Consult qualified counsel before launching an SMS program. The exposure here is statutory damages
+> per message, which is how these become class actions.
+
+In the US, marketing SMS requires **express written consent** obtained before sending — implied
+consent, an existing customer relationship, or a phone number collected for another purpose does not
+qualify. The consent record must show what the person agreed to receive and when, and it must be
+retained.
+
+The operational requirements that follow:
+
+- Disclose program purpose, frequency, and that message rates may apply, at the point of consent.
+- Honor opt-out immediately, on every standard keyword, with a single confirmation message and
+  nothing after it.
+- Respect quiet hours in the **recipient's** timezone, not yours.
+- Keep consent and opt-out records for as long as the retention rules require — these records are
+  the entire defense if challenged.
+- Never buy or rent SMS lists. Purchased consent is not consent.
+
+Other jurisdictions impose their own rules, and several are stricter. Determine which apply by where
+recipients are, not where you are.
+
+## Subject lines and preview text
+
+They are one unit and get read together. A subject line that works with the preview repeating it
+wastes the second-most-read text in the message — use the preview to extend the subject, not echo
+it, and never leave it to default to the first line of the body.
+
 ## Diagnosing
 
 - **Low open** — subject line, sender reputation, or list quality. Check deliverability before

@@ -43,6 +43,34 @@ Loading, empty, error, and overflow are where products feel unfinished. An empty
 opportunity; a spinner with no context is an admission. Long strings, long lists, and small screens
 must all be handled, not hoped about.
 
+## Dark mode is a palette, not an inversion
+
+Inverting a light theme produces the characteristic bad dark mode: pure black backgrounds, pure
+white text, and shadows that do nothing.
+
+- Use a very dark grey rather than pure black, and a slightly dimmed white rather than pure white.
+  Maximum contrast between the two causes halation and is genuinely tiring to read.
+- Elevation reverses: in light themes raised surfaces cast shadows, in dark themes they get
+  *lighter*. Shadow alone conveys nothing on a dark ground.
+- Saturated colors that worked on white will vibrate on dark. Desaturate and lighten accent colors
+  for the dark palette rather than reusing them.
+- Define both palettes together, at token level, from the start. Retrofitting means auditing every
+  surface.
+
+## Accessibility floor
+
+These are not polish items — below them, some people cannot use the interface at all.
+
+- Text contrast meeting the standard ratio against its actual background, including text over
+  images and inside colored buttons.
+- Never carry meaning by color alone. A red border indicating an error needs text or an icon too.
+- Every interactive element reachable by keyboard, in a sensible order, with a visible focus state.
+- Touch targets large enough to hit reliably, with spacing between adjacent ones.
+- Respect the reduced-motion preference: animation that cannot be disabled causes real symptoms for
+  some users.
+- Real semantic elements — buttons that are buttons, headings in order. A styled div is invisible to
+  assistive technology.
+
 ## Never
 
 - Add visual weight to fix a hierarchy problem caused by too many equal elements. Remove instead.

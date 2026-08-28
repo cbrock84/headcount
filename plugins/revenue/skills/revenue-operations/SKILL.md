@@ -28,6 +28,29 @@ recorded.
 A rejection loop with no recorded reason means marketing keeps sending the same unqualified leads,
 and both sides believe the other is the problem.
 
+## Lead scoring
+
+Scoring exists to route attention, not to produce a number. If sellers do not change what they work
+on because of the score, it is decoration.
+
+Score on two independent dimensions and keep them separate:
+
+- **Fit** — do they look like a customer? Company size, industry, geography, role and seniority,
+  technology in use. Static, knowable before any engagement.
+- **Intent** — are they acting like a buyer now? Pricing page visits, repeat sessions, demo request,
+  content depth, response to outreach. Dynamic, and it decays.
+
+Collapsing the two into one score is the standard mistake: a perfect-fit account with no activity
+and a poor-fit account browsing aggressively land on the same number and get treated identically,
+which is wrong in both directions.
+
+Build the model from closed-won and closed-lost history, not intuition. Look at what actually
+separated the two, and be prepared for the finding that a favored attribute has no predictive value.
+
+Decay intent scores over time and recalibrate on a schedule. A scoring model built once and never
+revisited drifts as the market and the product change, and nobody notices because it keeps producing
+numbers.
+
 ## Forecasting
 
 Forecast accuracy comes from process, not optimism.

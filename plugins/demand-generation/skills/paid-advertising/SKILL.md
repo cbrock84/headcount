@@ -29,6 +29,18 @@ Structure follows intent, since intent determines what a click is worth.
 - Enough volume per campaign to exit the learning phase. Over-segmentation starves every campaign of
   the data it needs.
 
+## Naming conventions
+
+Decide the convention before the first campaign, because renaming later breaks historical reporting
+on every platform.
+
+A workable pattern encodes, in fixed order: channel, objective, audience or intent tier, geography,
+and creative theme — separated consistently, with no spaces. It should be possible to filter a
+report by any one of those segments without opening a campaign.
+
+Apply it to every level: campaign, ad set, and ad. Inconsistent naming is why cross-channel
+reporting takes a week to assemble and why nobody trusts it when it arrives.
+
 ## Creative
 
 Creative is the biggest lever on paid social and the most neglected.
