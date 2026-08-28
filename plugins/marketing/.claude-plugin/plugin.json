@@ -1,0 +1,16 @@
+{
+  "name": "marketing",
+  "description": "Positioning, content strategy and production, social and video, brand voice, copywriting, PR, and partnerships.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Chris Brock"
+  },
+  "repository": "https://github.com/cbrock84/agents-v1",
+  "keywords": [
+    "marketing",
+    "content",
+    "brand",
+    "social",
+    "communications"
+  ]
+}
