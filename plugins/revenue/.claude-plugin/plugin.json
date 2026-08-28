@@ -1,7 +1,7 @@
 {
   "name": "revenue",
-  "description": "Sales, prospecting and outreach, pricing and packaging, monetization, activation, retention, and partnerships.",
-  "version": "0.2.0",
+  "description": "Outbound, sales enablement, revenue operations, pricing and packaging, activation, retention, and referrals.",
+  "version": "1.0.0",
   "author": {
     "name": "Chris Brock"
   },
@@ -11,6 +11,6 @@
     "pricing",
     "revenue",
     "retention",
-    "customer-success"
+    "revops"
   ]
 }

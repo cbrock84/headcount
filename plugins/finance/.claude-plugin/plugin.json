@@ -1,7 +1,7 @@
 {
   "name": "finance",
-  "description": "Planning and budgeting, forecasting, unit economics, cash and capital allocation, and financial controls.",
-  "version": "0.2.0",
+  "description": "Financial modeling, budgeting and forecasting, unit economics, and financial decision support.",
+  "version": "1.0.0",
   "author": {
     "name": "Chris Brock"
   },

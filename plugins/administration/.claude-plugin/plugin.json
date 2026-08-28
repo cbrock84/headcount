@@ -1,7 +1,7 @@
 {
   "name": "administration",
-  "description": "Corporate records and governance, board support, insurance and continuity, workplace, and shared services.",
-  "version": "0.2.0",
+  "description": "Corporate records and governance, board support, insurance and continuity, and shared services.",
+  "version": "1.0.0",
   "author": {
     "name": "Chris Brock"
   },
@@ -9,7 +9,6 @@
   "keywords": [
     "administration",
     "governance",
-    "board",
-    "corporate-services"
+    "board"
   ]
 }

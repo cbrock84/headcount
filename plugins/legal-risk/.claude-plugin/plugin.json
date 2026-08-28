@@ -1,17 +1,16 @@
 {
   "name": "legal-risk",
-  "description": "Contracts and commitments, IP and licensing, regulatory compliance and privacy, enterprise risk, and audit readiness.",
-  "version": "0.2.0",
+  "description": "Contract review, privacy and data protection, enterprise risk, compliance, and audit readiness.",
+  "version": "1.0.0",
   "author": {
     "name": "Chris Brock"
   },
   "repository": "https://github.com/cbrock84/agents-v1",
   "keywords": [
     "legal",
-    "compliance",
-    "risk",
     "privacy",
-    "governance",
-    "audit"
+    "risk",
+    "compliance",
+    "contracts"
   ]
 }

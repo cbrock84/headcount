@@ -5,8 +5,9 @@
                                      │
    ┌──────────┬──────────┬───────────┼───────────┬──────────┬──────────┐
    │          │          │           │           │          │          │
-  CTO/CIO    CPO        CMO         CRO         CFO        COO        CHRO
-Technology  Product   Marketing   Revenue     Finance   Operations   People
+ CTO/CIO     CPO        CMO         CRO         CFO        COO        CHRO
+Technology  Product  Marketing +   Revenue    Finance  Operations   People
+                     Demand Gen
    │          │          │           │           │          │          │
    └──────────┴──────────┴─── Legal & Risk (CLO/CCO) ───────┴──────────┘
                                      │
@@ -18,88 +19,79 @@ to. Administration owns what falls between functions.
 
 ## Departments
 
-| Department | Executive | Population | Depth |
-|---|---|---|---|
-| `executive` | Chief Executive | 6 | staffed |
-| `technology` | CTO / CIO | 16 | staffed |
-| `product` | CPO | 15 | staffed |
-| `marketing` | CMO | 46 | staffed |
-| `revenue` | CRO | 12 | staffed |
-| `finance` | CFO | 1 | **executive only** |
-| `operations` | COO | 1 | **executive only** |
-| `people` | CHRO | 1 | **executive only** |
-| `legal-risk` | CLO / CCO | 1 | **executive only** |
-| `administration` | CAO | 1 | **executive only** |
+| Department | Executive | Skills |
+|---|---|---|
+| `executive` | Chief Executive | 6 |
+| `technology` | CTO / CIO | 12 |
+| `product` | CPO | 9 |
+| `marketing` | CMO | 16 |
+| `demand-generation` | CMO | 11 |
+| `revenue` | CRO | 8 |
+| `finance` | CFO | 4 |
+| `operations` | COO | 4 |
+| `people` | CHRO | 4 |
+| `legal-risk` | CLO / CCO | 4 |
+| `administration` | CAO | 1 |
 
-Five departments have an executive and no staff. That is the honest state: the skills inherited from
-existing collections were all go-to-market, engineering, and design. The whole back half of a
-company is missing.
+Marketing was split: brand, content, and communications stay under `marketing`; acquisition,
+conversion, and measurement moved to `demand-generation`. Both report to the CMO. The split keeps
+specialization while halving what any one install loads.
 
-## Gaps, ranked
+## Remaining gaps, ranked
 
-### Tier 1 — a Fortune 500 cannot function without these
+### Tier 1 — build next
 
-**Finance (CFO).** Zero skills. Nothing in this repo can build a budget, model a decision's cost,
-compute unit economics, assess runway, or evaluate a spend request. `revenue:pricing` sets prices
-without anyone checking the margin. Needed: `financial-modeling`, `budgeting-and-forecasting`,
-`unit-economics`, `investment-analysis`, `procurement`.
+**Security (CISO).** Still zero skills, and it should be its own department rather than living
+under Technology: at scale the CISO reports independently so security can overrule engineering.
+Needed: `threat-modeling`, `security-architecture-review`, `incident-response`,
+`vulnerability-management`, `access-and-identity`. The `legal-risk` department covers governance and
+audit readiness but not technical security work.
 
-**Legal & Risk (CLO/CCO).** Zero skills, and the highest-consequence gap. Nothing reviews a
-contract, assesses privacy or regulatory exposure, checks an IP or licensing question, or maintains
-a risk register. This repo's own licensing question is a live example of the gap. Needed:
-`contract-review`, `privacy-and-data-protection`, `regulatory-compliance`, `ip-and-licensing`,
-`enterprise-risk`, `audit-readiness`.
+**Finance depth.** Four skills cover planning and analysis. Missing: `procurement`,
+`investment-analysis`, `cash-management`, `revenue-recognition`, `financial-controls`.
 
-**People (CHRO).** Zero skills. No org design, hiring, leveling, compensation, performance, or
-employee relations. Needed: `org-design`, `hiring-and-interviewing`, `compensation-and-leveling`,
-`performance-management`, `onboarding-employees` (distinct from `revenue:onboarding`, which is
-about users).
+**People depth.** Missing: `performance-management`, `employee-relations`, `learning-and-development`,
+`workforce-planning`, `employee-onboarding` (distinct from `revenue:activation`, which is users).
 
-**Security (CISO).** Zero skills, and not merely a subset of Technology — at Fortune 500 scale the
-CISO reports independently precisely so security can say no to engineering. Needed:
-`threat-modeling`, `security-review`, `incident-response`, `vulnerability-management`,
-`access-and-identity`.
+**Legal depth.** Missing: `ip-and-licensing`, `regulatory-compliance`, `audit-readiness`,
+`corporate-governance`.
 
-### Tier 2 — structurally expected, currently absent
+### Tier 2
 
-**Operations (COO).** One executive, no staff: no process design, program management, capacity
-planning, vendor management, or supply chain. For a business with physical production this is a
-first-tier gap, not a second.
+**Data & Analytics (CDO).** `demand-generation:marketing-analytics` covers marketing measurement
+only. No data governance, warehouse modeling, BI beyond marketing, or AI/ML governance — the last
+is increasingly a board-level obligation.
 
-**Data & Analytics (CDO).** `marketing:analytics` covers marketing measurement only. No data
-governance, warehouse modeling, BI beyond marketing, or ML/AI governance.
+**Customer Experience.** `revenue:retention` is the only adjacent skill. No support operations,
+escalation handling, or voice-of-customer program.
 
-**Customer Experience.** `revenue:churn-prevention` is the only retention-adjacent skill. No
-support operations, escalation handling, voice-of-customer, or CSAT/NPS program.
+**Corporate Strategy / Corp Dev.** `executive:ai-research-analyst` does market research; nothing
+covers M&A, diligence, or scenario planning.
 
-**Corporate Strategy / Corp Dev.** `executive:ai-research-analyst` does market research;
-nothing does M&A, partnership diligence, competitive war-gaming, or scenario planning.
+**Operations depth.** Three skills. A business with physical production also needs
+`supply-chain-planning`, `quality-management`, and `capacity-planning`.
 
-**Communications / IR.** `marketing:public-relations` covers press. No internal communications,
-executive communications, crisis communications, or investor relations.
+### Tier 3 — when the business needs them
 
-### Tier 3 — real at Fortune 500 scale, defer until the business needs them
-
-- **Chief Sustainability / ESG** — emissions reporting, supply-chain diligence, CSRD-style
-  disclosure. Increasingly statutory rather than optional.
-- **Corporate Secretary** — board minutes, entity governance, filings. Currently folded into
-  Administration.
-- **Internal Audit** — and a structural note: internal audit reports to the *audit committee*, not
-  the CEO. Modeling it under `executive` would reproduce the exact independence failure it exists to
-  prevent. If added, it needs a reviewer-class agent that no chief can overrule.
-- **Chief Medical / Chief Scientific Officer** — industry-specific, not applicable here.
+- **Chief Sustainability / ESG** — emissions reporting and supply-chain diligence, increasingly
+  statutory rather than optional.
+- **Corporate Secretary** — currently folded into Administration.
+- **Internal Audit** — with a structural caveat: internal audit reports to the audit committee, not
+  the CEO. Placing it under `executive` would reproduce the independence failure it exists to
+  prevent. It needs a reviewer-class agent no chief can overrule.
+- **Investor Relations** — only once there are investors to relate to.
 
 ## Structural notes
 
-**Marketing is oversized.** 46 of 100 skills. It should split into `marketing` (brand, content,
-communications) and `demand-generation` (SEO, paid, lifecycle, analytics) once the empty departments
-are staffed, or it will keep dominating whatever context it loads into.
+**Producer and auditor should not be the same agent.** The `executive:agent-hierarchy` skill makes
+this explicit, and the chart still partly violates it: most departments review their own work.
+`legal-risk` is the first genuine reviewer-class department. Security and Internal Audit are the
+next two, and both need the authority to block.
 
-**Producer and auditor should not be the same agent.** The `agent-hierarchy` skill in `executive`
-makes this rule explicit, and the current chart violates it: every department reviews its own work.
-Legal & Risk is the first genuine reviewer-class department. Security and Internal Audit are the
-next two.
+**Administration is a placeholder.** One charter, no specialists. It exists so orphaned
+responsibilities have somewhere to go rather than accumulating unowned.
 
-**Every department is one plugin.** Installing `finance` today gets a CFO charter and nothing
-underneath. That is deliberate — the executive can reason about the function and say what is
-missing, which is more useful than an empty directory.
+**How gap skills were scoped.** The `finance`, `people`, `legal-risk`, and `operations` skills were
+drafted against current senior job postings for those functions — FP&A leadership, commercial
+counsel, cybersecurity GRC, and HR business partner roles — so each skill's remit reflects what the
+role is actually accountable for rather than an assumption about it.

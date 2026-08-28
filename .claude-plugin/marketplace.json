@@ -5,39 +5,37 @@
   },
   "metadata": {
     "description": "An agent organization structured as a C-suite hierarchy. Each department installs independently so only the relevant function loads.",
-    "version": "0.2.0"
+    "version": "1.0.0"
   },
   "plugins": [
     {
       "name": "executive",
       "source": "./plugins/executive",
       "description": "Direction, capital and attention allocation, cross-functional arbitration, strategy validation, and the method for structuring the organization itself.",
-      "version": "0.2.0",
+      "version": "1.0.0",
       "author": {
         "name": "Chris Brock"
       },
       "keywords": [
         "strategy",
         "executive",
-        "decision-making",
-        "corporate-development"
+        "decision-making"
       ],
       "category": "executive"
     },
     {
       "name": "technology",
       "source": "./plugins/technology",
-      "description": "Architecture, engineering delivery, development discipline, infrastructure, data platform, and AI/automation systems.",
-      "version": "0.2.0",
+      "description": "Architecture, engineering delivery, development discipline, debugging, review, and AI and automation systems.",
+      "version": "1.0.0",
       "author": {
         "name": "Chris Brock"
       },
       "keywords": [
         "engineering",
-        "architecture",
         "tdd",
         "debugging",
-        "infrastructure",
+        "code-review",
         "automation"
       ],
       "category": "technology"
@@ -45,8 +43,8 @@
     {
       "name": "product",
       "source": "./plugins/product",
-      "description": "Product strategy, discovery, UX and usability, design systems, brand expression in the interface, and release success criteria.",
-      "version": "0.2.0",
+      "description": "Product strategy, UX and usability audit, design systems, interface craft, brand expression, and visual direction.",
+      "version": "1.0.0",
       "author": {
         "name": "Chris Brock"
       },
@@ -55,33 +53,50 @@
         "ux",
         "design",
         "design-system",
-        "usability"
+        "brand"
       ],
       "category": "product"
     },
     {
       "name": "marketing",
       "source": "./plugins/marketing",
-      "description": "Positioning, demand generation, SEO, paid acquisition, content and social production, and external communications.",
-      "version": "0.2.0",
+      "description": "Positioning, content strategy and production, social and video, brand voice, copywriting, PR, and partnerships.",
+      "version": "1.0.0",
       "author": {
         "name": "Chris Brock"
       },
       "keywords": [
         "marketing",
-        "seo",
         "content",
-        "demand-generation",
         "brand",
+        "social",
         "communications"
       ],
       "category": "marketing"
     },
     {
+      "name": "demand-generation",
+      "source": "./plugins/demand-generation",
+      "description": "Organic and paid acquisition, conversion, measurement, experimentation, lifecycle messaging, and distribution.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Chris Brock"
+      },
+      "keywords": [
+        "seo",
+        "paid-ads",
+        "cro",
+        "analytics",
+        "lifecycle",
+        "growth"
+      ],
+      "category": "demand-generation"
+    },
+    {
       "name": "revenue",
       "source": "./plugins/revenue",
-      "description": "Sales, prospecting and outreach, pricing and packaging, monetization, activation, retention, and partnerships.",
-      "version": "0.2.0",
+      "description": "Outbound, sales enablement, revenue operations, pricing and packaging, activation, retention, and referrals.",
+      "version": "1.0.0",
       "author": {
         "name": "Chris Brock"
       },
@@ -90,15 +105,15 @@
         "pricing",
         "revenue",
         "retention",
-        "customer-success"
+        "revops"
       ],
       "category": "revenue"
     },
     {
       "name": "finance",
       "source": "./plugins/finance",
-      "description": "Planning and budgeting, forecasting, unit economics, cash and capital allocation, and financial controls.",
-      "version": "0.2.0",
+      "description": "Financial modeling, budgeting and forecasting, unit economics, and financial decision support.",
+      "version": "1.0.0",
       "author": {
         "name": "Chris Brock"
       },
@@ -113,8 +128,8 @@
     {
       "name": "operations",
       "source": "./plugins/operations",
-      "description": "Cross-functional process, program and delivery management, capacity, vendors and supply chain, and operational quality.",
-      "version": "0.2.0",
+      "description": "Program management, process design, vendor and supplier management, and operational delivery.",
+      "version": "1.0.0",
       "author": {
         "name": "Chris Brock"
       },
@@ -122,15 +137,15 @@
         "operations",
         "process",
         "program-management",
-        "supply-chain"
+        "vendors"
       ],
       "category": "operations"
     },
     {
       "name": "people",
       "source": "./plugins/people",
-      "description": "Org design, hiring and leveling, compensation, performance and development, culture, and employee relations.",
-      "version": "0.2.0",
+      "description": "Org design, hiring and interviewing, compensation and leveling, and workforce planning.",
+      "version": "1.0.0",
       "author": {
         "name": "Chris Brock"
       },
@@ -146,34 +161,32 @@
     {
       "name": "legal-risk",
       "source": "./plugins/legal-risk",
-      "description": "Contracts and commitments, IP and licensing, regulatory compliance and privacy, enterprise risk, and audit readiness.",
-      "version": "0.2.0",
+      "description": "Contract review, privacy and data protection, enterprise risk, compliance, and audit readiness.",
+      "version": "1.0.0",
       "author": {
         "name": "Chris Brock"
       },
       "keywords": [
         "legal",
-        "compliance",
-        "risk",
         "privacy",
-        "governance",
-        "audit"
+        "risk",
+        "compliance",
+        "contracts"
       ],
       "category": "legal-risk"
     },
     {
       "name": "administration",
       "source": "./plugins/administration",
-      "description": "Corporate records and governance, board support, insurance and continuity, workplace, and shared services.",
-      "version": "0.2.0",
+      "description": "Corporate records and governance, board support, insurance and continuity, and shared services.",
+      "version": "1.0.0",
       "author": {
         "name": "Chris Brock"
       },
       "keywords": [
         "administration",
         "governance",
-        "board",
-        "corporate-services"
+        "board"
       ],
       "category": "administration"
     }
