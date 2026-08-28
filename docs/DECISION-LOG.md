@@ -16,18 +16,18 @@ recorded rather than being deleted.
 | D2 | Organizational structure | ✅ Resolved |
 | D3 | Handling of third-party licensed content | ✅ Resolved |
 | D4 | Rewrite-before-purge ordering | ✅ Resolved |
-| D5 | Vendored content remaining in branch history | 🔵 **Open** |
-| D6 | Provenance of the 12 Drive-sourced skills | 🔴 **Open — blocking** |
-| D7 | Audience for vertical variants | 🔵 **Open — gates D8** |
-| D8 | Architecture for vertical variants | 🔵 **Open** |
-| D9 | Security as its own department | 🔵 **Open** |
-| D10 | Which department to deepen next | 🔵 **Open** |
-| D11 | Cross-org sweep of public repos | 🔵 **Open** |
-| D12 | Administration department disposition | 🔵 **Open** |
-| D13 | Reviewer-class agents and audit independence | 🔵 **Open** |
-| D14 | Enforcing the surface map in CI | 🔵 **Open** |
-| D15 | PR #2 readiness and merge timing | 🔵 **Open** |
-| D16 | Repo visibility versus marketplace distribution | 🔵 **Open** |
+| D5 | Vendored content remaining in branch history | ✅ Resolved |
+| D6 | Provenance of the 12 Drive-sourced skills | ✅ Resolved |
+| D7 | Audience for vertical variants | ✅ Resolved |
+| D8 | Architecture for vertical variants | ✅ Resolved |
+| D9 | Security as its own department | ✅ Resolved |
+| D10 | Which department to deepen next | ✅ Resolved |
+| D11 | Cross-org sweep of public repos | ✅ Resolved |
+| D12 | Administration department disposition | ✅ Resolved |
+| D13 | Reviewer-class agents and audit independence | ✅ Resolved |
+| D14 | Enforcing the surface map in CI | ✅ Resolved |
+| D15 | PR #2 readiness and merge timing | ✅ Resolved |
+| D16 | Repo visibility versus marketplace distribution | ✅ Resolved |
 
 ---
 
@@ -98,7 +98,7 @@ home and became `marketing:behavioral-marketing`.
 
 ---
 
-## D5. Vendored content remaining in branch history — 🔵 Open
+## D5. Vendored content remaining in branch history — ✅ Resolved
 
 The working tree is clean, but commits `36d1be3`, `d091eac`, and `cd1cd22` on
 `claude/import-agents-drive-gmci3h` each still contain ~103 licensed paths. `main` is unaffected —
@@ -115,9 +115,12 @@ PR #1 only ever carried the 12 Drive-sourced skills.
 without destroying the review trail, since deleting the merged branch unreferences the commits
 anyway. Choose (b) only if you want them gone before merge.
 
+**Resolution: (a).** Squash-merge PR #2, then delete the branch — the merged branch's deletion
+unreferences the three commits carrying vendored paths.
+
 ---
 
-## D6. Provenance of the 12 Drive-sourced skills — 🔴 Open, blocking
+## D6. Provenance of the 12 Drive-sourced skills — ✅ Resolved
 
 Twelve skills came from the shared Drive folder "12 ready-to-use Claude Skills that turn Claude into
 your own AI team," owned by an unfamiliar Gmail account. They carry **no licence and no stated terms**,
@@ -146,9 +149,12 @@ quality variance in one pass, and it is the only option that does not depend on 
 not be able to get. Roughly a day of work. If you know the folder's origin and the terms are
 permissive, (a) becomes reasonable — but say so explicitly so it is recorded.
 
+**Resolution: (b).** Rewrite all twelve from scratch, the same treatment the MIT collections
+received. Removes the unlicensed content, brings them into the house voice, and unblocks D15 and D16.
+
 ---
 
-## D7. Audience for vertical variants — 🔵 Open, gates D8
+## D7. Audience for vertical variants — ✅ Resolved
 
 Whether industry variants (healthcare, manufacturing, retail, food & beverage, financial, services)
 are for your own businesses or are products handed to clients.
@@ -162,9 +168,14 @@ An overlay architecture built for own use can be packaged into standalone delive
 generator built for distribution is heavier than internal use warrants. Answer this before D8 — it
 changes the recommendation there.
 
+**Resolution: (c) — both, internal first.** Build for own use now; treat productization as a later
+decision rather than designing for both up front. D8 therefore resolves to overlays, with the
+constraint that overlay content must stay packageable into standalone deliverables later: no
+cross-vertical references inside an overlay, and no assumption that sibling overlays are installed.
+
 ---
 
-## D8. Architecture for vertical variants — 🔵 Open
+## D8. Architecture for vertical variants — ✅ Resolved
 
 Roughly 60% of the current 80 skills are vertical-neutral, 30% keep their shape but need
 vertical-specific content, and 10% would be genuinely new per vertical.
@@ -186,9 +197,19 @@ that a core export is never removed because it looks unused applies from the sec
 measure how much of that middle 30% genuinely needs context files. A few hours, and it validates the
 model before eight verticals depend on it.
 
+**Resolution: (c) — template plus generator, built now.** Chosen over the recommended overlay model
+because productization is planned (D7c) and this avoids migrating from overlays to a generator
+later.
+
+**What this commits to.** Generation must be one-way: the core plus a per-vertical config emits a
+standalone repo, and generated output is **never hand-edited** — an edit made downstream is lost on
+the next generation, silently. Every vertical change goes into the config or the core. This is
+heavier up front than overlays and the discipline is the whole cost; a generator whose outputs get
+edited is worse than a fork, because the divergence is invisible.
+
 ---
 
-## D9. Security as its own department — 🔵 Open
+## D9. Security as its own department — ✅ Resolved
 
 There are currently zero security skills. `legal-risk` covers governance, risk, and audit readiness
 but no technical security work.
@@ -202,9 +223,12 @@ can overrule engineering; modeling it under the CTO reproduces the conflict the 
 prevent. First skills: `threat-modeling`, `security-architecture-review`, `incident-response`,
 `vulnerability-management`, `access-and-identity`.
 
+**Resolution: (a).** A `security` department with its own CISO charter, reporting independently
+rather than under the CTO.
+
 ---
 
-## D10. Which department to deepen next — 🔵 Open
+## D10. Which department to deepen next — ✅ Resolved
 
 Four departments have three specialists each; `administration` has none.
 
@@ -219,9 +243,13 @@ Four departments have three specialists each; `administration` has none.
 the department your own businesses most immediately need — print, fulfillment, and production
 work — and because it is the department most reused by the manufacturing and food verticals in D8.
 
+**Resolution: all four, in this order — Security, Operations, Finance, People.** Security first as
+the largest absolute gap; Operations second as the department your own businesses most need and the
+one most reused by the manufacturing and food verticals.
+
 ---
 
-## D11. Cross-org sweep of public repos — 🔵 Open
+## D11. Cross-org sweep of public repos — ✅ Resolved
 
 `Keel-GRC` and `Drummond-IT` cannot be *attached* to this session (one-owner limit), but their
 **public** repositories are readable here by anonymous clone. Verified against
@@ -241,9 +269,16 @@ Public and likely to hold material: `Claude-Skills-Governance-Risk-and-Complianc
 is resolved would repeat the exact mistake D3 and D4 were about — and these are forks of
 third-party work, so the same licensing question applies to all of them.
 
+**Resolution: (d).** Catalogue the public repos from this session, and additionally start a separate
+session against `Keel-GRC` to sweep private and internal repos per `docs/cross-org-sweep-prompt.md`.
+
+**Constraint carried forward:** catalogue only. Nothing from either sweep is imported until its
+licensing is established, since these are forks of third-party work and D3 and D6 both turned on
+exactly that question.
+
 ---
 
-## D12. Administration department disposition — 🔵 Open
+## D12. Administration department disposition — ✅ Resolved
 
 `administration` holds one charter and no specialists. It exists so orphaned responsibilities have
 an owner.
@@ -256,9 +291,12 @@ an owner.
 and board support with the CEO's office. An empty department installed for one charter is overhead.
 Revisit if the corporate-secretary function becomes real.
 
+**Resolution: (c).** Fold corporate governance into `legal-risk` and board support into `executive`,
+then delete the `administration` department.
+
 ---
 
-## D13. Reviewer-class agents and audit independence — 🔵 Open
+## D13. Reviewer-class agents and audit independence — ✅ Resolved
 
 The `executive:agent-hierarchy` skill requires that producer and auditor are never the same agent.
 The current chart violates it: every department reviews its own work.
@@ -273,9 +311,13 @@ The current chart violates it: every department reviews its own work.
 there is real audit activity — and note that if it is ever added, placing it under `executive` would
 reproduce the independence failure it exists to prevent.
 
+**Resolution: (b).** Mark `legal-risk` and the new `security` department reviewer-class in their
+charters — explicitly not overrulable by the department under review. Internal audit deferred until
+there is real audit activity; if added, it must not report to the Chief Executive.
+
 ---
 
-## D14. Enforcing the surface map in CI — 🔵 Open
+## D14. Enforcing the surface map in CI — ✅ Resolved
 
 `executive:agent-hierarchy/scripts/agent-guard.mjs` is present and runs, but nothing invokes it and
 no surface map exists. The playbook's own position is that an unenforced map is a suggestion.
@@ -290,9 +332,12 @@ no surface map exists. The playbook's own position is that an unenforced map is 
 the moment more than one session edits this repo. Note the repo has no CI workflows at all yet, so
 this also means adding the first one.
 
+**Resolution: (b).** Write `docs/AGENT-SURFACES.md` mapping each department to its exclusive glob and
+run `agent-guard check` in CI. This adds the repository's first CI workflow.
+
 ---
 
-## D15. PR #2 readiness and merge timing — 🔵 Open
+## D15. PR #2 readiness and merge timing — ✅ Resolved
 
 PR #2 is a draft: 80 skills, eleven departments, merges cleanly, no CI configured, no review threads.
 
@@ -304,9 +349,12 @@ PR #2 is a draft: 80 skills, eleven departments, merges cleanly, no CI configure
 D7–D14 are all new work that belongs in later PRs — holding this one open for them means a
 1,000-file review nobody can do properly.
 
+**Resolution: (b).** Resolve D6 first, then mark ready and merge. D6 is the only open item touching
+files already in this PR's scope.
+
 ---
 
-## D16. Repo visibility versus marketplace distribution — 🔵 Open
+## D16. Repo visibility versus marketplace distribution — ✅ Resolved
 
 `cbrock84/agents-v1` is **private**, but the README instructs `/plugin marketplace add
 cbrock84/agents-v1`. A private marketplace requires each installing machine to be authenticated to
@@ -319,3 +367,31 @@ this repository, which the instructions do not mention.
 
 **Recommendation: (c), with the README corrected immediately** either way, since it currently
 documents an install path that will fail for anyone but you.
+
+**Resolution: (c).** Stay private until the twelve rewritten skills land, then revisit. The README
+already states the authentication requirement. Note that if D8's generator becomes the distribution
+path, the per-vertical repos rather than this one may be the artifact that needs to be public.
+
+---
+
+# Work queue
+
+Derived from the resolutions above, in dependency order. This is the execution plan, not a new set
+of decisions.
+
+| # | Work | From | Blocks |
+|---|---|---|---|
+| 1 | Rewrite the 12 Drive-sourced skills from scratch | D6 | D15, D16 |
+| 2 | Fold `administration` into `legal-risk` + `executive`; delete the department | D12 | — |
+| 3 | Mark `legal-risk` reviewer-class in its charter | D13 | — |
+| 4 | Write `docs/AGENT-SURFACES.md`; add first CI workflow running `agent-guard check` | D14 | — |
+| 5 | Mark PR #2 ready; squash-merge; delete the branch | D5, D15 | 6+ |
+| 6 | Build `security` department + CISO charter, marked reviewer-class | D9, D10, D13 | — |
+| 7 | Deepen `operations`, then `finance`, then `people` | D10 | — |
+| 8 | Catalogue public Keel-GRC and Drummond repos — no import | D11 | — |
+| 9 | Start a separate session against Keel-GRC for the private sweep | D11 | — |
+| 10 | Build the vertical generator: core, per-vertical config, one-way emit | D8 | — |
+| 11 | Revisit repo visibility | D16 | after 1 |
+
+Items 1–4 can proceed in parallel; all four land before item 5. Item 9 needs a session started
+outside this one — see `docs/cross-org-sweep-prompt.md`.
