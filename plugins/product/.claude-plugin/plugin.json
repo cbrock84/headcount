@@ -1,0 +1,16 @@
+{
+  "name": "product",
+  "description": "Product strategy, UX and usability audit, design systems, interface craft, brand expression, and visual direction.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Chris Brock"
+  },
+  "repository": "https://github.com/cbrock84/agents-v1",
+  "keywords": [
+    "product",
+    "ux",
+    "design",
+    "design-system",
+    "brand"
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "name": "agents-v1",
+  "owner": {
+    "name": "Chris Brock"
+  },
+  "metadata": {
+    "description": "An agent organization structured as a C-suite hierarchy. Each department installs independently so only the relevant function loads.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "executive",
+      "source": "./plugins/executive",
+      "description": "Direction, capital and attention allocation, cross-functional arbitration, strategy validation, and the method for structuring the organization itself.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Chris Brock"
+      },
+      "keywords": [
+        "strategy",
+        "executive",
+        "decision-making"
+      ],
+      "category": "executive"
+    },
+    {
+      "name": "technology",
+      "source": "./plugins/technology",
+      "description": "Architecture, engineering delivery, development discipline, debugging, review, and AI and automation systems.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Chris Brock"
+      },
+      "keywords": [
+        "engineering",
+        "tdd",
+        "debugging",
+        "code-review",
+        "automation"
+      ],
+      "category": "technology"
+    },
+    {
+      "name": "product",
+      "source": "./plugins/product",
+      "description": "Product strategy, UX and usability audit, design systems, interface craft, brand expression, and visual direction.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Chris Brock"
+      },
+      "keywords": [
+        "product",
+        "ux",
+        "design",
+        "design-system",
+        "brand"
+      ],
+      "category": "product"
+    },
+    {
+      "name": "marketing",
+      "source": "./plugins/marketing",
+      "description": "Positioning, content strategy and production, social and video, brand voice, copywriting, PR, and partnerships.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Chris Brock"
+      },
+      "keywords": [
+        "marketing",
+        "content",
+        "brand",
+        "social",
+        "communications"
+      ],
+      "category": "marketing"
+    },
+    {
+      "name": "demand-generation",
+      "source": "./plugins/demand-generation",
+      "description": "Organic and paid acquisition, conversion, measurement, experimentation, lifecycle messaging, and distribution.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Chris Brock"
+      },
+      "keywords": [
+        "seo",
+        "paid-ads",
+        "cro",
+        "analytics",
+        "lifecycle",
+        "growth"
+      ],
+      "category": "demand-generation"
+    },
+    {
+      "name": "revenue",
+      "source": "./plugins/revenue",
+      "description": "Outbound, sales enablement, revenue operations, pricing and packaging, activation, retention, and referrals.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Chris Brock"
+      },
+      "keywords": [
+        "sales",
+        "pricing",
+        "revenue",
+        "retention",
+        "revops"
+      ],
+      "category": "revenue"
+    },
+    {
+      "name": "finance",
+      "source": "./plugins/finance",
+      "description": "Financial modeling, budgeting and forecasting, unit economics, and financial decision support.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Chris Brock"
+      },
+      "keywords": [
+        "finance",
+        "budgeting",
+        "forecasting",
+        "unit-economics"
+      ],
+      "category": "finance"
+    },
+    {
+      "name": "operations",
+      "source": "./plugins/operations",
+      "description": "Program management, process design, vendor and supplier management, and operational delivery.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Chris Brock"
+      },
+      "keywords": [
+        "operations",
+        "process",
+        "program-management",
+        "vendors"
+      ],
+      "category": "operations"
+    },
+    {
+      "name": "people",
+      "source": "./plugins/people",
+      "description": "Org design, hiring and interviewing, compensation and leveling, and workforce planning.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Chris Brock"
+      },
+      "keywords": [
+        "people",
+        "hr",
+        "org-design",
+        "hiring",
+        "compensation"
+      ],
+      "category": "people"
+    },
+    {
+      "name": "legal-risk",
+      "source": "./plugins/legal-risk",
+      "description": "Contract review, privacy and data protection, enterprise risk, compliance, and audit readiness.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Chris Brock"
+      },
+      "keywords": [
+        "legal",
+        "privacy",
+        "risk",
+        "compliance",
+        "contracts"
+      ],
+      "category": "legal-risk"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+name: checks
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      # Same entry point as `./scripts/check-all.sh` locally, so the two cannot drift.
+      - run: ./scripts/check-all.sh
