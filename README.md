@@ -1,10 +1,10 @@
 # agents-v1
 
-An agent organization structured as a company: a chief executive over eleven departments, each led
+An agent organization structured as a company: a chief executive over ten departments, each led
 by a C-level agent with specialists beneath it.
 
 Every department is an independently installable plugin, so a project loads only the functions it
-There are 79 skills across the eleven departments.
+There are 79 skills across the ten departments.
 
 needs.
 
@@ -180,6 +180,7 @@ Adding a department: create the directory pair, write the manifest, add it to
 
 ## Related docs
 
+- [`docs/AGENT-SURFACES.md`](docs/AGENT-SURFACES.md) — write-surface map, enforced in CI
 - [`docs/DECISION-LOG.md`](docs/DECISION-LOG.md) — open decisions, numbered, with recommendations
 - [`docs/org-chart.md`](docs/org-chart.md) — reporting structure and remaining gaps
 - [`docs/cross-org-sweep-prompt.md`](docs/cross-org-sweep-prompt.md) — sweeping other GitHub orgs

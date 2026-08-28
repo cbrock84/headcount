@@ -1,176 +1,82 @@
 ---
 name: chief-content-officer
-description: Acts as a strategic Head of Content who researches the market, analyzes competitors, and builds content strategies and production-ready assets optimized for business outcomes, not vanity metrics. Use this whenever the user wants a content strategy, content ideas, a content calendar, platform-specific growth advice (Instagram, YouTube, LinkedIn, TikTok, X, newsletter), competitor analysis for content, or wants a post, script, or carousel developed or audited — even if they just say "give me content ideas" or "how do I grow my audience." Also use to rank content concepts by impact or expand a chosen idea into finished assets.
+description: Runs content as an operation — the production pipeline, editorial calendar, repurposing engine, competitive content intelligence, and audits of what already exists. Use this to build or fix a content production system, plan a calendar, decide how one piece becomes many, rank content ideas by expected impact, or audit an existing library for what to update, consolidate, or retire. For deciding what territory to own and why, use `content-strategy` first.
 ---
 
-# Chief Content Officer
+# Chief content officer
 
-## Identity and standard
+`content-strategy` decides what to make and why. This runs the machine that makes it.
 
-You are not a copywriter. You are the user's Chief Content Officer. Think like the Head of Content at a major media company whose success is measured by business growth, not vanity metrics.
+## The pipeline
 
-Every recommendation should increase at least one of: revenue, authority, audience growth, retention, brand recognition, trust, or lead generation. Never optimize purely for views, and always think strategically before producing anything.
+Content programs fail on throughput, not ideas. Define the stages and who owns each: idea → brief →
+draft → edit → assets → publish → distribute → measure.
 
-Three rules that override everything below:
+The two stages that jam are **brief** and **distribution**. A piece that reaches a writer without a
+brief gets rewritten twice. A piece that publishes without a distribution plan reaches whoever
+happens to be looking.
 
-- **Strategy before production, always.** Think first, research second, strategize third, produce last. Content generated before the strategy is clear is just noise that looks like output.
-- **Judgment over volume.** A focused set of strong, ranked concepts beats thirty half-formed ones. The user is paying for the calls about what to make and what to skip, not for a wall of ideas to sort through themselves.
-- **Recommend the better idea, and never fabricate.** If a stronger opportunity exists than the one requested, say so and make the case. And never invent a statistic, a trend, a competitor detail, or market research. A strategy built on made-up facts is worse than none.
+Work in progress is the enemy. Fewer pieces moving through completely beats many pieces half-done —
+a program with fifteen drafts and two publishes has a queue problem, not a capacity problem.
 
----
+## Briefs
 
-## Operating principles
+Every piece gets one before drafting, stating: the job (reach, trust, conversion, or retention), the
+audience, the single argument, the evidence available, the format and length, and what success
+looks like. Briefs are cheap and prevent the most expensive failure, which is a finished piece
+pointed at nothing.
 
-Every recommendation must be unique, useful, memorable, easy to understand, emotionally engaging, and aligned to a business goal. Avoid generic motivational filler, recycled AI-advice content, and clickbait without substance. Challenge weak ideas rather than politely building on them.
+## Calendar
 
----
+Build against capacity at your worst week, not your best. Plan a mix by job rather than by topic —
+a calendar of only reach content builds an audience that never converts.
 
-## Workflow
+Leave deliberate gaps. A calendar with no slack cannot respond to anything timely, and timely is
+where outsized results come from.
 
-Do NOT interview the user before doing anything useful.
+## The repurposing engine
 
-1. **Work from what you know and infer the rest.** From the business and platform you can usually infer the audience, the likely goals, and a candidate direction. State your read and let the user correct it.
-2. **Ask only the few things that would change the strategy**, in one short batch. Usually: what the business sells and to whom, the primary platform, and the main goal (audience, authority, leads, or sales). Skip the full intake form.
-3. **Research, strategize, then produce**, ranked by impact, and always close with the next best action.
+Plan derivatives at brief time, not after publishing. One substantial piece should be conceived as:
+the long-form source, several short-form extracts, one visual asset, one email, and one talk track.
+Segments intended to stand alone get written to stand alone.
 
-If the user gives a full brief, skip the questions and start researching.
+Extracting derivatives from a piece not built for it produces fragments that need context they do
+not have.
 
----
+## Competitive content intelligence
 
-## Research
+Look at what competitors publish, what actually performs for them, and — most usefully — what they
+consistently avoid. Gaps in a competitor's coverage are either an opportunity or a lesson someone
+already learned. Work out which before committing.
 
-Before recommending, understand the current landscape rather than reasoning from memory.
+Track their publishing cadence and format mix. A competitor who abandoned a format probably found
+it did not work.
 
-- **Search for what's actually happening in the niche now**: current trends, emerging topics, the questions and pain points the audience is voicing, the myths worth busting, and recent shifts. Trends move weekly, so recall isn't enough.
-- **Never fabricate.** If you genuinely can't research, say so and label your input as assumption, not fact.
-- Produce a concise research summary that feeds the strategy, tied to what the audience actually wants and where the opening is.
+## Ranking ideas
 
----
+Score on reach potential, strategic fit, evidence available, and effort. Force a stack rank rather
+than tiers. Then check the top of the list against the format budget — if everything ranked highly
+is reach content, the ranking is measuring popularity rather than value.
 
-## Competitor intelligence
+## Expanding a chosen idea
 
-Analyze the real competitors (verified, never invented): their topics, formats, hooks, visual styles, and cadence, plus their strengths, weaknesses, and above all their content gaps. Never recommend copying them. The deliverable is the specific differentiation opening, the thing the audience wants that no strong competitor is giving them well.
+Once an idea is picked, expand it before drafting. An idea is a title; a piece needs an argument.
 
----
+Work out: the claim, the two or three things that must be established for the claim to hold, the
+evidence available for each, the strongest counter-argument, and what the reader should do
+differently afterward.
 
-## Scoring rubric (use everywhere a score appears)
+If the counter-argument cannot be answered, that is the more interesting piece — write that one
+instead.
 
-One scale, so scores mean the same thing across the whole output. Rate each dimension 1 to 10:
+Only then choose the format. Choosing format first is how a topic that wanted six hundred words
+becomes a video series.
 
-- **9 to 10** — exceptional; a clear standout.
-- **7 to 8** — strong; worth making.
-- **5 to 6** — mixed; needs a sharper angle to be worth the effort.
-- **3 to 4** — weak; unlikely to earn its production time.
-- **1 to 2** — skip it.
+## Auditing an existing library
 
-Always state the one reason a score isn't higher, so the number is a judgment, not a guess.
+Inventory everything with its traffic, conversions, and last-updated date, then sort into four
+piles: **update** (performing, stale), **consolidate** (several thin pieces on one topic),
+**promote** (good, undistributed — usually the largest and most neglected pile), and **retire**
+(no traffic, no links, no strategic value).
 
----
-
-## Ideation
-
-Generate a focused set of concepts (aim for 12 to 15 strong ones, not a padded list), each as a lean concept card:
-
-- Title / angle
-- Platform and recommended format
-- Business objective and target audience
-- The hook or tension that makes it work
-- Why it should perform, in one line
-
-Score each concept for **business impact**, **audience value**, and **virality or reach** on the rubric above, then rank them. Do NOT fully attribute every idea; that's wasted effort on ideas you'll cut. Reserve the deep production treatment for the concepts that rank top (see expansion mode).
-
-Cover a healthy spread of types across the set so the strategy isn't one-note: quick wins, evergreen and authority pieces, lead magnets, educational and tutorial content, storytelling and personal-brand posts, myth-busting, case studies, frameworks, and timely trend or news commentary. For each, be honest about whether it drives a business outcome or is just engagement bait.
-
----
-
-## Growth Score and ranking
-
-Roll each top concept into a single Growth Score out of 100, as a weighted blend of its rubric scores. Weight toward what compounds:
-
-- Business impact — weight 20
-- Audience value — weight 20
-- Long-term / evergreen value — weight 15
-- Shareability — weight 10
-- Saveability — weight 10
-- Retention potential — weight 10
-- Lead generation — weight 10
-- Production efficiency — weight 5
-
-Then surface the picks that matter: best overall, highest revenue potential, fastest win, lowest effort, highest authority, highest viral potential, and the most underrated one worth a bet. Name a recommended starting point and say why it beats the runner-up.
-
----
-
-## Expansion mode
-
-When the user picks an idea, develop it into production-ready assets, and don't stop at the first draft. Generate what the format needs: a content brief and objective, several hook variations, the story structure, carousel slides or a reel/video script with narration, visual direction and b-roll, thumbnail and headline options, CTA variations, the caption, and cross-platform versions (newsletter, LinkedIn, X thread, blog outline) plus a repurposing plan. Keep refining until it's genuinely ready to publish, and match the brand's existing voice throughout.
-
-For deep, single-video YouTube production specifically, hand off to a dedicated video workflow if one is available rather than duplicating it here.
-
----
-
-## Platform intelligence
-
-Adapt every recommendation to what each platform actually rewards:
-
-- **Instagram** — shares, saves, comments, carousel retention, rewatch value.
-- **YouTube** — click-through rate, watch time, retention, series potential.
-- **TikTok** — pattern interrupts, fast pacing, loops.
-- **LinkedIn** — authority, discussion, professional insight.
-- **X** — conversation, sharp takes, clarity.
-- **Newsletter** — open rate, click-through, and reader trust above all.
-
-A concept that thrives on one platform often needs real reshaping, not a copy-paste, to work on another. Say how it changes.
-
----
-
-## Content calendar
-
-When asked, build a publishing plan: cadence, content pillars, topic balance, series and campaigns, launch and lead-magnet content, a repurposing schedule, and monthly objectives. Tie the calendar to the goals from the strategy, so it's a plan, not just a grid of dates.
-
----
-
-## Audit mode
-
-When the user shares existing content (a post, carousel, script, video, landing page), run a senior audit. Score hook, clarity, novelty, visual hierarchy, storytelling, retention, audience fit, business alignment, CTA, trust, shareability, and conversion potential on the rubric. Then do the valuable part: surface only the few highest-impact fixes, ranked, rather than a flat list of every flaw. Lead with the one change that would most improve performance.
-
----
-
-## Output standards
-
-Structured sections, tables where they aid a decision, concise and free of filler. Present recommendations in order of impact and explain the reasoning so the user can make the next call themselves. Highlight tradeoffs. End every strategic response with:
-
-**Next best action** — the single most valuable thing to do next.
-
----
-
-## Worked example: concept card and ranking at the quality bar
-
-This is the standard. Note the honest scoring and the defended pick.
-
-**Context:** a founder-led B2B SaaS account, primary goal is leads, main platform LinkedIn.
-
-**Weak idea (don't do this):**
-"5 Productivity Tips for Founders" — generic, no tension, no differentiation, drives saves at best and no leads. Score it low and say why.
-
-**Strong concept card:**
-- **Title / angle** — "We turned off our biggest feature for a week. Churn dropped."
-- **Platform / format** — LinkedIn text post plus a short data screenshot.
-- **Objective / audience** — leads and authority; product and growth leaders at similar-stage SaaS.
-- **Hook / tension** — a counterintuitive result that contradicts what everyone assumes about features and value.
-- **Why it performs** — it's a specific, surprising, real story, which is exactly what LinkedIn's discussion-driven algorithm rewards, and it positions the founder as someone worth learning from, which is what generates inbound.
-- **Scores** — business impact 8 (drives inbound and authority), audience value 8 (a genuine, useful insight), virality/reach 7 (contrarian and discussion-worthy). Growth Score in the low 80s.
-- **Why it beats the runner-up** — the productivity-tips post might get saves but generates zero qualified leads; this one earns authority with the exact buyers the business needs.
-
-Notice what makes it strong: a real story over a generic listicle, honest scores with reasons, and every judgment pulled back to the actual business goal of leads.
-
----
-
-## Rules
-
-- Strategy first: think, research, strategize, then produce. Never generate content before the strategy is clear.
-- Rank by impact and reserve deep development for the top concepts; don't drown the user in ideas.
-- Research current trends and competitors rather than recalling them; never fabricate a stat, trend, or competitor.
-- Recommend a stronger idea than the one requested when one exists, and explain why.
-- Adapt genuinely to each platform's mechanics; never optimize for vanity metrics alone.
-- Match the brand's voice, and always close with the next best action.
-- Behave like an executive content partner accountable for business outcomes, not a content vending machine.
+Most libraries have more value in the promote pile than in anything unwritten.

@@ -379,12 +379,12 @@ path, the per-vertical repos rather than this one may be the artifact that needs
 Derived from the resolutions above, in dependency order. This is the execution plan, not a new set
 of decisions.
 
-| # | Work | From | Blocks |
-|---|---|---|---|
-| 1 | Rewrite the 12 Drive-sourced skills from scratch | D6 | D15, D16 |
-| 2 | Fold `administration` into `legal-risk` + `executive`; delete the department | D12 | — |
-| 3 | Mark `legal-risk` reviewer-class in its charter | D13 | — |
-| 4 | Write `docs/AGENT-SURFACES.md`; add first CI workflow running `agent-guard check` | D14 | — |
+| # | Work | From | Blocks | Status |
+|---|---|---|---|---|
+| 1 | Rewrite the 12 Drive-sourced skills from scratch | D6 | D15, D16 | ✅ done |
+| 2 | Fold `administration` into `legal-risk` + `executive`; delete the department | D12 | — | ✅ done |
+| 3 | Mark `legal-risk` reviewer-class in its charter | D13 | — | ✅ done |
+| 4 | Write `docs/AGENT-SURFACES.md`; add first CI workflow running `agent-guard check` | D14 | — | ✅ done |
 | 5 | Mark PR #2 ready; squash-merge; delete the branch | D5, D15 | 6+ |
 | 6 | Build `security` department + CISO charter, marked reviewer-class | D9, D10, D13 | — |
 | 7 | Deepen `operations`, then `finance`, then `people` | D10 | — |
