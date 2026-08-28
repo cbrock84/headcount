@@ -1,0 +1,15 @@
+{
+  "name": "executive",
+  "description": "Direction, capital and attention allocation, cross-functional arbitration, strategy validation, and the method for structuring the organization itself.",
+  "version": "0.2.0",
+  "author": {
+    "name": "Chris Brock"
+  },
+  "repository": "https://github.com/cbrock84/agents-v1",
+  "keywords": [
+    "strategy",
+    "executive",
+    "decision-making",
+    "corporate-development"
+  ]
+}

@@ -1,8 +1,15 @@
 ---
 name: analytics
-description: When the user wants to set up, improve, or audit analytics tracking and measurement. Also use when the user mentions "set up tracking," "GA4," "Google Analytics," "conversion tracking," "event tracking," "UTM parameters," "tag manager," "GTM," "analytics implementation," "tracking plan," "how do I measure this," "track conversions," "Mixpanel," "Segment," "are my events firing," or "analytics isn't working." Use this whenever someone asks how to know if something is working or wants to measure marketing results. For choosing attribution models, comparing multi-touch/MMM/incrementality, or reconciling conflicting numbers across tools, see attribution. For A/B test measurement, see ab-testing.
-metadata:
-  version: 2.0.1
+description: Sets up, audits, and reports on measurement — tracking plans, event schemas, GA4 and product analytics instrumentation, and the dashboards and reporting built on top. Use this to instrument a site or product, audit tracking that is producing numbers nobody trusts, define the events and properties worth capturing, or build reporting that answers a specific question. Also use when two tools disagree about the same metric.
+---
+
+# Analytics
+
+Instrumentation and reporting are one job. Dashboards built on a bad tracking plan are confident and
+wrong, so the plan comes first.
+
+For dashboard and report construction specifically, see `references/analytics-dashboard.md`.
+
 ---
 
 # Analytics Tracking

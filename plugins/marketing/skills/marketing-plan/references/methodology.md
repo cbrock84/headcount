@@ -312,7 +312,7 @@ Set `phase: finalize` in `progress.md` before starting. Concatenate `sections/01
 
 Before printing:
 
-- **Cross-reference check** — every marketing-ideas number (e.g., "idea #17") matches the actual idea in `references/idea-cross-reference.md`. Every related-skill mention either exists in the `marketingskills` repo or is documented as an external dependency (see ops-stack-mapping note on cross-marketplace skills).
+- **Cross-reference check** — every marketing-ideas number (e.g., "idea #17") matches the actual idea in `references/idea-cross-reference.md`. Every related-skill mention either exists or is documented as an external dependency (see ops-stack-mapping note on cross-marketplace skills).
 - **MCP/API check** — every tool mentioned in Section 11 actually exists in the user's stack (per research.md intake) OR is flagged as "future / not yet wired."
 - **Path check** — no machine-specific paths (`/Users/...`, `/home/...`) in the output. Replace with descriptive references.
 - **Voice check** — final read against brand voice rules. Flag and fix violations.

@@ -1,0 +1,16 @@
+{
+  "name": "product",
+  "description": "Product strategy, discovery, UX and usability, design systems, brand expression in the interface, and release success criteria.",
+  "version": "0.2.0",
+  "author": {
+    "name": "Chris Brock"
+  },
+  "repository": "https://github.com/cbrock84/agents-v1",
+  "keywords": [
+    "product",
+    "ux",
+    "design",
+    "design-system",
+    "usability"
+  ]
+}

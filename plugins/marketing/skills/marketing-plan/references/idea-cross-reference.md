@@ -1,5 +1,10 @@
 # Idea Cross-Reference — 139 Marketing Ideas Mapped to AARRR
 
+> **Note.** The `marketing-ideas` skill referenced below is not part of this repo — it was
+> dropped as overlapping with `growth-strategy` and `chief-marketing-officer`. Where a step
+> calls for it, use those instead and carry the idea numbering as an internal reference only.
+
+
 The `marketing-ideas` skill catalogs 139 proven marketing tactics. This doc is the source-of-truth mapping: every idea assigned to a primary AARRR stage, with notes for when it's typically active and what category constraints apply.
 
 The plan's Section 12 ("Tactical idea bank") uses this mapping as the base, then layers client-specific filters: brand voice rules might skip some ideas; funding stage might shift Q-status; client category might rule out others.
@@ -254,12 +259,12 @@ After all five AARRR tables + skip list:
 ## How to maintain this doc
 
 If `marketing-ideas` adds new ideas (it's a living skill — the 139 may become 145 or 160 over time):
-1. Read `skills/marketing-ideas/references/ideas-by-category.md` in the `marketingskills` repo
+1. Read `skills/marketing-ideas/references/ideas-by-category.md`
 2. Assign each new idea to a primary AARRR stage using the rules above
 3. Add to this doc's tables
 4. Update SKILL.md's idea-count reference
 
 ## Sources
 
-- `skills/marketing-ideas/SKILL.md` (in the `marketingskills` repo)
-- `skills/marketing-ideas/references/ideas-by-category.md` (in the `marketingskills` repo)
+- `skills/marketing-ideas/SKILL.md` 
+- `skills/marketing-ideas/references/ideas-by-category.md` 

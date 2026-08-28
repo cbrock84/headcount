@@ -1,0 +1,17 @@
+{
+  "name": "technology",
+  "description": "Architecture, engineering delivery, development discipline, infrastructure, data platform, and AI/automation systems.",
+  "version": "0.2.0",
+  "author": {
+    "name": "Chris Brock"
+  },
+  "repository": "https://github.com/cbrock84/agents-v1",
+  "keywords": [
+    "engineering",
+    "architecture",
+    "tdd",
+    "debugging",
+    "infrastructure",
+    "automation"
+  ]
+}
