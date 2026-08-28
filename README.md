@@ -4,7 +4,8 @@ An in-house organization of Claude agents, built up as **skills**.
 
 Two tiers:
 
-- **Core** — `.claude/skills/`. Twelve general business advisors that load automatically in this repo.
+- **Core** — `.claude/skills/`. Twelve general business advisors plus `agent-hierarchy`, the method
+  for structuring the organization itself. These load automatically in this repo.
 - **Departments** — `plugins/`. Specialist teams installed per-project, so only the relevant ones
   occupy context.
 
@@ -16,13 +17,14 @@ Two tiers:
 ```
 
 Each department is independent — install only what a project needs. Plugin skills are addressed as
-`department:skill` (e.g. `marketing:seo-audit`), so names never collide with the core twelve or with
+`department:skill` (e.g. `marketing:seo-audit`), so names never collide with the core skills or with
 each other.
 
 ## Core (always on)
 
 | Skill | What it does |
 |---|---|
+| `agent-hierarchy` | Designs orchestrator-and-subagent hierarchies for a repository — splitting agents by exclusive write surface, pairing every producer with an independent auditor, and enforcing the split with a script that runs in CI. |
 | `ai-research-analyst` | Conducts executive-level market research, competitor analysis, trend discovery, and strategic business intelligence grounded in current, cited sources. |
 | `ai-workflow-architect` | Designs complete AI systems, automations, and agent workflows for businesses using tools like Claude, ChatGPT, MCP servers, APIs, and automation platforms. |
 | `business-growth-consultant` | Identifies the real constraint on a business's growth and the highest-leverage moves to increase revenue, profitability, and retention while scaling sustainably. |
@@ -35,6 +37,16 @@ each other.
 | `saas-idea-validator` | Evaluates SaaS and startup ideas with brutal honesty across problem, market, competition, monetization, defensibility, and execution, and returns a clear verdict rather than encouragem…. |
 | `ux-product-auditor` | Performs senior-level UX, conversion (CRO), usability, and product-strategy audits that tie every finding to a business outcome. |
 | `youtube-producer` | Plans, packages, scripts, and optimizes long-form YouTube videos for retention and channel growth. |
+
+The `agent-hierarchy` skill carries the governance method for this repo's own growth, vendored
+from [`cbrock84/agent-hierarchy`](https://github.com/cbrock84/agent-hierarchy):
+
+- `references/playbook.md` — the full playbook (surface splitting, the guard, registry, decision
+  log, anti-patterns, sizing, multi-repo layouts, charter format, day-one checklist).
+- `references/starter-rosters.md` — rosters for mobile-app, game, and shared-core portfolios.
+- `references/bootstrap-prompt.md` — fill-in-the-blanks prompt for a fresh session.
+- `scripts/agent-guard.mjs` — the executable guard: `check` proves the surface map is coherent,
+  `diff <agent>` proves a diff obeyed it. No dependencies, Node 18+.
 
 ## Departments
 
@@ -171,7 +183,7 @@ content was edited.
 
 The five upstream collections hold 106 skills; 84 were taken. Skipped:
 
-- **Duplicates of the core twelve** — `cro`, `content-strategy`, `social`, `launch`,
+- **Duplicates of the core advisors** — `cro`, `content-strategy`, `social`, `launch`,
   `competitor-profiling`, `marketing-ideas`, already covered by `landing-page-cro-expert`,
   `chief-content-officer`, `marketing-campaign-planner`, `ai-research-analyst`, and
   `business-growth-consultant`.
@@ -180,6 +192,15 @@ The five upstream collections hold 106 skills; 84 were taken. Skipped:
 - **Author-personalized** — `pinned-comment`, written for its author's own LinkedIn voice.
 - **Intrusive meta-skills** — `using-superpowers`, which demands invocation before every response.
 - **Overlapping media helpers** — `image`, `video`, `marketing-loops`, `marketing-council`.
+
+## Reaching the other orgs
+
+A session can only attach repos from one owner, so `Keel-GRC` and `Drummond-IT` material cannot
+be pushed here from a session rooted in those orgs, or pulled by attaching them from this one.
+Public repos in those orgs are still readable here via anonymous clone; private and internal
+ones need a session rooted in that org that hands results back as a file.
+
+`docs/cross-org-sweep-prompt.md` has the prompt for that sweep and the details of the split.
 
 ## Adding a department
 
