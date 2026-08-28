@@ -1,0 +1,82 @@
+{
+  "name": "agents-v1",
+  "owner": {
+    "name": "Chris Brock"
+  },
+  "metadata": {
+    "description": "Department plugins for an in-house agent organization. Each department installs independently so only the relevant specialists load.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "engineering",
+      "source": "./plugins/engineering",
+      "description": "Development workflow discipline: TDD, systematic debugging, planning, code review, and verification.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Chris Brock"
+      },
+      "keywords": [
+        "engineering",
+        "tdd",
+        "debugging",
+        "code-review",
+        "workflow"
+      ],
+      "category": "engineering"
+    },
+    {
+      "name": "marketing",
+      "source": "./plugins/marketing",
+      "description": "Demand generation, SEO, paid acquisition, lifecycle, pricing, and revenue operations specialists.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Chris Brock"
+      },
+      "keywords": [
+        "marketing",
+        "seo",
+        "growth",
+        "paid-ads",
+        "lifecycle",
+        "pricing"
+      ],
+      "category": "marketing"
+    },
+    {
+      "name": "content",
+      "source": "./plugins/content",
+      "description": "Social, newsletter, and short-form content production: voice, hooks, drafting, scoring, and repurposing.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Chris Brock"
+      },
+      "keywords": [
+        "content",
+        "social",
+        "newsletter",
+        "copywriting",
+        "video"
+      ],
+      "category": "content"
+    },
+    {
+      "name": "design",
+      "source": "./plugins/design",
+      "description": "UI/UX design intelligence and frontend taste: design systems, styling, brand, and image direction.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Chris Brock"
+      },
+      "keywords": [
+        "design",
+        "ui",
+        "ux",
+        "design-system",
+        "brand",
+        "frontend"
+      ],
+      "category": "design"
+    }
+  ]
+}
