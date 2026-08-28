@@ -178,9 +178,19 @@ plugins/<department>/
 Adding a department: create the directory pair, write the manifest, add it to
 `.claude-plugin/marketplace.json`, and give it a chief before any specialists.
 
+## Checks
+
+```
+./scripts/check-all.sh
+```
+
+Verifies the surface map is coherent, every skill's frontmatter is valid and unique, no third-party
+licence text or font assets have reappeared, and every manifest parses. CI calls the same script, so
+the two cannot drift.
+
 ## Related docs
 
-- [`docs/AGENT-SURFACES.md`](docs/AGENT-SURFACES.md) — write-surface map, enforced in CI
+- [`docs/AGENT-SURFACES.md`](docs/AGENT-SURFACES.md) — write-surface map, enforced by the checks
 - [`docs/DECISION-LOG.md`](docs/DECISION-LOG.md) — open decisions, numbered, with recommendations
 - [`docs/org-chart.md`](docs/org-chart.md) — reporting structure and remaining gaps
 - [`docs/cross-org-sweep-prompt.md`](docs/cross-org-sweep-prompt.md) — sweeping other GitHub orgs

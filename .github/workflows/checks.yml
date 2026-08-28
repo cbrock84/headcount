@@ -10,16 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
-
-      - name: Surface map is coherent
-        run: node plugins/executive/skills/agent-hierarchy/scripts/agent-guard.mjs check
-
-      - name: Skill frontmatter is valid
-        run: python3 scripts/validate-skills.py
-
-      - name: No third-party licence text
-        run: python3 scripts/check-provenance.py
+      # Same entry point as `./scripts/check-all.sh` locally, so the two cannot drift.
+      - run: ./scripts/check-all.sh
