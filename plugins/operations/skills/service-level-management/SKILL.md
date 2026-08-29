@@ -14,7 +14,7 @@ The characteristic failure is a service meeting every target while customers are
 when the measure is chosen for availability of data rather than relevance:
 
 - **Uptime that excludes degraded operation.** Technically up and unusably slow is down.
-- **Response time instead of resolution time.** An instant acknowledgement that resolves nothing
+- **Response time instead of resolution time.** An instant acknowledgment that resolves nothing
   measures the autoresponder.
 - **Averages instead of percentiles.** A mean hides the tail, and the tail is who complains. Commit
   at p95 or p99, not the mean.

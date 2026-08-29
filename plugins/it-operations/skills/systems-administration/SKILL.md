@@ -1,6 +1,6 @@
 ---
 name: systems-administration
-description: Runs servers and corporate systems — patching, configuration baselines, change control, capacity, and the routine that prevents incidents. Use this to establish a patching cadence, standardise server configuration, plan a maintenance window, decide change control for infrastructure, or clean up systems that have drifted from any known state.
+description: Runs servers and corporate systems — patching, configuration baselines, change control, capacity, and the routine that prevents incidents. Use this to establish a patching cadence, standardize server configuration, plan a maintenance window, decide change control for infrastructure, or clean up systems that have drifted from any known state.
 ---
 
 # Systems administration
@@ -17,7 +17,7 @@ Every system class needs a defined baseline: build, hardening, agents, logging, 
 built by hand from memory diverge immediately and cannot be reasoned about as a group.
 
 Drift is the real enemy. Detect it continuously and correct rather than document — a system that no
-longer matches its baseline is a system whose behaviour under patching or failover is unknown.
+longer matches its baseline is a system whose behavior under patching or failover is unknown.
 
 The strongest form is disposability: rebuild rather than repair. A system you can rebuild in an hour
 never accumulates the sediment of a decade of manual fixes.

@@ -70,7 +70,7 @@ to as a subagent with its own exclusive write surface.
 | Skill | What it does |
 |---|---|
 | `ai-workflow-architect` | Designs AI systems, automations, and agent workflows for a business — identifying which manual work is worth automating, how to structure the system, which tools fi…. |
-| `api-design` | Designs interfaces that survive their consumers — resource modelling, errors, versioning, pagination, and compatibility. |
+| `api-design` | Designs interfaces that survive their consumers — resource modeling, errors, versioning, pagination, and compatibility. |
 | `branch-and-worktree-workflow` | Isolates feature work in its own branch or worktree and integrates it cleanly when done. |
 | `chief-technology-officer` | Owns architecture, engineering delivery, infrastructure, data platform, and internal systems. |
 | `cloud-infrastructure` | Designs and runs cloud infrastructure — environments, infrastructure as code, networking and isolation, scaling, and cost. |
@@ -110,11 +110,11 @@ to as a subagent with its own exclusive write surface.
 | Skill | What it does |
 |---|---|
 | `backup-and-recovery` | Protects and restores data — backup coverage and scope, retention, immutability against ransomware, and proving restores actually work. |
-| `endpoint-management` | Manages laptops, desktops and mobile devices — enrolment, configuration, patching, software distribution, and lost or compromised devices. |
+| `endpoint-management` | Manages laptops, desktops and mobile devices — enrollment, configuration, patching, software distribution, and lost or compromised devices. |
 | `identity-lifecycle-administration` | Executes joiner, mover and leaver processes — provisioning, group membership, access changes on role change, and complete deprovisioning. |
 | `it-asset-management` | Tracks hardware and software assets through their life — procurement, ownership, licensing, refresh, and disposal. |
 | `network-administration` | Designs and operates the corporate network — segmentation, remote access, wireless, DNS and addressing, and diagnosing network problems. |
-| `service-desk` | Runs the IT service desk — intake, triage, prioritisation, escalation, knowledge, and the metrics that improve service rather than distort it. |
+| `service-desk` | Runs the IT service desk — intake, triage, prioritization, escalation, knowledge, and the metrics that improve service rather than distort it. |
 | `systems-administration` | Runs servers and corporate systems — patching, configuration baselines, change control, capacity, and the routine that prevents incidents. |
 
 </details>
@@ -207,7 +207,7 @@ to as a subagent with its own exclusive write surface.
 | `financial-modeling` | Builds and stress-tests financial models for forecasting, scenario planning, and decision support — revenue build, cost structure, driver logic, and the sensitiviti…. |
 | `financial-reporting-and-close` | Runs the period-end close and produces reporting — close calendar, reconciliations, accruals, variance analysis, and reporting that gets read. |
 | `internal-controls-and-audit` | Designs and tests controls over financial reporting — segregation of duties, approval limits, evidence, and preparing for audit. |
-| `revenue-recognition` | Determines when and how revenue is recognised — performance obligations, contract terms that change the answer, and the deal structures that create accounting probl…. |
+| `revenue-recognition` | Determines when and how revenue is recognized — performance obligations, contract terms that change the answer, and the deal structures that create accounting probl…. |
 | `treasury-and-liquidity` | Manages cash and liquidity — cash forecasting, runway, working capital, banking structure, and currency and counterparty exposure. |
 | `unit-economics` | Establishes whether the business makes money on each customer or unit — contribution margin, acquisition cost, payback period, lifetime value, and the cohort behavi…. |
 
@@ -224,20 +224,20 @@ to as a subagent with its own exclusive write surface.
 | `process-design` | Designs, documents, and fixes operational processes — mapping the current state, finding where work actually stalls, redesigning the flow, and building controls tha…. |
 | `quality-management` | Builds quality into operations — defining standards, catching defects at the right point, root cause analysis, and continuous improvement. |
 | `service-level-management` | Defines and manages service levels — setting targets that reflect what customers need, measuring honestly, and handling breaches. |
-| `supply-chain-and-logistics` | Manages the flow of goods and inputs — sourcing, inventory, lead times, fulfilment, and supply risk. |
+| `supply-chain-and-logistics` | Manages the flow of goods and inputs — sourcing, inventory, lead times, fulfillment, and supply risk. |
 | `vendor-management` | Selects, contracts, and manages suppliers and vendors — requirements, evaluation, negotiation support, onboarding, performance management, and exit. |
 
 </details>
 
 <details>
-<summary><b>Programme Management Office</b> (EPMO / COO) — 6 skills</summary>
+<summary><b>Program Management Office</b> (EPMO / COO) — 6 skills</summary>
 
 | Skill | What it does |
 |---|---|
 | `benefits-realization` | Ensures projects deliver the value they were approved on — defining measurable benefits, baselining, tracking after delivery, and honest post-implementation review. |
 | `change-and-adoption` | Gets people to actually use what was delivered — stakeholder analysis, communication, training, resistance, and measuring adoption. |
 | `dependency-and-risk-management` | Manages delivery risk and cross-team dependencies — identifying, sizing, mitigating and escalating what could stop the work. |
-| `portfolio-governance` | Governs the portfolio of work — intake, prioritisation, stage gates, resource contention, and stopping things. |
+| `portfolio-governance` | Governs the portfolio of work — intake, prioritization, stage gates, resource contention, and stopping things. |
 | `program-management` | Plans and drives cross-functional programs to delivery — scope, sequencing, dependencies, status, risk, and the escalations that keep work moving. |
 | `project-delivery` | Plans and delivers a single project — scope, estimation, scheduling, critical path, tracking, and recovering when it slips. |
 
@@ -250,7 +250,7 @@ to as a subagent with its own exclusive write surface.
 |---|---|
 | `chief-customer-officer` | Owns the customer's experience after the sale — support, success, escalation, and the feedback loop back into product. |
 | `escalation-management` | Handles customer situations that have exceeded normal support — severity assessment, incident communication, executive escalation, and recovering a relationship aft…. |
-| `self-service-and-knowledge` | Builds the help centre, in-product guidance, and knowledge base that let customers resolve problems without contacting anyone — content, findability, maintenance, a…. |
+| `self-service-and-knowledge` | Builds the help center, in-product guidance, and knowledge base that let customers resolve problems without contacting anyone — content, findability, maintenance, a…. |
 | `support-operations` | Designs and runs the support function — channels, queues, routing, staffing, service levels, quality, and the metrics that show whether it is working. |
 | `voice-of-customer` | Builds the loop from what customers say to what gets changed — collecting feedback, distinguishing signal from noise, routing it to owners, and closing the loop bac…. |
 
@@ -295,7 +295,7 @@ to as a subagent with its own exclusive write surface.
 | `learning-and-development` | Builds capability — skills gaps, career frameworks, training that transfers to the job, and internal mobility. |
 | `onboarding-and-offboarding` | Designs the joining and leaving experience — first-day readiness, ramp to productivity, knowledge capture, and clean exits. |
 | `org-design` | Designs how an organization is structured — reporting lines, team boundaries, spans and layers, role definition, and workforce planning against the strategy. |
-| `performance-management` | Runs performance systems that change behaviour — expectations, feedback, review cycles, calibration, and handling underperformance. |
+| `performance-management` | Runs performance systems that change behavior — expectations, feedback, review cycles, calibration, and handling underperformance. |
 | `workforce-planning` | Plans the shape and size of the workforce — demand for roles, build-versus-buy, attrition, and sequencing hiring against budget. |
 
 </details>
@@ -341,15 +341,16 @@ boundary, and two agents working on "SEO" and "UI" both end up in the same file.
 ```
 
 Verifies the surface map is coherent, every skill's frontmatter is valid and unique, no
-third-party licence text has appeared, the generated README and social card are current, every
-`department:skill` reference in the docs resolves, and every manifest parses. CI runs the same
+third-party license text has appeared, the generated README and social card are current, every
+`department:skill` reference in the docs resolves, spelling is US English, and every manifest
+parses. CI runs the same
 script, so local and CI cannot drift.
 
 A new department needs its roster row in `docs/AGENT-SURFACES.md`, a surface block, a charter in
 `.claude/agents/`, and an entry in `.claude-plugin/marketplace.json` — all in the same change, or
 the check fails.
 
-## Licence
+## License
 
 MIT — see [LICENSE](LICENSE). Every skill here was written for this repository.
 

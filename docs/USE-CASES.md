@@ -3,7 +3,7 @@
 A collection of skills answers a question. An organization answers a *situation* — several
 functions engaging in order, with someone able to say no.
 
-These are the situations this catalogue is shaped around. Every skill named here exists; a check
+These are the situations this catalog is shaped around. Every skill named here exists; a check
 in CI fails if a reference stops resolving, so this page cannot rot as skills are renamed or
 consolidated.
 
@@ -70,7 +70,7 @@ Everyone has an opinion and nobody has the number.
 5. `security:threat-modeling` — before it is built, while changing the design is still cheap
 6. `technology:implementation-planning` — what it actually takes
 
-**Where it stops.** Threat modelling after the build is archaeology. It sits at step five
+**Where it stops.** Threat modeling after the build is archaeology. It sits at step five
 deliberately.
 
 ### Growth has stalled

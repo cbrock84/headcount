@@ -30,7 +30,7 @@ position; an unacknowledged one is a finding waiting to be written.
 ## Design controls that leave evidence
 
 A control that happened but left no trace did not happen, as far as an auditor can determine. Each
-control needs a stated owner, frequency, what is examined, and an artefact produced as a by-product
+control needs a stated owner, frequency, what is examined, and an artifact produced as a by-product
 of doing the work — not assembled afterwards for the audit.
 
 Prefer **preventive** controls, which stop the transaction, over **detective** ones, which find it
@@ -46,8 +46,8 @@ threshold creates, and it is straightforward to monitor for.
 
 ## Audit findings
 
-Treat a finding as information. Fix the cause rather than the instance, and be sceptical of
-remediation that consists of more careful behaviour: the same conditions will reproduce the finding
+Treat a finding as information. Fix the cause rather than the instance, and be skeptical of
+remediation that consists of more careful behavior: the same conditions will reproduce the finding
 with different people.
 
 Related but distinct: `legal-risk:corporate-governance` owns board and entity governance,

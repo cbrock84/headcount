@@ -42,7 +42,7 @@ not.
 Knowledge capture has to precede the access cutoff, which means starting on the day notice is given,
 not the day before departure.
 
-Prioritise what is genuinely undocumented and only in one head: the systems they alone maintain, the
+Prioritize what is genuinely undocumented and only in one head: the systems they alone maintain, the
 relationships they hold, the decisions whose reasoning exists nowhere. Ask directly — "what will
 break, and who will not know why?" — because they know and will usually say.
 

@@ -12,7 +12,7 @@ something goes wrong. Unglamorous until it is the only thing that matters.
 
 One authoritative place holding: formation and entity documents, ownership and cap table, board and
 shareholder resolutions, minutes, signed agreements above the review threshold, insurance policies,
-and material licences and registrations.
+and material licenses and registrations.
 
 The failure mode is not losing a document; it is not knowing which version is current. Every record
 carries its effective date, and superseded versions are marked superseded rather than deleted —

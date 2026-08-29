@@ -19,14 +19,14 @@ to demand you could have eliminated.
 In order of cost, cheapest first. Push volume up this list rather than getting faster at the bottom:
 
 1. **Eliminate** — fix the product defect or confusing flow generating the contact.
-2. **Deflect** — answer it in the interface at the moment of confusion, not in a help centre nobody
+2. **Deflect** — answer it in the interface at the moment of confusion, not in a help center nobody
    visits.
 3. **Self-serve** — findable documentation for people who go looking.
 4. **Automate** — genuine resolution of routine requests, not a bot that stalls people before a
    human.
 5. **Assist** — a person.
 
-Most support improvement programmes work on level 5 exclusively, because it is the visible one.
+Most support improvement programs work on level 5 exclusively, because it is the visible one.
 
 ## Channels
 
@@ -67,4 +67,4 @@ by a wide margin and then blames the team.
 ## Quality
 
 Review a sample of resolved contacts against a rubric agreed with the team, and coach against it.
-Reviewing only escalations trains for defence rather than quality.
+Reviewing only escalations trains for defense rather than quality.

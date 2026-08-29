@@ -1,6 +1,6 @@
 ---
 name: capacity-and-demand-planning
-description: Matches operational capacity to expected demand — forecasting load, sizing teams and systems, managing queues, and deciding when to add capacity. Use this to plan staffing for expected volume, diagnose a queue that keeps growing, size support or fulfilment capacity, or decide whether a bottleneck needs more capacity or better flow.
+description: Matches operational capacity to expected demand — forecasting load, sizing teams and systems, managing queues, and deciding when to add capacity. Use this to plan staffing for expected volume, diagnose a queue that keeps growing, size support or fulfillment capacity, or decide whether a bottleneck needs more capacity or better flow.
 ---
 
 # Capacity and demand planning

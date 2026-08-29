@@ -15,7 +15,7 @@ A dependency in your plan that the owning team has not agreed to, with a date th
 to, is a wish. Most plans contain several.
 
 For each: what exactly is needed, from whom by name, by when, and what happens if it is late. Then
-confirm it with the owning team in a way they would recognise as a commitment — an item on their
+confirm it with the owning team in a way they would recognize as a commitment — an item on their
 plan, not a mention in a meeting.
 
 Track dependencies both ways. Teams reliably track what they are owed and forget what they owe, which

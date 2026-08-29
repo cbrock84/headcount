@@ -1,6 +1,6 @@
 ---
 name: service-desk
-description: Runs the IT service desk — intake, triage, prioritisation, escalation, knowledge, and the metrics that improve service rather than distort it. Use this to set up or fix a service desk, design ticket priority and escalation, reduce repeat contacts, structure a knowledge base, or work out why a desk hitting its targets still frustrates everyone.
+description: Runs the IT service desk — intake, triage, prioritization, escalation, knowledge, and the metrics that improve service rather than distort it. Use this to set up or fix a service desk, design ticket priority and escalation, reduce repeat contacts, structure a knowledge base, or work out why a desk hitting its targets still frustrates everyone.
 ---
 
 # Service desk
@@ -26,12 +26,12 @@ Keep **incidents** (something broken) separate from **requests** (something want
 different clocks, different queues, and different success conditions, and merging them lets routine
 requests bury outages.
 
-Escalation should be time-based and automatic. Relying on someone to notice a ticket ageing means the
+Escalation should be time-based and automatic. Relying on someone to notice a ticket aging means the
 tickets that age are the ones nobody is watching.
 
 ## Measure service, not activity
 
-Tickets closed measures activity, and optimising it produces premature closure and reopened tickets.
+Tickets closed measures activity, and optimizing it produces premature closure and reopened tickets.
 Better:
 
 - **First-contact resolution** — resolved without a handoff.

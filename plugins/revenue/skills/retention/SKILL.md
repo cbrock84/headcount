@@ -34,7 +34,7 @@ the cause:
 
 ## Cancellation flow
 
-Make cancelling straightforward. Obstruction generates chargebacks, public complaints, and in a
+Make canceling straightforward. Obstruction generates chargebacks, public complaints, and in a
 growing number of jurisdictions, regulatory exposure.
 
 Do ask why, with specific options plus free text — this is the highest-quality product feedback you

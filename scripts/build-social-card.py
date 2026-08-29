@@ -10,7 +10,7 @@ without needing a browser.
   python3 scripts/build-social-card.py --check    fail if the HTML is stale (CI)
   python3 scripts/build-social-card.py --html     regenerate HTML only, skip rendering
 
-Rendering needs Chromium. The PNG is a build artefact committed for convenience: GitHub wants a
+Rendering needs Chromium. The PNG is a build artifact committed for convenience: GitHub wants a
 file upload, not a URL, so a copy in the repository is what you re-download when re-uploading it.
 """
 import glob

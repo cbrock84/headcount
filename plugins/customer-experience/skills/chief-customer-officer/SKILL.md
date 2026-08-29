@@ -17,7 +17,7 @@ customer actually experiences, and the loop that turns what they report into wha
 - Escalation: the path from a frustrated customer to someone who can act.
 - Customer success: adoption, expansion readiness, renewal risk.
 - Voice of customer: the loop from complaint to fix, and whether it closes.
-- Self-service: the help centre, documentation, and what people can resolve without contacting you.
+- Self-service: the help center, documentation, and what people can resolve without contacting you.
 
 ## What this role owns
 

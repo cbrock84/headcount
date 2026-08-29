@@ -23,7 +23,7 @@ security-deps         reviewer   planned
   analytics event schema, the version/compat policy. Sole agent permitted to change a
   contract, and it does so as a **coordinated pair** with a consumer PR.
 - **`core-qa`** — tests the compat matrix: does version N read version N-1's save files.
-- **`security-deps`** — sole reviewer for manifests, lockfiles, and third-party licences.
+- **`security-deps`** — sole reviewer for manifests, lockfiles, and third-party licenses.
 
 **The single most valuable rule here:** never remove a core export because it looks
 unused. You cannot see the consumers from inside the core. Deprecate, announce, remove.
