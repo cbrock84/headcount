@@ -702,3 +702,42 @@ not zero.
 that gets used. Any one of those makes the ask legible. **Revisit sooner** if the D7/D8 vertical
 variants become a commercial product — that is a different question (pricing, not donations) and
 deserves its own entry rather than a sponsor button.
+
+---
+
+## D25. Whether to register a domain for the About field — ✅ Resolved
+
+GitHub's About panel has a Website field. The available domains were `headcount.biz`,
+`headcount.info` and similar — the short, conventional ones are gone.
+
+- (a) Register a cheap available TLD (`.biz`, `.info`) and link it now.
+- **(b) Leave the Website field empty; revisit when there is something to point at.** ←
+  **chosen**
+- (c) Register `headcount.dev` if free and hold it unused against later need.
+- (d) Point the Website field at a GitHub Pages site built from this repository.
+
+**Resolution: (b), with (c) as a cheap optional hedge.**
+
+- **`.biz` and `.info` are negative signals to this audience.** They are the TLDs of parked
+  pages and expired-domain farms. Someone deciding whether to install 101 skills into their
+  agent is making a trust judgement, and that domain in the About field reads worse than a blank
+  field. A rare case where the cheap option is worse than nothing rather than merely weaker.
+- **A domain does not serve this product yet.** Installation is `/plugin marketplace add
+  cbrock84/headcount`, typed inside Claude Code. Discovery runs through repository topics, the
+  plugin ecosystem, and word of mouth — none of which route through a domain. Nobody searches
+  the web for "headcount" and finds an agent marketplace; they find HR software.
+- **A link has to point at something.** A redirect to the repository adds a hop for no gain, and
+  a parked domain is a worse signal than an empty field. (d) has the same problem until there is
+  documentation that does not fit in the README.
+
+**The part worth keeping.** That the short TLDs are gone is *evidence for the collision caveat
+already recorded in D22*, discovered by accident. `headcount` is a common noun in HR software,
+and the domain market is confirming how crowded that space is. The name remains right for a
+repository, where the namespace is `cbrock84/headcount` and collision costs nothing — but **do
+not build an identity that depends on owning the word.** Accepting a degraded TLD would be
+exactly that mistake in miniature.
+
+**Revisit when** the D7/D8 vertical variants become something distributed or sold. That is a real
+product with a reason for a hub, and it is the same moment the trademark question in D22 needs a
+proper answer rather than a caveat. Prefer `.dev` then — correct signal for developer tooling and
+HTTPS-only — or a modified name over a degraded TLD.
