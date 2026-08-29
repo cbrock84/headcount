@@ -30,13 +30,15 @@ ASSET_EXTS = (".ttf", ".otf", ".woff", ".woff2", ".eot")
 OWN_LICENSE = "LICENSE"  # ours, and the only one expected
 
 # Naming our own license in our own documentation is expected and is not evidence of vendored
-# material. Only the "MIT License" marker is waived, and only in these files — every other
-# pattern still applies to them, so a real vendored notice landing here is still caught.
+# material: the decision log records why MIT was chosen, and the other two tell contributors what
+# they are agreeing to. Only the "MIT License" marker is waived, and only in these files — every
+# other pattern still applies, so an actually pasted license is still caught by its body text
+# ("Permission is hereby granted", "Copyright (c)"), which no real license lacks.
 #
 # This exemption exists because the check was previously passing these files by accident: they
 # spelled the word the British way, which this American-spelled pattern never matched. Converting
 # the prose to US English exposed the gap rather than creating it.
-OWN_LICENSE_MENTION = {"CONTRIBUTING.md", "README.md"}
+OWN_LICENSE_MENTION = {"CONTRIBUTING.md", "README.md", "docs/DECISION-LOG.md"}
 OWN_LICENSE_PATTERN = r"\bMIT License\b"
 
 SKIP_DIRS = (".git/",)

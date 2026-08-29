@@ -828,9 +828,9 @@ updated to a number that would rot again.
 
 ## D28. US English as house style — ✅ Resolved
 
-The catalog had drifted into British spelling — *licence*, *programme*, *catalogue*, *behaviour*,
-*prioritise*, *centre* — across 178 occurrences in 49 files. The author is in Georgia and writes in
-US English, so the repository was not speaking in his voice.
+The catalog had drifted into British spelling across 178 occurrences in 49 files — the British
+forms of *license*, *program*, *catalog*, *behavior*, *prioritize* and *center*, among others. The
+author is in Georgia and writes in US English, so the repository was not speaking in his voice.
 
 - (a) **Fix the current occurrences.** A one-time rewrite.
 - **(b) Fix them and enforce it.** ← **chosen**
@@ -842,17 +842,19 @@ somewhere else is precisely the wrong impression. `scripts/check-us-english.py` 
 British spellings and rewrites them under `--fix`; it is the ninth check.
 
 **Exact word forms, never stems.** This is the trap the check is built around: *analysis*,
-*analyst*, *specialist* and *realistic* are all correct US English. A stem-based rewrite of
-`analys`, `specialis` or `realis` would have produced *analyzis*, *specializt* and *realiztic*
-across the catalog. The pairs list is exact forms only, and the check was verified against those
-four words specifically before being run.
+*analyst*, *specialist* and *realistic* are all correct US English already. A rewrite keyed on the
+stems those words share with their British-spelled cousins would have mangled all four across the
+catalog. The pairs list holds exact forms only, and those four words were confirmed unflagged before
+the rewrite was run.
 
 **`LICENSE` is never rewritten.** It carries the canonical MIT text, which is not ours to edit.
 
-**It exposed a latent bug rather than creating one.** Converting `CONTRIBUTING.md` from *Licence* to
-*License* immediately failed `check-provenance.py`, whose `\bMIT License\b` marker had never matched
-the British spelling. The provenance check had been passing that file **by accident** — anyone
-writing the American spelling would have failed the build, and the reason would have been baffling.
+**It exposed a latent bug rather than creating one.** Converting `CONTRIBUTING.md` to the US
+spelling of *license* immediately failed `check-provenance.py`, whose `\bMIT License\b` marker had
+never matched the British form. The provenance check had been passing that file **by accident** —
+anyone
+writing it the American way would have failed the build, for a reason that would have been
+baffling.
 
 Fixed with a deliberately narrow waiver: the `MIT License` marker alone is waived, in
 `CONTRIBUTING.md` and `README.md` alone, because naming our own license in our own documentation is
