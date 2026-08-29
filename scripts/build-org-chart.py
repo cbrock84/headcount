@@ -25,7 +25,10 @@ import sys
 OUT = "docs/org-chart.html"
 SHOT_LIGHT = "docs/assets/org-chart-light.png"
 SHOT_DARK = "docs/assets/org-chart-dark.png"
-SHOT_W, SHOT_H = 1280, 1010  # hero crop: masthead through the first full row of departments
+# Hero crop: masthead through two full rows of departments. Headless Chromium lays the page out
+# about 86px short of the requested window height and fills the remainder with page ground, so the
+# window has to be that much taller than the content you want — here row two ends at 1081.
+SHOT_W, SHOT_H = 1180, 1170
 REPO = "cbrock84/headcount"
 BLOB = f"https://github.com/{REPO}/blob/main"
 
@@ -36,6 +39,32 @@ _src = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "build-read
             encoding="utf-8").read()
 META = eval(re.search(r"^META = (\{.*?^\})", _src, re.S | re.M).group(1))
 REVIEWER = eval(re.search(r"^REVIEWER = (\{.*?\})", _src, re.M).group(1))
+
+# One glyph per department, drawn on a 24x24 grid in a single stroke weight so sixteen cards read
+# as one set rather than sixteen clip-arts. Sixteen identical rectangles distinguished only by
+# their text is what the chart looked like before, and nothing anchored the eye.
+GLYPHS = {
+    "executive": "M4 20h16M6 20V9l6-4 6 4v11M10 20v-5h4v5",
+    "technology": "M9 8l-4 4 4 4M15 8l4 4-4 4",
+    "it-operations": "M3.5 5h17v10.5h-17zM9.5 20h5M12 15.5V20",
+    "security": "M12 3.2l7 2.8v5.4c0 4.3-2.9 7.4-7 8.8-4.1-1.4-7-4.5-7-8.8V6z",
+    "product": "M12 3.2l7.6 4.3v8.9L12 20.8l-7.6-4.4V7.5zM4.4 7.5l7.6 4.4 7.6-4.4M12 11.9v8.9",
+    "marketing": "M4 10v4h3l7 4V6l-7 4H4zM17.5 9.2a4 4 0 0 1 0 5.6",
+    "demand-generation": "M4 4.5h16l-6.2 7.2V19l-3.6 1.8v-9.1z",
+    "revenue": "M4 17.5l5.2-5.2 3.4 3.4L20 8.2M14.8 8.2H20v5.2",
+    "finance": ("M12 12m-8 0a8 8 0 1 0 16 0a8 8 0 1 0-16 0M12 7v10"
+                "M14.6 9.4c0-1-1.2-1.7-2.6-1.7s-2.6.7-2.6 1.7 1.2 1.7 2.6 1.7 2.6.8 2.6 1.8"
+                "-1.2 1.7-2.6 1.7-2.6-.7-2.6-1.7"),
+    "operations": "M4.2 12a7.8 7.8 0 0 1 13.3-5.5M19.8 12a7.8 7.8 0 0 1-13.3 5.5M18 3.4v3.6h-3.6M6 20.6V17h3.6",
+    "pmo": "M4 7h9M7.5 12h11M4 17h7",
+    "customer-experience": "M4 5h16v10.5H9.5L4 20z",
+    "data-analytics": "M4 20h16M7 20v-6M12 20V7M17 20v-9",
+    "corporate-strategy": ("M12 12m-8 0a8 8 0 1 0 16 0a8 8 0 1 0-16 0"
+                           "M12 12m-3.4 0a3.4 3.4 0 1 0 6.8 0a3.4 3.4 0 1 0-6.8 0M12 12h.01"),
+    "people": ("M9 8.4m-3 0a3 3 0 1 0 6 0a3 3 0 1 0-6 0M3.4 20a5.6 5.6 0 0 1 11.2 0"
+               "M17 9.4m-2.3 0a2.3 2.3 0 1 0 4.6 0a2.3 2.3 0 1 0-4.6 0M15.6 20a4.6 4.6 0 0 1 5-4.4"),
+    "legal-risk": "M12 4.5v14.5M8 19h8M4 7.5h16M4 7.5l-2.4 5h4.8zM20 7.5l-2.4 5h4.8z",
+}
 
 
 def first_sentence(desc, limit=150):
@@ -66,8 +95,11 @@ def collect():
                 "url": f"{BLOB}/{path}",
             })
         _, title, exec_role = META[slug]
+        if slug not in GLYPHS:
+            sys.exit(f"build-org-chart: no glyph for department '{slug}' — add one to GLYPHS. "
+                     "A card with no mark is worse than no card, so this is not defaulted.")
         depts.append({
-            "slug": slug, "title": title, "exec": exec_role,
+            "slug": slug, "title": title, "exec": exec_role, "glyph": GLYPHS[slug],
             "reviewer": slug in REVIEWER, "skills": skills,
         })
     return depts
@@ -82,31 +114,34 @@ TEMPLATE = r"""<meta charset="utf-8">
   /* Palette inherited from the repository's existing identity — the badge row and the social
      preview card — rather than invented here. Light ground is a cool neutral: the accent is
      already terracotta, and a warm cream under it is the stock look. */
+  /* Dark is the default: it is what the chart was designed in, and it is what a reader with no
+     stated preference gets. An explicit light preference is still honored — the light README
+     screenshot is rendered through exactly that path. */
   :root {
-    --ground:#F6F7F9; --surface:#FFFFFF; --surface-2:#EEF1F4;
-    --line:#D8DEE6; --line-strong:#B9C3CE;
-    --ink:#141A21; --ink-2:#4A5866; --ink-3:#78889A;
-    --accent:#C2663F; --accent-ink:#FFFFFF; --accent-soft:rgba(194,102,63,.10);
-    --shadow:0 1px 2px rgba(20,26,33,.06), 0 8px 24px -12px rgba(20,26,33,.18);
-    --focus:#C2663F;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      --ground:#0B0E14; --surface:#141A22; --surface-2:#1B222C;
-      --line:#252E3A; --line-strong:#3A4553;
-      --ink:#E6EDF3; --ink-2:#9FB0C3; --ink-3:#71818F;
-      --accent:#D97757; --accent-ink:#1A1006; --accent-soft:rgba(217,119,87,.13);
-      --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 30px -14px rgba(0,0,0,.7);
-      --focus:#D97757;
-    }
-  }
-  :root[data-theme="dark"] {
     --ground:#0B0E14; --surface:#141A22; --surface-2:#1B222C;
     --line:#252E3A; --line-strong:#3A4553;
     --ink:#E6EDF3; --ink-2:#9FB0C3; --ink-3:#71818F;
     --accent:#D97757; --accent-ink:#1A1006; --accent-soft:rgba(217,119,87,.13);
     --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 30px -14px rgba(0,0,0,.7);
     --focus:#D97757;
+  }
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) {
+      --ground:#F6F7F9; --surface:#FFFFFF; --surface-2:#EEF1F4;
+      --line:#D8DEE6; --line-strong:#B9C3CE;
+      --ink:#141A21; --ink-2:#4A5866; --ink-3:#78889A;
+      --accent:#C2663F; --accent-ink:#FFFFFF; --accent-soft:rgba(194,102,63,.10);
+      --shadow:0 1px 2px rgba(20,26,33,.06), 0 8px 24px -12px rgba(20,26,33,.18);
+      --focus:#C2663F;
+    }
+  }
+  :root[data-theme="light"] {
+    --ground:#F6F7F9; --surface:#FFFFFF; --surface-2:#EEF1F4;
+    --line:#D8DEE6; --line-strong:#B9C3CE;
+    --ink:#141A21; --ink-2:#4A5866; --ink-3:#78889A;
+    --accent:#C2663F; --accent-ink:#FFFFFF; --accent-soft:rgba(194,102,63,.10);
+    --shadow:0 1px 2px rgba(20,26,33,.06), 0 8px 24px -12px rgba(20,26,33,.18);
+    --focus:#C2663F;
   }
 
   * { box-sizing:border-box; }
@@ -194,17 +229,36 @@ TEMPLATE = r"""<meta charset="utf-8">
     max-width:66ch; margin:0 auto;
   }
   .rail-cards {
-    display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  }
+  .rail-cards .head { flex-direction:row; align-items:center; gap:13px; padding:13px 16px; }
+  .rail-cards .tile { margin-bottom:0; }
+  .rail-cards .role { margin-top:0; }
+  .rail-cards .foot { margin:0 0 0 auto; padding:0; border:0; }
+
+  /* ---- connector bus ---- */
+  /* Drawn only at the width where the grid is locked to four columns. Below that the columns
+     reflow and the drops would point between cards, so the bus is hidden rather than
+     approximated — a connector that lands on nothing is worse than no connector. */
+  .bus { display:none; }
+  @media (min-width:1100px) {
+    .grid { grid-template-columns:repeat(4,1fr) !important; }
+    .bus { display:block; position:relative; width:100%; height:30px; margin-top:2px; }
+    .bus i { position:absolute; background:var(--line-strong); }
+    .bus .h { left:12.5%; right:12.5%; top:14px; height:2px; }
+    .bus .v { top:0; left:calc(50% - 1px); width:2px; height:14px; }
+    .bus .d { top:16px; width:2px; height:14px; }
   }
 
   /* ---- department grid ---- */
   .grid {
     margin-top:26px; display:grid; gap:14px;
-    grid-template-columns:repeat(auto-fill,minmax(290px,1fr));
+    grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
   }
   .dept {
     background:var(--surface); border:1px solid var(--line); border-radius:12px;
     overflow:hidden; transition:border-color .12s ease;
+    display:flex; flex-direction:column;
   }
   .dept:hover { border-color:var(--line-strong); }
   .dept.rev { border-color:var(--accent); }
@@ -213,25 +267,36 @@ TEMPLATE = r"""<meta charset="utf-8">
 
   .head {
     width:100%; text-align:left; background:none; border:0; cursor:pointer;
-    padding:15px 16px; display:flex; gap:12px; align-items:baseline; color:inherit;
-    font-family:inherit;
+    padding:15px 16px 13px; display:flex; flex-direction:column; color:inherit;
+    font-family:inherit; flex:1;
+  }
+  .tile {
+    width:38px; height:38px; border-radius:10px; background:var(--surface-2);
+    border:1px solid var(--line); display:flex; align-items:center; justify-content:center;
+    color:var(--ink-3); margin-bottom:13px; flex:none;
+  }
+  .dept.rev .tile {
+    color:var(--accent); border-color:var(--accent); background:var(--accent-soft);
   }
   .head h2 {
-    margin:0; font-family:Archivo,sans-serif; font-weight:600; font-size:16px;
-    letter-spacing:-.012em; flex:1;
+    margin:0; font-family:Archivo,sans-serif; font-weight:600; font-size:13px;
+    letter-spacing:.055em; text-transform:uppercase; line-height:1.3;
   }
   .role {
-    font-family:"IBM Plex Mono",monospace; font-size:11px; color:var(--ink-3);
-    white-space:nowrap;
+    font-family:"IBM Plex Mono",monospace; font-size:11.5px; color:var(--ink-3);
+    margin-top:4px; white-space:nowrap;
   }
-  .n {
-    font-family:"IBM Plex Mono",monospace; font-size:12px; color:var(--ink-2);
-    font-variant-numeric:tabular-nums;
+  /* The longer department names wrap to two lines, so the meta strip is pushed down with an auto
+     margin — that keeps every footer in a grid row sitting on one baseline. */
+  .foot {
+    margin-top:auto; padding-top:11px; border-top:1px solid var(--line);
+    display:flex; align-items:center; gap:7px; overflow:hidden; white-space:nowrap;
+    font-family:"IBM Plex Mono",monospace; font-size:11.5px; color:var(--ink-2);
   }
-  .slug {
-    display:block; font-family:"IBM Plex Mono",monospace; font-size:11px;
-    color:var(--ink-3); margin-top:3px; font-weight:400;
-  }
+  .n { color:var(--ink); font-weight:500; font-variant-numeric:tabular-nums; }
+  .dept.rev .n { color:var(--accent); }
+  .sep { color:var(--line-strong); }
+  .slug { color:var(--ink-3); overflow:hidden; text-overflow:ellipsis; }
   .revtag {
     font-family:"IBM Plex Mono",monospace; font-size:10px; letter-spacing:.1em;
     text-transform:uppercase; color:var(--accent);
@@ -311,6 +376,11 @@ TEMPLATE = r"""<meta charset="utf-8">
       </p>
       <div class="rail-cards" id="rail-cards"></div>
     </div>
+    <div class="bus" id="bus">
+      <i class="v"></i><i class="h"></i>
+      <i class="d" style="left:12.5%"></i><i class="d" style="left:37.5%"></i>
+      <i class="d" style="left:62.5%"></i><i class="d" style="left:87.5%"></i>
+    </div>
   </div>
 
   <div class="grid" id="grid"></div>
@@ -349,12 +419,17 @@ function card(d) {
   el.dataset.slug = d.slug;
   el.innerHTML = `
     <button class="head" aria-expanded="false">
-      <span style="flex:1">
-        <h2>${esc(d.title)}${d.reviewer ? ' <span class="revtag">reviewer</span>' : ''}</h2>
-        <span class="slug">${esc(d.slug)}</span>
-      </span>
+      <span class="tile"><svg viewBox="0 0 24 24" width="20" height="20" fill="none"
+        stroke="currentColor" stroke-width="1.55" stroke-linecap="round"
+        stroke-linejoin="round" aria-hidden="true"><path d="${d.glyph}"/></svg></span>
+      <h2>${esc(d.title)}</h2>
       <span class="role">${esc(d.exec)}</span>
-      <span class="n">${d.skills.length}</span>
+      <span class="foot">
+        <span class="n">${d.skills.length}</span> skills
+        <span class="sep">·</span>
+        <span class="slug">${esc(d.slug)}</span>
+        ${d.reviewer ? '<span class="revtag">reviewer</span>' : ''}
+      </span>
     </button>
     <div class="body">
       <div class="install">
@@ -432,6 +507,9 @@ function apply() {
     .some(el => !el.classList.contains('hidden'));
   document.getElementById('rail').style.display = railVisible ? '' : 'none';
   document.querySelector('.stem').style.display = railVisible ? '' : 'none';
+  // The bus hangs off the rail; with the rail gone it would connect the chief executive to
+  // nothing, so it goes too.
+  document.getElementById('bus').style.display = railVisible ? '' : 'none';
 
   countEl.textContent = term || revOnly
     ? `${shown} skill${shown === 1 ? '' : 's'} in ${visibleDepts} department${visibleDepts === 1 ? '' : 's'}`
