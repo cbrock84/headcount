@@ -477,3 +477,50 @@ The list, in order of value:
 
 **Recommendation: (b).** 1–3 matter; 4 is preference; 5 is worth doing only if you want the profile
 to lead with this.
+
+## D21. MIT or Apache-2.0 for the long term — ✅ Resolved
+
+Raised while preparing to publish. Apache-2.0 is the usual alternative to MIT for a project intended
+for wide reuse.
+
+**What Apache-2.0 adds over MIT:** an explicit patent grant with a retaliation clause, an explicit
+trademark carve-out, a requirement that modified files carry a notice of change, and automatic terms
+for inbound contributions.
+
+- **(a) MIT.** ← **chosen**
+- (b) Apache-2.0.
+- (c) A content licence such as CC-BY-4.0.
+- (d) Dual — CC-BY for the prose, MIT for the scripts.
+
+**Resolution: (a).** The reasoning, recorded so it is not re-litigated:
+
+- **The patent grant is Apache's headline feature and is near-irrelevant here.** This repository is
+  markdown. Instructions for running a threat model or a CRO audit are not patentable subject matter
+  in any practical sense, so the protection Apache exists to provide has almost nothing to attach to.
+- **Apache §4(b) is active friction for the intended use.** It requires modified files to carry
+  prominent change notices. The whole design is people installing a department and adapting it; MIT
+  lets them, Apache asks them to annotate every file they touch.
+- **MIT is the ecosystem norm.** Every collection this repository originally drew from was MIT, and
+  the Claude skills and plugins ecosystem is MIT by convention. Lower friction, fewer legal reviews.
+- **Short licences get complied with.** Two hundred lines of licence on a prose repository invites
+  the question of whether anyone read it.
+- **(c) and (d) rejected:** Creative Commons explicitly advises against using CC for software, this
+  repository contains executable scripts alongside the prose, and a split licence confuses tooling
+  and adopters for no practical gain.
+
+**The one real gap MIT leaves** — what licence inbound contributions carry — is closed by
+`CONTRIBUTING.md` stating that contributions are accepted under MIT, rather than by changing the
+licence.
+
+**Timing note, which is the part that matters later.** Relicensing is clean only while there is a
+single copyright holder. Once outside contributions land under MIT, you cannot retroactively un-MIT
+what has been published; you would be layering Apache over MIT-licensed parts, which is lawful but
+messy. So this decision is cheap to reverse **today** and expensive to reverse after the first
+external pull request.
+
+**Revisit if** the repository grows substantial executable code — the vertical generator in D8 is the
+plausible candidate — or if a corporate adopter's legal team specifically asks for the patent grant.
+Neither is true now.
+
+**Not legal advice.** For the productized vertical variants contemplated in D8, where money and
+third-party distribution are involved, this is worth qualified counsel rather than a decision log.

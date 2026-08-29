@@ -99,6 +99,7 @@ plugins/security/**
 
 ```surface:repo-meta
 LICENSE
+CONTRIBUTING.md
 docs/**
 scripts/**
 .github/**
