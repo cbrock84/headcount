@@ -63,10 +63,22 @@ def skills(dept):
 
 
 total = sum(len(skills(d)) for d, _, _ in ORDER)
+# Badge counts come from the same tree walk as the tables below, so they cannot drift from
+# reality — a wrong count fails `build-readme.py --check` in CI like any other staleness.
+B = "https://img.shields.io/badge"
 out = [
-    "# headcount",
+    '<h1 align="center">headcount</h1>',
     "",
-    "**Add a department, not a prompt.**",
+    '<p align="center"><b>Add a department, not a prompt.</b></p>',
+    "",
+    '<p align="center">',
+    f'  <a href="https://claude.com/claude-code"><img alt="Built for Claude Code"'
+    f' src="{B}/built%20for-Claude%20Code-D97757?style=flat-square"></a>',
+    f'  <img alt="{len(ORDER)} departments" src="{B}/departments-{len(ORDER)}-3F4B5B?style=flat-square">',
+    f'  <img alt="{total} skills" src="{B}/skills-{total}-3F4B5B?style=flat-square">',
+    f'  <a href="LICENSE"><img alt="MIT licensed" src="{B}/license-MIT-3F4B5B?style=flat-square"></a>',
+    f'  <a href="CONTRIBUTING.md"><img alt="PRs welcome" src="{B}/PRs-welcome-2EA043?style=flat-square"></a>',
+    "</p>",
     "",
     "An agent organization for [Claude Code](https://claude.com/claude-code), structured as a company:",
     f"a chief executive over {len(ORDER)} departments, {total} skills in total.",

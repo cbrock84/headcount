@@ -2,8 +2,14 @@ name: checks
 
 on:
   push:
-    branches: ["**"]
+    branches: [main]
   pull_request:
+
+# The workflow only reads the tree and runs checks; it never writes back. Setting this
+# explicitly means a permissive account-level default cannot silently hand a write-scoped
+# token to a workflow triggered from a fork.
+permissions:
+  contents: read
 
 jobs:
   verify:

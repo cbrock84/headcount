@@ -392,7 +392,7 @@ of decisions.
 | 8 | Catalogue the other organizations' public repos — no import | D11 | — | |
 | 9 | Start a separate session for the private sweep | D11 | — | |
 | 10 | Build the vertical generator: core, per-vertical config, one-way emit | D8 | — | |
-| 11 | Revisit repo visibility | D16 | after 1 | |
+| 11 | Revisit repo visibility | D16 | after 1 | ✅ done |
 
 Items 1–4 can proceed in parallel; all four land before item 5. Item 9 needs a session started
 outside this one — see `docs/cross-org-sweep-prompt.md`.
@@ -426,7 +426,7 @@ this repo's likely users have not reached.
 **Resolution: all three, treated as equally important.** `customer-experience`, `data-analytics`,
 and `corporate-strategy` built together, five skills each. Fourteen departments, 101 skills.
 
-## D18. Repository visibility, now that all content is original — 🔵 Open
+## D18. Repository visibility, now that all content is original — ✅ Resolved
 
 D16 deferred this until the rewrite landed. It has. Nothing in the repository now carries a
 third-party obligation, and `scripts/check-provenance.py` fails the build if that changes.
@@ -440,7 +440,18 @@ third-party obligation, and `scripts/check-provenance.py` fails the build if tha
 **Recommendation: (a).** The blocker was provenance and it is resolved. Publishing does not commit
 you on D8 — a generator can emit per-vertical repos later regardless of whether this one is public.
 
-## D19. README drift — 🔵 Open
+**Resolution: (a).** `cbrock84/headcount` is public under MIT as of 29 August 2026, confirmed via the
+API (`visibility: public`). This also closes work-queue item 11, which existed only to revisit this.
+
+**What publishing actually changed.** The install path in the README now resolves for anyone — under
+D16 it required every installing machine to be authenticated to the account, which made the
+documented instructions untrue for everybody except the owner. That gap is closed.
+
+**Still unverified.** Nothing in this session can run `/plugin marketplace add` against a clean
+client, so the manifest is verified only up to "it parses and every referenced path exists". The
+first genuine test is an install from a machine that has never seen this repository.
+
+## D19. README drift — ✅ Resolved
 
 `scripts/build-readme.py` regenerates the README from the tree, and `check-all.sh` fails if it is
 stale. This works but means the README cannot be hand-edited.
@@ -453,7 +464,20 @@ stale. This works but means the README cannot be hand-edited.
 awkward.** The failure this prevents is real: the README claimed eleven departments and listed a
 deleted one for two commits before it was caught by hand.
 
-## D20. Publishing steps that need your hands — 🔵 Open
+**Resolution: (a), and the scope of generation has since widened twice.** The org chart's department
+table was moved inside generated markers after it drifted the same way, and the badge counts in the
+README header are now emitted from the same tree walk that builds the tables — so a wrong count is a
+CI failure rather than something a reader has to notice.
+
+The generator was also hardened after review: it discovers departments from the plugin tree instead
+of a hand-maintained list, and refuses to run when a department on disk has no display metadata. The
+earlier design would have omitted a new department from both documents while `--check` still passed,
+because it compared the files against output from the same incomplete list.
+
+**(b) remains the fallback** if the prose ever wants per-section nuance that the generator makes
+awkward. Nothing about that has changed.
+
+## D20. Publishing steps that need your hands — ✅ Resolved
 
 Repository settings are not reachable from this session — no tool exposes topics, description, or
 merge defaults, and the git proxy blocks branch deletion. These are yours to click.
@@ -477,6 +501,16 @@ The list, in order of value:
 
 **Recommendation: (b).** 1–3 matter; 4 is preference; 5 is worth doing only if you want the profile
 to lead with this.
+
+**Resolution: (b), executed 29 August 2026.** Repository renamed to `headcount` (D22), made public,
+description set, automatic head-branch deletion enabled, and the four stale merged branches deleted.
+`origin/main` is now the only remote branch.
+
+**One item outstanding, carried to D23:** topics are still empty. Verified via the API — the
+repository returns no topics array. This is the item the entry above called "the step most often
+skipped", and it was skipped, for a findable reason: **topics are not in Settings.** They live behind
+the gear icon on the About panel of the repository home page, which is where nobody looks for a
+setting. Noted here because the same confusion will recur on every vertical repo D8 emits.
 
 ## D21. MIT or Apache-2.0 for the long term — ✅ Resolved
 
@@ -576,3 +610,78 @@ young — the same timing logic as D21.
 **Timing.** Renaming cost one commit here. After publication the install string gets copied into
 config files, posts and screenshots that never update — GitHub redirects renamed repositories, but
 it cannot rewrite what people have already pasted elsewhere. This was the last moment it was free.
+
+---
+
+## D23. Buttoning up the repository now that it is public — ✅ Resolved
+
+Going public changes the threat model and the audience. Anyone can now fork, open a pull request
+that runs CI, and judge the project in about four seconds of looking at the landing page.
+
+- **(a) Presentation and hardening together, now.** ← **chosen**
+- (b) Presentation now, hardening when there is actual traffic.
+- (c) Neither; the repository is fine as it is.
+
+**Resolution: (a).** Both are cheap, and the hardening items are the kind that are embarrassing to
+add after an incident rather than before one.
+
+**Presentation — done in this change.**
+
+The README now opens with a centred title, the tagline, and a badge row: built-for Claude Code,
+department count, skill count, licence, and PRs-welcome. **The counts are generated from the same
+tree walk that builds the tables**, so they are covered by the existing staleness check — a badge
+claiming the wrong number fails CI. A hand-typed badge would have become a lie on the next
+department, which is precisely the D19 failure in a more visible place.
+
+**`.gitattributes` added.** GitHub labelled the repository *JavaScript* on the strength of a single
+`.mjs` guard script, against 101 markdown skills that are the actual product. Linguist counts bytes
+of code and does not know what a repository is for. The attributes file marks tooling as vendored
+and generated documents as generated, so the language bar reflects the deliverable.
+
+**Hardening — done in this change.**
+
+- **Explicit `permissions: contents: read` on the workflow.** It only reads the tree and runs
+  checks. Public repositories accept pull requests from forks, and being explicit means a permissive
+  account-level default cannot hand a write-scoped token to a workflow triggered by a stranger.
+- **Push trigger narrowed from `["**"]` to `[main]`.** Every push was running the workflow twice —
+  once for the push, once for the pull request, on the same commit. This halves the Actions burn,
+  which is not academic: the account exhausted its minutes on 28 August and CI has been dark since.
+
+**Deliberately not done.**
+
+- **Dependabot.** There are no dependency manifests — no `package.json`, no `requirements.txt`.
+  It would have nothing to scan, and enabling it would only add a quiet integration that never fires.
+- **Branch protection requiring approvals.** With a single maintainer, required approvals block the
+  only person who can approve. A ruleset requiring a pull request into `main`, with the owner as a
+  bypass actor, is the right shape if drive-by pushes ever become a concern; it is not one yet.
+
+**Left to the owner** (settings are not reachable from an agent session — see D20): topics, secret
+scanning with push protection, and turning off the unused Wiki and Projects tabs.
+
+---
+
+## D24. Whether to add sponsorship — ✅ Resolved
+
+GitHub Sponsors would put a **Sponsor** button on the repository, driven by `.github/FUNDING.yml`.
+
+- (a) Enrol and add `FUNDING.yml` now, with the repository.
+- **(b) Not yet — revisit at a real usage signal.** ← **chosen**
+- (c) Never; keep it a pure gift.
+
+**Resolution: (b).** Not on principle — the timing is simply wrong, and the cost of asking early is
+not zero.
+
+- **There is nothing to sponsor yet.** One star, no external installs, no issues, published today.
+  A funding ask is a claim that ongoing maintenance has value to someone; that claim is currently
+  unevidenced, and a reader can tell.
+- **It changes how the first impression reads.** A brand-new repository leading with a payment link
+  invites the question of whether the catalogue was assembled to be monetised. That is a costly
+  question to raise while the provenance story — 101 skills written from scratch after removing
+  every vendored collection — is the thing worth the reader's attention.
+- **It is thirty seconds whenever you want it.** Enrol at `github.com/sponsors`, then a two-line
+  `.github/FUNDING.yml` with `github: [cbrock84]`. Nothing about deferring makes it harder later.
+
+**The signal to revisit:** external installs, inbound issues from people who are not you, or a fork
+that gets used. Any one of those makes the ask legible. **Revisit sooner** if the D7/D8 vertical
+variants become a commercial product — that is a different question (pricing, not donations) and
+deserves its own entry rather than a sponsor button.
