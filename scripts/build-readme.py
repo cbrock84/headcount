@@ -147,6 +147,7 @@ out += [
     "docs/AGENT-SURFACES.md         every path has exactly one owner, enforced in CI",
     "docs/DECISION-LOG.md           numbered decisions with options and recommendations",
     "docs/USE-CASES.md              situations worked end to end across departments",
+    "docs/org-chart.html           interactive org chart, searchable across every skill",
     "```",
     "",
     "Agents split by **exclusive write surface**, not by topic — a topic split has no checkable",
