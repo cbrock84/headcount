@@ -404,7 +404,7 @@ outside this one — see `docs/cross-org-sweep-prompt.md`.
 Raised after the first sixteen were resolved. Same convention: numbers are addresses, assigned when
 asked.
 
-## D17. Which department is the next real gap — 🔵 Open
+## D17. Which department is the next real gap — ✅ Resolved
 
 With `security` built, the catalogue covers eleven departments. Three functions a Fortune 500 has
 that this does not:
@@ -422,6 +422,9 @@ that this does not:
 catalogue — it is the department every company has and this one does not. Data & Analytics is the
 one most likely to be expected of a modern org chart. Corp Dev is real but only bites at a scale
 this repo's likely users have not reached.
+
+**Resolution: all three, treated as equally important.** `customer-experience`, `data-analytics`,
+and `corporate-strategy` built together, five skills each. Fourteen departments, 101 skills.
 
 ## D18. Repository visibility, now that all content is original — 🔵 Open
 
@@ -449,3 +452,28 @@ stale. This works but means the README cannot be hand-edited.
 **Recommendation: (a) for now, (b) if the prose starts wanting per-section nuance the generator makes
 awkward.** The failure this prevents is real: the README claimed eleven departments and listed a
 deleted one for two commits before it was caught by hand.
+
+## D20. Publishing steps that need your hands — 🔵 Open
+
+Repository settings are not reachable from this session — no tool exposes topics, description, or
+merge defaults, and the git proxy blocks branch deletion. These are yours to click.
+
+- (a) Do them all now, before going public.
+- **(b) Do the four that affect discoverability and hygiene now; treat the profile README as
+  optional.** ← **recommended**
+- (c) Publish first, tidy later.
+
+The list, in order of value:
+
+1. **Topics** — `claude-code`, `claude-skills`, `ai-agents`, `agent-marketplace`, `claude-plugins`.
+   This is how anyone finds it, and it is the step most often skipped.
+2. **About** — one line plus the repo URL. Suggested: *"An agent organization for Claude Code: a
+   C-suite of 14 departments and 101 skills, installable per department."*
+3. **Settings → General → Automatically delete head branches.** Three merged branches have needed
+   manual deletion so far.
+4. **Default merge to squash**, if you want one commit per change on `main`. #3 came in as a merge
+   commit.
+5. *Optional:* pin the repo on your profile, and a `cbrock84/cbrock84` profile README featuring it.
+
+**Recommendation: (b).** 1–3 matter; 4 is preference; 5 is worth doing only if you want the profile
+to lead with this.
