@@ -17,7 +17,7 @@ Reads: anything. Commits: nothing; the orchestrator is the sole committer.
 
 ## Standard
 
-Load `pmo:portfolio-governance` for this department's remit, the artifacts it owns, and when it escalates.
+Load `pmo:head-of-pmo` for this department's remit, the artifacts it owns, and when it escalates.
 Skills in this department follow the conventions in `technology:skill-authoring`: the frontmatter
 `name` equals the directory name, and the description carries both what the skill does and when to
 reach for it.
