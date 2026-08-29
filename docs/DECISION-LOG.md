@@ -252,26 +252,25 @@ one most reused by the manufacturing and food verticals.
 
 ## D11. Cross-org sweep of public repos — ✅ Resolved
 
-`Keel-GRC` and `Drummond-IT` cannot be *attached* to this session (one-owner limit), but their
-**public** repositories are readable here by anonymous clone. Verified against
-`Keel-GRC/Claude-Skills-Governance-Risk-and-Compliance`.
+Two other GitHub organizations I have access to cannot be *attached* to this session (one-owner
+limit), but their **public** repositories are readable here by anonymous clone. Verified against
+one of them.
 
-Public and likely to hold material: `Claude-Skills-Governance-Risk-and-Compliance`,
-`automotive-skills-suite`, `claude-grc-engineering`, `claude-grc-plugin`, `llm-iso27001`,
-`evidence-fetchers`, and `Drummond-IT/enfocus-switch-script-skill`.
+What looked likely to hold material: a set of governance, risk and compliance skill repositories,
+and one workflow-automation script skill.
 
 - (a) Sweep them now and propose a `compliance` department.
 - **(b) Sweep and catalog only** — report what is there, import nothing until D6 is settled. ←
   **recommended**
 - (c) Defer entirely.
-- (d) Also run the private/internal sweep via `docs/cross-org-sweep-prompt.md`.
+- (d) Also run the private and internal sweep from a session rooted in the other organization.
 
 **Recommendation: (b).** The catalog is cheap and informs D8 and D10. Importing anything before D6
 is resolved would repeat the exact mistake D3 and D4 were about — and these are forks of
 third-party work, so the same licensing question applies to all of them.
 
 **Resolution: (d).** Catalog the public repos from this session, and additionally start a separate
-session against `Keel-GRC` to sweep private and internal repos per `docs/cross-org-sweep-prompt.md`.
+session rooted in the other organization to sweep its private and internal repositories.
 
 **Constraint carried forward:** catalog only. Nothing from either sweep is imported until its
 licensing is established, since these are forks of third-party work and D3 and D6 both turned on
@@ -389,13 +388,12 @@ of decisions.
 | 5 | Mark PR #2 ready; squash-merge; delete the branch | D5, D15 | 6+ | ✅ done |
 | 6 | Build `security` department + CISO charter, marked reviewer-class | D9, D10, D13 | — | ✅ done |
 | 7 | Deepen `operations`, then `finance`, then `people` | D10 | — | ✅ done |
-| 8 | Catalog public Keel-GRC and Drummond repos — no import | D11 | — | |
-| 9 | ~~Separate session against Keel-GRC for the private sweep~~ | D11 | — | ✂️ dropped, D30 |
+| 8 | Catalog the other organizations' public repos — no import | D11 | — | ✂️ dropped, D30 |
+| 9 | ~~Separate session for the private sweep~~ | D11 | — | ✂️ dropped, D30 |
 | 10 | Build the vertical generator: core, per-vertical config, one-way emit | D8 | — | |
 | 11 | Revisit repo visibility | D16 | after 1 | ✅ done |
 
-Items 1–4 can proceed in parallel; all four land before item 5. Item 9 needs a session started
-outside this one — see `docs/cross-org-sweep-prompt.md`.
+Items 1–4 can proceed in parallel; all four land before item 5. Items 8 and 9 were dropped in D30.
 
 ---
 
@@ -912,8 +910,8 @@ not publish a site.
 Two questions, settled together: whether the cross-organization repository sweep was worth running,
 and whether the catalog covers what a medium-to-large business actually contains.
 
-**The sweep is dropped.** A manual pass over the Keel and Drummond repositories found little beyond
-overlap with GRC roles already covered by `legal-risk` and `security`. Work-queue items 8 and 9 are
+**The sweep is dropped.** A manual pass over those repositories found little beyond overlap with
+GRC roles already covered by `legal-risk` and `security`. Work-queue items 8 and 9 are
 closed rather than deferred — a deferred item nobody intends to do is worse than a closed one,
 because it keeps appearing in every review.
 
@@ -954,3 +952,31 @@ toward manufacturing, logistics and retail, so they go to the verticals too.
 **Remaining Tier 1**, recorded in the org chart's gaps section: customer experience depth, legal
 depth, corporate strategy depth, and product discovery and prioritization. None is a missing
 function; all are thin coverage of a function already present.
+
+---
+
+## D31. Identifying repository names removed from this log — ✅ Resolved
+
+A QC sweep for third-party traces found none of what it went looking for — no upstream author
+names, no vendored license text, no borrowed prose anywhere in the tree. It found something else.
+
+`docs/cross-org-sweep-prompt.md` and D11 named two other GitHub organizations I have access to,
+along with four specific repositories, two of which the file itself described as private or
+internal. That is not a licensing problem — nothing was copied from any of them, and D11's own
+constraint was catalog-only. It is a disclosure problem: this repository is public, and those
+names identify other people's internal projects for no reader benefit.
+
+**Resolution: remove the names, keep the decisions.** The sweep prompt is deleted — D30 dropped
+the work it described, so the file documented a plan nobody intends to execute. D11, D30 and the
+work queue keep their substance and lose the identifying names; nothing about why the sweep was
+proposed or dropped depended on which organizations they were.
+
+**The honest limit.** This removes the names from the current tree, not from git history. The file
+was committed before the repository went public and is still readable in earlier commits. Erasing
+it properly means rewriting history and force-pushing, which invalidates every existing clone and
+breaks the commit links in merged pull requests. That trade is the owner's call, not a cleanup I
+should make unilaterally — recorded here so the decision is visible either way.
+
+**Rule going forward.** A public repository's documentation names its own repositories and nobody
+else's. Where another organization is load-bearing to a decision, describe it by relationship
+rather than by name.
