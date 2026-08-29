@@ -41,6 +41,22 @@
       "category": "technology"
     },
     {
+      "name": "it-operations",
+      "source": "./plugins/it-operations",
+      "description": "Corporate IT: service desk, systems and network administration, endpoints, assets, identity lifecycle, and backup and recovery.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Chris Brock"
+      },
+      "keywords": [
+        "it-operations",
+        "service-desk",
+        "sysadmin",
+        "network"
+      ],
+      "category": "technology"
+    },
+    {
       "name": "product",
       "source": "./plugins/product",
       "description": "Product strategy, UX and usability audit, design systems, interface craft, brand expression, and visual direction.",
@@ -138,6 +154,22 @@
         "process",
         "program-management",
         "vendors"
+      ],
+      "category": "operations"
+    },
+    {
+      "name": "pmo",
+      "source": "./plugins/pmo",
+      "description": "Enterprise programme management office: portfolio governance, programme and project delivery, delivery risk, benefits realization, and adoption.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Chris Brock"
+      },
+      "keywords": [
+        "pmo",
+        "portfolio",
+        "project-management",
+        "delivery"
       ],
       "category": "operations"
     },

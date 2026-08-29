@@ -741,3 +741,85 @@ exactly that mistake in miniature.
 product with a reason for a hub, and it is the same moment the trademark question in D22 needs a
 proper answer rather than a caveat. Prefer `.dev` then — correct signal for developer tooling and
 HTTPS-only — or a modified name over a degraded TLD.
+
+---
+
+## D26. Where project management lives — ✅ Resolved
+
+Project management existed only as a single `program-management` skill inside `operations`. The
+question raised was whether
+discipline belongs in silos inside each department or as an enterprise function.
+
+- (a) **Siloed.** Each department carries its own project management guidance.
+- (b) **Inside `operations`.** Expand the COO's department to hold the discipline.
+- **(c) A separate `pmo` department reporting to the COO.** ← **chosen**
+
+**Resolution: (c).**
+
+- **(a) fails this repository's founding rule.** `executive:agent-hierarchy` splits by exclusive
+  write surface, not by topic. Project management is a topic crossing all sixteen departments, so
+  siloing it produces sixteen near-identical skills — precisely the duplication that forced the
+  earlier consolidation.
+- **(c) over (b) on installability.** The premise of the marketplace is installing only what you
+  need. Someone who wants portfolio governance and stage gates should not have to take
+  `supply-chain-and-logistics` and `vendor-management` with it. An EPMO is also a distinct function
+  in practice, with its own head, rather than a subset of operations.
+
+**The `program-management` skill moved from `operations` to `pmo:program-management`.** Worth doing
+at this moment specifically: the repository published today with no external installs, so the
+address is still free
+to change. Once someone has the department installed and the address referenced, it is not — the same
+timing logic as the rename in D22 and the licence in D21. Verified no reference to the old address
+survives anywhere in the tree.
+
+**Reporting line: the COO**, reflected in the org chart. The EPMO governs delivery across the
+organization; it does not own the functions whose work it governs.
+
+**Boundaries stated in the skills rather than left to collide.** `pmo:portfolio-governance` handles
+resource contention across projects while `operations:capacity-and-demand-planning` handles
+operational throughput; `pmo:dependency-and-risk-management` handles delivery risk while
+`legal-risk:enterprise-risk` owns the enterprise framework.
+
+---
+
+## D27. Splitting CIO-side IT operations out of `technology` — ✅ Resolved
+
+`technology` was labelled "CTO / CIO" and held twelve skills, all of them software development
+workflow. The request to add help desk, network administration and system administration forced the
+question of whether those belong in the same department.
+
+- (a) **Add them to `technology`.** One department, around twenty-five skills.
+- **(b) Split: `technology` for the CTO side, a new `it-operations` for the CIO side.** ← **chosen**
+- (c) Leave corporate IT out of the catalogue.
+
+**Resolution: (b).**
+
+- **They are different functions with different audiences.** Product engineering and corporate IT
+  share a reporting line in some organizations and almost nothing else. Bundled, a SaaS engineering
+  team installing `technology` receives deskside support skills it will never open, and an IT
+  director receives worktree workflow they will never open. The split is what makes both installable
+  without noise.
+- **The combined "CTO / CIO" label was papering over a real division**, and the catalogue was
+  honest about only one half of it.
+
+**What moved where.** `technology` gained `solution-architecture`, `api-design`,
+`technical-debt-management`, `cloud-infrastructure`, `observability-and-reliability` and
+`release-and-deployment`, reaching eighteen. `it-operations` is new with seven. `data-engineering`
+went to `data-analytics` rather than `technology`, because pipelines belong beside `data-modeling`
+and `data-governance` under the CDO.
+
+**Overlaps resolved explicitly inside the skills**, since unstated boundaries are what forced the
+earlier consolidation:
+
+- `security:access-and-identity` owns access **policy**;
+  `it-operations:identity-lifecycle-administration` owns **execution** of joiner-mover-leaver.
+- `operations:business-continuity-and-resilience` owns recovery objectives and the business process;
+  `it-operations:backup-and-recovery` owns the technical restore that delivers against them.
+- `technology:cloud-infrastructure` owns cloud environment design;
+  `it-operations:systems-administration` owns operating the systems the company runs on.
+- `security:vulnerability-management` decides what is urgent to patch;
+  `it-operations:systems-administration` executes the cadence.
+
+**Also fixed here.** Every agent charter carried a hardcoded skill count — `finance` claimed four
+while holding nine. The count added nothing and rotted silently, so it was removed rather than
+updated to a number that would rot again.
