@@ -64,7 +64,9 @@ def skills(dept):
 
 total = sum(len(skills(d)) for d, _, _ in ORDER)
 out = [
-    "# agents-v1",
+    "# headcount",
+    "",
+    "**Add a department, not a prompt.**",
     "",
     "An agent organization for [Claude Code](https://claude.com/claude-code), structured as a company:",
     f"a chief executive over {len(ORDER)} departments, {total} skills in total.",
@@ -75,8 +77,8 @@ out = [
     "## Install",
     "",
     "```",
-    "/plugin marketplace add cbrock84/agents-v1",
-    "/plugin install security@agents-v1",
+    "/plugin marketplace add cbrock84/headcount",
+    "/plugin install security@headcount",
     "```",
     "",
     "Install as many departments as the project needs. Skills are addressed as `department:skill` —",

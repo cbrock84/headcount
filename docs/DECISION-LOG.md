@@ -357,8 +357,8 @@ files already in this PR's scope.
 
 ## D16. Repo visibility versus marketplace distribution — ✅ Resolved
 
-`cbrock84/agents-v1` is **private**, but the README instructs `/plugin marketplace add
-cbrock84/agents-v1`. A private marketplace requires each installing machine to be authenticated to
+`cbrock84/headcount` is **private**, but the README instructs `/plugin marketplace add
+cbrock84/headcount`. A private marketplace requires each installing machine to be authenticated to
 this repository, which the instructions do not mention.
 
 - (a) Keep private, and document the authentication requirement in the README.
@@ -524,3 +524,55 @@ Neither is true now.
 
 **Not legal advice.** For the productized vertical variants contemplated in D8, where money and
 third-party distribution are involved, this is worth qualified counsel rather than a decision log.
+
+---
+
+## D22. What to call this — ✅ Resolved
+
+`agents-v1` was a working title. It describes the mechanism (agents) and a version number, neither of
+which is a name, and it was about to be published — at which point the name stops being free to
+change.
+
+The binding constraint is not aesthetics. It is that the brand appears **after an `@` in every
+install command**:
+
+```
+/plugin marketplace add cbrock84/NAME
+/plugin install security@NAME
+```
+
+`security@NAME` renders as a corporate email address. That is free explanation of the whole product,
+but only for a name that reads like a company. It rules out descriptive multi-word names.
+
+- **(a) `headcount`.** ← **chosen**
+- (b) `holdco` — a holding company holds operating subsidiaries; this holds installable departments.
+  Structurally exact, and less likely to collide with an existing product.
+- (c) `boardroom`, `roster`, `charter`, `quorum` — all read as companies; each is either semantically
+  off (a boardroom is the board, not the operating org) or heavily used elsewhere.
+- (d) `company-in-a-box` and relatives — say exactly what it is, but are not distinctive and destroy
+  the `@` construction.
+- (e) Keep `agents-v1`.
+
+**Resolution: (a).**
+
+- **It names the benefit, not the mechanism.** "101 markdown skills in a plugin marketplace" is what
+  it is made of. "Headcount" is what someone wants: a CISO, a CFO, a growth lead, without the req.
+- **The install string becomes the tagline.** `/plugin install security@headcount` reads as hiring a
+  security department. Nothing further needs explaining.
+- **It survives D8.** Generated verticals are `headcount-health`, `headcount-retail`,
+  `headcount-industrial` — which parse as staffing firms with a specialty. The metaphor strengthens
+  as it is cloned, which is unusual and worth the points.
+
+**This sets the vertical naming convention for D8**, whose resolution (c) emits standalone repos:
+each generated vertical is `headcount-<vertical>`, and the generator's per-vertical config carries
+the suffix. Recorded here so the generator is not built against a different scheme.
+
+**Name-collision caveat, not resolved by this entry.** `headcount` is a common noun in HR software
+and this log is not a trademark search. The check is worth doing before any commercial use of the
+D7/D8 productized variants; for an MIT repository under a personal account the exposure is low.
+`holdco` (b) remains the fallback if a conflict surfaces, and is a cheap swap while the name is
+young — the same timing logic as D21.
+
+**Timing.** Renaming cost one commit here. After publication the install string gets copied into
+config files, posts and screenshots that never update — GitHub redirects renamed repositories, but
+it cannot rewrite what people have already pasted elsewhere. This was the last moment it was free.
