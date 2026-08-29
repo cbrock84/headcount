@@ -357,8 +357,8 @@ files already in this PR's scope.
 
 ## D16. Repo visibility versus marketplace distribution — ✅ Resolved
 
-`cbrock84/agents-v1` is **private**, but the README instructs `/plugin marketplace add
-cbrock84/agents-v1`. A private marketplace requires each installing machine to be authenticated to
+`cbrock84/headcount` is **private**, but the README instructs `/plugin marketplace add
+cbrock84/headcount`. A private marketplace requires each installing machine to be authenticated to
 this repository, which the instructions do not mention.
 
 - (a) Keep private, and document the authentication requirement in the README.
@@ -477,3 +477,102 @@ The list, in order of value:
 
 **Recommendation: (b).** 1–3 matter; 4 is preference; 5 is worth doing only if you want the profile
 to lead with this.
+
+## D21. MIT or Apache-2.0 for the long term — ✅ Resolved
+
+Raised while preparing to publish. Apache-2.0 is the usual alternative to MIT for a project intended
+for wide reuse.
+
+**What Apache-2.0 adds over MIT:** an explicit patent grant with a retaliation clause, an explicit
+trademark carve-out, a requirement that modified files carry a notice of change, and automatic terms
+for inbound contributions.
+
+- **(a) MIT.** ← **chosen**
+- (b) Apache-2.0.
+- (c) A content licence such as CC-BY-4.0.
+- (d) Dual — CC-BY for the prose, MIT for the scripts.
+
+**Resolution: (a).** The reasoning, recorded so it is not re-litigated:
+
+- **The patent grant is Apache's headline feature and is near-irrelevant here.** This repository is
+  markdown. Instructions for running a threat model or a CRO audit are not patentable subject matter
+  in any practical sense, so the protection Apache exists to provide has almost nothing to attach to.
+- **Apache §4(b) is active friction for the intended use.** It requires modified files to carry
+  prominent change notices. The whole design is people installing a department and adapting it; MIT
+  lets them, Apache asks them to annotate every file they touch.
+- **MIT is the ecosystem norm.** Every collection this repository originally drew from was MIT, and
+  the Claude skills and plugins ecosystem is MIT by convention. Lower friction, fewer legal reviews.
+- **Short licences get complied with.** Two hundred lines of licence on a prose repository invites
+  the question of whether anyone read it.
+- **(c) and (d) rejected:** Creative Commons explicitly advises against using CC for software, this
+  repository contains executable scripts alongside the prose, and a split licence confuses tooling
+  and adopters for no practical gain.
+
+**The one real gap MIT leaves** — what licence inbound contributions carry — is closed by
+`CONTRIBUTING.md` stating that contributions are accepted under MIT, rather than by changing the
+licence.
+
+**Timing note, which is the part that matters later.** Relicensing is clean only while there is a
+single copyright holder. Once outside contributions land under MIT, you cannot retroactively un-MIT
+what has been published; you would be layering Apache over MIT-licensed parts, which is lawful but
+messy. So this decision is cheap to reverse **today** and expensive to reverse after the first
+external pull request.
+
+**Revisit if** the repository grows substantial executable code — the vertical generator in D8 is the
+plausible candidate — or if a corporate adopter's legal team specifically asks for the patent grant.
+Neither is true now.
+
+**Not legal advice.** For the productized vertical variants contemplated in D8, where money and
+third-party distribution are involved, this is worth qualified counsel rather than a decision log.
+
+---
+
+## D22. What to call this — ✅ Resolved
+
+`agents-v1` was a working title. It describes the mechanism (agents) and a version number, neither of
+which is a name, and it was about to be published — at which point the name stops being free to
+change.
+
+The binding constraint is not aesthetics. It is that the brand appears **after an `@` in every
+install command**:
+
+```
+/plugin marketplace add cbrock84/NAME
+/plugin install security@NAME
+```
+
+`security@NAME` renders as a corporate email address. That is free explanation of the whole product,
+but only for a name that reads like a company. It rules out descriptive multi-word names.
+
+- **(a) `headcount`.** ← **chosen**
+- (b) `holdco` — a holding company holds operating subsidiaries; this holds installable departments.
+  Structurally exact, and less likely to collide with an existing product.
+- (c) `boardroom`, `roster`, `charter`, `quorum` — all read as companies; each is either semantically
+  off (a boardroom is the board, not the operating org) or heavily used elsewhere.
+- (d) `company-in-a-box` and relatives — say exactly what it is, but are not distinctive and destroy
+  the `@` construction.
+- (e) Keep `agents-v1`.
+
+**Resolution: (a).**
+
+- **It names the benefit, not the mechanism.** "101 markdown skills in a plugin marketplace" is what
+  it is made of. "Headcount" is what someone wants: a CISO, a CFO, a growth lead, without the req.
+- **The install string becomes the tagline.** `/plugin install security@headcount` reads as hiring a
+  security department. Nothing further needs explaining.
+- **It survives D8.** Generated verticals are `headcount-health`, `headcount-retail`,
+  `headcount-industrial` — which parse as staffing firms with a specialty. The metaphor strengthens
+  as it is cloned, which is unusual and worth the points.
+
+**This sets the vertical naming convention for D8**, whose resolution (c) emits standalone repos:
+each generated vertical is `headcount-<vertical>`, and the generator's per-vertical config carries
+the suffix. Recorded here so the generator is not built against a different scheme.
+
+**Name-collision caveat, not resolved by this entry.** `headcount` is a common noun in HR software
+and this log is not a trademark search. The check is worth doing before any commercial use of the
+D7/D8 productized variants; for an MIT repository under a personal account the exposure is low.
+`holdco` (b) remains the fallback if a conflict surfaces, and is a cheap swap while the name is
+young — the same timing logic as D21.
+
+**Timing.** Renaming cost one commit here. After publication the install string gets copied into
+config files, posts and screenshots that never update — GitHub redirects renamed repositories, but
+it cannot rewrite what people have already pasted elsewhere. This was the last moment it was free.

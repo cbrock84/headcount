@@ -3,23 +3,48 @@
 and verified in CI so the README can never drift from what the repo actually contains."""
 import glob, os, re, json, sys
 
-ORDER = [
-    ("executive",         "Office of the CEO",  "Chief Executive"),
-    ("technology",        "Technology",         "CTO / CIO"),
-    ("security",          "Security",           "CISO"),
-    ("product",           "Product",            "CPO"),
-    ("marketing",         "Marketing",          "CMO"),
-    ("demand-generation", "Demand Generation",  "CMO"),
-    ("revenue",           "Revenue",            "CRO"),
-    ("finance",           "Finance",            "CFO"),
-    ("operations",        "Operations",         "COO"),
-    ("customer-experience","Customer Experience","CCO"),
-    ("data-analytics",    "Data & Analytics",   "CDO"),
-    ("corporate-strategy","Corporate Strategy", "CSO"),
-    ("people",            "People",             "CHRO"),
-    ("legal-risk",        "Legal & Risk",       "CLO / CCO"),
-]
+# Display metadata per department. The department list itself comes from the plugin tree — see
+# load_departments() — so a department cannot be added to disk and silently omitted from the docs.
+# The rank fixes reporting order: the chief executive first, then the functions beneath.
+META = {
+    "executive":          (10, "Office of the CEO",   "Chief Executive"),
+    "technology":         (20, "Technology",          "CTO / CIO"),
+    "security":           (30, "Security",            "CISO"),
+    "product":            (40, "Product",             "CPO"),
+    "marketing":          (50, "Marketing",           "CMO"),
+    "demand-generation":  (60, "Demand Generation",   "CMO"),
+    "revenue":            (70, "Revenue",             "CRO"),
+    "finance":            (80, "Finance",             "CFO"),
+    "operations":         (90, "Operations",          "COO"),
+    "customer-experience": (100, "Customer Experience", "CCO"),
+    "data-analytics":     (110, "Data & Analytics",   "CDO"),
+    "corporate-strategy": (120, "Corporate Strategy", "CSO"),
+    "people":             (130, "People",             "CHRO"),
+    "legal-risk":         (140, "Legal & Risk",       "CLO / CCO"),
+}
 REVIEWER = {"security", "legal-risk"}
+
+
+def load_departments():
+    """Departments come from disk, not from a list someone has to remember to update. A department
+    present on disk but missing from META is a hard error rather than a silent omission — the same
+    mistake used to drop a department out of both generated docs while --check still passed."""
+    found = {os.path.basename(os.path.dirname(os.path.dirname(m)))
+             for m in glob.glob("plugins/*/.claude-plugin/plugin.json")}
+    missing = sorted(found - set(META))
+    if missing:
+        sys.exit("build-readme: no display metadata for department(s) "
+                 + ", ".join(missing)
+                 + "\n  add a (rank, title, executive) entry to META in scripts/build-readme.py")
+    stale = sorted(set(META) - found)
+    if stale:
+        sys.exit("build-readme: META names department(s) that are not on disk: "
+                 + ", ".join(stale)
+                 + "\n  remove them from META in scripts/build-readme.py")
+    return [(d, META[d][1], META[d][2]) for d in sorted(found, key=lambda d: META[d][0])]
+
+
+ORDER = load_departments()
 
 
 def summarize(path, limit=165):
@@ -39,7 +64,9 @@ def skills(dept):
 
 total = sum(len(skills(d)) for d, _, _ in ORDER)
 out = [
-    "# agents-v1",
+    "# headcount",
+    "",
+    "**Add a department, not a prompt.**",
     "",
     "An agent organization for [Claude Code](https://claude.com/claude-code), structured as a company:",
     f"a chief executive over {len(ORDER)} departments, {total} skills in total.",
@@ -50,8 +77,8 @@ out = [
     "## Install",
     "",
     "```",
-    "/plugin marketplace add cbrock84/agents-v1",
-    "/plugin install security@agents-v1",
+    "/plugin marketplace add cbrock84/headcount",
+    "/plugin install security@headcount",
     "```",
     "",
     "Install as many departments as the project needs. Skills are addressed as `department:skill` —",

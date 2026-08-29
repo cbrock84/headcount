@@ -1,8 +1,8 @@
 # Cross-org sweep prompt
 
 A Claude Code session can only attach repositories from **one owner**. A session rooted at
-`cbrock84/agents-v1` cannot attach `Keel-GRC/*` or `Drummond-IT/*`, and a session rooted in
-either of those cannot attach `agents-v1`. No single session sees both sides.
+`cbrock84/headcount` cannot attach `Keel-GRC/*` or `Drummond-IT/*`, and a session rooted in
+either of those cannot attach `headcount`. No single session sees both sides.
 
 That restriction applies to **attaching** — which is what push access and the GitHub API need.
 It does **not** apply to reading: the session's git proxy serves anonymous clones of any
@@ -12,7 +12,7 @@ So the split is:
 
 | Repos | How to reach them |
 |---|---|
-| Public `Keel-GRC/*` and `Drummond-IT/*` | Readable from the `agents-v1` session directly — no separate session needed |
+| Public `Keel-GRC/*` and `Drummond-IT/*` | Readable from the `headcount` session directly — no separate session needed |
 | Private / internal `Keel-GRC/*` and `Drummond-IT/*` | Need a session rooted in that org, which then hands results back as a file |
 
 Use the prompt below only for the second row.
@@ -30,7 +30,7 @@ Sweep this organization's **private and internal** repositories for Claude agent
 agent-definition material, and package what you find so it can be moved into another repo.
 
 **Constraint, so you don't waste time on it:** this session is locked to this org's owner. You
-cannot attach `cbrock84/agents-v1`, and you cannot push there. The deliverable is a file you
+cannot attach `cbrock84/headcount`, and you cannot push there. The deliverable is a file you
 hand back, not a commit. Public repos in this org do not need you — they are readable from the
 other session directly, so **skip anything public** and spend your budget on private/internal
 repos only.
@@ -82,7 +82,7 @@ as files.
 
 ## Bringing the results back
 
-Attach the tarball (or paste `REPORT.md`) in the `agents-v1` session and say which departments
+Attach the tarball (or paste `REPORT.md`) in the `headcount` session and say which departments
 they should land in. Existing departments are `engineering`, `marketing`, `content`, `design`;
 GRC material most likely wants a new `compliance` department, and Drummond print/prepress
 material a `print-production` one.
