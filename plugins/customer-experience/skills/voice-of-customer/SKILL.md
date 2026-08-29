@@ -10,8 +10,11 @@ loop is the whole value.
 
 ## Sources, weighted honestly
 
-- **Support contacts** — the highest-volume, least-biased source, and the most under-used. People
-  contacting you have a real problem, unprompted.
+- **Support contacts** — the highest-volume and least *prompted* source, and the most under-used.
+  People contacting you have a real problem nobody asked them about. But the sample is strongly
+  self-selected: it excludes everyone who silently churned, worked around the problem, or would
+  never contact you. Treat it as operational evidence to be normalized per active account and
+  triangulated against churn and behavioural data — never as representative of the customer base.
 - **Churn and loss reasons** — the most valuable and most under-sampled. People leaving have no
   reason to be polite.
 - **Interviews** — depth, small n, best for understanding *why* something in the data is happening.

@@ -130,7 +130,32 @@ out += [
 ]
 content = "\n".join(out)
 
+# The org chart's department table drifts the same way the README did. Generate it between
+# markers so the two cannot disagree; the analysis prose around it stays hand-written.
+chart_rows = "\n".join(
+    f"| `{d}` | {t} | {e} | {len(skills(d))}"
+    + (" · reviewer-class |" if d in REVIEWER else " |")
+    for d, t, e in ORDER
+)
+chart_block = (
+    "<!-- BEGIN GENERATED: departments -->\n"
+    f"| Department | Function | Executive | Skills |\n|---|---|---|---|\n{chart_rows}\n"
+    f"\n{len(ORDER)} departments, {total} skills.\n"
+    "<!-- END GENERATED: departments -->"
+)
+chart_path = "docs/org-chart.md"
+chart_current = open(chart_path, encoding="utf-8").read()
+chart_new = re.sub(
+    r"<!-- BEGIN GENERATED: departments -->.*?<!-- END GENERATED: departments -->",
+    lambda _: chart_block,
+    chart_current,
+    flags=re.S,
+)
+
 if "--check" in sys.argv:
+    if chart_current != chart_new:
+        print("  docs/org-chart.md department table is stale — run: python3 scripts/build-readme.py")
+        sys.exit(1)
     current = open("README.md", encoding="utf-8").read() if os.path.exists("README.md") else ""
     if current != content:
         print("  README.md is stale — run: python3 scripts/build-readme.py")
@@ -139,4 +164,5 @@ if "--check" in sys.argv:
     sys.exit(0)
 
 open("README.md", "w", encoding="utf-8").write(content)
-print(f"README.md regenerated — {len(ORDER)} departments, {total} skills")
+open(chart_path, "w", encoding="utf-8").write(chart_new)
+print(f"README.md and org-chart.md regenerated — {len(ORDER)} departments, {total} skills")

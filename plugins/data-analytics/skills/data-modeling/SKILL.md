@@ -9,8 +9,17 @@ description: Designs the warehouse and semantic layer — source-to-mart structu
 
 Three layers, each with one job:
 
-1. **Raw** — source data, unmodified, append-only. Never transform on ingest; you cannot recover what
-   you discarded, and you will want it.
+1. **Raw** — source data, append-only, otherwise unmodified. Do not apply *business* logic on
+   ingest: you cannot recover what you discarded, and the logic will need to change retroactively.
+
+   **Privacy and security transformations are the exception, and belong at ingest.** Credentials and
+   secrets should never land in the warehouse at all. Personal data that is not needed should be
+   dropped rather than stored and governed later, and identifiers you must keep but rarely need in
+   the clear should be tokenized or encrypted on arrival. Retention and deletion apply from ingest,
+   not from the marts.
+
+   The distinction: strip what you must not hold, keep everything you are entitled to hold, and
+   leave interpretation for later.
 2. **Staging** — cleaned and conformed: consistent types, standardized names, deduplicated, no
    business logic yet.
 3. **Marts** — business-facing models shaped for how questions are asked.
