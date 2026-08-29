@@ -10,8 +10,13 @@ terms as the rest of this repository.**
 Contribute only work you have the right to license this way. In particular, do not paste in skills,
 prose, or reference material from another project unless you wrote it or its licence permits
 relocation — and if it does, say so in the pull request. Every line in this repository is original
-to it, and `scripts/check-provenance.py` fails the build if third-party licence text, copyright
-notices, or font assets appear.
+to it.
+
+`scripts/check-provenance.py` is a backstop, not a proof. It scans every text file in the tree for
+licence headers, copyright notices, and SPDX identifiers, flags files named like licences
+(`LICENSE`, `COPYING`, `NOTICE`, `PATENTS`, `AUTHORS`), and rejects bundled font assets. It cannot
+detect prose lifted without a notice attached — which is the case that matters most. Review is what
+catches that; the check only catches the obvious.
 
 ## What makes a good skill
 
@@ -51,7 +56,7 @@ Four checks, the same ones CI runs:
 |---|---|
 | Surface map | Every tracked path has exactly one owner |
 | Skill frontmatter | `name` equals the directory name, lowercase-hyphenated, unique, description substantial |
-| Provenance | No third-party licence text, copyright notices, or font assets |
+| Provenance | No licence headers, copyright notices, licence-named files, or font assets |
 | Generated docs | README and org-chart tables match the tree |
 
 **Stage your files first.** The surface guard reads `git ls-files`, so an unstaged file is invisible
@@ -68,12 +73,17 @@ present.
 
 ## Adding a department
 
-All four, in the same change, or the check fails:
+All five, in the same change, or the check fails:
 
 1. `plugins/<name>/skills/` and `plugins/<name>/.claude-plugin/plugin.json`
 2. A roster row and a `surface:` block in `docs/AGENT-SURFACES.md`
 3. A charter at `.claude/agents/<name>.md`
 4. An entry in `.claude-plugin/marketplace.json`
+5. A `(rank, title, executive)` entry in `META` in `scripts/build-readme.py`, then regenerate with
+   `python3 scripts/build-readme.py`
+
+The generator reads the department list off disk and refuses to run until step 5 is done, so a new
+department cannot end up missing from the README and the org chart while the checks still pass.
 
 Give it a chief before any specialists — the department's remit should exist before things are added
 to it.
