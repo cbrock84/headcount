@@ -5,16 +5,27 @@ Every department, skill, count and description comes from the tree, so the chart
 organization the repository does not have. `--check` compares the committed file against freshly
 generated output, the same contract as the README and the social card.
 
-  python3 scripts/build-org-chart.py           regenerate
+  python3 scripts/build-org-chart.py           regenerate, then render the README screenshots
   python3 scripts/build-org-chart.py --check   fail if stale (CI)
+  python3 scripts/build-org-chart.py --html    regenerate HTML only, skip rendering
+
+The screenshots are a light and a dark crop of this same page, embedded in the README inside a
+<picture> element so GitHub serves whichever matches the reader's theme. They are rendered from
+the generated HTML in the same run, so they cannot describe a different organization than it does.
+Rendering needs Chromium; without it the HTML is still written.
 """
 import glob
 import json
 import os
 import re
+import shutil
+import subprocess
 import sys
 
 OUT = "docs/org-chart.html"
+SHOT_LIGHT = "docs/assets/org-chart-light.png"
+SHOT_DARK = "docs/assets/org-chart-dark.png"
+SHOT_W, SHOT_H = 1280, 1010  # hero crop: masthead through the first full row of departments
 REPO = "cbrock84/headcount"
 BLOB = f"https://github.com/{REPO}/blob/main"
 
@@ -454,6 +465,28 @@ def render():
     return html.replace("Search 135 skills", f"Search {total} skills"), len(depts), total
 
 
+def find_chromium():
+    """Playwright's bundled Chromium first, then anything on PATH."""
+    pw = os.environ.get("PLAYWRIGHT_BROWSERS_PATH", "/opt/pw-browsers")
+    candidates = [
+        os.path.join(pw, "chromium"),
+        *(shutil.which(n) for n in
+          ("chromium", "chromium-browser", "google-chrome", "google-chrome-stable")),
+    ]
+    return next((c for c in candidates if c and os.path.exists(c)), None)
+
+
+def shoot(chrome, out, dark):
+    subprocess.run(
+        [chrome, "--headless", "--no-sandbox", "--disable-gpu", "--hide-scrollbars",
+         "--force-device-scale-factor=2", f"--window-size={SHOT_W},{SHOT_H}",
+         "--virtual-time-budget=5000"]
+        + (["--force-dark-mode"] if dark else [])
+        + [f"--screenshot={out}", OUT],
+        check=True, capture_output=True)
+    return os.path.getsize(out) // 1024
+
+
 def main():
     html, ndept, nskill = render()
     if "--check" in sys.argv:
@@ -466,6 +499,18 @@ def main():
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     open(OUT, "w", encoding="utf-8").write(html)
     print(f"{OUT} regenerated — {ndept} departments, {nskill} skills")
+
+    if "--html" in sys.argv:
+        return 0
+    chrome = find_chromium()
+    if not chrome:
+        print("  no Chromium found — HTML written, README screenshots not re-rendered.")
+        return 0
+    os.makedirs(os.path.dirname(SHOT_LIGHT), exist_ok=True)
+    light = shoot(chrome, SHOT_LIGHT, dark=False)
+    dark = shoot(chrome, SHOT_DARK, dark=True)
+    print(f"{SHOT_LIGHT} {light} KB, {SHOT_DARK} {dark} KB "
+          f"— {SHOT_W*2}x{SHOT_H*2}, embedded in the README as a <picture>")
     return 0
 
 

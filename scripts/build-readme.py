@@ -82,6 +82,23 @@ out = [
     f'  <a href="CONTRIBUTING.md"><img alt="PRs welcome" src="{B}/PRs-welcome-2EA043?style=flat-square"></a>',
     "</p>",
     "",
+    # The chart is the clearest single statement of what this is, so it leads. GitHub does not
+    # render HTML from a repository, so the image links to the Pages copy, which does.
+    '<p align="center">',
+    '  <a href="https://cbrock84.github.io/headcount/org-chart.html">',
+    "    <picture>",
+    '      <source media="(prefers-color-scheme: dark)" srcset="docs/assets/org-chart-dark.png">',
+    f'      <img alt="The headcount org chart — {len(ORDER)} departments, {total} skills, searchable"'
+    ' src="docs/assets/org-chart-light.png" width="840">',
+    "    </picture>",
+    "  </a>",
+    "</p>",
+    "",
+    '<p align="center">',
+    '  <a href="https://cbrock84.github.io/headcount/org-chart.html"><b>Open the interactive org'
+    " chart</b></a> — search every skill, open a department, jump to the source.",
+    "</p>",
+    "",
     "An agent organization for [Claude Code](https://claude.com/claude-code), structured as a company:",
     f"a chief executive over {len(ORDER)} departments, {total} skills in total.",
     "",
@@ -148,6 +165,7 @@ out += [
     "docs/DECISION-LOG.md           numbered decisions with options and recommendations",
     "docs/USE-CASES.md              situations worked end to end across departments",
     "docs/org-chart.html           interactive org chart, searchable across every skill",
+    "docs/index.html               GitHub Pages entry point, redirects to the chart",
     "```",
     "",
     "Agents split by **exclusive write surface**, not by topic — a topic split has no checkable",

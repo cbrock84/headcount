@@ -864,3 +864,43 @@ copyright notice in one and Apache text in the other — both still caught.
 **The naming consequence.** The PMO department's display title becomes *Program Management Office*.
 The slug `pmo` and the skill addresses are unaffected, so nothing anyone could have installed
 changes.
+
+---
+
+## D29. Publishing the org chart so the README can link to it — 🔵 Open (needs your hands)
+
+The README now leads with a screenshot of the org chart. The screenshot is honest but static; the
+value is in the live page, and **GitHub does not render HTML from a repository** — a link to
+`docs/org-chart.html` shows a reader the source, not the chart.
+
+- **(a) GitHub Pages, serving `/docs` from `main`.** ← **recommended**
+- (b) A third-party HTML preview proxy.
+- (c) Screenshot only, no link.
+- (d) A hosted site on a purchased domain.
+
+**Recommendation: (a).** Free on public repositories, one setting, and it republishes on every push
+— so the live chart tracks the generator with no extra step. The URL becomes
+`https://cbrock84.github.io/headcount/org-chart.html`, which is what the README already points at.
+
+- **(b) rejected.** Depends on someone else's service staying up, and the URL is unpresentable.
+- **(c) rejected** as the default, though it is what you get until (a) is enabled: the screenshot is
+  the flair, the live page is the substance.
+- **(d) is D25 revisited and still premature** — Pages costs nothing and needs no domain.
+
+**Two consequences worth knowing before enabling it.**
+
+1. Pages serves everything in `/docs`, so the decision log and use cases become browsable as raw
+   files. The repository is already public, so nothing is newly exposed; it is only more visible.
+2. `docs/index.html` redirects the site root to the chart, so
+   `https://cbrock84.github.io/headcount` works rather than presenting a directory listing.
+
+**This also reopens the Website field from D25**, which was left empty for want of anything worth
+pointing at. A live, self-updating org chart is exactly that, at no cost and with none of the
+credibility risk of a degraded TLD. If Pages is enabled, the Website field should be set to the
+Pages URL. D25's reasoning about domains is unchanged: still not worth buying one.
+
+**Until enabled**, the README's two links to the Pages URL are dead. That is the one cost of
+shipping this before the setting is flipped, and it is a single line to revert if you would rather
+not publish a site.
+
+**To enable:** Settings → Pages → Source: *Deploy from a branch* → Branch: `main`, folder `/docs`.

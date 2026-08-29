@@ -10,6 +10,19 @@
   <a href="CONTRIBUTING.md"><img alt="PRs welcome" src="https://img.shields.io/badge/PRs-welcome-2EA043?style=flat-square"></a>
 </p>
 
+<p align="center">
+  <a href="https://cbrock84.github.io/headcount/org-chart.html">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="docs/assets/org-chart-dark.png">
+      <img alt="The headcount org chart — 16 departments, 135 skills, searchable" src="docs/assets/org-chart-light.png" width="840">
+    </picture>
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://cbrock84.github.io/headcount/org-chart.html"><b>Open the interactive org chart</b></a> — search every skill, open a department, jump to the source.
+</p>
+
 An agent organization for [Claude Code](https://claude.com/claude-code), structured as a company:
 a chief executive over 16 departments, 135 skills in total.
 
@@ -328,6 +341,7 @@ docs/AGENT-SURFACES.md         every path has exactly one owner, enforced in CI
 docs/DECISION-LOG.md           numbered decisions with options and recommendations
 docs/USE-CASES.md              situations worked end to end across departments
 docs/org-chart.html           interactive org chart, searchable across every skill
+docs/index.html               GitHub Pages entry point, redirects to the chart
 ```
 
 Agents split by **exclusive write surface**, not by topic — a topic split has no checkable
