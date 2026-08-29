@@ -1,0 +1,4 @@
+# Byproducts of running the check scripts. Nothing here belongs in the repository, and an
+# untracked __pycache__ is enough to make a clean tree look dirty.
+__pycache__/
+*.pyc
