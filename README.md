@@ -1,7 +1,7 @@
 # agents-v1
 
 An agent organization for [Claude Code](https://claude.com/claude-code), structured as a company:
-a chief executive over 11 departments, 86 skills in total.
+a chief executive over 14 departments, 101 skills in total.
 
 Every department is an independently installable plugin, so a project loads only the functions it
 needs rather than all of them at once.
@@ -181,6 +181,45 @@ to as a subagent with its own exclusive write surface.
 | `process-design` | Designs, documents, and fixes operational processes — mapping the current state, finding where work actually stalls, redesigning the flow, and building controls tha…. |
 | `program-management` | Plans and drives cross-functional programs to delivery — scope, sequencing, dependencies, status, risk, and the escalations that keep work moving. |
 | `vendor-management` | Selects, contracts, and manages suppliers and vendors — requirements, evaluation, negotiation support, onboarding, performance management, and exit. |
+
+</details>
+
+<details>
+<summary><b>Customer Experience</b> (CCO) — 5 skills</summary>
+
+| Skill | What it does |
+|---|---|
+| `chief-customer-officer` | Owns the customer's experience after the sale — support, success, escalation, and the feedback loop back into product. |
+| `escalation-management` | Handles customer situations that have exceeded normal support — severity assessment, incident communication, executive escalation, and recovering a relationship aft…. |
+| `self-service-and-knowledge` | Builds the help centre, in-product guidance, and knowledge base that let customers resolve problems without contacting anyone — content, findability, maintenance, a…. |
+| `support-operations` | Designs and runs the support function — channels, queues, routing, staffing, service levels, quality, and the metrics that show whether it is working. |
+| `voice-of-customer` | Builds the loop from what customers say to what gets changed — collecting feedback, distinguishing signal from noise, routing it to owners, and closing the loop bac…. |
+
+</details>
+
+<details>
+<summary><b>Data & Analytics</b> (CDO) — 5 skills</summary>
+
+| Skill | What it does |
+|---|---|
+| `ai-ml-governance` | Governs models and AI systems in production — intended use, evaluation, monitoring, human oversight, documentation, and the decision to deploy or retire. |
+| `business-intelligence` | Builds reporting and self-serve analytics that people actually use — metric trees, dashboard design, distribution, and the discipline that stops dashboards prolifer…. |
+| `chief-data-officer` | Owns data as an asset — governance, quality, the warehouse and semantic layer, analytics capability, and the governance of models built on top. |
+| `data-governance` | Establishes ownership, definitions, quality, access, and lineage for the organization's data. |
+| `data-modeling` | Designs the warehouse and semantic layer — source-to-mart structure, dimensional modeling, grain, slowly changing dimensions, and the metric layer analytics reads t…. |
+
+</details>
+
+<details>
+<summary><b>Corporate Strategy</b> (CSO) — 5 skills</summary>
+
+| Skill | What it does |
+|---|---|
+| `chief-strategy-officer` | Owns where the business plays and how it wins over a multi-year horizon — portfolio choices, corporate development, strategic partnerships, and planning under uncer…. |
+| `mergers-and-acquisitions` | Runs corporate development — deal thesis, target screening, valuation framing, diligence, and integration planning. |
+| `portfolio-strategy` | Decides where capital and attention go across business lines, products, and markets — what to fund, hold, harvest, or exit, and on what evidence. |
+| `scenario-planning` | Plans under genuine uncertainty — building scenarios, identifying which assumptions are load-bearing, setting early-warning indicators, and stress-testing a plan ag…. |
+| `strategic-alliances` | Structures partnerships that change what the business can do — technology integrations, channel and reseller arrangements, joint ventures, and OEM relationships. |
 
 </details>
 

@@ -1,0 +1,16 @@
+{
+  "name": "customer-experience",
+  "description": "Support operations, escalation management, voice of customer, and self-service. Owns what the customer experiences after the sale.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Chris Brock"
+  },
+  "repository": "https://github.com/cbrock84/agents-v1",
+  "keywords": [
+    "support",
+    "customer-success",
+    "escalation",
+    "voice-of-customer",
+    "service"
+  ]
+}
