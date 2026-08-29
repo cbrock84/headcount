@@ -4,6 +4,14 @@ set -uo pipefail
 cd "$(dirname "$0")/.."
 
 fail=0
+
+# The surface guard reads `git ls-files`, so a new file that has not been staged is invisible to
+# it and the check passes locally then fails in CI. Warn rather than guess.
+untracked=$(git ls-files --others --exclude-standard 2>/dev/null | head -5)
+if [ -n "$untracked" ]; then
+  printf '\033[33mwarning: untracked files are not seen by the surface check — stage them first:\033[0m\n'
+  printf '%s\n' "$untracked" | sed 's/^/  /'
+fi
 run() {
   printf '\n\033[1m%s\033[0m\n' "$1"; shift
   if "$@"; then :; else fail=1; printf '  FAILED\n'; fi
