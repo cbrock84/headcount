@@ -1,22 +1,26 @@
 # Org chart
 
 ```
-                              Chief Executive
-                                     │
-   ┌────────────┬────────────┬───────┴──────┬────────────┬────────────┐
-   │            │            │              │            │            │
- CTO/CIO       CPO          CMO            CRO          CFO          COO
-Technology   Product   Marketing +       Revenue      Finance    Operations
-                       Demand Gen
-   │            │            │              │            │            │
-  CHRO         CDO          CCO            CSO
- People   Data & Analytics  Customer    Corporate
-                            Experience   Strategy
-   │            │            │              │            │            │
-   └────────────┴──── Security (CISO) ─┬─ Legal & Risk (CLO/CCO) ─────┘
-                                       │
-                              reviewer-class
+                                  Chief Executive
+                                         │
+   ┌──────────┬──────────┬──────────┬────┴─────┬──────────┬──────────┬──────────┐
+  CTO/CIO    CPO        CMO        CRO        CFO        COO        CDO        CSO
+Technology  Product  Marketing +  Revenue   Finance  Operations   Data &    Corporate
+   │                 Demand Gen                          │       Analytics   Strategy
+  CIO                                                  EPMO
+IT Operations                              Programme Management Office
+
+  CHRO                CCO
+ People       Customer Experience
+
+   ┌─────────────────────────────────────────────────────────────────────────┐
+   │   Security (CISO)                            Legal & Risk (CLO / CCO)   │
+   │                        reviewer-class                                   │
+   └─────────────────────────────────────────────────────────────────────────┘
 ```
+
+An interactive version — searchable across every skill, linking out to each one — is generated at
+[`docs/org-chart.html`](org-chart.html).
 
 Security and Legal & Risk sit across every function rather than under one. Both are reviewer-class:
 they review what the other departments commit to, and their blocking findings are not overrulable by
@@ -52,16 +56,23 @@ than into the function they oversee.
 
 ### Tier 1 — worth building next
 
-**Operations depth.** Three specialists. A business with physical production also needs
-`supply-chain-planning`, `quality-management`, and `capacity-planning`.
+**Legal depth.** Five skills. Missing `ip-and-licensing`, `regulatory-compliance`, and
+`audit-readiness` — the last pairing with `finance:internal-controls-and-audit`, which covers
+controls over financial reporting but not readiness for a wider audit.
 
-**Finance depth.** Four specialists covering planning and analysis. Missing `procurement`,
-`investment-analysis`, `cash-management`, `revenue-recognition`, and `financial-controls`.
+**Customer Experience depth.** Five skills, the thinnest department. Missing `customer-onboarding`,
+`churn-and-recovery`, and `community`.
 
-**People depth.** Missing `performance-management`, `employee-relations`,
-`learning-and-development`, and `workforce-planning`.
+**Corporate Strategy depth.** Five skills. Missing `competitive-intelligence` and
+`market-entry`.
 
-**Legal depth.** Missing `ip-and-licensing`, `regulatory-compliance`, and `audit-readiness`.
+**Built since this list was written**, and removed from it: operations gained supply chain, quality
+management and capacity planning; finance gained revenue recognition, cash management as
+`treasury-and-liquidity`, investment appraisal as `capital-allocation`, and financial controls as
+`internal-controls-and-audit`; people gained performance management, employee relations, learning
+and development, and workforce planning. `procurement` was judged already covered by
+`operations:vendor-management` and `it-operations:it-asset-management` rather than needing its own
+skill.
 
 ### Tier 2
 
