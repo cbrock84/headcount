@@ -40,6 +40,11 @@ right specialist engages:
 
 Invoke one directly by name when you want a specific lens: `/finance:financial-modeling`.
 
+Seven situations that cross departments — a SOC 2 demand from an enterprise prospect, a
+security incident, a stalled funnel — are worked through end to end in
+[docs/USE-CASES.md](docs/USE-CASES.md), including where a reviewer-class department stops the
+work rather than adding an opinion.
+
 Each department also ships an agent charter in `.claude/agents/`, so a department can be delegated
 to as a subagent with its own exclusive write surface.
 
@@ -271,6 +276,7 @@ plugins/<department>/
 .claude/agents/<id>.md         one charter per department
 docs/AGENT-SURFACES.md         every path has exactly one owner, enforced in CI
 docs/DECISION-LOG.md           numbered decisions with options and recommendations
+docs/USE-CASES.md              situations worked end to end across departments
 ```
 
 Agents split by **exclusive write surface**, not by topic — a topic split has no checkable
@@ -283,8 +289,10 @@ boundary, and two agents working on "SEO" and "UI" both end up in the same file.
 ./scripts/check-all.sh
 ```
 
-Verifies the surface map is coherent, every skill's frontmatter is valid and unique, no third-party
-licence text has appeared, and every manifest parses. CI runs the same script.
+Verifies the surface map is coherent, every skill's frontmatter is valid and unique, no
+third-party licence text has appeared, the generated README and social card are current, every
+`department:skill` reference in the docs resolves, and every manifest parses. CI runs the same
+script, so local and CI cannot drift.
 
 A new department needs its roster row in `docs/AGENT-SURFACES.md`, a surface block, a charter in
 `.claude/agents/`, and an entry in `.claude-plugin/marketplace.json` — all in the same change, or
