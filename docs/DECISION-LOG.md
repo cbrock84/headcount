@@ -388,9 +388,9 @@ of decisions.
 | 4 | Write `docs/AGENT-SURFACES.md`; add first CI workflow running `agent-guard check` | D14 | — | ✅ done |
 | 5 | Mark PR #2 ready; squash-merge; delete the branch | D5, D15 | 6+ | ✅ done |
 | 6 | Build `security` department + CISO charter, marked reviewer-class | D9, D10, D13 | — | ✅ done |
-| 7 | Deepen `operations`, then `finance`, then `people` | D10 | — | |
+| 7 | Deepen `operations`, then `finance`, then `people` | D10 | — | ✅ done |
 | 8 | Catalog public Keel-GRC and Drummond repos — no import | D11 | — | |
-| 9 | Start a separate session against Keel-GRC for the private sweep | D11 | — | |
+| 9 | ~~Separate session against Keel-GRC for the private sweep~~ | D11 | — | ✂️ dropped, D30 |
 | 10 | Build the vertical generator: core, per-vertical config, one-way emit | D8 | — | |
 | 11 | Revisit repo visibility | D16 | after 1 | ✅ done |
 
@@ -904,3 +904,53 @@ shipping this before the setting is flipped, and it is a single line to revert i
 not publish a site.
 
 **To enable:** Settings → Pages → Source: *Deploy from a branch* → Branch: `main`, folder `/docs`.
+
+---
+
+## D30. Coverage QC against public occupational taxonomies — ✅ Resolved
+
+Two questions, settled together: whether the cross-organization repository sweep was worth running,
+and whether the catalog covers what a medium-to-large business actually contains.
+
+**The sweep is dropped.** A manual pass over the Keel and Drummond repositories found little beyond
+overlap with GRC roles already covered by `legal-risk` and `security`. Work-queue items 8 and 9 are
+closed rather than deferred — a deferred item nobody intends to do is worse than a closed one,
+because it keeps appearing in every review.
+
+**Coverage was validated against external taxonomies rather than intuition.** Judging one's own
+catalog complete by inspection reliably finds the functions the author already thought of. The
+references used were the **BLS Standard Occupational Classification** major groups 11-0000
+(Management Occupations) and 13-0000 (Business and Financial Operations Occupations) — public,
+cross-industry, and the standard instrument for exactly this question.
+
+**Eight gaps found, all built.** Six were functions the taxonomy names and the catalog did not
+cover:
+
+| Function | SOC codes | Why it was missed |
+|---|---|---|
+| `operations:procurement-and-sourcing` | 11-3061, 13-1023 | Judged covered by `vendor-management`, which is post-contract only. Two separate SOC codes point at the pre-contract discipline; that judgment was wrong. |
+| `finance:tax` | 13-2081, 13-2082 | Zero coverage across nine finance skills. |
+| `people:benefits-and-leave` | 11-3111, 13-1141 | `compensation-and-leveling` covers pay bands, not health, retirement or leave. |
+| `legal-risk:regulatory-compliance` | 13-1041 | Already named as a gap; the taxonomy confirmed it. |
+| `operations:facilities-and-workplace` | 11-3013, 11-9141 | Zero coverage. Also absorbs the administrative-services function from 11-3012, so D12's dissolution of the `administration` department stands. |
+| `marketing:events-and-field-marketing` | 13-1121 | Seventeen marketing skills and no events. |
+
+**Two more were internal inconsistencies the taxonomy did not find and a structural check did.**
+Every department carried a department-head skill except `it-operations` and `pmo` — the two added
+most recently. Their charters had been written to anchor on an arbitrary skill instead, which is a
+workaround I introduced rather than a gap I reported. Fixed with
+`it-operations:chief-information-officer` and `pmo:head-of-pmo`, and both charters now anchor on
+their head like every other.
+
+The CIO skill also states the CTO/CIO boundary explicitly, which D27 split but never wrote down in
+a skill: the CIO runs the technology the company works *on*, the CTO the technology it *sells*.
+
+**What was deliberately not built.** The industry-specific management occupations in SOC 11-9000 —
+education, medical, food service, lodging, gambling, funeral, agricultural and construction — are
+correctly absent from a cross-industry core and belong to the vertical variants in D8. Labor and
+union relations (13-1075) and industrial production management (11-3051) are real but weighted
+toward manufacturing, logistics and retail, so they go to the verticals too.
+
+**Remaining Tier 1**, recorded in the org chart's gaps section: customer experience depth, legal
+depth, corporate strategy depth, and product discovery and prioritization. None is a missing
+function; all are thin coverage of a function already present.

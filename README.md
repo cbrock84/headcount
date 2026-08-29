@@ -5,7 +5,7 @@
 <p align="center">
   <a href="https://claude.com/claude-code"><img alt="Built for Claude Code" src="https://img.shields.io/badge/built%20for-Claude%20Code-D97757?style=flat-square"></a>
   <img alt="16 departments" src="https://img.shields.io/badge/departments-16-3F4B5B?style=flat-square">
-  <img alt="135 skills" src="https://img.shields.io/badge/skills-135-3F4B5B?style=flat-square">
+  <img alt="143 skills" src="https://img.shields.io/badge/skills-143-3F4B5B?style=flat-square">
   <a href="LICENSE"><img alt="MIT licensed" src="https://img.shields.io/badge/license-MIT-3F4B5B?style=flat-square"></a>
   <a href="CONTRIBUTING.md"><img alt="PRs welcome" src="https://img.shields.io/badge/PRs-welcome-2EA043?style=flat-square"></a>
 </p>
@@ -14,7 +14,7 @@
   <a href="https://cbrock84.github.io/headcount/org-chart.html">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="docs/assets/org-chart-dark.png">
-      <img alt="The headcount org chart — 16 departments, 135 skills, searchable" src="docs/assets/org-chart-light.png" width="840">
+      <img alt="The headcount org chart — 16 departments, 143 skills, searchable" src="docs/assets/org-chart-light.png" width="840">
     </picture>
   </a>
 </p>
@@ -24,7 +24,7 @@
 </p>
 
 An agent organization for [Claude Code](https://claude.com/claude-code), structured as a company:
-a chief executive over 16 departments, 135 skills in total.
+a chief executive over 16 departments, 143 skills in total.
 
 Every department is an independently installable plugin, so a project loads only the functions it
 needs rather than all of them at once.
@@ -118,11 +118,12 @@ to as a subagent with its own exclusive write surface.
 </details>
 
 <details>
-<summary><b>IT Operations</b> (CIO) — 7 skills</summary>
+<summary><b>IT Operations</b> (CIO) — 8 skills</summary>
 
 | Skill | What it does |
 |---|---|
 | `backup-and-recovery` | Protects and restores data — backup coverage and scope, retention, immutability against ransomware, and proving restores actually work. |
+| `chief-information-officer` | The CIO's remit — running the technology the company works on, service quality, IT spend, and the boundary with product engineering. |
 | `endpoint-management` | Manages laptops, desktops and mobile devices — enrollment, configuration, patching, software distribution, and lost or compromised devices. |
 | `identity-lifecycle-administration` | Executes joiner, mover and leaver processes — provisioning, group membership, access changes on role change, and complete deprovisioning. |
 | `it-asset-management` | Tracks hardware and software assets through their life — procurement, ownership, licensing, refresh, and disposal. |
@@ -150,7 +151,7 @@ to as a subagent with its own exclusive write surface.
 </details>
 
 <details>
-<summary><b>Marketing</b> (CMO) — 17 skills</summary>
+<summary><b>Marketing</b> (CMO) — 18 skills</summary>
 
 | Skill | What it does |
 |---|---|
@@ -160,6 +161,7 @@ to as a subagent with its own exclusive write surface.
 | `chief-marketing-officer` | Owns brand, demand generation, content, communications, and how the market understands what the business does. |
 | `content-strategy` | Decides what content to make and why — topic territory, format mix, cadence, and how content connects to a business outcome rather than to traffic. |
 | `customer-research` | Plans, runs, and synthesizes customer research — interviews, surveys, win-loss analysis, and message testing — into findings that change decisions. |
+| `events-and-field-marketing` | Plans and runs events that produce pipeline — conferences, trade shows, webinars, field programs, and measuring whether any of it worked. |
 | `marketing-campaign-planner` | Designs a coordinated multi-channel campaign or product launch around one story — objective, message, channel sequencing, timeline, assets, and the checklist that g…. |
 | `marketing-copywriting` | Writes and edits marketing copy for any surface — homepage, product and pricing pages, ads, emails, and collateral — and sharpens existing copy that is not working. |
 | `marketing-planning` | Builds the marketing plan of record — objectives, channel mix, budget allocation, sequencing, and the measurement that says whether it worked. |
@@ -210,7 +212,7 @@ to as a subagent with its own exclusive write surface.
 </details>
 
 <details>
-<summary><b>Finance</b> (CFO) — 9 skills</summary>
+<summary><b>Finance</b> (CFO) — 10 skills</summary>
 
 | Skill | What it does |
 |---|---|
@@ -221,20 +223,23 @@ to as a subagent with its own exclusive write surface.
 | `financial-reporting-and-close` | Runs the period-end close and produces reporting — close calendar, reconciliations, accruals, variance analysis, and reporting that gets read. |
 | `internal-controls-and-audit` | Designs and tests controls over financial reporting — segregation of duties, approval limits, evidence, and preparing for audit. |
 | `revenue-recognition` | Determines when and how revenue is recognized — performance obligations, contract terms that change the answer, and the deal structures that create accounting probl…. |
+| `tax` | Structures the tax questions a growing business faces — corporate income, sales and use, payroll, nexus, and the obligations created by hiring or selling somewhere…. |
 | `treasury-and-liquidity` | Manages cash and liquidity — cash forecasting, runway, working capital, banking structure, and currency and counterparty exposure. |
 | `unit-economics` | Establishes whether the business makes money on each customer or unit — contribution margin, acquisition cost, payback period, lifetime value, and the cohort behavi…. |
 
 </details>
 
 <details>
-<summary><b>Operations</b> (COO) — 8 skills</summary>
+<summary><b>Operations</b> (COO) — 10 skills</summary>
 
 | Skill | What it does |
 |---|---|
 | `business-continuity-and-resilience` | Plans for operating through disruption — impact analysis, recovery objectives, continuity plans, and the exercises that prove they work. |
 | `capacity-and-demand-planning` | Matches operational capacity to expected demand — forecasting load, sizing teams and systems, managing queues, and deciding when to add capacity. |
 | `chief-operating-officer` | Owns execution: how work actually gets done across the organization, including process, program management, capacity, vendors, supply chain, and service delivery. |
+| `facilities-and-workplace` | Runs the physical and hybrid workplace — space planning, leases, health and safety, office services, and the operational side of where people work. |
 | `process-design` | Designs, documents, and fixes operational processes — mapping the current state, finding where work actually stalls, redesigning the flow, and building controls tha…. |
+| `procurement-and-sourcing` | Buys well — specifying need, running competitive sourcing, negotiating, and category strategy before a contract exists. |
 | `quality-management` | Builds quality into operations — defining standards, catching defects at the right point, root cause analysis, and continuous improvement. |
 | `service-level-management` | Defines and manages service levels — setting targets that reflect what customers need, measuring honestly, and handling breaches. |
 | `supply-chain-and-logistics` | Manages the flow of goods and inputs — sourcing, inventory, lead times, fulfillment, and supply risk. |
@@ -243,13 +248,14 @@ to as a subagent with its own exclusive write surface.
 </details>
 
 <details>
-<summary><b>Program Management Office</b> (EPMO / COO) — 6 skills</summary>
+<summary><b>Program Management Office</b> (EPMO / COO) — 7 skills</summary>
 
 | Skill | What it does |
 |---|---|
 | `benefits-realization` | Ensures projects deliver the value they were approved on — defining measurable benefits, baselining, tracking after delivery, and honest post-implementation review. |
 | `change-and-adoption` | Gets people to actually use what was delivered — stakeholder analysis, communication, training, resistance, and measuring adoption. |
 | `dependency-and-risk-management` | Manages delivery risk and cross-team dependencies — identifying, sizing, mitigating and escalating what could stop the work. |
+| `head-of-pmo` | The EPMO lead's remit — what the PMO governs, what it must never become, and how it earns standing rather than compliance. |
 | `portfolio-governance` | Governs the portfolio of work — intake, prioritization, stage gates, resource contention, and stopping things. |
 | `program-management` | Plans and drives cross-functional programs to delivery — scope, sequencing, dependencies, status, risk, and the escalations that keep work moving. |
 | `project-delivery` | Plans and delivers a single project — scope, estimation, scheduling, critical path, tracking, and recovering when it slips. |
@@ -297,10 +303,11 @@ to as a subagent with its own exclusive write surface.
 </details>
 
 <details>
-<summary><b>People</b> (CHRO) — 9 skills</summary>
+<summary><b>People</b> (CHRO) — 10 skills</summary>
 
 | Skill | What it does |
 |---|---|
+| `benefits-and-leave` | Designs and runs employee benefits and leave — health and retirement plans, leave policy, cost and renewal, and the administration that keeps them compliant. |
 | `chief-human-resources-officer` | Owns the organization itself: org design, hiring, performance, compensation, development, culture, and employee relations. |
 | `compensation-and-leveling` | Builds and maintains the leveling framework and pay structure — level definitions, salary bands, benchmarking, pay equity, and how raises and promotions are decided. |
 | `employee-relations` | Handles the difficult human situations — grievances, complaints, investigations, conflict, and separations conducted properly. |
@@ -314,7 +321,7 @@ to as a subagent with its own exclusive write surface.
 </details>
 
 <details>
-<summary><b>Legal & Risk</b> (CLO / CCO) — 5 skills · **reviewer-class**</summary>
+<summary><b>Legal & Risk</b> (CLO / CCO) — 6 skills · **reviewer-class**</summary>
 
 | Skill | What it does |
 |---|---|
@@ -323,6 +330,7 @@ to as a subagent with its own exclusive write surface.
 | `corporate-governance` | Maintains the corporate record and the governance machinery — entity records, board and committee support, resolutions and minutes, delegations of authority, insura…. |
 | `enterprise-risk` | Identifies, assesses, and tracks organizational risk — building and maintaining a risk register, scoring exposure, assigning owners and treatments, and preparing fo…. |
 | `privacy-and-data-protection` | Assesses and improves how personal data is collected, used, shared, and retained — data mapping, lawful basis, consent, processor agreements, subject rights, and br…. |
+| `regulatory-compliance` | Identifies which regulations apply and builds the program that keeps you inside them — obligation mapping, controls, monitoring, and responding to regulators. |
 
 </details>
 
