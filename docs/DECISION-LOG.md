@@ -644,8 +644,25 @@ and generated documents as generated, so the language bar reflects the deliverab
   checks. Public repositories accept pull requests from forks, and being explicit means a permissive
   account-level default cannot hand a write-scoped token to a workflow triggered by a stranger.
 - **Push trigger narrowed from `["**"]` to `[main]`.** Every push was running the workflow twice —
-  once for the push, once for the pull request, on the same commit. This halves the Actions burn,
-  which is not academic: the account exhausted its minutes on 28 August and CI has been dark since.
+  once for the push, once for the pull request, on the same commit. Pure waste either way.
+- **Deprecated actions bumped.** The first green run warned that `actions/checkout@v4` and
+  `actions/setup-node@v4` run on Node 20, which is being force-migrated to Node 24. Both are now at
+  v7, with `node-version` at 24. Versions were checked against the actions' own release pages rather
+  than assumed — the guess would have been v5, and both are three majors further on than that.
+
+**The CI blackout ended, and not for the reason recorded.** Every run from 28 August onward failed in
+three to four seconds with no steps and empty output, on this repository and on `main` alike. That
+was diagnosed as exhausted Actions minutes, with the fix being the 1 September quota reset. The
+minutes were genuinely exhausted, but the reset was never the fix: **GitHub Actions is free and
+unlimited for public repositories on standard runners** (GitHub's own billing documentation:
+"GitHub Actions usage is free for self-hosted runners and for public repositories that use standard
+GitHub-hosted runners"). Making the repository public under D18 ended the blackout immediately —
+the first run after publishing went green in eight seconds, executing all five checks.
+
+Worth recording because the wrong lesson was nearly banked. The blackout was treated as an external
+constraint to wait out, and `scripts/check-all.sh` was built to decouple verification from CI while
+it lasted. That script earns its place regardless. But the constraint was a consequence of a setting
+this project had already decided to change, and nobody connected the two for a full day.
 
 **Deliberately not done.**
 
