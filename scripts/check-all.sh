@@ -27,6 +27,8 @@ run "README is current" \
   python3 scripts/build-readme.py --check
 run "Social card is current" \
   python3 scripts/build-social-card.py --check
+run "Org chart is current" \
+  python3 scripts/build-org-chart.py --check
 run "Skill references resolve" \
   python3 scripts/check-skill-refs.py
 run "Manifests parse" \
