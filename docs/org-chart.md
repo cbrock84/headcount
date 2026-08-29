@@ -35,54 +35,59 @@ than into the function they oversee.
 | `executive` | Office of the CEO | Chief Executive | 6 |
 | `technology` | Technology | CTO / CIO | 18 |
 | `security` | Security | CISO | 6 · reviewer-class |
-| `it-operations` | IT Operations | CIO | 7 |
+| `it-operations` | IT Operations | CIO | 8 |
 | `product` | Product | CPO | 9 |
-| `marketing` | Marketing | CMO | 17 |
+| `marketing` | Marketing | CMO | 18 |
 | `demand-generation` | Demand Generation | CMO | 11 |
 | `revenue` | Revenue | CRO | 8 |
-| `finance` | Finance | CFO | 9 |
-| `operations` | Operations | COO | 8 |
-| `pmo` | Program Management Office | EPMO / COO | 6 |
+| `finance` | Finance | CFO | 10 |
+| `operations` | Operations | COO | 10 |
+| `pmo` | Program Management Office | EPMO / COO | 7 |
 | `customer-experience` | Customer Experience | CCO | 5 |
 | `data-analytics` | Data & Analytics | CDO | 6 |
 | `corporate-strategy` | Corporate Strategy | CSO | 5 |
-| `people` | People | CHRO | 9 |
-| `legal-risk` | Legal & Risk | CLO / CCO | 5 · reviewer-class |
+| `people` | People | CHRO | 10 |
+| `legal-risk` | Legal & Risk | CLO / CCO | 6 · reviewer-class |
 
-16 departments, 135 skills.
+16 departments, 143 skills.
 <!-- END GENERATED: departments -->
 
 ## Remaining gaps
 
+Validated against two public taxonomies rather than intuition: the **BLS Standard Occupational
+Classification** major groups 11-0000 (Management) and 13-0000 (Business and Financial Operations),
+and the shape of a cross-industry business. Every management occupation in 11-0000 that is not
+industry-specific now maps to a skill, and the gaps below are what remains.
+
 ### Tier 1 — worth building next
 
-**Legal depth.** Five skills. Missing `ip-and-licensing`, `regulatory-compliance`, and
-`audit-readiness` — the last pairing with `finance:internal-controls-and-audit`, which covers
-controls over financial reporting but not readiness for a wider audit.
+**Customer Experience depth.** Five skills, now the thinnest department. Missing
+`customer-onboarding`, `churn-and-recovery`, and `community`.
 
-**Customer Experience depth.** Five skills, the thinnest department. Missing `customer-onboarding`,
-`churn-and-recovery`, and `community`.
+**Legal depth.** Missing `ip-and-licensing` and `audit-readiness` — the latter pairing with
+`finance:internal-controls-and-audit`, which covers controls over financial reporting but not
+readiness for a wider audit.
 
-**Corporate Strategy depth.** Five skills. Missing `competitive-intelligence` and
-`market-entry`.
+**Corporate Strategy depth.** Five skills. Missing `competitive-intelligence` and `market-entry`.
 
-**Built since this list was written**, and removed from it: operations gained supply chain, quality
-management and capacity planning; finance gained revenue recognition, cash management as
-`treasury-and-liquidity`, investment appraisal as `capital-allocation`, and financial controls as
-`internal-controls-and-audit`; people gained performance management, employee relations, learning
-and development, and workforce planning. `procurement` was judged already covered by
-`operations:vendor-management` and `it-operations:it-asset-management` rather than needing its own
-skill.
+**Product depth.** Nine skills, but weighted toward design and interface craft. Missing
+`product-discovery` and `roadmap-prioritization`.
 
-### Tier 2
+### Tier 2 — real, but situational
 
-**Communications and Investor Relations.** `marketing:public-relations` covers earned media. No
-internal communications, executive communications, crisis communications, or IR. IR only matters
-once there are investors.
+**Internal and executive communications.** `marketing:public-relations` covers earned media;
+nothing covers all-hands, change communication, or executive voice. `pmo:change-and-adoption`
+covers rollout communication only.
 
-**Product depth.** No dedicated `product-discovery`, `roadmap-prioritization`, or
-`pricing-experimentation` — the last overlapping `revenue:pricing-and-packaging`, so it may not
-warrant its own skill.
+**Investor relations.** Matters once there are investors, and not before.
+
+**Labor and union relations.** SOC 13-1075. `people:employee-relations` covers individual
+grievances and investigations; collective bargaining is a different discipline. Weighted toward
+manufacturing, logistics and retail, so it belongs with the vertical packs rather than the core.
+
+**Industrial production management.** SOC 11-3051. `operations:quality-management` and
+`operations:capacity-and-demand-planning` cover the general disciplines; plant-floor management is
+vertical.
 
 ### Tier 3 — when the business needs them
 
@@ -92,6 +97,12 @@ warrant its own skill.
 - **Internal Audit** — with a structural caveat: internal audit reports to the audit committee, not
   the CEO. Placing it under `executive` would reproduce the independence failure it exists to
   prevent. It needs a reviewer-class agent no chief can overrule.
+
+### Deliberately out of scope
+
+The industry-specific management occupations in SOC 11-9000 — education, medical and health
+services, food service, lodging, gambling, funeral, agricultural and construction management — are
+correctly absent from a cross-industry core. They belong to the vertical variants in D8.
 
 ## Structural notes
 
