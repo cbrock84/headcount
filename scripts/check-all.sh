@@ -25,6 +25,8 @@ run "No third-party licence text" \
   python3 scripts/check-provenance.py
 run "README is current" \
   python3 scripts/build-readme.py --check
+run "Social card is current" \
+  python3 scripts/build-social-card.py --check
 run "Manifests parse" \
   python3 -c "
 import json,glob,sys
