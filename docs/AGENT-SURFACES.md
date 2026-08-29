@@ -109,6 +109,7 @@ plugins/security/**
 
 ```surface:repo-meta
 LICENSE
+.gitignore
 CONTRIBUTING.md
 .gitattributes
 docs/**
