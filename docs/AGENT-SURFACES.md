@@ -100,6 +100,7 @@ plugins/security/**
 ```surface:repo-meta
 LICENSE
 CONTRIBUTING.md
+.gitattributes
 docs/**
 scripts/**
 .github/**

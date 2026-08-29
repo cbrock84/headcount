@@ -1,0 +1,10 @@
+# GitHub's language bar is computed by Linguist, which by default weighs a single
+# tooling script more heavily than the prose that is actually the product. Without
+# this the repository is labelled "JavaScript" on the strength of one .mjs guard.
+#
+# Skills are the deliverable, so they count. Tooling and generated docs do not.
+scripts/*        linguist-vendored
+*.mjs            linguist-vendored
+README.md        linguist-generated
+docs/org-chart.md linguist-generated
+plugins/**/*.md  linguist-detectable
