@@ -83,6 +83,7 @@ plugins/security/**
 ```
 
 ```surface:repo-meta
+LICENSE
 docs/**
 scripts/**
 .github/**
