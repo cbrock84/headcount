@@ -1,4 +1,6 @@
-# agents-v1
+# headcount
+
+**Add a department, not a prompt.**
 
 An agent organization for [Claude Code](https://claude.com/claude-code), structured as a company:
 a chief executive over 14 departments, 101 skills in total.
@@ -9,8 +11,8 @@ needs rather than all of them at once.
 ## Install
 
 ```
-/plugin marketplace add cbrock84/agents-v1
-/plugin install security@agents-v1
+/plugin marketplace add cbrock84/headcount
+/plugin install security@headcount
 ```
 
 Install as many departments as the project needs. Skills are addressed as `department:skill` —
