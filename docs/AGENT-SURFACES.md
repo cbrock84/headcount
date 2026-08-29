@@ -28,9 +28,10 @@ finance              builder    installed
 operations           builder    installed
 people               builder    installed
 legal-risk           builder    installed
+security             builder    installed
 repo-meta            builder    installed
 legal-risk-review    reviewer   installed
-security-review      reviewer   planned
+security-review      reviewer   installed
 ```
 
 Charters live in `.claude/agents/`, one per installed row. A row marked `installed` without a
@@ -77,6 +78,10 @@ plugins/people/**
 ```surface:legal-risk
 plugins/legal-risk/**
 ```
+```surface:security
+plugins/security/**
+```
+
 ```surface:repo-meta
 docs/**
 scripts/**
@@ -97,7 +102,10 @@ commit to, holds no surface in that capacity, and its findings are not overrulab
 under review. Disagreement escalates to the Chief Executive rather than resolving inside the
 reviewed department. See D13.
 
-`security-review` activates when the `security` department is built (D9).
+`security` mirrors `legal-risk`: a builder owning `plugins/security/**`, and separately
+`security-review`, reviewer-class over what other departments build. Its blocking findings are not
+overrulable by the department under review, which is why the CISO reports independently rather than
+under the CTO (D9, D13).
 
 ## Rules
 
