@@ -28,6 +28,9 @@ finance              builder    installed
 operations           builder    installed
 people               builder    installed
 legal-risk           builder    installed
+customer-experience  builder    installed
+data-analytics       builder    installed
+corporate-strategy   builder    installed
 security             builder    installed
 repo-meta            builder    installed
 legal-risk-review    reviewer   installed
@@ -78,6 +81,18 @@ plugins/people/**
 ```surface:legal-risk
 plugins/legal-risk/**
 ```
+```surface:customer-experience
+plugins/customer-experience/**
+```
+
+```surface:data-analytics
+plugins/data-analytics/**
+```
+
+```surface:corporate-strategy
+plugins/corporate-strategy/**
+```
+
 ```surface:security
 plugins/security/**
 ```

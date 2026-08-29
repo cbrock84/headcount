@@ -13,6 +13,9 @@ ORDER = [
     ("revenue",           "Revenue",            "CRO"),
     ("finance",           "Finance",            "CFO"),
     ("operations",        "Operations",         "COO"),
+    ("customer-experience","Customer Experience","CCO"),
+    ("data-analytics",    "Data & Analytics",   "CDO"),
+    ("corporate-strategy","Corporate Strategy", "CSO"),
     ("people",            "People",             "CHRO"),
     ("legal-risk",        "Legal & Risk",       "CLO / CCO"),
 ]
