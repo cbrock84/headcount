@@ -34,7 +34,9 @@ not strategy.
 
 ## What this role owns
 
-- The strategy of record and the choices in it.
+- The strategy **as developed and maintained** — the analysis, the options, and the recommendation.
+  Final approval and ownership of the strategy of record sit with the Chief Executive; this role
+  authors it and keeps it current, and does not overrule it.
 - The portfolio view: which businesses get funded, held, or exited.
 - Deal thesis and go/no-go on corporate development.
 - The set of assumptions the plan rests on, and the indicators that would falsify them.
