@@ -252,26 +252,25 @@ one most reused by the manufacturing and food verticals.
 
 ## D11. Cross-org sweep of public repos — ✅ Resolved
 
-Two other organizations I have access to cannot be *attached* to this session (one-owner limit), but their
-**public** repositories are readable here by anonymous clone. Verified against
-`one of their public repositories`.
+Two other organizations I have access to cannot be *attached* to this session (one-owner limit),
+but their **public** repositories are readable here by anonymous clone, which I verified against
+one of them.
 
-Public and likely to hold material: `a governance and compliance skill set`,
-`an industry skills suite`, `GRC engineering`, `a GRC plugin`, `ISO 27001 tooling`,
-`evidence collection`, and `a workflow-automation script skill`.
+What looked likely to hold material: a set of governance, risk and compliance skill repositories,
+some ISO 27001 tooling and evidence-collection work, and one workflow-automation script skill.
 
 - (a) Sweep them now and propose a `compliance` department.
 - **(b) Sweep and catalog only** — report what is there, import nothing until D6 is settled. ←
   **recommended**
 - (c) Defer entirely.
-- (d) Also run the private/internal sweep via `docs/cross-org-sweep-prompt.md`.
+- (d) Also run the private and internal sweep from a session rooted in the other organization.
 
 **Recommendation: (b).** The catalog is cheap and informs D8 and D10. Importing anything before D6
 is resolved would repeat the exact mistake D3 and D4 were about — and these are forks of
 third-party work, so the same licensing question applies to all of them.
 
 **Resolution: (d).** Catalog the public repos from this session, and additionally start a separate
-separate session to sweep private and internal repositories per `docs/cross-org-sweep-prompt.md`.
+session rooted in the other organization to sweep its private and internal repositories.
 
 **Constraint carried forward:** catalog only. Nothing from either sweep is imported until its
 licensing is established, since these are forks of third-party work and D3 and D6 both turned on
@@ -389,13 +388,12 @@ of decisions.
 | 5 | Mark PR #2 ready; squash-merge; delete the branch | D5, D15 | 6+ | ✅ done |
 | 6 | Build `security` department + CISO charter, marked reviewer-class | D9, D10, D13 | — | ✅ done |
 | 7 | Deepen `operations`, then `finance`, then `people` | D10 | — | ✅ done |
-| 8 | Catalog the other organizations' public repos — no import | D11 | — | |
+| 8 | Catalog the other organizations' public repos — no import | D11 | — | ✂️ dropped, D30 |
 | 9 | ~~Separate session for the private sweep~~ | D11 | — | ✂️ dropped, D30 |
 | 10 | Build the vertical generator: core, per-vertical config, one-way emit | D8 | — | |
 | 11 | Revisit repo visibility | D16 | after 1 | ✅ done |
 
-Items 1–4 can proceed in parallel; all four land before item 5. Item 9 needs a session started
-outside this one — see `docs/cross-org-sweep-prompt.md`.
+Items 1–4 can proceed in parallel; all four land before item 5. Items 8 and 9 were dropped in D30.
 
 ---
 
@@ -912,7 +910,7 @@ not publish a site.
 Two questions, settled together: whether the cross-organization repository sweep was worth running,
 and whether the catalog covers what a medium-to-large business actually contains.
 
-**The sweep is dropped.** A manual pass over the those repositories found little beyond
+**The sweep is dropped.** A manual pass over those repositories found little beyond
 overlap with GRC roles already covered by `legal-risk` and `security`. Work-queue items 8 and 9 are
 closed rather than deferred — a deferred item nobody intends to do is worse than a closed one,
 because it keeps appearing in every review.
