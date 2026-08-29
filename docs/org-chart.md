@@ -35,15 +35,15 @@ than into the function they oversee.
 | `marketing` | Marketing | CMO | 17 |
 | `demand-generation` | Demand Generation | CMO | 11 |
 | `revenue` | Revenue | CRO | 8 |
-| `finance` | Finance | CFO | 4 |
-| `operations` | Operations | COO | 4 |
+| `finance` | Finance | CFO | 9 |
+| `operations` | Operations | COO | 9 |
 | `customer-experience` | Customer Experience | CCO | 5 |
 | `data-analytics` | Data & Analytics | CDO | 5 |
 | `corporate-strategy` | Corporate Strategy | CSO | 5 |
-| `people` | People | CHRO | 4 |
+| `people` | People | CHRO | 9 |
 | `legal-risk` | Legal & Risk | CLO / CCO | 5 · reviewer-class |
 
-14 departments, 101 skills.
+14 departments, 116 skills.
 <!-- END GENERATED: departments -->
 
 ## Remaining gaps

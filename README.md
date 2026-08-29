@@ -5,13 +5,13 @@
 <p align="center">
   <a href="https://claude.com/claude-code"><img alt="Built for Claude Code" src="https://img.shields.io/badge/built%20for-Claude%20Code-D97757?style=flat-square"></a>
   <img alt="14 departments" src="https://img.shields.io/badge/departments-14-3F4B5B?style=flat-square">
-  <img alt="101 skills" src="https://img.shields.io/badge/skills-101-3F4B5B?style=flat-square">
+  <img alt="116 skills" src="https://img.shields.io/badge/skills-116-3F4B5B?style=flat-square">
   <a href="LICENSE"><img alt="MIT licensed" src="https://img.shields.io/badge/license-MIT-3F4B5B?style=flat-square"></a>
   <a href="CONTRIBUTING.md"><img alt="PRs welcome" src="https://img.shields.io/badge/PRs-welcome-2EA043?style=flat-square"></a>
 </p>
 
 An agent organization for [Claude Code](https://claude.com/claude-code), structured as a company:
-a chief executive over 14 departments, 101 skills in total.
+a chief executive over 14 departments, 116 skills in total.
 
 Every department is an independently installable plugin, so a project loads only the functions it
 needs rather than all of them at once.
@@ -39,6 +39,11 @@ right specialist engages:
 | "our growth has stalled" | `executive:business-growth-consultant` |
 
 Invoke one directly by name when you want a specific lens: `/finance:financial-modeling`.
+
+Seven situations that cross departments — a SOC 2 demand from an enterprise prospect, a
+security incident, a stalled funnel — are worked through end to end in
+[docs/USE-CASES.md](docs/USE-CASES.md), including where a reviewer-class department stops the
+work rather than adding an opinion.
 
 Each department also ships an agent charter in `.claude/agents/`, so a department can be delegated
 to as a subagent with its own exclusive write surface.
@@ -171,25 +176,35 @@ to as a subagent with its own exclusive write surface.
 </details>
 
 <details>
-<summary><b>Finance</b> (CFO) — 4 skills</summary>
+<summary><b>Finance</b> (CFO) — 9 skills</summary>
 
 | Skill | What it does |
 |---|---|
 | `budgeting-and-forecasting` | Runs the planning cycle — annual budget, rolling forecast, consolidation of business unit inputs, and the variance analysis that explains actuals against plan. |
+| `capital-allocation` | Evaluates where to spend limited capital — investment appraisal, hurdle rates, payback, and comparing proposals that are not alike. |
 | `chief-financial-officer` | Owns the financial position: planning, budgeting, forecasting, unit economics, cash, and the numbers the business is run and reported on. |
 | `financial-modeling` | Builds and stress-tests financial models for forecasting, scenario planning, and decision support — revenue build, cost structure, driver logic, and the sensitiviti…. |
+| `financial-reporting-and-close` | Runs the period-end close and produces reporting — close calendar, reconciliations, accruals, variance analysis, and reporting that gets read. |
+| `internal-controls-and-audit` | Designs and tests controls over financial reporting — segregation of duties, approval limits, evidence, and preparing for audit. |
+| `revenue-recognition` | Determines when and how revenue is recognised — performance obligations, contract terms that change the answer, and the deal structures that create accounting probl…. |
+| `treasury-and-liquidity` | Manages cash and liquidity — cash forecasting, runway, working capital, banking structure, and currency and counterparty exposure. |
 | `unit-economics` | Establishes whether the business makes money on each customer or unit — contribution margin, acquisition cost, payback period, lifetime value, and the cohort behavi…. |
 
 </details>
 
 <details>
-<summary><b>Operations</b> (COO) — 4 skills</summary>
+<summary><b>Operations</b> (COO) — 9 skills</summary>
 
 | Skill | What it does |
 |---|---|
+| `business-continuity-and-resilience` | Plans for operating through disruption — impact analysis, recovery objectives, continuity plans, and the exercises that prove they work. |
+| `capacity-and-demand-planning` | Matches operational capacity to expected demand — forecasting load, sizing teams and systems, managing queues, and deciding when to add capacity. |
 | `chief-operating-officer` | Owns execution: how work actually gets done across the organization, including process, program management, capacity, vendors, supply chain, and service delivery. |
 | `process-design` | Designs, documents, and fixes operational processes — mapping the current state, finding where work actually stalls, redesigning the flow, and building controls tha…. |
 | `program-management` | Plans and drives cross-functional programs to delivery — scope, sequencing, dependencies, status, risk, and the escalations that keep work moving. |
+| `quality-management` | Builds quality into operations — defining standards, catching defects at the right point, root cause analysis, and continuous improvement. |
+| `service-level-management` | Defines and manages service levels — setting targets that reflect what customers need, measuring honestly, and handling breaches. |
+| `supply-chain-and-logistics` | Manages the flow of goods and inputs — sourcing, inventory, lead times, fulfilment, and supply risk. |
 | `vendor-management` | Selects, contracts, and manages suppliers and vendors — requirements, evaluation, negotiation support, onboarding, performance management, and exit. |
 
 </details>
@@ -234,14 +249,19 @@ to as a subagent with its own exclusive write surface.
 </details>
 
 <details>
-<summary><b>People</b> (CHRO) — 4 skills</summary>
+<summary><b>People</b> (CHRO) — 9 skills</summary>
 
 | Skill | What it does |
 |---|---|
 | `chief-human-resources-officer` | Owns the organization itself: org design, hiring, performance, compensation, development, culture, and employee relations. |
 | `compensation-and-leveling` | Builds and maintains the leveling framework and pay structure — level definitions, salary bands, benchmarking, pay equity, and how raises and promotions are decided. |
+| `employee-relations` | Handles the difficult human situations — grievances, complaints, investigations, conflict, and separations conducted properly. |
 | `hiring-and-interviewing` | Designs and runs hiring — role definition, sourcing, interview loop design, structured evaluation, and the decision itself. |
+| `learning-and-development` | Builds capability — skills gaps, career frameworks, training that transfers to the job, and internal mobility. |
+| `onboarding-and-offboarding` | Designs the joining and leaving experience — first-day readiness, ramp to productivity, knowledge capture, and clean exits. |
 | `org-design` | Designs how an organization is structured — reporting lines, team boundaries, spans and layers, role definition, and workforce planning against the strategy. |
+| `performance-management` | Runs performance systems that change behaviour — expectations, feedback, review cycles, calibration, and handling underperformance. |
+| `workforce-planning` | Plans the shape and size of the workforce — demand for roles, build-versus-buy, attrition, and sequencing hiring against budget. |
 
 </details>
 
@@ -271,6 +291,7 @@ plugins/<department>/
 .claude/agents/<id>.md         one charter per department
 docs/AGENT-SURFACES.md         every path has exactly one owner, enforced in CI
 docs/DECISION-LOG.md           numbered decisions with options and recommendations
+docs/USE-CASES.md              situations worked end to end across departments
 ```
 
 Agents split by **exclusive write surface**, not by topic — a topic split has no checkable
@@ -283,8 +304,10 @@ boundary, and two agents working on "SEO" and "UI" both end up in the same file.
 ./scripts/check-all.sh
 ```
 
-Verifies the surface map is coherent, every skill's frontmatter is valid and unique, no third-party
-licence text has appeared, and every manifest parses. CI runs the same script.
+Verifies the surface map is coherent, every skill's frontmatter is valid and unique, no
+third-party licence text has appeared, the generated README and social card are current, every
+`department:skill` reference in the docs resolves, and every manifest parses. CI runs the same
+script, so local and CI cannot drift.
 
 A new department needs its roster row in `docs/AGENT-SURFACES.md`, a surface block, a charter in
 `.claude/agents/`, and an entry in `.claude-plugin/marketplace.json` — all in the same change, or
