@@ -12,7 +12,7 @@ function inside the delivery organization is measured on delivery, and will lose
 
 ## Surface
 
-Writes: `plugins/security/**` — currently 6 skills.
+Writes: `plugins/security/**`.
 Reads: anything. Commits: nothing; the orchestrator is the sole committer.
 
 ## Standard

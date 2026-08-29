@@ -4,14 +4,14 @@
 
 <p align="center">
   <a href="https://claude.com/claude-code"><img alt="Built for Claude Code" src="https://img.shields.io/badge/built%20for-Claude%20Code-D97757?style=flat-square"></a>
-  <img alt="14 departments" src="https://img.shields.io/badge/departments-14-3F4B5B?style=flat-square">
-  <img alt="116 skills" src="https://img.shields.io/badge/skills-116-3F4B5B?style=flat-square">
+  <img alt="16 departments" src="https://img.shields.io/badge/departments-16-3F4B5B?style=flat-square">
+  <img alt="135 skills" src="https://img.shields.io/badge/skills-135-3F4B5B?style=flat-square">
   <a href="LICENSE"><img alt="MIT licensed" src="https://img.shields.io/badge/license-MIT-3F4B5B?style=flat-square"></a>
   <a href="CONTRIBUTING.md"><img alt="PRs welcome" src="https://img.shields.io/badge/PRs-welcome-2EA043?style=flat-square"></a>
 </p>
 
 An agent organization for [Claude Code](https://claude.com/claude-code), structured as a company:
-a chief executive over 14 departments, 116 skills in total.
+a chief executive over 16 departments, 135 skills in total.
 
 Every department is an independently installable plugin, so a project loads only the functions it
 needs rather than all of them at once.
@@ -65,21 +65,27 @@ to as a subagent with its own exclusive write surface.
 </details>
 
 <details>
-<summary><b>Technology</b> (CTO / CIO) — 12 skills</summary>
+<summary><b>Technology</b> (CTO / CIO) — 18 skills</summary>
 
 | Skill | What it does |
 |---|---|
 | `ai-workflow-architect` | Designs AI systems, automations, and agent workflows for a business — identifying which manual work is worth automating, how to structure the system, which tools fi…. |
+| `api-design` | Designs interfaces that survive their consumers — resource modelling, errors, versioning, pagination, and compatibility. |
 | `branch-and-worktree-workflow` | Isolates feature work in its own branch or worktree and integrates it cleanly when done. |
 | `chief-technology-officer` | Owns architecture, engineering delivery, infrastructure, data platform, and internal systems. |
+| `cloud-infrastructure` | Designs and runs cloud infrastructure — environments, infrastructure as code, networking and isolation, scaling, and cost. |
 | `code-review` | Conducts and responds to code review — reviewing a change for correctness, design, and risk, and evaluating review feedback received on your own work. |
 | `completion-verification` | Verifies that work is actually complete before it is claimed to be — running the checks, reading the output, and confirming the original request was satisfied rathe…. |
 | `implementation-planning` | Turns a spec or requirement into a written plan a separate session or agent can execute, then drives that plan through review checkpoints. |
+| `observability-and-reliability` | Makes systems debuggable and reliably operable — instrumentation, alerting that is worth waking for, service objectives, and learning from failure. |
 | `parallel-agent-delivery` | Splits work across multiple agents or sessions running at once, keeping their surfaces disjoint so results merge cleanly. |
 | `prompt-optimizer` | Turns rough intent or a weak prompt into a reliable one — diagnosing why output is inconsistent, restructuring the instruction, and adapting it across models. |
+| `release-and-deployment` | Ships changes safely and often — pipelines, deployment strategies, feature flags, rollback, and database changes. |
 | `skill-authoring` | Writes and revises agent skills so they trigger at the right moments and give usable instruction when they do. |
+| `solution-architecture` | Designs system structure and makes architectural decisions defensible — boundaries, coupling, trade-offs, and recording why. |
 | `solution-exploration` | Explores the problem and the range of possible approaches before any code is written — clarifying what is actually being asked, surfacing options with their tradeof…. |
 | `systematic-debugging` | Finds the root cause of a bug, test failure, or unexpected behavior before proposing any fix. |
+| `technical-debt-management` | Makes technical debt visible and decidable — distinguishing real debt from mess, quantifying its cost, and arguing for remediation in business terms. |
 | `test-driven-development` | Drives implementation by writing a failing test first, then the smallest code that passes it. |
 
 </details>
@@ -95,6 +101,21 @@ to as a subagent with its own exclusive write surface.
 | `security-architecture-review` | Reviews a design or change for security before it ships — authentication and authorization, data handling, secrets, dependencies, and the secure-development practic…. |
 | `threat-modeling` | Identifies what could go wrong in a system before it is built or changed — the assets worth attacking, the entry points, the trust boundaries, and the controls that…. |
 | `vulnerability-management` | Runs the loop from discovering a weakness to confirming it is fixed — scanning, triage, prioritization by real exploitability, remediation tracking, and patch policy. |
+
+</details>
+
+<details>
+<summary><b>IT Operations</b> (CIO) — 7 skills</summary>
+
+| Skill | What it does |
+|---|---|
+| `backup-and-recovery` | Protects and restores data — backup coverage and scope, retention, immutability against ransomware, and proving restores actually work. |
+| `endpoint-management` | Manages laptops, desktops and mobile devices — enrolment, configuration, patching, software distribution, and lost or compromised devices. |
+| `identity-lifecycle-administration` | Executes joiner, mover and leaver processes — provisioning, group membership, access changes on role change, and complete deprovisioning. |
+| `it-asset-management` | Tracks hardware and software assets through their life — procurement, ownership, licensing, refresh, and disposal. |
+| `network-administration` | Designs and operates the corporate network — segmentation, remote access, wireless, DNS and addressing, and diagnosing network problems. |
+| `service-desk` | Runs the IT service desk — intake, triage, prioritisation, escalation, knowledge, and the metrics that improve service rather than distort it. |
+| `systems-administration` | Runs servers and corporate systems — patching, configuration baselines, change control, capacity, and the routine that prevents incidents. |
 
 </details>
 
@@ -193,7 +214,7 @@ to as a subagent with its own exclusive write surface.
 </details>
 
 <details>
-<summary><b>Operations</b> (COO) — 9 skills</summary>
+<summary><b>Operations</b> (COO) — 8 skills</summary>
 
 | Skill | What it does |
 |---|---|
@@ -201,11 +222,24 @@ to as a subagent with its own exclusive write surface.
 | `capacity-and-demand-planning` | Matches operational capacity to expected demand — forecasting load, sizing teams and systems, managing queues, and deciding when to add capacity. |
 | `chief-operating-officer` | Owns execution: how work actually gets done across the organization, including process, program management, capacity, vendors, supply chain, and service delivery. |
 | `process-design` | Designs, documents, and fixes operational processes — mapping the current state, finding where work actually stalls, redesigning the flow, and building controls tha…. |
-| `program-management` | Plans and drives cross-functional programs to delivery — scope, sequencing, dependencies, status, risk, and the escalations that keep work moving. |
 | `quality-management` | Builds quality into operations — defining standards, catching defects at the right point, root cause analysis, and continuous improvement. |
 | `service-level-management` | Defines and manages service levels — setting targets that reflect what customers need, measuring honestly, and handling breaches. |
 | `supply-chain-and-logistics` | Manages the flow of goods and inputs — sourcing, inventory, lead times, fulfilment, and supply risk. |
 | `vendor-management` | Selects, contracts, and manages suppliers and vendors — requirements, evaluation, negotiation support, onboarding, performance management, and exit. |
+
+</details>
+
+<details>
+<summary><b>Programme Management Office</b> (EPMO / COO) — 6 skills</summary>
+
+| Skill | What it does |
+|---|---|
+| `benefits-realization` | Ensures projects deliver the value they were approved on — defining measurable benefits, baselining, tracking after delivery, and honest post-implementation review. |
+| `change-and-adoption` | Gets people to actually use what was delivered — stakeholder analysis, communication, training, resistance, and measuring adoption. |
+| `dependency-and-risk-management` | Manages delivery risk and cross-team dependencies — identifying, sizing, mitigating and escalating what could stop the work. |
+| `portfolio-governance` | Governs the portfolio of work — intake, prioritisation, stage gates, resource contention, and stopping things. |
+| `program-management` | Plans and drives cross-functional programs to delivery — scope, sequencing, dependencies, status, risk, and the escalations that keep work moving. |
+| `project-delivery` | Plans and delivers a single project — scope, estimation, scheduling, critical path, tracking, and recovering when it slips. |
 
 </details>
 
@@ -223,13 +257,14 @@ to as a subagent with its own exclusive write surface.
 </details>
 
 <details>
-<summary><b>Data & Analytics</b> (CDO) — 5 skills</summary>
+<summary><b>Data & Analytics</b> (CDO) — 6 skills</summary>
 
 | Skill | What it does |
 |---|---|
 | `ai-ml-governance` | Governs models and AI systems in production — intended use, evaluation, monitoring, human oversight, documentation, and the decision to deploy or retire. |
 | `business-intelligence` | Builds reporting and self-serve analytics that people actually use — metric trees, dashboard design, distribution, and the discipline that stops dashboards prolifer…. |
 | `chief-data-officer` | Owns data as an asset — governance, quality, the warehouse and semantic layer, analytics capability, and the governance of models built on top. |
+| `data-engineering` | Builds and operates data pipelines — ingestion, transformation, orchestration, quality testing, and reliability of data delivery. |
 | `data-governance` | Establishes ownership, definitions, quality, access, and lineage for the organization's data. |
 | `data-modeling` | Designs the warehouse and semantic layer — source-to-mart structure, dimensional modeling, grain, slowly changing dimensions, and the metric layer analytics reads t…. |
 
@@ -316,6 +351,8 @@ the check fails.
 ## Licence
 
 MIT — see [LICENSE](LICENSE). Every skill here was written for this repository.
+
+Built by [Chris Brock](https://chrisbrock.io).
 
 ---
 

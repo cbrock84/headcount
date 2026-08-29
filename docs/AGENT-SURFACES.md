@@ -32,6 +32,8 @@ customer-experience  builder    installed
 data-analytics       builder    installed
 corporate-strategy   builder    installed
 security             builder    installed
+it-operations        builder    installed
+pmo                  builder    installed
 repo-meta            builder    installed
 legal-risk-review    reviewer   installed
 security-review      reviewer   installed
@@ -91,6 +93,14 @@ plugins/data-analytics/**
 
 ```surface:corporate-strategy
 plugins/corporate-strategy/**
+```
+
+```surface:it-operations
+plugins/it-operations/**
+```
+
+```surface:pmo
+plugins/pmo/**
 ```
 
 ```surface:security

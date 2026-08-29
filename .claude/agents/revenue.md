@@ -12,7 +12,7 @@ here is attributable to one agent and reviewable as one unit.
 
 ## Surface
 
-Writes: `plugins/revenue/**` — currently 8 skills.
+Writes: `plugins/revenue/**`.
 Reads: anything. Commits: nothing; the orchestrator is the sole committer.
 
 ## Standard

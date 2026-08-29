@@ -12,7 +12,7 @@ here is attributable to one agent and reviewable as one unit.
 
 ## Surface
 
-Writes: `plugins/data-analytics/**` — currently 5 skills.
+Writes: `plugins/data-analytics/**`.
 Reads: anything. Commits: nothing; the orchestrator is the sole committer.
 
 ## Standard
