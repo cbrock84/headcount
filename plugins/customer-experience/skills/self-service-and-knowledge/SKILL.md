@@ -1,6 +1,6 @@
 ---
 name: self-service-and-knowledge
-description: Builds the help centre, in-product guidance, and knowledge base that let customers resolve problems without contacting anyone — content, findability, maintenance, and deflection measurement. Use this to build or fix a help centre, reduce support volume, write documentation for customers, improve findability, or decide what deserves a help article versus a product fix.
+description: Builds the help center, in-product guidance, and knowledge base that let customers resolve problems without contacting anyone — content, findability, maintenance, and deflection measurement. Use this to build or fix a help center, reduce support volume, write documentation for customers, improve findability, or decide what deserves a help article versus a product fix.
 ---
 
 # Self-service and knowledge
@@ -38,12 +38,12 @@ An article nobody finds does not exist. Findability comes from titles matching r
 in-product links at the moment of confusion, and search that tolerates the words customers actually
 use rather than your internal vocabulary.
 
-Read your help-centre search logs, especially the queries returning nothing. That list is your
+Read your help-center search logs, especially the queries returning nothing. That list is your
 content backlog, ranked by demand, already written for you.
 
-## In-product beats the help centre
+## In-product beats the help center
 
-Guidance at the point of confusion deflects far more than a help centre does, because it requires no
+Guidance at the point of confusion deflects far more than a help center does, because it requires no
 decision to go looking. A well-written empty state, field hint, or error message removes contacts
 that documentation never would.
 

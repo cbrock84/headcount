@@ -11,7 +11,7 @@ release larger. The loop is the problem.
 
 ## Separate deploy from release
 
-Deploying code and exposing behaviour to users are different acts, and coupling them forces every
+Deploying code and exposing behavior to users are different acts, and coupling them forces every
 deployment to be a business decision.
 
 Decouple with flags: deploy continuously, expose deliberately. This makes rollback a configuration
@@ -30,7 +30,7 @@ Order gates fast-to-slow so failure is cheap: lint and unit tests, then integrat
 requiring a deployed environment. A pipeline slow enough to be circumvented is worse than a fast one
 with fewer checks, because it will be circumvented.
 
-Build once and promote the same artefact through environments. Rebuilding per environment means the
+Build once and promote the same artifact through environments. Rebuilding per environment means the
 thing you tested is not the thing you shipped.
 
 ## Roll out gradually
@@ -48,11 +48,11 @@ structure, write to both, migrate, switch reads, then remove the old — with th
 of both shapes throughout.
 
 Test the migration against production-scale data. A migration that is instant on a development
-dataset can lock a large table for a length of time nobody modelled.
+dataset can lock a large table for a length of time nobody modeled.
 
 ## Never
 
-- Couple deploying code to exposing behaviour.
-- Promote a different artefact than the one that was tested.
+- Couple deploying code to exposing behavior.
+- Promote a different artifact than the one that was tested.
 - Begin a rollout without a defined abort condition.
 - Ship a schema change that requires the application and database to deploy simultaneously.

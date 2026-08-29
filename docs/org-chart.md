@@ -8,7 +8,7 @@
 Technology  Product  Marketing +  Revenue   Finance  Operations   Data &    Corporate
    │                 Demand Gen                          │       Analytics   Strategy
   CIO                                                  EPMO
-IT Operations                              Programme Management Office
+IT Operations                              Program Management Office
 
   CHRO                CCO
  People       Customer Experience
@@ -42,7 +42,7 @@ than into the function they oversee.
 | `revenue` | Revenue | CRO | 8 |
 | `finance` | Finance | CFO | 9 |
 | `operations` | Operations | COO | 8 |
-| `pmo` | Programme Management Office | EPMO / COO | 6 |
+| `pmo` | Program Management Office | EPMO / COO | 6 |
 | `customer-experience` | Customer Experience | CCO | 5 |
 | `data-analytics` | Data & Analytics | CDO | 6 |
 | `corporate-strategy` | Corporate Strategy | CSO | 5 |

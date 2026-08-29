@@ -160,7 +160,7 @@
     {
       "name": "pmo",
       "source": "./plugins/pmo",
-      "description": "Enterprise programme management office: portfolio governance, programme and project delivery, delivery risk, benefits realization, and adoption.",
+      "description": "Enterprise program management office: portfolio governance, program and project delivery, delivery risk, benefits realization, and adoption.",
       "version": "1.0.0",
       "author": {
         "name": "Chris Brock"

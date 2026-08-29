@@ -18,7 +18,7 @@ systems tells you what you own, never what matters.
 For each critical process establish:
 
 - **Maximum tolerable outage** — the point past which the damage is not recoverable by working harder
-  afterwards. This is a business judgement, made by the process owner, not by IT.
+  afterwards. This is a business judgment, made by the process owner, not by IT.
 - **RTO** — how quickly it must be back. Always shorter than someone wants to pay for.
 - **RPO** — how much data you can afford to lose, measured in time. An RPO of zero is a claim about
   spending, not about intent.
@@ -27,7 +27,7 @@ RTO and RPO that were not signed by the person accountable for the process are a
 
 ## Plans people can follow badly
 
-A continuity plan is read by a stressed person at 03:00 who did not write it. Optimise for that
+A continuity plan is read by a stressed person at 03:00 who did not write it. Optimize for that
 reader: named roles rather than names, decision authority stated explicitly, and the first three
 actions on the first page.
 

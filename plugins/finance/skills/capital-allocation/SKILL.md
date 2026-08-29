@@ -48,7 +48,7 @@ first is usually cheaper than being right by luck.
 
 ## Look back, or the numbers stay fictional
 
-Compare realised outcomes against the approved case, and make it routine rather than punitive. Where
+Compare realized outcomes against the approved case, and make it routine rather than punitive. Where
 nobody looks back, forecasts drift optimistic because optimism is rewarded at approval and never
 tested afterwards.
 

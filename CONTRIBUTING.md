@@ -1,19 +1,19 @@
 # Contributing
 
-Contributions are welcome. This document covers the licence, the bar for a skill, and the checks.
+Contributions are welcome. This document covers the license, the bar for a skill, and the checks.
 
-## Licence
+## License
 
-**By submitting a contribution you agree it is licensed under the [MIT Licence](LICENSE), the same
+**By submitting a contribution you agree it is licensed under the [MIT License](LICENSE), the same
 terms as the rest of this repository.**
 
 Contribute only work you have the right to license this way. In particular, do not paste in skills,
-prose, or reference material from another project unless you wrote it or its licence permits
+prose, or reference material from another project unless you wrote it or its license permits
 relocation — and if it does, say so in the pull request. Every line in this repository is original
 to it.
 
 `scripts/check-provenance.py` is a backstop, not a proof. It scans every text file in the tree for
-licence headers, copyright notices, and SPDX identifiers, flags files named like licences
+license headers, copyright notices, and SPDX identifiers, flags files named like licenses
 (`LICENSE`, `COPYING`, `NOTICE`, `PATENTS`, `AUTHORS`), and rejects bundled font assets. It cannot
 detect prose lifted without a notice attached — which is the case that matters most. Review is what
 catches that; the check only catches the obvious.
@@ -56,7 +56,7 @@ Four checks, the same ones CI runs:
 |---|---|
 | Surface map | Every tracked path has exactly one owner |
 | Skill frontmatter | `name` equals the directory name, lowercase-hyphenated, unique, description substantial |
-| Provenance | No licence headers, copyright notices, licence-named files, or font assets |
+| Provenance | No license headers, copyright notices, license-named files, or font assets |
 | Generated docs | README and org-chart tables match the tree |
 
 **Stage your files first.** The surface guard reads `git ls-files`, so an unstaged file is invisible
@@ -70,6 +70,15 @@ present.
 3. Check nothing already covers the ground. Two skills whose descriptions both match a request means
    neither reliably wins — prefer extending an existing skill, or folding a family into one skill
    with references, over adding a near-neighbour.
+
+## House style
+
+**US English.** The author writes in US English and the catalog does too — *license*, *program*,
+*catalog*, *behavior*, *prioritize*, *center*. `scripts/check-us-english.py` fails the build on
+British spellings and `--fix` rewrites them.
+
+The list is of exact word forms, not stems, because stems are a trap here: *analysis*, *analyst*,
+*specialist* and *realistic* are already correct US English and must never be rewritten.
 
 ## Adding a department
 

@@ -1,6 +1,6 @@
 ---
 name: supply-chain-and-logistics
-description: Manages the flow of goods and inputs — sourcing, inventory, lead times, fulfilment, and supply risk. Use this to reduce stockouts or excess inventory, plan for a supplier failure, decide reorder points and safety stock, improve fulfilment reliability, or assess concentration risk in a supply base.
+description: Manages the flow of goods and inputs — sourcing, inventory, lead times, fulfillment, and supply risk. Use this to reduce stockouts or excess inventory, plan for a supplier failure, decide reorder points and safety stock, improve fulfillment reliability, or assess concentration risk in a supply base.
 ---
 
 # Supply chain and logistics
@@ -38,13 +38,13 @@ qualifying an alternate under pressure is where quality problems enter.
 Supplier commercial terms and exit rights belong with `operations:vendor-management`; continuity of
 the wider business process belongs with `operations:business-continuity-and-resilience`.
 
-## Fulfilment reliability
+## Fulfillment reliability
 
 Measure on-time-in-full, not on-time and in-full separately — partial shipments that arrive on
 schedule are a way of appearing to hit a target while failing the customer.
 
 Diagnose misses by cause: supply, capacity, information, or process. The remedies do not overlap,
-and a fulfilment problem attributed to the wrong one gets more expensive rather than better.
+and a fulfillment problem attributed to the wrong one gets more expensive rather than better.
 
 ## Never
 

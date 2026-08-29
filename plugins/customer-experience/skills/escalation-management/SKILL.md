@@ -25,7 +25,7 @@ get worse when ownership is ambiguous — the customer starts re-explaining, whi
 update at three" preserves trust; silence destroys it faster than bad news does. Customers escalate
 again because they heard nothing, far more often than because of the underlying issue.
 
-**Separate acknowledgement from explanation.** Acknowledge the impact immediately, in their terms.
+**Separate acknowledgment from explanation.** Acknowledge the impact immediately, in their terms.
 Explanation comes when you actually know. Leading with a cause you have not confirmed means
 retracting it later, and the retraction is what they remember.
 

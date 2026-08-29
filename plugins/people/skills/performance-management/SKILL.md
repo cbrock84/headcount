@@ -1,6 +1,6 @@
 ---
 name: performance-management
-description: Runs performance systems that change behaviour — expectations, feedback, review cycles, calibration, and handling underperformance. Use this to design or fix a review process, run calibration, write or coach on feedback, address sustained underperformance, or work out why reviews consume weeks and change nothing.
+description: Runs performance systems that change behavior — expectations, feedback, review cycles, calibration, and handling underperformance. Use this to design or fix a review process, run calibration, write or coach on feedback, address sustained underperformance, or work out why reviews consume weeks and change nothing.
 ---
 
 # Performance management
@@ -21,7 +21,7 @@ as justification.
 Separate two axes deliberately, because conflating them is the most common structural flaw:
 
 - **Outcomes** — what was delivered, which is partly situational.
-- **Behaviours** — how it was done, which is more within the person's control.
+- **Behaviors** — how it was done, which is more within the person's control.
 
 Someone who delivered through a collapsing market and someone who delivered by scorching the earth
 around them are different cases. A single blended rating hides both.
@@ -56,7 +56,7 @@ capability, a role mismatch, or something outside work. Treating a role mismatch
 problem produces a performance plan that fails for reasons nobody named.
 
 Where a formal plan is warranted it needs specific outcomes, a real timeframe, defined support, and a
-stated consequence. A plan that is only a paper trail for a decision already taken is recognised as
+stated consequence. A plan that is only a paper trail for a decision already taken is recognized as
 such and does damage well beyond the individual.
 
 ## Never

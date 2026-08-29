@@ -42,7 +42,7 @@ complaint.
 
 ## Conflict that is not misconduct
 
-Most friction is not a policy matter. Address it directly and early: separate the behaviour from the
+Most friction is not a policy matter. Address it directly and early: separate the behavior from the
 person, establish what each actually needs, and be explicit that the working relationship has to
 function even where warmth is not available.
 

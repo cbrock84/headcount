@@ -1,6 +1,6 @@
 ---
 name: technical-debt-management
-description: Makes technical debt visible and decidable — distinguishing real debt from mess, quantifying its cost, and arguing for remediation in business terms. Use this to assess and prioritise debt, decide whether to fix or live with something, justify remediation work to non-engineers, or plan a migration off a system nobody wants to touch.
+description: Makes technical debt visible and decidable — distinguishing real debt from mess, quantifying its cost, and arguing for remediation in business terms. Use this to assess and prioritize debt, decide whether to fix or live with something, justify remediation work to non-engineers, or plan a migration off a system nobody wants to touch.
 ---
 
 # Technical debt management
@@ -9,7 +9,7 @@ Debt is a deliberate trade: taking on future cost to move faster now. Most of wh
 is not that — it is mess, which was never a decision, or drift, where the world moved and the code
 did not. The distinction matters because the arguments and remedies differ.
 
-## Classify before prioritising
+## Classify before prioritizing
 
 - **Deliberate debt** — a known shortcut with a reason. Has a principal and interest. Legitimate.
 - **Mess** — nobody chose it; it accumulated. No trade was made, so there is nothing to defend.
@@ -39,7 +39,7 @@ Frame remediation as capacity recovery with a payback period — the same terms 
 ## Remediate incrementally
 
 Large rewrites fail at a well-documented rate: they take longer than estimated, deliver no value
-until the end, and are cancelled halfway leaving two systems. Prefer strangling the old system
+until the end, and are canceled halfway leaving two systems. Prefer strangling the old system
 gradually behind a stable interface, so value lands continuously and the work can stop at any point
 without leaving a mess.
 
@@ -49,6 +49,6 @@ cheapest code to improve, and it is by definition the code that is being touched
 ## Never
 
 - Present debt as a quality argument to someone accountable for delivery dates.
-- Prioritise by how bad code looks rather than how often it is paid for.
+- Prioritize by how bad code looks rather than how often it is paid for.
 - Start a rewrite with no value delivered until completion.
 - Classify taste as debt.

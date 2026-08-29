@@ -53,5 +53,5 @@ which parts of the plan can still be unwound and by when.
 
 - Build a plan on salary rather than fully loaded cost.
 - Hire faster than the organization can absorb and expect output to rise.
-- Treat attrition as a residual instead of a modelled input.
+- Treat attrition as a residual instead of a modeled input.
 - Report aggregate attrition without looking at it by team and by manager.

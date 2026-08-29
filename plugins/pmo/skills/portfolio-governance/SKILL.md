@@ -1,6 +1,6 @@
 ---
 name: portfolio-governance
-description: Governs the portfolio of work — intake, prioritisation, stage gates, resource contention, and stopping things. Use this to set up intake and prioritisation, run a stage gate, decide between competing initiatives, resolve resource contention across projects, or work out why everything is in flight and nothing is finishing.
+description: Governs the portfolio of work — intake, prioritization, stage gates, resource contention, and stopping things. Use this to set up intake and prioritization, run a stage gate, decide between competing initiatives, resolve resource contention across projects, or work out why everything is in flight and nothing is finishing.
 ---
 
 # Portfolio governance
@@ -19,10 +19,10 @@ evidence it matters, a rough size, the accountable owner, and what will not happ
 That last one is the honest part — capacity is fixed, so approving anything is declining something
 else, whether or not the decline is ever stated.
 
-## Prioritise against capacity, not against merit
+## Prioritize against capacity, not against merit
 
 Ranking by value produces a list where everything above the line is approved and the line is
-imaginary. Prioritisation only means something when the cut is made at real, measured delivery
+imaginary. Prioritization only means something when the cut is made at real, measured delivery
 capacity — see `operations:capacity-and-demand-planning` for the throughput side.
 
 **Limit work in progress.** An organization running twenty concurrent initiatives with capacity for
