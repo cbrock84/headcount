@@ -36,7 +36,7 @@ People adopt what respected colleagues adopt. A message from an executive establ
 is sanctioned; it does not establish that it is sensible.
 
 Find the people others actually ask, involve them early enough to influence the outcome, and let them
-carry it. Involvement after the decisions are made is recognised as decoration and costs more
+carry it. Involvement after the decisions are made is recognized as decoration and costs more
 credibility than it buys.
 
 ## Train at the moment of use
@@ -50,15 +50,15 @@ change.
 
 ## Measure adoption, not deployment
 
-Licences deployed, accounts created and sessions logged measure nothing about whether the work
-changed. Measure the behaviour: is the new process being followed, is the old path still being used,
+Licenses deployed, accounts created and sessions logged measure nothing about whether the work
+changed. Measure the behavior: is the new process being followed, is the old path still being used,
 have the outcomes moved?
 
 Watch for the workaround. Where people have quietly kept the old spreadsheet, adoption is nominal —
 and the workaround is data about what the new system fails to do, not merely non-compliance.
 
 Adoption is the mechanism by which `pmo:benefits-realization` becomes possible; without it there is
-nothing to realise.
+nothing to realize.
 
 ## Never
 

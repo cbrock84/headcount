@@ -27,7 +27,7 @@ boundary; separate namespaces in one account give a soft one that a misconfigure
 crosses.
 
 Production data does not belong in lower environments. Where realistic data is needed, mask or
-synthesise it — a copied production database is a breach waiting for a misconfigured bucket, and it
+synthesize it — a copied production database is a breach waiting for a misconfigured bucket, and it
 is one of the most common ways personal data escapes.
 
 ## Networking and isolation

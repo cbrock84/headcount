@@ -1,11 +1,11 @@
 ---
 name: voice-of-customer
-description: Builds the loop from what customers say to what gets changed — collecting feedback, distinguishing signal from noise, routing it to owners, and closing the loop back to the customer. Use this to set up a feedback programme, design or interpret CSAT/NPS, decide what customer feedback deserves action, get product to act on recurring issues, or diagnose why feedback is collected but nothing changes.
+description: Builds the loop from what customers say to what gets changed — collecting feedback, distinguishing signal from noise, routing it to owners, and closing the loop back to the customer. Use this to set up a feedback program, design or interpret CSAT/NPS, decide what customer feedback deserves action, get product to act on recurring issues, or diagnose why feedback is collected but nothing changes.
 ---
 
 # Voice of customer
 
-Most feedback programmes collect diligently and change nothing. The collection is the easy half; the
+Most feedback programs collect diligently and change nothing. The collection is the easy half; the
 loop is the whole value.
 
 ## Sources, weighted honestly
@@ -14,7 +14,7 @@ loop is the whole value.
   People contacting you have a real problem nobody asked them about. But the sample is strongly
   self-selected: it excludes everyone who silently churned, worked around the problem, or would
   never contact you. Treat it as operational evidence to be normalized per active account and
-  triangulated against churn and behavioural data — never as representative of the customer base.
+  triangulated against churn and behavioral data — never as representative of the customer base.
 - **Churn and loss reasons** — the most valuable and most under-sampled. People leaving have no
   reason to be polite.
 - **Interviews** — depth, small n, best for understanding *why* something in the data is happening.
@@ -27,13 +27,13 @@ Anything a customer built a workaround for outranks anything they merely said in
 ## On CSAT and NPS
 
 Both are useful as trends and misleading as targets. The moment a team is measured on a score, the
-score improves faster than the experience does — asking at the favourable moment, coaching for the
+score improves faster than the experience does — asking at the favorable moment, coaching for the
 rating, excluding difficult segments.
 
 Treat the score as a prompt for the free-text answer, which is where the information is. Segment
 before concluding: an overall score is an average of experiences that have nothing in common.
 
-Never target a number without also watching the behaviour it is supposed to predict.
+Never target a number without also watching the behavior it is supposed to predict.
 
 ## Turning feedback into change
 
@@ -61,5 +61,5 @@ stop escalating.
 
 - Report themes without volume.
 - Let one loud enterprise account set the roadmap without checking how widely the problem is shared.
-- Run a programme with no mechanism for anything to change as a result. That is a survey habit, not
+- Run a program with no mechanism for anything to change as a result. That is a survey habit, not
   a feedback loop.

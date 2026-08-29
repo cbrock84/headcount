@@ -1,6 +1,6 @@
 ---
 name: endpoint-management
-description: Manages laptops, desktops and mobile devices — enrolment, configuration, patching, software distribution, and lost or compromised devices. Use this to set up device management, standardise builds, roll out software or an OS upgrade, handle a lost device, or bring an unmanaged fleet under control.
+description: Manages laptops, desktops and mobile devices — enrollment, configuration, patching, software distribution, and lost or compromised devices. Use this to set up device management, standardize builds, roll out software or an OS upgrade, handle a lost device, or bring an unmanaged fleet under control.
 ---
 
 # Endpoint management
@@ -8,12 +8,12 @@ description: Manages laptops, desktops and mobile devices — enrolment, configu
 Endpoints are the most exposed and least controlled part of the estate: they leave the building, run
 arbitrary software, and are operated by people whose job is not IT.
 
-## Enrolment is the control point
+## Enrollment is the control point
 
 A device that never enrolled is a device with no patching, no encryption guarantee, and no remote
-wipe. Enrolment must be a precondition of access to company data, not a request made afterwards.
+wipe. Enrollment must be a precondition of access to company data, not a request made afterwards.
 
-Automate it from procurement so a device is enrolled before the user opens it. Manual enrolment as a
+Automate it from procurement so a device is enrolled before the user opens it. Manual enrollment as a
 post-delivery step is skipped exactly when the desk is busy.
 
 Handle personal devices as a deliberate policy decision, not an accident. If personal devices reach
@@ -37,7 +37,7 @@ deferral with a hard deadline and force after it, and communicate the deadline i
 unexpected forced reboot during a customer call is what teaches people to avoid management.
 
 Report coverage as a percentage of the fleet, and specifically chase the long tail. The devices that
-never appear in patch reports are usually the interesting ones: travelling users, spares, and the
+never appear in patch reports are usually the interesting ones: traveling users, spares, and the
 machine in a cupboard still holding a domain account.
 
 ## Lost, stolen, or leaving

@@ -49,7 +49,7 @@ finance must agree before an approach is made, not after.
 
 ## The failure mode
 
-Strategy functions drift into producing analysis nobody acts on. The defence is that every piece of
+Strategy functions drift into producing analysis nobody acts on. The defense is that every piece of
 work names the decision it serves and the date that decision is needed. Analysis with no decision
 attached is a hobby.
 

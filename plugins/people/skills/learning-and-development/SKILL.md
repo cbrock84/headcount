@@ -54,6 +54,6 @@ quietly resisted, and quiet resistance always wins.
 ## Never
 
 - Deliver training for a problem that is not a capability problem.
-- Measure a programme by satisfaction scores.
+- Measure a program by satisfaction scores.
 - Write levels in adjectives rather than observable scope and impact.
 - Make management the only route to progression.

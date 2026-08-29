@@ -21,7 +21,7 @@ run "Surface map is coherent" \
   node plugins/executive/skills/agent-hierarchy/scripts/agent-guard.mjs check
 run "Skill frontmatter is valid" \
   python3 scripts/validate-skills.py
-run "No third-party licence text" \
+run "No third-party license text" \
   python3 scripts/check-provenance.py
 run "README is current" \
   python3 scripts/build-readme.py --check
@@ -31,6 +31,8 @@ run "Org chart is current" \
   python3 scripts/build-org-chart.py --check
 run "Skill references resolve" \
   python3 scripts/check-skill-refs.py
+run "US English spelling" \
+  python3 scripts/check-us-english.py
 run "Manifests parse" \
   python3 -c "
 import json,glob,sys

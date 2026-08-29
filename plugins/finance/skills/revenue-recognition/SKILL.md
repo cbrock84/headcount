@@ -1,6 +1,6 @@
 ---
 name: revenue-recognition
-description: Determines when and how revenue is recognised — performance obligations, contract terms that change the answer, and the deal structures that create accounting problems. Use this to work out how a contract should be recognised, review a non-standard deal before it is signed, understand deferred revenue, or spot terms that would delay or reverse recognition.
+description: Determines when and how revenue is recognized — performance obligations, contract terms that change the answer, and the deal structures that create accounting problems. Use this to work out how a contract should be recognized, review a non-standard deal before it is signed, understand deferred revenue, or spot terms that would delay or reverse recognition.
 ---
 
 # Revenue recognition
@@ -16,7 +16,7 @@ contract need your auditors or a qualified accountant, not a checklist.**
 
 Recognition follows the transfer of control to the customer, worked through in five steps: identify
 the contract, identify the distinct performance obligations, determine the transaction price,
-allocate it across the obligations, then recognise as each is satisfied.
+allocate it across the obligations, then recognize as each is satisfied.
 
 Most disputes happen at step two and step four. What sales sold as one thing is frequently several
 obligations for accounting purposes — software plus implementation plus support — and the price has
@@ -45,7 +45,7 @@ nothing commercially can move revenue across a period boundary, and by the time 
 signed paper the trade has already been made.
 
 Give `revenue:chief-revenue-officer` and `revenue:pricing-and-packaging` a small set of standard
-structures that recognise cleanly, and route anything outside them through review before signature —
+structures that recognize cleanly, and route anything outside them through review before signature —
 alongside `legal-risk:contract-review`, which owns the legal exposure the same clauses create.
 
 ## Deferred revenue is an obligation
@@ -56,7 +56,7 @@ surprises you.
 
 ## Never
 
-- Recognise on invoice date or cash receipt as a shortcut.
+- Recognize on invoice date or cash receipt as a shortcut.
 - Allocate price across obligations the way the quote happened to be laid out.
 - Let a side letter exist.
 - Conclude a material or novel contract's treatment without your auditors.

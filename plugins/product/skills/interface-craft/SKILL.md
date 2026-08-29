@@ -48,7 +48,7 @@ must all be handled, not hoped about.
 Inverting a light theme produces the characteristic bad dark mode: pure black backgrounds, pure
 white text, and shadows that do nothing.
 
-- Use a very dark grey rather than pure black, and a slightly dimmed white rather than pure white.
+- Use a very dark gray rather than pure black, and a slightly dimmed white rather than pure white.
   Maximum contrast between the two causes halation and is genuinely tiring to read.
 - Elevation reverses: in light themes raised surfaces cast shadows, in dark themes they get
   *lighter*. Shadow alone conveys nothing on a dark ground.

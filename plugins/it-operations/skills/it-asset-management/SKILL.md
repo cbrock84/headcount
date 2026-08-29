@@ -1,13 +1,13 @@
 ---
 name: it-asset-management
-description: Tracks hardware and software assets through their life — procurement, ownership, licensing, refresh, and disposal. Use this to build an asset register, prepare for a software audit, plan a refresh cycle, control licence spend, or dispose of equipment safely.
+description: Tracks hardware and software assets through their life — procurement, ownership, licensing, refresh, and disposal. Use this to build an asset register, prepare for a software audit, plan a refresh cycle, control license spend, or dispose of equipment safely.
 ---
 
 # IT asset management
 
 The register exists to answer operational questions: what do we have, who has it, is it supported, is
 it licensed, and when does it need replacing. An inventory that answers none of those is an
-accounting artefact.
+accounting artifact.
 
 ## One register, reconciled against reality
 
@@ -32,12 +32,12 @@ is wrong between batches, which is most of the time.
 Under-licensing is a financial and legal exposure that surfaces at audit; over-licensing is money
 spent on nothing, and it is usually the larger number.
 
-Reconcile entitlements against actual installs and actual use. Reclaiming licences from people who
+Reconcile entitlements against actual installs and actual use. Reclaiming licenses from people who
 stopped using a tool typically funds a meaningful fraction of the next renewal, and the data for it
 already exists.
 
-Watch licence models that change cost with infrastructure — per-core, per-socket, per-user in a
-system that provisions freely. A routine infrastructure change can multiply a licence bill with no
+Watch license models that change cost with infrastructure — per-core, per-socket, per-user in a
+system that provisions freely. A routine infrastructure change can multiply a license bill with no
 procurement decision anywhere in the path.
 
 ## Refresh and disposal
@@ -54,5 +54,5 @@ breach with no date attached.
 
 - Maintain a register by hand and trust it.
 - Record a team as an asset owner.
-- Renew licences without reconciling against actual use.
+- Renew licenses without reconciling against actual use.
 - Dispose of storage without evidence of destruction or wipe.

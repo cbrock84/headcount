@@ -85,7 +85,7 @@ knowingly.
 
 ## D4. Rewrite-before-purge ordering — ✅ Resolved
 
-The first execution of D3 deleted the originals and then wrote replacements from a catalogue of
+The first execution of D3 deleted the originals and then wrote replacements from a catalog of
 names and descriptions, so coverage was never verified against actual content.
 
 **Resolution:** Corrected. All 100 superseded skills were restored from git history to a scratch
@@ -124,7 +124,7 @@ commits carrying the vendored tree are unreachable.
 ## D6. Provenance of the 12 Drive-sourced skills — ✅ Resolved
 
 Twelve skills came from the shared Drive folder "12 ready-to-use Claude Skills that turn Claude into
-your own AI team," owned by an unfamiliar Gmail account. They carry **no licence and no stated terms**,
+your own AI team," owned by an unfamiliar Gmail account. They carry **no license and no stated terms**,
 and they were never rewritten — they are the only skills in the repository that are not original work.
 
 They are already merged to `main` via PR #1, and they sit in six departments: `ceo-advisor`,
@@ -132,7 +132,7 @@ They are already merged to `main` via PR #1, and they sit in six departments: `c
 `prompt-optimizer`, `chief-content-officer`, `marketing-campaign-planner`, `newsletter-writer`,
 `landing-page-cro-expert`, `youtube-producer`, `ux-product-auditor`.
 
-This matters because the whole point of D3 was to remove third-party licensed content. No licence is
+This matters because the whole point of D3 was to remove third-party licensed content. No license is
 a *weaker* position than MIT, not a stronger one: MIT grants redistribution rights explicitly, while
 absent terms grant nothing. If that folder is someone's paid product, the repository currently
 redistributes it.
@@ -261,19 +261,19 @@ Public and likely to hold material: `a governance and compliance skill set`,
 `evidence collection`, and `a workflow-automation script skill`.
 
 - (a) Sweep them now and propose a `compliance` department.
-- **(b) Sweep and catalogue only** — report what is there, import nothing until D6 is settled. ←
+- **(b) Sweep and catalog only** — report what is there, import nothing until D6 is settled. ←
   **recommended**
 - (c) Defer entirely.
 - (d) Also run the private/internal sweep via `docs/cross-org-sweep-prompt.md`.
 
-**Recommendation: (b).** The catalogue is cheap and informs D8 and D10. Importing anything before D6
+**Recommendation: (b).** The catalog is cheap and informs D8 and D10. Importing anything before D6
 is resolved would repeat the exact mistake D3 and D4 were about — and these are forks of
 third-party work, so the same licensing question applies to all of them.
 
-**Resolution: (d).** Catalogue the public repos from this session, and additionally start a separate
+**Resolution: (d).** Catalog the public repos from this session, and additionally start a separate
 separate session to sweep private and internal repositories per `docs/cross-org-sweep-prompt.md`.
 
-**Constraint carried forward:** catalogue only. Nothing from either sweep is imported until its
+**Constraint carried forward:** catalog only. Nothing from either sweep is imported until its
 licensing is established, since these are forks of third-party work and D3 and D6 both turned on
 exactly that question.
 
@@ -389,7 +389,7 @@ of decisions.
 | 5 | Mark PR #2 ready; squash-merge; delete the branch | D5, D15 | 6+ | ✅ done |
 | 6 | Build `security` department + CISO charter, marked reviewer-class | D9, D10, D13 | — | ✅ done |
 | 7 | Deepen `operations`, then `finance`, then `people` | D10 | — | |
-| 8 | Catalogue the other organizations' public repos — no import | D11 | — | |
+| 8 | Catalog the other organizations' public repos — no import | D11 | — | |
 | 9 | Start a separate session for the private sweep | D11 | — | |
 | 10 | Build the vertical generator: core, per-vertical config, one-way emit | D8 | — | |
 | 11 | Revisit repo visibility | D16 | after 1 | ✅ done |
@@ -406,10 +406,10 @@ asked.
 
 ## D17. Which department is the next real gap — ✅ Resolved
 
-With `security` built, the catalogue covers eleven departments. Three functions a Fortune 500 has
+With `security` built, the catalog covers eleven departments. Three functions a Fortune 500 has
 that this does not:
 
-- **(a) Customer Experience / Support.** Every business has support; the catalogue has none.
+- **(a) Customer Experience / Support.** Every business has support; the catalog has none.
   `revenue:retention` is the only adjacent skill. Needed: support operations, escalation handling,
   voice-of-customer, service-level design. ← **recommended**
 - (b) **Data & Analytics (CDO).** `demand-generation:marketing-analytics` covers marketing
@@ -419,7 +419,7 @@ that this does not:
 - (d) None — deepen the eleven that exist instead.
 
 **Recommendation: (a), then (b).** Support is the most conspicuous absence to anyone reading the
-catalogue — it is the department every company has and this one does not. Data & Analytics is the
+catalog — it is the department every company has and this one does not. Data & Analytics is the
 one most likely to be expected of a modern org chart. Corp Dev is real but only bites at a scale
 this repo's likely users have not reached.
 
@@ -523,7 +523,7 @@ for inbound contributions.
 
 - **(a) MIT.** ← **chosen**
 - (b) Apache-2.0.
-- (c) A content licence such as CC-BY-4.0.
+- (c) A content license such as CC-BY-4.0.
 - (d) Dual — CC-BY for the prose, MIT for the scripts.
 
 **Resolution: (a).** The reasoning, recorded so it is not re-litigated:
@@ -536,15 +536,15 @@ for inbound contributions.
   lets them, Apache asks them to annotate every file they touch.
 - **MIT is the ecosystem norm.** Every collection this repository originally drew from was MIT, and
   the Claude skills and plugins ecosystem is MIT by convention. Lower friction, fewer legal reviews.
-- **Short licences get complied with.** Two hundred lines of licence on a prose repository invites
+- **Short licenses get complied with.** Two hundred lines of license on a prose repository invites
   the question of whether anyone read it.
 - **(c) and (d) rejected:** Creative Commons explicitly advises against using CC for software, this
-  repository contains executable scripts alongside the prose, and a split licence confuses tooling
+  repository contains executable scripts alongside the prose, and a split license confuses tooling
   and adopters for no practical gain.
 
-**The one real gap MIT leaves** — what licence inbound contributions carry — is closed by
+**The one real gap MIT leaves** — what license inbound contributions carry — is closed by
 `CONTRIBUTING.md` stating that contributions are accepted under MIT, rather than by changing the
-licence.
+license.
 
 **Timing note, which is the part that matters later.** Relicensing is clean only while there is a
 single copyright holder. Once outside contributions land under MIT, you cannot retroactively un-MIT
@@ -627,13 +627,13 @@ add after an incident rather than before one.
 
 **Presentation — done in this change.**
 
-The README now opens with a centred title, the tagline, and a badge row: built-for Claude Code,
-department count, skill count, licence, and PRs-welcome. **The counts are generated from the same
+The README now opens with a centered title, the tagline, and a badge row: built-for Claude Code,
+department count, skill count, license, and PRs-welcome. **The counts are generated from the same
 tree walk that builds the tables**, so they are covered by the existing staleness check — a badge
 claiming the wrong number fails CI. A hand-typed badge would have become a lie on the next
 department, which is precisely the D19 failure in a more visible place.
 
-**`.gitattributes` added.** GitHub labelled the repository *JavaScript* on the strength of a single
+**`.gitattributes` added.** GitHub labeled the repository *JavaScript* on the strength of a single
 `.mjs` guard script, against 101 markdown skills that are the actual product. Linguist counts bytes
 of code and does not know what a repository is for. The attributes file marks tooling as vendored
 and generated documents as generated, so the language bar reflects the deliverable.
@@ -692,7 +692,7 @@ not zero.
   A funding ask is a claim that ongoing maintenance has value to someone; that claim is currently
   unevidenced, and a reader can tell.
 - **It changes how the first impression reads.** A brand-new repository leading with a payment link
-  invites the question of whether the catalogue was assembled to be monetised. That is a costly
+  invites the question of whether the catalog was assembled to be monetised. That is a costly
   question to raise while the provenance story — 101 skills written from scratch after removing
   every vendored collection — is the thing worth the reader's attention.
 - **It is thirty seconds whenever you want it.** Enrol at `github.com/sponsors`, then a two-line
@@ -720,7 +720,7 @@ GitHub's About panel has a Website field. The available domains were `headcount.
 
 - **`.biz` and `.info` are negative signals to this audience.** They are the TLDs of parked
   pages and expired-domain farms. Someone deciding whether to install 101 skills into their
-  agent is making a trust judgement, and that domain in the About field reads worse than a blank
+  agent is making a trust judgment, and that domain in the About field reads worse than a blank
   field. A rare case where the cheap option is worse than nothing rather than merely weaker.
 - **A domain does not serve this product yet.** Installation is `/plugin marketplace add
   cbrock84/headcount`, typed inside Claude Code. Discovery runs through repository topics, the
@@ -769,7 +769,7 @@ discipline belongs in silos inside each department or as an enterprise function.
 at this moment specifically: the repository published today with no external installs, so the
 address is still free
 to change. Once someone has the department installed and the address referenced, it is not — the same
-timing logic as the rename in D22 and the licence in D21. Verified no reference to the old address
+timing logic as the rename in D22 and the license in D21. Verified no reference to the old address
 survives anywhere in the tree.
 
 **Reporting line: the COO**, reflected in the org chart. The EPMO governs delivery across the
@@ -784,13 +784,13 @@ operational throughput; `pmo:dependency-and-risk-management` handles delivery ri
 
 ## D27. Splitting CIO-side IT operations out of `technology` — ✅ Resolved
 
-`technology` was labelled "CTO / CIO" and held twelve skills, all of them software development
+`technology` was labeled "CTO / CIO" and held twelve skills, all of them software development
 workflow. The request to add help desk, network administration and system administration forced the
 question of whether those belong in the same department.
 
 - (a) **Add them to `technology`.** One department, around twenty-five skills.
 - **(b) Split: `technology` for the CTO side, a new `it-operations` for the CIO side.** ← **chosen**
-- (c) Leave corporate IT out of the catalogue.
+- (c) Leave corporate IT out of the catalog.
 
 **Resolution: (b).**
 
@@ -799,7 +799,7 @@ question of whether those belong in the same department.
   team installing `technology` receives deskside support skills it will never open, and an IT
   director receives worktree workflow they will never open. The split is what makes both installable
   without noise.
-- **The combined "CTO / CIO" label was papering over a real division**, and the catalogue was
+- **The combined "CTO / CIO" label was papering over a real division**, and the catalog was
   honest about only one half of it.
 
 **What moved where.** `technology` gained `solution-architecture`, `api-design`,
@@ -823,3 +823,84 @@ earlier consolidation:
 **Also fixed here.** Every agent charter carried a hardcoded skill count — `finance` claimed four
 while holding nine. The count added nothing and rotted silently, so it was removed rather than
 updated to a number that would rot again.
+
+---
+
+## D28. US English as house style — ✅ Resolved
+
+The catalog had drifted into British spelling across 178 occurrences in 49 files — the British
+forms of *license*, *program*, *catalog*, *behavior*, *prioritize* and *center*, among others. The
+author is in Georgia and writes in US English, so the repository was not speaking in his voice.
+
+- (a) **Fix the current occurrences.** A one-time rewrite.
+- **(b) Fix them and enforce it.** ← **chosen**
+- (c) Accept mixed spelling as unimportant.
+
+**Resolution: (b).** The one-time fix is the smaller half. Spelling drift is invisible to review and
+returns with the next contribution, and a repository of original work reading as though it came from
+somewhere else is precisely the wrong impression. `scripts/check-us-english.py` fails the build on
+British spellings and rewrites them under `--fix`; it is the ninth check.
+
+**Exact word forms, never stems.** This is the trap the check is built around: *analysis*,
+*analyst*, *specialist* and *realistic* are all correct US English already. A rewrite keyed on the
+stems those words share with their British-spelled cousins would have mangled all four across the
+catalog. The pairs list holds exact forms only, and those four words were confirmed unflagged before
+the rewrite was run.
+
+**`LICENSE` is never rewritten.** It carries the canonical MIT text, which is not ours to edit.
+
+**It exposed a latent bug rather than creating one.** Converting `CONTRIBUTING.md` to the US
+spelling of *license* immediately failed `check-provenance.py`, whose `\bMIT License\b` marker had
+never matched the British form. The provenance check had been passing that file **by accident** —
+anyone
+writing it the American way would have failed the build, for a reason that would have been
+baffling.
+
+Fixed with a deliberately narrow waiver: the `MIT License` marker alone is waived, in
+`CONTRIBUTING.md` and `README.md` alone, because naming our own license in our own documentation is
+expected. Every other marker still applies to those files, verified by planting a third-party
+copyright notice in one and Apache text in the other — both still caught.
+
+**The naming consequence.** The PMO department's display title becomes *Program Management Office*.
+The slug `pmo` and the skill addresses are unaffected, so nothing anyone could have installed
+changes.
+
+---
+
+## D29. Publishing the org chart so the README can link to it — 🔵 Open (needs your hands)
+
+The README now leads with a screenshot of the org chart. The screenshot is honest but static; the
+value is in the live page, and **GitHub does not render HTML from a repository** — a link to
+`docs/org-chart.html` shows a reader the source, not the chart.
+
+- **(a) GitHub Pages, serving `/docs` from `main`.** ← **recommended**
+- (b) A third-party HTML preview proxy.
+- (c) Screenshot only, no link.
+- (d) A hosted site on a purchased domain.
+
+**Recommendation: (a).** Free on public repositories, one setting, and it republishes on every push
+— so the live chart tracks the generator with no extra step. The URL becomes
+`https://cbrock84.github.io/headcount/org-chart.html`, which is what the README already points at.
+
+- **(b) rejected.** Depends on someone else's service staying up, and the URL is unpresentable.
+- **(c) rejected** as the default, though it is what you get until (a) is enabled: the screenshot is
+  the flair, the live page is the substance.
+- **(d) is D25 revisited and still premature** — Pages costs nothing and needs no domain.
+
+**Two consequences worth knowing before enabling it.**
+
+1. Pages serves everything in `/docs`, so the decision log and use cases become browsable as raw
+   files. The repository is already public, so nothing is newly exposed; it is only more visible.
+2. `docs/index.html` redirects the site root to the chart, so
+   `https://cbrock84.github.io/headcount` works rather than presenting a directory listing.
+
+**This also reopens the Website field from D25**, which was left empty for want of anything worth
+pointing at. A live, self-updating org chart is exactly that, at no cost and with none of the
+credibility risk of a degraded TLD. If Pages is enabled, the Website field should be set to the
+Pages URL. D25's reasoning about domains is unchanged: still not worth buying one.
+
+**Until enabled**, the README's two links to the Pages URL are dead. That is the one cost of
+shipping this before the setting is flipped, and it is a single line to revert if you would rather
+not publish a site.
+
+**To enable:** Settings → Pages → Source: *Deploy from a branch* → Branch: `main`, folder `/docs`.

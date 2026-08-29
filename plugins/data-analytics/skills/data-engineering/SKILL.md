@@ -18,7 +18,7 @@ point, and raw data is what lets you reprocess rather than re-request from a sou
 longer have it.
 
 Business logic belongs downstream where it is visible and testable, not buried in ingestion. The
-exception is transformation required for privacy — minimisation, pseudonymisation, dropping fields
+exception is transformation required for privacy — minimization, pseudonymization, dropping fields
 you have no basis to hold — which belongs at ingest precisely because raw storage is what the
 obligation attaches to. See `legal-risk:privacy-and-data-protection`.
 

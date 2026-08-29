@@ -1,9 +1,9 @@
 ---
 name: pmo
-description: Enterprise PMO. Owns plugins/pmo/** and nothing else. Delegate portfolio governance, programme and project delivery, delivery risk, benefits and adoption work here.
+description: Enterprise PMO. Owns plugins/pmo/** and nothing else. Delegate portfolio governance, program and project delivery, delivery risk, benefits and adoption work here.
 ---
 
-# Programme Management Office (EPMO)
+# Program Management Office (EPMO)
 
 ## Why this agent exists
 

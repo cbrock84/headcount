@@ -27,7 +27,7 @@ with the numbers scaled, and it teaches nothing.
 
 Take the two most consequential uncertainties and build the quadrants. Each scenario should be
 internally coherent: if demand is high *and* supply is constrained, what else follows — pricing,
-competitor behaviour, regulatory attention?
+competitor behavior, regulatory attention?
 
 Give each a name that captures its logic. Names make scenarios usable in conversation, which is where
 they earn their keep.
