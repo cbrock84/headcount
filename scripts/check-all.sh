@@ -15,6 +15,8 @@ run "Skill frontmatter is valid" \
   python3 scripts/validate-skills.py
 run "No third-party licence text" \
   python3 scripts/check-provenance.py
+run "README is current" \
+  python3 scripts/build-readme.py --check
 run "Manifests parse" \
   python3 -c "
 import json,glob,sys

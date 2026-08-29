@@ -115,8 +115,9 @@ PR #1 only ever carried the 12 Drive-sourced skills.
 without destroying the review trail, since deleting the merged branch unreferences the commits
 anyway. Choose (b) only if you want them gone before merge.
 
-**Resolution: (a).** Squash-merge PR #2, then delete the branch — the merged branch's deletion
-unreferences the three commits carrying vendored paths.
+**Resolution: (a) — done.** PR #2 squash-merged as `cc77e22`; branch deleted. `main` carries a single
+clean commit, and no licensed path was ever added on `main` across its whole history. The three
+commits carrying the vendored tree are unreachable.
 
 ---
 
@@ -385,13 +386,66 @@ of decisions.
 | 2 | Fold `administration` into `legal-risk` + `executive`; delete the department | D12 | — | ✅ done |
 | 3 | Mark `legal-risk` reviewer-class in its charter | D13 | — | ✅ done |
 | 4 | Write `docs/AGENT-SURFACES.md`; add first CI workflow running `agent-guard check` | D14 | — | ✅ done |
-| 5 | Mark PR #2 ready; squash-merge; delete the branch | D5, D15 | 6+ |
-| 6 | Build `security` department + CISO charter, marked reviewer-class | D9, D10, D13 | — |
-| 7 | Deepen `operations`, then `finance`, then `people` | D10 | — |
-| 8 | Catalogue the other organizations' public repos — no import | D11 | — |
-| 9 | Start a separate session for the private sweep | D11 | — |
-| 10 | Build the vertical generator: core, per-vertical config, one-way emit | D8 | — |
-| 11 | Revisit repo visibility | D16 | after 1 |
+| 5 | Mark PR #2 ready; squash-merge; delete the branch | D5, D15 | 6+ | ✅ done |
+| 6 | Build `security` department + CISO charter, marked reviewer-class | D9, D10, D13 | — | ✅ done |
+| 7 | Deepen `operations`, then `finance`, then `people` | D10 | — | |
+| 8 | Catalogue the other organizations' public repos — no import | D11 | — | |
+| 9 | Start a separate session for the private sweep | D11 | — | |
+| 10 | Build the vertical generator: core, per-vertical config, one-way emit | D8 | — | |
+| 11 | Revisit repo visibility | D16 | after 1 | |
 
 Items 1–4 can proceed in parallel; all four land before item 5. Item 9 needs a session started
 outside this one — see `docs/cross-org-sweep-prompt.md`.
+
+---
+
+# Open decisions
+
+Raised after the first sixteen were resolved. Same convention: numbers are addresses, assigned when
+asked.
+
+## D17. Which department is the next real gap — 🔵 Open
+
+With `security` built, the catalogue covers eleven departments. Three functions a Fortune 500 has
+that this does not:
+
+- **(a) Customer Experience / Support.** Every business has support; the catalogue has none.
+  `revenue:retention` is the only adjacent skill. Needed: support operations, escalation handling,
+  voice-of-customer, service-level design. ← **recommended**
+- (b) **Data & Analytics (CDO).** `demand-generation:marketing-analytics` covers marketing
+  measurement only. No data governance, warehouse modeling, BI, or AI/ML governance — the last is
+  increasingly a board obligation.
+- (c) **Corporate Strategy / Corp Dev.** M&A, diligence, scenario planning, competitive war-gaming.
+- (d) None — deepen the eleven that exist instead.
+
+**Recommendation: (a), then (b).** Support is the most conspicuous absence to anyone reading the
+catalogue — it is the department every company has and this one does not. Data & Analytics is the
+one most likely to be expected of a modern org chart. Corp Dev is real but only bites at a scale
+this repo's likely users have not reached.
+
+## D18. Repository visibility, now that all content is original — 🔵 Open
+
+D16 deferred this until the rewrite landed. It has. Nothing in the repository now carries a
+third-party obligation, and `scripts/check-provenance.py` fails the build if that changes.
+
+- **(a) Make it public under MIT.** The install path in the README then works for anyone. ←
+  **recommended**
+- (b) Stay private and document the authentication requirement.
+- (c) Public, but wait until the vertical generator (D8) decides whether per-vertical repos are the
+  distributed artifact instead.
+
+**Recommendation: (a).** The blocker was provenance and it is resolved. Publishing does not commit
+you on D8 — a generator can emit per-vertical repos later regardless of whether this one is public.
+
+## D19. README drift — 🔵 Open
+
+`scripts/build-readme.py` regenerates the README from the tree, and `check-all.sh` fails if it is
+stale. This works but means the README cannot be hand-edited.
+
+- **(a) Keep generation, edit the generator.** ← **recommended**
+- (b) Generate only the tables, hand-write the prose around them.
+- (c) Drop generation; accept that counts drift.
+
+**Recommendation: (a) for now, (b) if the prose starts wanting per-section nuance the generator makes
+awkward.** The failure this prevents is real: the README claimed eleven departments and listed a
+deleted one for two commits before it was caught by hand.

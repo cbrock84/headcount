@@ -9,6 +9,8 @@ PATTERNS = [
     r"\bSPDX-License-Identifier\b",
     r"\bSIL Open Font License\b",
 ]
+# Our own MIT LICENSE at the repo root is expected; any other licence file is not.
+OWN_LICENSE = "LICENSE"
 BANNED_FILES = ("licence", "license", "ofl", ".ttf", ".otf", ".woff")
 
 problems = []
@@ -17,6 +19,8 @@ for path in glob.glob("**/*", recursive=True):
         continue
     if os.path.abspath(path) == os.path.abspath(__file__):
         continue  # this file necessarily contains the patterns it searches for
+    if path == OWN_LICENSE:
+        continue
     if any(token in os.path.basename(path).lower() for token in BANNED_FILES):
         problems.append(f"{path}: third-party licence or font asset")
         continue
