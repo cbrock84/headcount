@@ -1,6 +1,14 @@
-# headcount
+<h1 align="center">headcount</h1>
 
-**Add a department, not a prompt.**
+<p align="center"><b>Add a department, not a prompt.</b></p>
+
+<p align="center">
+  <a href="https://claude.com/claude-code"><img alt="Built for Claude Code" src="https://img.shields.io/badge/built%20for-Claude%20Code-D97757?style=flat-square"></a>
+  <img alt="14 departments" src="https://img.shields.io/badge/departments-14-3F4B5B?style=flat-square">
+  <img alt="101 skills" src="https://img.shields.io/badge/skills-101-3F4B5B?style=flat-square">
+  <a href="LICENSE"><img alt="MIT licensed" src="https://img.shields.io/badge/license-MIT-3F4B5B?style=flat-square"></a>
+  <a href="CONTRIBUTING.md"><img alt="PRs welcome" src="https://img.shields.io/badge/PRs-welcome-2EA043?style=flat-square"></a>
+</p>
 
 An agent organization for [Claude Code](https://claude.com/claude-code), structured as a company:
 a chief executive over 14 departments, 101 skills in total.
