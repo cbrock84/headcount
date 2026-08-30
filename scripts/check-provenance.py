@@ -60,7 +60,11 @@ def is_probably_text(path, sniff=4096):
 
 
 problems = []
+# glob returns the platform separator, while SKIP_DIRS and OWN_LICENSE_MENTION are written
+# with forward slashes. On Windows the waiver never matched and this file reported its own
+# license mention as vendored text.
 for path in glob.glob("**/*", recursive=True):
+    path = path.replace(os.sep, "/")
     if not os.path.isfile(path) or path.startswith(SKIP_DIRS):
         continue
     if os.path.abspath(path) == os.path.abspath(__file__):

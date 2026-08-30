@@ -92,7 +92,8 @@ def collect():
                 "name": name,
                 "summary": first_sentence(desc),
                 "trigger": desc,
-                "url": f"{BLOB}/{path}",
+                # A GitHub URL is always posix, whatever separator glob handed back.
+                "url": f"{BLOB}/{path.replace(os.sep, '/')}",
             })
         _, title, exec_role = META[slug]
         if slug not in GLYPHS:
