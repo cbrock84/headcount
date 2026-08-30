@@ -53,6 +53,35 @@ Knowledge articles should be written for the person with the problem, not the pe
 the symptom as experienced, then the steps. An article filed under the internal cause is not
 findable by anyone who does not already know the answer.
 
+## Tiers are a design decision, not a headcount ladder
+
+Most desks describe themselves in tiers without having decided what defines one. The useful
+definition is not seniority — it is **what a tier is permitted to resolve without escalating**.
+Tier 1 owns the known and the documented. Tier 2 owns diagnosis: problems with no article yet.
+Tier 3 owns the systems themselves, and is the same people who build them.
+
+Two failure modes, and they look opposite while sharing a cause:
+
+- **Tiers drawn too high.** Tier 1 escalates anything unfamiliar, so it becomes a routing desk and
+  the expensive people handle password resets. The tell is a high escalation rate on tickets that
+  close with a documented fix.
+- **Tiers drawn too low.** Tier 1 is expected to resolve things it has no access or training for,
+  so it improvises, and the improvisations become the estate's undocumented configuration. The tell
+  is repeat contacts on the same asset and fixes nobody can explain later.
+
+Draw the boundary at access, not difficulty. A tier that cannot be granted the permission to fix a
+class of problem should not be the tier that owns it, and granting the permission anyway to avoid
+an escalation is how the least-experienced people end up with the most rights — see
+`it-operations:identity-lifecycle-administration`.
+
+Write the escalation criteria down as conditions rather than judgment: elapsed time, blast radius,
+or a named system. "Escalate when you are stuck" produces wildly different behavior between two
+people on the same shift, and the quieter one escalates later.
+
+Each tier needs its own definition of done. Tier 1 closing a ticket by handing it upward has not
+resolved anything, and counting that as a resolution is how a desk reports success while the
+backlog grows one layer up.
+
 ## Never
 
 - Run parallel unofficial intake channels and treat the ticket queue as the workload.
