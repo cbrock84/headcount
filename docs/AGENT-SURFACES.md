@@ -14,33 +14,61 @@ and "UI" both end up in the same token file, and neither is wrong.
 
 The orchestrator is neither: it owns no surface and is the sole committer.
 
+## Authority
+
+The class and the surface together answer *where* an agent may write. They have never answered
+whether that write may land without a decision, so in practice that was settled per dispatch, from
+memory, by whoever was driving. Authority states it once, in the same row, and `check` verifies it.
+
+- **autonomous** — dispatch it and take the result. The surface is the only gate needed.
+- **proposes** — it may do the work; the orchestrator surfaces the diff before landing it.
+- **escalates** — do not dispatch it unasked. The work itself is the decision.
+
+Two things the check enforces, both because the row would otherwise read as governed while
+governing nothing: a reviewer may not be gated, because it holds no write surface to gate; and a
+gated builder must actually own a surface.
+
+Almost every row here is `autonomous`, and that is the honest answer rather than a placeholder — a
+department writes only inside its own plugin directory, where the worst case is a bad skill in one
+department. The column exists because the one exception is real, and because a repository adopting
+this map will have more of them than this one does.
+
 ## Roster
 
 ```roster
-# id                class      status
-executive            builder    installed
-technology           builder    installed
-product              builder    installed
-marketing            builder    installed
-demand-generation    builder    installed
-revenue              builder    installed
-finance              builder    installed
-operations           builder    installed
-people               builder    installed
-legal-risk           builder    installed
-customer-experience  builder    installed
-data-analytics       builder    installed
-corporate-strategy   builder    installed
-security             builder    installed
-it-operations        builder    installed
-pmo                  builder    installed
-repo-meta            builder    installed
-legal-risk-review    reviewer   installed
-security-review      reviewer   installed
+# id                class      status     authority
+executive            builder    installed  autonomous
+technology           builder    installed  autonomous
+product              builder    installed  autonomous
+marketing            builder    installed  autonomous
+demand-generation    builder    installed  autonomous
+revenue              builder    installed  autonomous
+finance              builder    installed  autonomous
+operations           builder    installed  autonomous
+people               builder    installed  autonomous
+legal-risk           builder    installed  autonomous
+customer-experience  builder    installed  autonomous
+data-analytics       builder    installed  autonomous
+corporate-strategy   builder    installed  autonomous
+security             builder    installed  autonomous
+it-operations        builder    installed  autonomous
+pmo                  builder    installed  autonomous
+repo-meta            builder    installed  proposes
+legal-risk-review    reviewer   installed  autonomous
+security-review      reviewer   installed  autonomous
 ```
+
+`repo-meta` is the exception because of what it owns: the CI workflows, the check scripts, the
+generators every document is built from, and this map. A change inside `plugins/finance/**` is
+wrong in one department. A change to `scripts/check-all.sh` can make every other check stop
+reporting, and nothing downstream would fail to say so.
 
 Charters live in `.claude/agents/`, one per installed row. A row marked `installed` without a
 charter, or a charter without a row, fails the check — the two cannot drift apart silently.
+
+The column may be omitted; an omitted authority means `autonomous`, and `check` reports which rows
+defaulted so that a map which never considered the question is distinguishable from one that
+answered it.
 
 ## Surfaces
 

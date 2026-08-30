@@ -73,11 +73,11 @@ trying to prevent.
 
 ````markdown
 ```roster
-# id                class      status
-core-owner          builder    installed
-ios-builder         builder    installed
-store-compliance    reviewer   installed
-telemetry           reviewer   planned
+# id                class      status     authority
+core-owner          builder    installed  proposes
+ios-builder         builder    installed  autonomous
+store-compliance    reviewer   installed  autonomous
+telemetry           reviewer   planned    autonomous
 ```
 
 ```surface:ios-builder
@@ -93,6 +93,24 @@ apps/ios/**
 
 **Semantics.** One glob per line. Leading `!` excludes. **Later lines win over earlier
 ones.** A path may be claimed by exactly one owner.
+
+**The fourth roster column is authority**, and it answers the question the surface cannot:
+not *where* the agent may write, but whether that write may land without a decision.
+
+| Authority | Meaning |
+|---|---|
+| `autonomous` | Dispatch it and take the result. The surface is the only gate needed. |
+| `proposes` | It may do the work; the orchestrator surfaces the diff before landing it. |
+| `escalates` | Do not dispatch it unasked. The work itself is the decision. |
+
+Most rows are `autonomous` and should be — gate everything and the gate stops meaning
+anything. Reserve it for surfaces where the blast radius escapes the surface: the build and
+release path, dependency manifests, anything the other agents' checks run through. In the
+example above `core-owner` is gated because every consumer compiles against what it changes.
+
+Omitting the column means `autonomous`, so existing maps keep working; `check` reports which
+rows defaulted, because a map that never asked the question should be distinguishable from
+one that answered it.
 
 | Pattern | Matches |
 |---|---|
@@ -135,7 +153,10 @@ So: every claim in the map is checked against `git ls-files` on every PR.
    write anywhere; a row still marked `planned` whose charter has landed is a lie about
    what is dispatchable.
 4. **A reviewer declares no write surface.**
-5. **Decision numbers are unique.** Two concurrent sessions both claiming `D14` merges
+5. **Authority matches the surface the row holds.** A gated reviewer reads as governed while
+   being the one row that never needed governing — it cannot write at all. A gated builder
+   owning no surface has a checkpoint on an empty set. Both fail.
+6. **Decision numbers are unique.** Two concurrent sessions both claiming `D14` merges
    cleanly in git and fails nothing — which is precisely why it needs a guard and not a
    convention. *(Tune this assertion's regex to your own log format; the shipped one
    matches `### D<number>` headings.)*

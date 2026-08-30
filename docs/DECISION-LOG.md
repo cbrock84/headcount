@@ -952,3 +952,45 @@ toward manufacturing, logistics and retail, so they go to the verticals too.
 **Remaining Tier 1**, recorded in the org chart's gaps section: customer experience depth, legal
 depth, corporate strategy depth, and product discovery and prioritization. None is a missing
 function; all are thin coverage of a function already present.
+
+---
+
+## D31. Authority as a second axis on the surface map — ✅ Resolved
+
+The surface map answers where an agent may write. It has never answered whether that write may
+land without a decision, and the two are not the same question. In practice the second one was
+settled per dispatch, from memory, by whoever happened to be driving — which is the condition the
+surface map itself exists to eliminate.
+
+- **(a) A fourth roster column, checked by the guard.** ← **chosen**
+- (b) State it in each charter. Prose inside the agent being governed; nothing checks it, and it is
+  invisible at the moment it matters, which is the dispatch.
+- (c) Infer it from class. Conflates "cannot write" with "may not land unreviewed" — a reviewer is
+  ungated precisely because it cannot write, and a builder's blast radius has nothing to do with
+  its class.
+- (d) Leave it implicit. The status quo, and the reason this was raised.
+
+**Resolution:** (a). Three values — `autonomous` (dispatch it and take the result), `proposes` (the
+orchestrator surfaces the diff before landing it), `escalates` (do not dispatch it unasked; the
+work itself is the decision).
+
+**Eighteen of nineteen rows are `autonomous`, and that is the honest answer rather than a
+placeholder.** A department writes only inside its own plugin directory, where the worst outcome is
+a bad skill in one department. Marking rows gated to make the column look load-bearing would be the
+decoration this repository rejects everywhere else.
+
+**The one exception is `repo-meta`, and it is a real one.** It owns the CI workflows, the check
+scripts, every generator the documents are built from, and the surface map itself. A wrong change
+under `plugins/finance/**` is wrong in one department. A wrong change to `scripts/check-all.sh` can
+make every other check stop reporting, and nothing downstream would fail to say so. That is the
+shape of thing worth a checkpoint.
+
+**Two invariants are enforced rather than described**, both catching a row that reads as governed
+while governing nothing: a reviewer may not be gated, because it holds no write surface to gate;
+and a gated builder must own a surface. Both were verified against deliberately broken maps rather
+than assumed — an unproven guard is a comment claiming to be a guard.
+
+**Existing maps keep working.** The column is optional and omission means `autonomous`, but `check`
+reports which rows defaulted, so a map that never considered the question stays distinguishable
+from one that answered it. The value here is not the single gated row; it is that the axis is now
+expressible and checked instead of remembered — the same argument that justified the surface map.
