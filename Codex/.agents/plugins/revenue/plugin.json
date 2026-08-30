@@ -1,0 +1,16 @@
+{
+  "name": "revenue",
+  "description": "Outbound, sales enablement, revenue operations, pricing and packaging, activation, retention, and referrals.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Chris Brock"
+  },
+  "repository": "https://github.com/cbrock84/headcount",
+  "keywords": [
+    "sales",
+    "pricing",
+    "revenue",
+    "retention",
+    "revops"
+  ]
+}

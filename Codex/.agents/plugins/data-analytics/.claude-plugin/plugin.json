@@ -1,0 +1,17 @@
+{
+  "name": "data-analytics",
+  "description": "Data governance, warehouse and semantic modeling, business intelligence, and AI/ML governance.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Chris Brock"
+  },
+  "repository": "https://github.com/cbrock84/headcount",
+  "keywords": [
+    "data",
+    "analytics",
+    "governance",
+    "warehouse",
+    "business-intelligence",
+    "ai-governance"
+  ]
+}
