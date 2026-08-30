@@ -372,6 +372,14 @@ A new department needs its roster row in `docs/AGENT-SURFACES.md`, a surface blo
 `.claude/agents/`, and an entry in `.claude-plugin/marketplace.json` — all in the same change, or
 the check fails.
 
+## Writing
+
+Notes from building and running this, and from the day job — technology, security, AI, and the
+operating side of all three — go out at [cbrock84.substack.com](https://cbrock84.substack.com).
+
+The piece on why this is shaped like an org chart at all, and what broke before it was:
+[Giving AI agents an org chart](https://cbrock84.substack.com/p/giving-ai-agents-an-org-chart).
+
 ## License
 
 MIT — see [LICENSE](LICENSE). Every skill here was written for this repository.
