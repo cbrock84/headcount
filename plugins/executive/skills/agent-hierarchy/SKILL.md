@@ -14,7 +14,10 @@ Split agents by **write surface, not by topic**. Two classes only: **builders**,
 inside exactly one exclusive surface and never commit, and **reviewers**, which are permanently
 read-only and can always run in parallel. The orchestrator — the main chat — is the sole
 committer. Write the surface map **before** any charters, keep it in one Markdown file, and
-enforce it with a script that runs in CI. Producer and auditor are never the same agent. For
+enforce it with a script that runs in CI. Each row also carries an **authority** — `autonomous`,
+`proposes`, or `escalates` — which answers the separate question of whether that agent's work may
+land without a decision; most rows are `autonomous`, and gating everything makes the gate
+meaningless. Producer and auditor are never the same agent. For
 each class of fact, exactly one file owns it and everyone else derives.
 
 ## Why topic splits fail

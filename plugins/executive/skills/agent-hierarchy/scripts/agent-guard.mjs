@@ -28,6 +28,26 @@ const DECISION_LOG = process.env.AGENT_DECISIONS ?? 'docs/DECISION-LOG.md';
 /** The orchestrator is not an agent. It owns the context artifacts and commits everything. */
 const ORCHESTRATOR = 'orchestrator';
 
+/* ── Authority ────────────────────────────────────────────────────────────────
+ * The surface map answers *where* an agent may write. It has never answered whether
+ * that write may land without a human seeing it, so in practice that was decided per
+ * dispatch, from memory, by whoever was driving. Authority is the second axis, stated
+ * once in the map and checked like everything else.
+ *
+ *   autonomous  dispatch it and take the result; the surface is the only gate needed
+ *   proposes    it may do the work, but the orchestrator surfaces the diff before landing
+ *   escalates   do not dispatch it without being asked to; the work itself is the decision
+ *
+ * Rows may omit the column. Omission means `autonomous` — the behavior every existing map
+ * already had — and is reported as a note so a map that never considered the question is
+ * distinguishable from one that answered it.
+ */
+const AUTHORITY = ['autonomous', 'proposes', 'escalates'];
+const DEFAULT_AUTHORITY = 'autonomous';
+
+/** Gated rows are the ones whose output the orchestrator may not simply take. */
+const isGated = (row) => row.authority !== 'autonomous';
+
 /* ── Glob → RegExp ────────────────────────────────────────────────────────────
  * Hand-rolled on purpose. A matcher dependency here buys four metacharacters and
  * costs you a supply-chain review on the one file whose job is enforcing rules.
@@ -82,7 +102,7 @@ const ownersOf = (owners, file) => owners.filter((o) => claims(o, file)).map((o)
  * Two fenced-block kinds inside an ordinary Markdown file, so the map stays readable
  * as documentation and parseable as config. One file, not two that can disagree.
  *
- *   ```roster              <id> <builder|reviewer> <installed|planned>
+ *   ```roster              <id> <builder|reviewer> <installed|planned> [authority]
  *   ```surface:<id>        one glob per line; `!` prefix excludes
  */
 function fencedBlocks(src) {
@@ -105,12 +125,24 @@ export function parseSurfaceMap(src) {
   for (const { info, body } of fencedBlocks(src)) {
     if (info === 'roster') {
       for (const line of significant(body)) {
-        const [id, klass, status] = line.split(/\s+/);
+        const cols = line.split(/\s+/);
+        const [id, klass, status, authority] = cols;
         if (!id || !klass || !status) { errors.push(`roster: cannot parse "${line}"`); continue; }
+        if (cols.length > 4) { errors.push(`roster: ${id} has ${cols.length} columns, expected at most 4 (id, class, status, authority)`); continue; }
         if (klass !== 'builder' && klass !== 'reviewer') { errors.push(`roster: ${id} has unknown class "${klass}"`); continue; }
         if (status !== 'installed' && status !== 'planned') { errors.push(`roster: ${id} has unknown status "${status}"`); continue; }
+        if (authority !== undefined && !AUTHORITY.includes(authority)) {
+          errors.push(`roster: ${id} has unknown authority "${authority}" — one of ${AUTHORITY.join(', ')}`);
+          continue;
+        }
         if (roster.some((r) => r.id === id)) { errors.push(`roster: ${id} listed twice`); continue; }
-        roster.push({ id, klass, status });
+        roster.push({
+          id,
+          klass,
+          status,
+          authority: authority ?? DEFAULT_AUTHORITY,
+          authorityStated: authority !== undefined,
+        });
       }
     } else if (info.startsWith('surface:')) {
       const id = info.slice('surface:'.length).trim();
@@ -197,7 +229,30 @@ function check() {
     }
   }
 
-  // 4. Decision numbers are unique. Two concurrent sessions both claiming D14 merges
+  // 4. Authority is coherent with the surface the row actually holds.
+  //    A reviewer holds no write surface, so gating its writes gates nothing — and a row
+  //    reading `security-review reviewer installed proposes` looks governed while being
+  //    the one row that never needed governing. Same failure in the other direction: a
+  //    builder marked `proposes` that owns no surface has a checkpoint on an empty set.
+  for (const r of roster) {
+    const owned = owners.find((x) => x.id === r.id);
+    const writes = owned ? owned.patterns.some((p) => !p.negated) : false;
+    if (r.klass === 'reviewer' && isGated(r)) {
+      problems.push(`reviewer ${r.id} declares authority "${r.authority}" — reviewers hold no write surface, so there is nothing to gate`);
+    }
+    if (r.klass === 'builder' && isGated(r) && !writes) {
+      problems.push(`${r.id} declares authority "${r.authority}" but holds no write surface — the gate governs nothing`);
+    }
+  }
+
+  // A row that never stated an authority is not wrong, but it did not answer the question
+  // either. Say so once, the same way a stale glob is said.
+  const unstated = roster.filter((r) => !r.authorityStated).map((r) => r.id);
+  if (unstated.length) {
+    notes.push(`authority not stated on ${unstated.length} row(s), defaulting to ${DEFAULT_AUTHORITY}: ${unstated.join(', ')}`);
+  }
+
+  // 5. Decision numbers are unique. Two concurrent sessions both claiming D14 merges
   //    cleanly in git and fails nothing, which is exactly why it needs a guard and not
   //    a convention.
   if (existsSync(DECISION_LOG)) {
@@ -217,8 +272,12 @@ function check() {
 
   const builders = roster.filter((r) => r.klass === 'builder').length;
   const reviewers = roster.filter((r) => r.klass === 'reviewer').length;
+  const gated = roster.filter(isGated);
   for (const n of notes) console.log(`  ok  ${n}`);
   console.log(`  ok  Roster: ${builders} builder(s), ${reviewers} reviewer(s), ${charters.length} charter file(s).`);
+  console.log(gated.length
+    ? `  ok  Authority: ${roster.length - gated.length} autonomous, ${gated.length} gated — ${gated.map((r) => `${r.id} (${r.authority})`).join(', ')}.`
+    : `  ok  Authority: all ${roster.length} row(s) autonomous.`);
 
   if (problems.length) {
     console.error(`\nAgent surfaces FAILED — ${problems.length} problem(s):`);
@@ -268,6 +327,11 @@ function diff(agentId, base) {
 
   if (violations.size === 0) {
     console.log(`  ok  ${files.length} changed path(s), all inside ${agentId}'s surface.`);
+    // Clean is not the same as landable. This is the only moment the distinction is
+    // actionable, so it is said here rather than left to whoever remembers the map.
+    if (isGated(row)) {
+      console.log(`  !!  ${agentId} authority is "${row.authority}" — surface this diff for a decision before committing it.`);
+    }
     return;
   }
   console.error(`\nagents:diff FAILED — ${agentId} changed path(s) outside its surface:`);
