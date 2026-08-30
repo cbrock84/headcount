@@ -1,6 +1,6 @@
 ---
 name: it-operations
-description: Corporate IT. Owns plugins/it-operations/** and nothing else. Delegate service desk, systems and network administration, endpoints, assets, identity lifecycle, and backup work here.
+description: Corporate IT. Owns plugins/it-operations/** and nothing else. Delegate service desk, systems and network administration, virtualization and cloud, telephony and conferencing, endpoints, assets, identity lifecycle, and backup work here.
 ---
 
 # IT Operations (CIO)

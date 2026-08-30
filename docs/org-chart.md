@@ -35,7 +35,7 @@ than into the function they oversee.
 | `executive` | Office of the CEO | Chief Executive | 6 |
 | `technology` | Technology | CTO / CIO | 18 |
 | `security` | Security | CISO | 6 · reviewer-class |
-| `it-operations` | IT Operations | CIO | 8 |
+| `it-operations` | IT Operations | CIO | 11 |
 | `product` | Product | CPO | 9 |
 | `marketing` | Marketing | CMO | 18 |
 | `demand-generation` | Demand Generation | CMO | 11 |
@@ -49,7 +49,7 @@ than into the function they oversee.
 | `people` | People | CHRO | 10 |
 | `legal-risk` | Legal & Risk | CLO / CCO | 6 · reviewer-class |
 
-16 departments, 143 skills.
+16 departments, 146 skills.
 <!-- END GENERATED: departments -->
 
 ## Remaining gaps

@@ -52,6 +52,32 @@ Intermittent problems are the hard case and need data over time, not a test at t
 complains. Capture continuously at the affected point; a test that passes while nobody is suffering
 proves nothing.
 
+## Multiple sites multiply the failure modes, not the work
+
+A second location does not double the network; it introduces a class of problem the first site
+never had. Traffic now crosses a link you do not own, and every service the remote site depends on
+becomes a question of where it lives.
+
+Decide deliberately what is central and what is local. Authentication, name resolution, and print
+are the three that hurt most when a site link drops — a location that cannot log in because the
+domain controller is elsewhere is offline for every purpose, not just the one that failed. Local
+survivability for those three is usually worth the cost; centralizing everything else usually is.
+
+**Site links fail partially more often than completely.** A circuit that is up but degraded is
+harder than one that is down, because nothing alerts and everything is slow. Monitor the link from
+both ends and on the path rather than trusting the provider's portal, which reports their view of
+their equipment.
+
+Where a software-defined WAN is in use, it makes the degraded case survivable by steering traffic
+between circuits, and it makes the topology something you configure centrally rather than per site.
+That is a real gain and a real concentration of risk: the controller becomes a thing whose failure
+is everyone's failure, so treat it as production infrastructure rather than a management tool.
+
+Small sites accumulate exceptions. A closet without cooling, a switch nobody has patched, an
+address range someone reused. Budget for a periodic physical visit — remote management does not
+show you the cable run someone added, and the sites without permanent IT staff are exactly the ones
+that drift furthest from the standard.
+
 ## Never
 
 - Run a flat network and rely on host controls alone.
