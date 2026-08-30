@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Verify that every `department:skill` reference in the documentation resolves.
+"""Verify that every `department:skill` reference in the repository resolves.
 
 Prose naming specific skills rots as skills are renamed or consolidated — and this repository
 has already consolidated once, losing six capabilities in the process. A reference to a skill
@@ -13,7 +13,14 @@ import os
 import re
 import sys
 
-DOCS = ["README.md", "CONTRIBUTING.md"] + sorted(glob.glob("docs/**/*.md", recursive=True))
+# Skill bodies address each other as often as the prose does, and a rename breaks them the
+# same way. Leaving them out meant the check covered the documentation about the product
+# but not the product, which is where the references a reader follows actually live.
+DOCS = (
+    ["README.md", "CONTRIBUTING.md"]
+    + sorted(glob.glob("docs/**/*.md", recursive=True))
+    + sorted(glob.glob("plugins/*/skills/*/SKILL.md"))
+)
 # `dept:skill` inside backticks — the convention this repository uses for addressing a skill.
 REF = re.compile(r"`([a-z][a-z0-9-]*):([a-z][a-z0-9-]*)`")
 
