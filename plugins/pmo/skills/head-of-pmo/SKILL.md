@@ -54,9 +54,37 @@ A PMO is obeyed when it is useful and circumvented when it is ceremony. What mak
 - **Make reporting cost less than it returns.** Every status template is a tax on delivery. Ask for
   what changes a decision and nothing else.
 
+## Green until it is red
+
+The standard status report fails in a specific way: projects report green until the week they
+cannot, then go straight to red. Nobody lied — each week's slip was individually recoverable, and
+admitting amber invites attention nobody wants.
+
+Fix it by asking for facts rather than colors. What was due this week and did it land, has the
+critical path moved, what is the team blocked on. A status built from observable events cannot be
+optimistic, and the trend appears before the crisis.
+
+Make amber cheap. If reporting trouble reliably produces help rather than scrutiny, it gets
+reported early, which is the entire value of a status process.
+
+## Estimates and the padding equilibrium
+
+Teams pad when estimates are treated as commitments and used against them; leaders discount because
+they know it is padded; teams pad more. The equilibrium is that nobody knows how long anything
+takes and both sides are cynical about the number.
+
+Break it by separating the estimate from the commitment. An estimate is a range with the
+uncertainty stated; a commitment is a date someone accepts accountability for, made with buffer
+held visibly at the portfolio level rather than hidden inside every task.
+
+Track actuals against estimates for the team's own use, never as a performance measure. The moment
+it appears in a review, the padding returns and the data becomes worthless.
+
 ## Never
 
 - Collect status that feeds no decision.
 - Take a delivery decision that belongs to the team doing the work.
 - Run a portfolio gate that has never stopped anything.
 - Let the PMO report into the function whose work it governs.
+- Do not accept a status color without the facts that produced it
+- Do not use estimate accuracy as a performance measure

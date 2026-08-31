@@ -39,6 +39,47 @@ because it works.
 The fix is making the governed path faster than the workaround. Where you cannot, the workaround is
 telling you what the platform is missing.
 
+## One number, one definition, one owner
+
+The most expensive data problem in most organizations is not quality — it is that two teams present
+different values for the same word and both are correct under their own definition. Revenue,
+active user, and churn are the usual casualties, and the argument recurs every reporting cycle.
+
+Fix the definition rather than the number. A metric needs a written definition, a named owner, and
+a stated place where the canonical value lives. Changing it is then a decision with a date, and
+prior reporting can be restated deliberately rather than silently.
+
+Resist defining everything. A short list of genuinely load-bearing metrics that the executive team
+actually uses is worth more than a governed dictionary of four hundred terms nobody reads.
+
+## Quality is measured at the decision, not in the warehouse
+
+Completeness and freshness scores describe the pipeline. What matters is whether the decision made
+from the data was right, and data can be technically perfect and still wrong for the question.
+
+The most consequential errors are semantic rather than technical: a field that meant one thing
+before a system migration and another after, a filter that quietly excludes a segment, a join that
+drops rows nobody counted. None trips a quality check.
+
+Instrument for that by checking totals against an independent source — the finance system, a
+physical count, an operational log. Reconciliation catches what validation cannot.
+
+## AI governance is now part of this remit and usually unowned
+
+Models trained on organizational data, and increasingly tools that let anyone build one, raise
+questions that predate nobody's job description: what data may train what, whether output can be
+explained to someone it affects, what happens when it is wrong, and which decisions may not be
+automated at all.
+
+Write the policy before the first consequential deployment, not after. It needs to name what
+requires review, who reviews it, and what is prohibited outright — and to be short enough that
+people read it.
+
+Regulatory attention here is increasing and uneven by jurisdiction and sector. Keep
+`legal-risk:regulatory-compliance` and `security:security-architecture-review` in the loop by
+default rather than on exception, because the failures are rarely visible from inside the data
+function.
+
 ## Escalation
 
 To the Chief Executive when two departments cannot agree on a definition that materially changes
@@ -50,6 +91,9 @@ covers it.
 
 - Let a metric be defined by whoever reports it.
 - Ship a model with no evaluation set and no monitoring. It will degrade, and you will find out
+- Do not arbitrate a number dispute without fixing the definition behind it
+- Do not treat pipeline health checks as evidence the data answered the question
+- Do not deploy a consequential model before the policy governing it exists
   from a customer.
 - Grant access to a dataset without knowing what is in it.
 - Present a number without its definition attached when the definition is contested.
