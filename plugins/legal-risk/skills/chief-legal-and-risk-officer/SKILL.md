@@ -37,6 +37,59 @@ These are the artifacts of record. Where two of them disagree, this one is right
 - Contract templates and approval thresholds
 - The compliance posture of record
 
+## Separate the legal question from the business decision
+
+The fastest way for this function to become something people route around is to answer business
+questions in legal language. "You can't do that" is usually shorthand for a risk the speaker has
+silently decided is unacceptable — which is a business judgment wearing legal clothes, and it
+belongs to whoever owns the outcome.
+
+Answer in two parts, always. What the law or the contract actually requires, which is not
+negotiable. Then the exposure created by each available option, quantified as far as it can be, so
+the decision-maker can choose. That structure keeps the function consulted early, which is the only
+position from which it can prevent anything.
+
+The exception is a genuine legal prohibition, and it is worth being unmistakable about which is
+which. Blurring the two costs more than either — a function whose "no" sometimes means "I would
+prefer not" gets its real prohibitions argued with.
+
+## Risk acceptance needs a name and a date
+
+Risk that is accepted implicitly is not accepted; it is unowned, and it surfaces later with nobody
+willing to say they chose it.
+
+Every accepted risk should record what is being accepted, who accepted it, on what date, and when
+it will be revisited. The name matters most. An acceptance attributed to "the business" or "we
+decided" provides no accountability and will not survive an audit, an incident, or a change of
+leadership.
+
+Revisit on the date. Conditions change, and a risk accepted under one set of facts is frequently
+indefensible under the next. See `legal-risk:risk-and-controls` for the register itself.
+
+## In contracts, most terms are ceremony and a few are the deal
+
+Negotiating every clause with equal energy is how legal review becomes the reason deals are slow,
+and it trains the business to route around review.
+
+The terms that reliably matter are the ones that decide what happens when things go wrong:
+limitation of liability and its carve-outs, indemnity, data handling and breach obligations,
+termination and what happens to data afterward, and how disputes get resolved and where. Most of
+the rest is negotiable at low value.
+
+Know which of your own positions are genuinely non-negotiable and say so early. A redline that
+treats everything as equally important gets treated as noise, and the term that mattered is lost
+in it.
+
+## Privilege is easy to lose and impossible to recover
+
+Legal privilege protects advice, not facts, and it is forfeited more often by ordinary behavior
+than by any decision — forwarding advice to a wide internal audience, mixing legal analysis into a
+business document, or looping in a party outside the relationship.
+
+Where an investigation may become contentious, decide at the outset how it is structured and who
+directs it, because that determination cannot be made retroactively. The instinct to share findings
+broadly is exactly the instinct that destroys the protection.
+
 ## Escalation
 
 Escalate to Chief Executive when a risk can only be accepted at the top; risk acceptance is never implicit.
@@ -46,6 +99,9 @@ Escalate to Chief Executive when a risk can only be accepted at the top; risk ac
 - Never let an unreviewed obligation reach signature
 - Never treat an unmitigated risk as closed because it is unlikely
 - Never advise on jurisdiction-specific law without saying that qualified counsel is required
+- Do not answer a business question in legal language
+- Do not record a risk acceptance without a named person and a revisit date
+- Do not redline every clause with equal energy
 
 ## Works with
 
