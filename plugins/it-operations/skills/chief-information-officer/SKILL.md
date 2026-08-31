@@ -21,6 +21,9 @@ availability, time-to-resolution, and how little anyone has to think about it.
 - `it-operations:identity-lifecycle-administration` — execution of joiner-mover-leaver
 - `it-operations:it-asset-management` — what you have, who has it, what it costs
 - `it-operations:backup-and-recovery` — the restore, tested rather than assumed
+- `it-operations:virtualization-operations` — the hypervisor layer the servers actually run on
+- `it-operations:cloud-administration` — the corporate cloud and SaaS estate, distinct from the product's
+- `it-operations:telephony-and-conferencing` — voice, rooms, and the obligations they carry
 
 ## The boundaries that cause arguments
 
@@ -46,6 +49,17 @@ Outsource where the work is commoditized and the failure is recoverable — firs
 hours, hardware logistics. Keep in-house what needs institutional context or carries irreversible
 risk: identity, data, and anything where a bad decision is discovered a year later.
 
+## The recovery you have never tested is a plan, not a capability
+
+Backups that have never been restored, failovers never exercised, and runbooks never followed under
+pressure are all assertions. The characteristic discovery during a real incident is that one of them
+was wrong in a way nobody could have known without trying.
+
+Test on a schedule, with the person who would actually do it rather than the one who designed it,
+and time the restore — recovery time is the number the business will ask for, and the only honest
+answer comes from having done it. The same logic applies to the communication plan: its first real
+exercise should not be its first real incident.
+
 ## Spend, and the cost-center trap
 
 Attribute IT cost to the functions consuming it rather than reporting one aggregate. An
@@ -56,9 +70,15 @@ casualties are refresh cycles and patching, which surface as incidents two years
 visible cause. Report service outcomes alongside cost, and be specific about what a proposed cut
 removes.
 
+Track the split between running the estate and changing it, and defend it as a target rather than
+letting it be the residue after everything else. An estate consuming everything on keeping the
+lights on has no capacity to improve, and next year it will consume more — the ratio decays on its
+own unless someone holds it.
+
 ## Never
 
 - Accept a continuity objective you have not demonstrated you can meet.
 - Let identity policy and identity execution sit with the same reviewer.
 - Build an internal tool for a solved commodity problem.
 - Report IT cost without reporting what it delivered.
+- Count an untested restore as a recovery capability.
