@@ -11,6 +11,31 @@ conceal one. Everything else is elaboration on that.
 **This structures control design and audit readiness. Statutory audit requirements, and regimes such
 as SOX where they apply, are matters for your auditors and qualified advisers.**
 
+## The five components an auditor will assess
+
+Segregation of duties is one control activity inside a much larger structure, and a team that has
+only built control activities will still be told its control environment is weak. Auditors assess
+five components, and a deficiency in any one undermines the others:
+
+- **Control environment** — integrity and ethical values, oversight by whoever plays the board
+  role, a structure with defined responsibility and authority, competence for the work assigned,
+  and accountability actually enforced. This is the component small organizations skip and the one
+  that determines whether every other control holds.
+- **Risk assessment** — objectives defined clearly enough to have risks, risks identified and
+  responded to, **fraud risk assessed explicitly** rather than assumed away, and change identified
+  as it happens. New systems, new people, and rapid growth all invalidate control designs quietly.
+- **Control activities** — the controls themselves, including those over the information systems
+  the records depend on, and evidence that they were performed rather than merely designed.
+- **Information and communication** — quality information available to the people who need it,
+  communicated internally to those who act on it and externally to those who rely on it. A control
+  nobody was told about does not operate.
+- **Monitoring** — someone checks that controls still work, and identified deficiencies get
+  remediated on a timetable rather than carried forward year after year.
+
+Two of these are consistently the weak ones in organizations under a few hundred people: fraud risk
+is never assessed on the reasoning that everyone is trusted, and monitoring never happens because
+the people who would monitor are the people who perform the controls.
+
 ## Segregation of duties
 
 Four capabilities should not sit with one person: **initiating** a transaction, **approving** it,

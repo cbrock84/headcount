@@ -40,7 +40,7 @@ than into the function they oversee.
 | `marketing` | Marketing | CMO | 18 |
 | `demand-generation` | Demand Generation | CMO | 11 |
 | `revenue` | Revenue | CRO | 8 |
-| `finance` | Finance | CFO | 10 |
+| `finance` | Finance | CFO | 13 |
 | `operations` | Operations | COO | 10 |
 | `pmo` | Program Management Office | EPMO / COO | 7 |
 | `customer-experience` | Customer Experience | CCO | 5 |
@@ -49,7 +49,7 @@ than into the function they oversee.
 | `people` | People | CHRO | 10 |
 | `legal-risk` | Legal & Risk | CLO / CCO | 6 · reviewer-class |
 
-16 departments, 146 skills.
+16 departments, 149 skills.
 <!-- END GENERATED: departments -->
 
 ## Remaining gaps
