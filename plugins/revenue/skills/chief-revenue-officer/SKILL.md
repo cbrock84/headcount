@@ -61,7 +61,7 @@ the date.
 
 Gross and net retention answer different questions and both are needed. Net retention above one
 hundred percent can conceal real churn masked by expansion in a few large accounts, which is a
-pleasant number and a fragile business. See `revenue:retention` and `customer-experience:churn`.
+pleasant number and a fragile business. See `revenue:retention` and `customer-experience:customer-success-management`.
 
 ## Marketing volume and revenue quality pull against each other
 

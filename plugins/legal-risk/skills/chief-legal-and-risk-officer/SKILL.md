@@ -64,7 +64,7 @@ decided" provides no accountability and will not survive an audit, an incident, 
 leadership.
 
 Revisit on the date. Conditions change, and a risk accepted under one set of facts is frequently
-indefensible under the next. See `legal-risk:risk-and-controls` for the register itself.
+indefensible under the next. See `legal-risk:enterprise-risk` for the register itself.
 
 ## In contracts, most terms are ceremony and a few are the deal
 

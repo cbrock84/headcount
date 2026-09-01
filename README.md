@@ -5,7 +5,7 @@
 <p align="center">
   <a href="https://claude.com/claude-code"><img alt="Built for Claude Code" src="https://img.shields.io/badge/built%20for-Claude%20Code-D97757?style=flat-square"></a>
   <img alt="16 departments" src="https://img.shields.io/badge/departments-16-3F4B5B?style=flat-square">
-  <img alt="166 skills" src="https://img.shields.io/badge/skills-166-3F4B5B?style=flat-square">
+  <img alt="167 skills" src="https://img.shields.io/badge/skills-167-3F4B5B?style=flat-square">
   <a href="LICENSE"><img alt="MIT licensed" src="https://img.shields.io/badge/license-MIT-3F4B5B?style=flat-square"></a>
   <a href="CONTRIBUTING.md"><img alt="PRs welcome" src="https://img.shields.io/badge/PRs-welcome-2EA043?style=flat-square"></a>
 </p>
@@ -14,7 +14,7 @@
   <a href="https://cbrock84.github.io/headcount/org-chart.html">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="docs/assets/org-chart-dark.png">
-      <img alt="The headcount org chart — 16 departments, 166 skills, searchable" src="docs/assets/org-chart-light.png" width="840">
+      <img alt="The headcount org chart — 16 departments, 167 skills, searchable" src="docs/assets/org-chart-light.png" width="840">
     </picture>
   </a>
 </p>
@@ -24,7 +24,7 @@
 </p>
 
 An agent organization for [Claude Code](https://claude.com/claude-code), structured as a company:
-a chief executive over 16 departments, 166 skills in total.
+a chief executive over 16 departments, 167 skills in total.
 
 Every department is an independently installable plugin, so a project loads only the functions it
 needs rather than all of them at once.
@@ -244,7 +244,7 @@ to as a subagent with its own exclusive write surface.
 </details>
 
 <details>
-<summary><b>Operations</b> (COO) — 11 skills</summary>
+<summary><b>Operations</b> (COO) — 12 skills</summary>
 
 | Skill | What it does |
 |---|---|
@@ -252,6 +252,7 @@ to as a subagent with its own exclusive write surface.
 | `capacity-and-demand-planning` | Matches operational capacity to expected demand — forecasting load, sizing teams and systems, managing queues, and deciding when to add capacity. |
 | `chief-operating-officer` | Owns execution: how work actually gets done across the organization, including process, program management, capacity, vendors, supply chain, and service delivery. |
 | `facilities-and-workplace` | Runs the physical and hybrid workplace — space planning, leases, health and safety, office services, and the operational side of where people work. |
+| `incident-management` | Runs an operational incident from detection to closed action — declaring it and naming a commander, separating the people restoring service from the people communic…. |
 | `operating-cadence` | Designs the rhythm an organization runs on — which reviews happen weekly, monthly and quarterly, what each one decides, who owns the numbers presented, and how a si…. |
 | `process-design` | Designs, documents, and fixes operational processes — mapping the current state, finding where work actually stalls, redesigning the flow, and building controls tha…. |
 | `procurement-and-sourcing` | Buys well — specifying need, running competitive sourcing, negotiating, and category strategy before a contract exists. |

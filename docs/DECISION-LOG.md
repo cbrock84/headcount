@@ -994,3 +994,49 @@ than assumed — an unproven guard is a comment claiming to be a guard.
 reports which rows defaulted, so a map that never considered the question stays distinguishable
 from one that answered it. The value here is not the single gated row; it is that the axis is now
 expressible and checked instead of remembered — the same argument that justified the surface map.
+
+## D32. Extending the skill-reference checker to skill bodies — 🔵 Open (needs your call)
+
+`scripts/check-skill-refs.py` verifies that every `` `department:skill` `` reference resolves. It
+scans `README.md`, `CONTRIBUTING.md` and `docs/**` — and nothing else. Skill files themselves are
+not scanned, so the 131 cross-references inside `plugins/**/SKILL.md` have never been checked.
+
+**Four of them were broken**, found by running the checker's own logic over the skill tree:
+
+| Reference | In | Actual problem |
+|---|---|---|
+| revenue:revenue-recognition | `finance:tax` | Wrong department prefix |
+| legal-risk:risk-and-controls | `legal-risk:chief-legal-and-risk-officer` | Skill never existed |
+| customer-experience:churn | `revenue:chief-revenue-officer` | Skill never existed |
+| operations:incident-management | `operations:chief-operating-officer` | Skill never existed |
+
+All four are fixed on this branch. The first three were retargeted; the fourth was a genuine
+capability gap and `operations:incident-management` now exists, which is what the reference always
+promised a reader.
+
+That leaves the checker itself, which is `repo-meta` — the one row on the surface map carrying
+`proposes` under D31, so the change is surfaced here rather than made.
+
+- **(a) Extend the checker to scan `plugins/**/SKILL.md` as well.** ← **recommended**
+- (b) Leave it. Skill-to-skill references stay unchecked, and the next broken one is found by a
+  reader rather than by CI.
+- (c) Extend it, but as a warning rather than a failure. Keeps CI green while surfacing rot; also
+  means nothing ever forces the fix, which is how the four above accumulated.
+
+**Recommendation: (a).** The checker's own docstring says a reference to a skill that no longer
+exists is a broken promise to a reader and that nothing else in the tree catches it. That argument
+does not weaken inside a skill file — it strengthens, because that is where readers follow
+references from. The measured cost is zero: 131 references, four failures, all now fixed, no
+false positives from ordinary prose.
+
+**Why it is not simply done here.** The argument that a draft pull request is itself the surfacing
+`proposes` calls for does not hold up. It would license any `repo-meta` change made overnight,
+which collapses `proposes` into `autonomous` and makes the single non-default row on the roster
+decorative — precisely what D31 refused. Note the contrast with this log entry, which is also a
+`repo-meta` write under `docs/**` and is fine because it was explicitly asked for. Same surface,
+different authorization.
+
+**One consequence worth knowing before choosing (a).** CI runs `check-all.sh` on every pull
+request, so the extension turns any unresolved reference into a red build immediately — including a
+forward reference written to a skill that has not been created yet. That is the intended behavior,
+but it changes what writing a cross-reference costs.
