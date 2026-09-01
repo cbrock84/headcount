@@ -55,6 +55,16 @@ deciding that trade.
 Route the resulting terms through `legal-risk:contract-review`, and anything touching customer data
 through `legal-risk:privacy-and-data-protection` before signature rather than after.
 
+## Tooling
+
+Procure-to-pay: Coupa, SAP Ariba, Zip, Precoro, and similar. At smaller scale a request
+form plus the accounting system's purchase orders does the same work.
+
+Spend visibility: Ramp, Brex, Vertice, and similar, read against the ledger.
+
+Vendor risk lives in the GRC tooling, not here — but the intake form is where the security
+and privacy review has to be triggered, or it never happens.
+
 ## Never
 
 - Write a requirement that only the preferred supplier can meet.

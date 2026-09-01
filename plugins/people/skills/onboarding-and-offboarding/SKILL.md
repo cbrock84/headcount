@@ -56,6 +56,17 @@ Exit conversations produce candid information that is unavailable any other way,
 collected and never used. Aggregate themes over time and look by manager and by team; a single exit
 is an anecdote, a pattern across four is a finding for `people:chief-human-resources-officer`.
 
+## Tooling
+
+HRIS as the record of who works here and when they started or left: Workday, BambooHR,
+Rippling, HiBob, Gusto, ADP, and similar.
+
+Onboarding workflow: the HRIS's own, or Sapling, Enboarder, or a checklist in the ticketing
+system, and similar.
+
+Offboarding has to reach identity, devices, and payroll the same day. Whatever the tools,
+one owner runs the checklist end to end. Split ownership is how accounts stay live.
+
 ## Never
 
 - Let a start date arrive without access and equipment confirmed ready.

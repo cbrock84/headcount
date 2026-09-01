@@ -52,6 +52,10 @@ implements a comparison, a token, or a signature by hand.
 - **DAST** and dependency scanning find different things; neither replaces review.
 - **Secret scanning in CI and pre-commit** is the highest-value automation per unit of effort.
 
+By name today: Semgrep, CodeQL, or SonarQube for SAST; Snyk, Dependabot, or Trivy for
+dependencies; Burp Suite or OWASP ZAP for DAST; gitleaks, TruffleHog, or GitHub secret
+scanning for secrets — and similar in each category.
+
 Automation is a floor, not a review. It finds known patterns, not design flaws — and design flaws
 are what actually cause the expensive incidents.
 

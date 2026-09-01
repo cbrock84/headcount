@@ -54,6 +54,16 @@ formality that certifies whatever exists.
 Hunt specifically for orphaned accounts — accounts with no owner, service accounts nobody claims,
 and credentials that have not been used in months but still work.
 
+## Tooling
+
+Directory and SSO: Microsoft Entra ID, Okta, Google Workspace, JumpCloud, and similar.
+
+HRIS as the trigger: Workday, BambooHR, Rippling, HiBob, Gusto, ADP, and similar. Identity
+should follow the HRIS record rather than a separate list of who works here.
+
+Provisioning runs on SCIM wherever the application supports it. Where it does not, the
+joiner-mover-leaver steps are manual and belong in a ticket template, not in someone's head.
+
 ## Never
 
 - Provision by copying an existing user.

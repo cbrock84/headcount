@@ -71,6 +71,16 @@ be unusable within two quarters.
 Never require a field whose value is not used in a decision. Every unnecessary field trains sellers
 to enter garbage in all of them.
 
+## Tooling
+
+CRM: Salesforce, HubSpot, Pipedrive, Zoho CRM, and similar. The CRM is the record for
+pipeline. Anything that disagrees with it is a report, not a number.
+
+Enrichment and routing: Clay, ZoomInfo, Apollo, Chili Piper, and similar.
+
+Forecasting and conversation data: Clari, Gong, and similar — useful once you have enough
+deals for a pattern to mean anything.
+
 ## Never
 
 - Change a definition without restating history on the new one. A metric that moved because you redefined it is not a result.

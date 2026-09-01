@@ -91,6 +91,17 @@ These are the artifacts of record. Where two of them disagree, this one is right
 
 Escalate to Chief Executive when the plan is not fundable as written; to Legal & Risk on anything touching financial reporting obligations.
 
+## Tooling
+
+The stack a CFO is accountable for, by layer: the ledger (QuickBooks or Xero at small
+scale, NetSuite, Sage Intacct, or Dynamics 365 in the middle, SAP or Oracle at the top),
+planning (Anaplan, Pigment, Adaptive Planning, Cube), close (BlackLine, FloQast, Numeric),
+payments and spend (Bill.com, Ramp, Brex, Tipalti), and cap table (Carta, Pulley) — and
+similar in each.
+
+Know which system is the record for a number before you report it. Two systems that both
+hold a version of revenue will disagree, and the one you quoted will be the wrong one.
+
 ## Never
 
 - Never present a forecast without stating its assumptions and what breaks it

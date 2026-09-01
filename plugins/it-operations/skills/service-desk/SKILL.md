@@ -82,6 +82,17 @@ Each tier needs its own definition of done. Tier 1 closing a ticket by handing i
 resolved anything, and counting that as a resolution is how a desk reports success while the
 backlog grows one layer up.
 
+## Tooling
+
+ITSM platforms: Jira Service Management, Freshservice, ServiceNow, Ivanti Neurons,
+SolarWinds Service Desk, and similar. ServiceNow is a program rather than a purchase — do
+not take it on without the people to run it.
+
+Remote support: TeamViewer, ScreenConnect, Splashtop, and similar.
+
+Whatever the platform, a ticket has to carry the asset, the person, and a resolution
+category, or the reporting built on it is fiction.
+
 ## Never
 
 - Run parallel unofficial intake channels and treat the ticket queue as the workload.

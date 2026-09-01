@@ -52,6 +52,17 @@ one that gets left in a taxi.
 Departures are coordinated with `people:onboarding-and-offboarding`, with asset return tracked
 against `it-operations:it-asset-management`.
 
+## Tooling
+
+Windows: Microsoft Intune, Configuration Manager, Ivanti, and similar. Apple: Jamf Pro,
+Kandji, Mosyle, and similar. Cross-platform: NinjaOne, Automox, Addigy, and similar.
+
+Endpoint protection: Microsoft Defender for Endpoint, CrowdStrike Falcon, SentinelOne, and
+similar.
+
+Pick for your fleet's majority and accept a second tool for the minority. One tool that
+half-manages both platforms costs more than two that each work.
+
 ## Never
 
 - Allow company data onto a device that never enrolled.

@@ -54,6 +54,16 @@ Leadership needs the few risks whose residual exposure is above appetite, what i
 what needs a decision. Not the whole register. A risk report that requires reading forty rows to
 find the three that matter will not be read.
 
+## Tooling
+
+A risk register is a table, and for most organizations a spreadsheet or a database in
+Notion, Airtable, or Confluence is the honest answer. Dedicated platforms — LogicGate,
+AuditBoard, Riskonnect, ServiceNow IRM, and similar — earn their place when the register
+has to reconcile with audit findings and control testing in one system.
+
+Compliance automation tools cover control evidence, not enterprise risk. Do not let one
+stand in for the other.
+
 ## Never
 
 - Score residual risk on controls that are planned rather than operating.
