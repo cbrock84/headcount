@@ -51,6 +51,18 @@ offset pagination silently skips and duplicates records under concurrent writes.
 State rate limits in the contract and communicate them in responses. An undocumented limit is
 discovered in the consumer's production incident.
 
+## Tooling
+
+Specification and documentation: OpenAPI with Redocly, Stoplight, or Scalar; gRPC with protocol
+buffers where the consumers are internal services, and similar.
+
+Design review and testing: Postman, Insomnia, Bruno, and similar. Contract testing — Pact and
+similar — is what catches a breaking change before a consumer does.
+
+Generate the documentation from the specification and the specification from or alongside the code.
+Hand-maintained API documentation is wrong within a release, and being confidently wrong is worse
+for a consumer than being absent.
+
 ## Never
 
 - Expose internal identifiers or storage structure through the interface.

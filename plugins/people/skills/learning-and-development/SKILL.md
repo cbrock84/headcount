@@ -51,6 +51,18 @@ Fix the incentive rather than the policy: make developing and releasing people s
 evaluated on. A mobility policy that costs a manager their best person and gives them nothing will be
 quietly resisted, and quiet resistance always wins.
 
+## Tooling
+
+Delivery: TalentLMS, Docebo, WorkRamp, Absorb, and similar; smaller organizations often do better
+with a structured path built in the tools people already use than with a platform nobody visits.
+
+Content libraries: LinkedIn Learning, Coursera, Pluralsight, Udemy Business, and similar. Licensed
+libraries buy breadth and almost never buy transfer — completion rates on self-serve content are
+low everywhere, and the ones that work are assigned against a named capability gap.
+
+Skills and career frameworks: the HRIS's own, or a maintained document. The framework matters more
+than the software holding it.
+
 ## Never
 
 - Deliver training for a problem that is not a capability problem.

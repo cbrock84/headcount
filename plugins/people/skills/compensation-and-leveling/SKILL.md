@@ -54,6 +54,18 @@ cycle. Findings here need qualified review before action.
   counteroffer is right, it should reflect a correction you should have already made.
 - Every exception is a precedent. Document the reasoning, because you will be asked to repeat it.
 
+## Tooling
+
+Benchmark data is the purchase that matters, and it is where the scale tier is real: free and
+crowd-sourced ranges are directional at best; Pave, Carta Total Comp or Option Impact suit venture
+-backed companies; Radford, Mercer or Willis Towers Watson are the surveys large employers price
+against, and similar.
+
+Administration: the compensation module of the HRIS, or CompTrack, Assemble, and similar.
+
+Whatever the source, know its effective date, its scope, and how it defines the level you are
+matching to. Two surveys disagreeing usually means they are describing different jobs.
+
 ## Never
 
 - Set an individual's pay before their level is settled.

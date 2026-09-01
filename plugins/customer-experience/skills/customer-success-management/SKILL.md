@@ -74,6 +74,15 @@ thing that leads to the next thing, added a team. Expansion pushed on a quota ca
 account that has not realized its original purchase is how a renewal gets lost while chasing a
 smaller number.
 
+## Tooling
+
+Customer success platforms: Gainsight, Totango, ChurnZero, Vitally, Planhat, and similar. They
+earn their cost once you have more accounts than a person can hold in their head and product usage
+data worth joining to the account record — before that, the CRM plus a usage query does the job.
+
+Renewal and expansion tracking belongs in the CRM alongside new business, not in a separate system,
+or the forecast will exist twice and disagree.
+
 ## Never
 
 - Run a health score nobody has validated against actual outcomes.

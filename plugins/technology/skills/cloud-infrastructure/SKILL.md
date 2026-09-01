@@ -57,6 +57,19 @@ tagging, cost becomes an unattributable aggregate that only ever gets addressed 
 The usual large wins are unglamorous: idle non-production resources, over-provisioned instances,
 storage nobody deleted, and cross-zone data transfer nobody accounted for.
 
+## Tooling
+
+Platforms: AWS, Google Cloud, Microsoft Azure, and similar; managed application platforms —
+Fly.io, Render, Vercel, Railway — remove most of this work and are the right answer more often than
+engineering pride admits.
+
+Orchestration where you need it: Kubernetes with a managed control plane, or a container service
+like ECS. Kubernetes is a platform team's worth of work; adopt it when you have the team.
+
+Infrastructure as code and secrets: Terraform, OpenTofu, Pulumi, and similar, with secrets in a
+managed store rather than in the state file. `it-operations:cloud-administration` covers the
+corporate cloud estate, which is a different problem with overlapping tools.
+
 ## Never
 
 - Make a production change by hand that is not reflected in code.

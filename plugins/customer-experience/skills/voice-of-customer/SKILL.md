@@ -57,6 +57,17 @@ why it works — it converts a complainer into someone who reports the next issu
 Also close it internally: show the support team what shipped because of what they escalated, or they
 stop escalating.
 
+## Tooling
+
+Survey and feedback: Qualtrics, Medallia, Delighted, SurveyMonkey, Typeform, and similar.
+
+In-product feedback and micro-surveys: Pendo, Sprig, Chameleon, and similar — usually a better
+signal than emailed surveys because they reach people mid-task rather than after the fact.
+
+Aggregating unstructured feedback across tickets, calls and reviews is where the platforms differ
+most. Whatever collects it, the theme has to be traceable back to individual verbatims, or nobody
+downstream will believe the count.
+
 ## Never
 
 - Report themes without volume.

@@ -47,6 +47,18 @@ Watch review text for recurring themes — it is the cheapest continuous product
 Change one element at a time and let it run a full weekly cycle; app traffic is strongly
 day-of-week seasonal. Attributing a lift to the wrong change is worse than not testing.
 
+## Tooling
+
+The consoles are the source of truth: App Store Connect and Google Play Console, including their
+own experiment features — product page optimization and store listing experiments — which test on
+real store traffic rather than a simulation.
+
+Keyword and competitor research: AppTweak, Sensor Tower, data.ai, AppFollow, and similar. Treat
+their volume estimates as directional; the stores do not publish the underlying numbers.
+
+Review management and reply workflows live in the consoles or in the same tools, and replying is
+the part most teams skip.
+
 ## Never
 
 - Chase a keyword the app does not deliver on. Installs from a mismatched query become one-star reviews and a worse ranking than you started with.

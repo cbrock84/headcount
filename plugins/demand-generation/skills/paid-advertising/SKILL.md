@@ -60,6 +60,18 @@ conversion rate (is the page delivering), cost per acquisition (is it economic),
 quality (did those customers stay). Stopping at cost per acquisition is how channels get scaled that
 are buying bad customers cheaply.
 
+## Tooling
+
+The platforms themselves: Google Ads, Meta Ads Manager, LinkedIn Campaign Manager, Microsoft
+Advertising, TikTok Ads Manager, Reddit Ads, and similar. Each has its own definition of a
+conversion, and reconciling them against one internal definition is most of the analytics work.
+
+Management and automation layers — Skai, Optmyzr, Smartly, and similar — are worth it at spend
+levels where a full-time person could not manually cover the account structure, and not before.
+
+Creative volume is the constraint more often than bidding. Budget for producing variants at the
+rate the platform consumes them.
+
 ## Never
 
 - Scale a campaign on a few conversions. Wait for significance.

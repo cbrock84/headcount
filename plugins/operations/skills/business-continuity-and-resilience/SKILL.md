@@ -53,6 +53,19 @@ region, redundant network paths in the same physical duct, a manual workaround t
 system you have just lost. Map dependencies to the point where they stop being yours, and check
 whether the redundancy is real or just contractual.
 
+## Tooling
+
+Continuity and crisis management platforms: Fusion Framework, Castellan, Riskonnect, and similar.
+They hold the impact analysis, the plans, and the exercise record in one place, and they are worth
+buying at the point where the plans are too many for one person to keep current.
+
+Mass notification: Everbridge, AlertMedia, and similar — the capability being bought is reaching
+people when your own email and chat are the thing that is down, which is the scenario a plan stored
+only in those systems fails.
+
+Keep an offline copy of the plan and the contact list. Every organization that has run a real
+incident has a story about the plan being inside the system that was unavailable.
+
 ## Never
 
 - Set an RTO without the process owner agreeing to what it costs.

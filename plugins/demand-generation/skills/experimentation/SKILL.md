@@ -47,6 +47,19 @@ tests a year — spend them on structural questions, not button colors.
 Keep a log of every test: hypothesis, result, decision. Without it, teams re-run the same tests every
 eighteen months and re-learn the same things.
 
+## Tooling
+
+Client-side and web testing: Optimizely, VWO, AB Tasty, and similar. Warehouse- or
+product-native: GrowthBook, Statsig, Eppo, PostHog, and similar — these compute against your own
+event data, which is what you want once the metric definitions matter.
+
+Feature flags are the server-side path to the same thing: LaunchDarkly, Unleash, Split, and similar.
+Running an experiment behind a flag you already use for release control is cheaper than adding a
+second system, and `technology:release-and-deployment` covers the release side of it.
+
+No tool fixes an underpowered test. The platform reports a result either way, which is exactly the
+risk.
+
 ## Never
 
 - Stop a test because it reached significance early. Peeking until it looks conclusive manufactures the result.

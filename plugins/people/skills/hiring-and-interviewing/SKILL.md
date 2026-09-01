@@ -50,6 +50,17 @@ is missing, get it — an extra conversation is cheap compared to a mis-hire.
 Ambiguity means no. The cost of a bad hire is far larger and lasts far longer than the cost of a
 longer search, and it is borne by the team, not the hiring manager.
 
+## Tooling
+
+Applicant tracking, roughly by scale: Workable, JazzHR or the hiring module of an all-in-one HRIS
+at small scale; Greenhouse, Lever or Ashby once structured interviewing and reporting matter;
+Workday Recruiting or SmartRecruiters at enterprise scale, and similar.
+
+Sourcing and scheduling: LinkedIn Recruiter, Gem, GoodTime, and similar.
+
+Put the scorecard in the tracking system rather than beside it. A structured process that lives in
+a separate document is a structured process that stops being followed in the first busy week.
+
 ## Never
 
 - Lower the bar because the search has been long. Reopen the role definition instead.
