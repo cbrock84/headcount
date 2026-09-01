@@ -5,7 +5,7 @@
 <p align="center">
   <a href="https://claude.com/claude-code"><img alt="Built for Claude Code" src="https://img.shields.io/badge/built%20for-Claude%20Code-D97757?style=flat-square"></a>
   <img alt="16 departments" src="https://img.shields.io/badge/departments-16-3F4B5B?style=flat-square">
-  <img alt="155 skills" src="https://img.shields.io/badge/skills-155-3F4B5B?style=flat-square">
+  <img alt="160 skills" src="https://img.shields.io/badge/skills-160-3F4B5B?style=flat-square">
   <a href="LICENSE"><img alt="MIT licensed" src="https://img.shields.io/badge/license-MIT-3F4B5B?style=flat-square"></a>
   <a href="CONTRIBUTING.md"><img alt="PRs welcome" src="https://img.shields.io/badge/PRs-welcome-2EA043?style=flat-square"></a>
 </p>
@@ -14,7 +14,7 @@
   <a href="https://cbrock84.github.io/headcount/org-chart.html">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="docs/assets/org-chart-dark.png">
-      <img alt="The headcount org chart — 16 departments, 155 skills, searchable" src="docs/assets/org-chart-light.png" width="840">
+      <img alt="The headcount org chart — 16 departments, 160 skills, searchable" src="docs/assets/org-chart-light.png" width="840">
     </picture>
   </a>
 </p>
@@ -24,7 +24,7 @@
 </p>
 
 An agent organization for [Claude Code](https://claude.com/claude-code), structured as a company:
-a chief executive over 16 departments, 155 skills in total.
+a chief executive over 16 departments, 160 skills in total.
 
 Every department is an independently installable plugin, so a project loads only the functions it
 needs rather than all of them at once.
@@ -78,7 +78,7 @@ to as a subagent with its own exclusive write surface.
 </details>
 
 <details>
-<summary><b>Technology</b> (CTO / CIO) — 18 skills</summary>
+<summary><b>Technology</b> (CTO / CIO) — 19 skills</summary>
 
 | Skill | What it does |
 |---|---|
@@ -89,6 +89,7 @@ to as a subagent with its own exclusive write surface.
 | `cloud-infrastructure` | Designs and runs cloud infrastructure — environments, infrastructure as code, networking and isolation, scaling, and cost. |
 | `code-review` | Conducts and responds to code review — reviewing a change for correctness, design, and risk, and evaluating review feedback received on your own work. |
 | `completion-verification` | Verifies that work is actually complete before it is claimed to be — running the checks, reading the output, and confirming the original request was satisfied rathe…. |
+| `data-migration` | Moves data from one system to another without losing it or corrupting it — profiling the source before mapping, deciding between big-bang and parallel-run cutover,…. |
 | `implementation-planning` | Turns a spec or requirement into a written plan a separate session or agent can execute, then drives that plan through review checkpoints. |
 | `observability-and-reliability` | Makes systems debuggable and reliably operable — instrumentation, alerting that is worth waking for, service objectives, and learning from failure. |
 | `parallel-agent-delivery` | Splits work across multiple agents or sessions running at once, keeping their surfaces disjoint so results merge cleanly. |
@@ -104,12 +105,14 @@ to as a subagent with its own exclusive write surface.
 </details>
 
 <details>
-<summary><b>Security</b> (CISO) — 6 skills · **reviewer-class**</summary>
+<summary><b>Security</b> (CISO) — 8 skills · **reviewer-class**</summary>
 
 | Skill | What it does |
 |---|---|
 | `access-and-identity` | Designs and audits who can reach what — authentication, authorization models, privileged access, service credentials, and joiner-mover-leaver process. |
 | `chief-information-security-officer` | Owns the security posture of the organization — architecture, program strategy, risk acceptance, incident command, and the authority to stop work that creates unacc…. |
+| `data-protection-and-encryption` | Protects data itself rather than the systems around it — classifying what you hold, encrypting in transit and at rest and understanding what each actually defends a…. |
+| `detection-and-monitoring` | Builds the capability to notice an attack in progress — deciding what to log and retain, centralizing it somewhere tamper-resistant, writing detections that fire on…. |
 | `incident-response` | Runs a security incident from detection to closure — triage, containment, investigation, communication, and the review afterward. |
 | `security-architecture-review` | Reviews a design or change for security before it ships — authentication and authorization, data handling, secrets, dependencies, and the secure-development practic…. |
 | `threat-modeling` | Identifies what could go wrong in a system before it is built or changed — the assets worth attacking, the entry points, the trust boundaries, and the controls that…. |
@@ -333,14 +336,16 @@ to as a subagent with its own exclusive write surface.
 </details>
 
 <details>
-<summary><b>Legal & Risk</b> (CLO / CCO) — 6 skills · **reviewer-class**</summary>
+<summary><b>Legal & Risk</b> (CLO / CCO) — 8 skills · **reviewer-class**</summary>
 
 | Skill | What it does |
 |---|---|
 | `chief-legal-and-risk-officer` | Owns legal, contracts, intellectual property, regulatory compliance, privacy, security governance, enterprise risk, and audit readiness. |
 | `contract-review` | Reviews and negotiates commercial agreements — MSAs, SOWs, order forms, NDAs, vendor and data-processing agreements — identifying material risk, proposing positions…. |
 | `corporate-governance` | Maintains the corporate record and the governance machinery — entity records, board and committee support, resolutions and minutes, delegations of authority, insura…. |
+| `disputes-and-legal-holds` | Handles a dispute from the first sign of it — recognizing when preservation obligations attach, issuing and scoping a legal hold, suspending automatic deletion acro…. |
 | `enterprise-risk` | Identifies, assesses, and tracks organizational risk — building and maintaining a risk register, scoring exposure, assigning owners and treatments, and preparing fo…. |
+| `intellectual-property` | Covers what the organization owns and what it is only borrowing — trademarks and clearance, copyright and work-for-hire, patents and trade secrets, open-source lice…. |
 | `privacy-and-data-protection` | Assesses and improves how personal data is collected, used, shared, and retained — data mapping, lawful basis, consent, processor agreements, subject rights, and br…. |
 | `regulatory-compliance` | Identifies which regulations apply and builds the program that keeps you inside them — obligation mapping, controls, monitoring, and responding to regulators. |
 
