@@ -152,7 +152,7 @@ to as a subagent with its own exclusive write surface.
 | `design-system` | Builds and maintains the design system a product is assembled from — tokens for color, type, spacing and elevation, component contracts, and the rules that keep the…. |
 | `interface-craft` | Raises the visual and interaction quality of an interface — layout, hierarchy, type, spacing, density, and the details that separate a considered product from a gen…. |
 | `interface-redesign` | Upgrades an existing interface to a higher standard without rebuilding it — auditing what is there, identifying what reads as generic or unfinished, and sequencing…. |
-| `presentation-design` | Designs slide decks, one-pagers, and marketing graphics that carry an argument rather than decorate one. |
+| `presentation-design` | Designs slide decks and one-pagers that carry an argument rather than decorate one — deck structure, headlines that state the takeaway, charts that make a single po…. |
 | `product-discovery` | Finds out whether a problem is real and a solution would work, before building it — recruiting the right people, interviewing without leading them, separating what…. |
 | `product-requirements` | Writes down what is being built so a team can build it and know when they are done — problem and success measure before solution, scope stated by exclusion, user-vi…. |
 | `ux-product-auditor` | Audits a website, app, onboarding flow, or design for usability, conversion, and product problems, tying every finding to a business outcome and a severity. |

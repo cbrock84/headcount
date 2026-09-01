@@ -995,7 +995,7 @@ reports which rows defaulted, so a map that never considered the question stays 
 from one that answered it. The value here is not the single gated row; it is that the axis is now
 expressible and checked instead of remembered — the same argument that justified the surface map.
 
-## D32. Extending the skill-reference checker to skill bodies — 🔵 Open (needs your call)
+## D32. Extending the skill-reference checker to skill bodies — ✅ Resolved
 
 `scripts/check-skill-refs.py` verifies that every `` `department:skill` `` reference resolves. It
 scans `README.md`, `CONTRIBUTING.md` and `docs/**` — and nothing else. Skill files themselves are
@@ -1017,7 +1017,7 @@ promised a reader.
 That leaves the checker itself, which is `repo-meta` — the one row on the surface map carrying
 `proposes` under D31, so the change is surfaced here rather than made.
 
-- **(a) Extend the checker to scan `plugins/**/SKILL.md` as well.** ← **recommended**
+- **(a) Extend the checker to scan `plugins/**/SKILL.md` as well.** ← **chosen**
 - (b) Leave it. Skill-to-skill references stay unchecked, and the next broken one is found by a
   reader rather than by CI.
 - (c) Extend it, but as a warning rather than a failure. Keeps CI green while surfacing rot; also
@@ -1041,7 +1041,16 @@ request, so the extension turns any unresolved reference into a red build immedi
 forward reference written to a skill that has not been created yet. That is the intended behavior,
 but it changes what writing a cross-reference costs.
 
-## D33. US English check rejects the plural of "analysis" — 🔵 Open (needs your call)
+
+**Resolution: (a).** The checker now scans `plugins/**/SKILL.md` alongside the documentation.
+Coverage went from 99 references to 244, and the tree is clean at the point of the change because
+the four broken ones were fixed when they were found.
+
+The cost named in this entry is now live: a reference written to a skill that does not exist yet
+fails CI immediately. That is the intended behavior, and it means a forward reference has to be
+written after the skill it points at, not before.
+
+## D33. US English check rejects the plural of "analysis" — ✅ Resolved
 
 `scripts/check-us-english.py` maps the British spelling of the verb *analyze* and its inflections to
 the American forms. One of those inflections collides with the plural of *analysis*, which is spelled
@@ -1062,7 +1071,7 @@ The same noun/verb collision exists in principle for the *practice* and *license
 British English splits the spelling by part of speech. Both British forms are in the word list, so
 the same trap is set for anyone writing about either.
 
-- **(a) Drop the colliding inflection from the word list.** ← **recommended.** A one-line change.
+- **(a) Drop the colliding inflection from the word list.** ← **chosen.** A one-line change.
   The British verb is rare in this library's register; the noun plural is common.
 - (b) Skip matches inside backticks and block quotes. Fixes the describability problem for every
   word at once, and leaves the false positive in ordinary prose where it actually bites.
@@ -1075,7 +1084,17 @@ the same trap is set for anyone writing about either.
 excludes the other. This is repo-meta and carries `proposes` under D31, which is why it is logged
 rather than fixed. It is independent of D32; either can be taken alone.
 
-## D34. Two skills claim social graphics — 🔵 Open (needs your call)
+
+**Resolution: (a).** The colliding inflection is gone from the word list; the British verb and its
+past form remain. Verified both directions — a sentence using the plural noun passes, and one using
+the British verb is still caught.
+
+(b), the code-span exemption, was not taken. It solves a narrower problem than it appears to: the
+reason this entry could not name the word was that the whole file is scanned, and (a) removes that
+constraint for this word without adding machinery. The exemption is worth revisiting if a second
+word hits the same wall.
+
+## D34. Two skills claim social graphics — ✅ Resolved
 
 Found by a promise-versus-coverage sweep of all 172 descriptions. `product:presentation-design`
 says "to design a banner, social graphic, or one-pager". `marketing:visual-content` says "create
@@ -1090,7 +1109,7 @@ The two sit in different departments, so resolving it moves work across surfaces
 one. That is why it is logged rather than decided.
 
 - **(a) Narrow `presentation-design` to decks and one-pagers**, and drop the social and banner
-  claim from its description. ← **recommended.** `visual-content` is substantially deeper on that
+  claim from its description. ← **chosen.** `visual-content` is substantially deeper on that
   material — it covers format selection, carousels, infographics and generation prompts, where
   `presentation-design` gives it two paragraphs. The narrower skill also matches its own body,
   which is organized as decks first and everything else second.
@@ -1107,3 +1126,12 @@ each skill's trigger with where its depth actually is.
 and was introduced by this branch: `corporate-strategy:portfolio-strategy` claimed "decide market
 entry or exit" while the new `corporate-strategy:market-entry` covers entry properly. The
 portfolio skill's description now says exit only, which is what its body is about.
+
+
+**Resolution: (a).** `presentation-design` now covers decks and one-pagers, and points at
+`marketing:visual-content` for social graphics, carousels and infographics. The description and the
+body both moved, so the trigger and the content agree.
+
+The one-pager section kept its last bullet in changed form. It had been about a social graphic at
+thumbnail size; it is now about a one-pager's real reading contexts — printed, attached, projected —
+which is the same lesson applied to the surface this skill actually keeps.

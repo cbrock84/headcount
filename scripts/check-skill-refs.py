@@ -1,9 +1,14 @@
 #!/usr/bin/env python3
-"""Verify that every `department:skill` reference in the documentation resolves.
+"""Verify that every `department:skill` reference resolves, in the docs and in the skills.
 
 Prose naming specific skills rots as skills are renamed or consolidated — and this repository
 has already consolidated once, losing six capabilities in the process. A reference to a skill
 that no longer exists is a broken promise to a reader, and nothing else in the tree catches it.
+
+Skill bodies are checked as well as the documentation, per D32. They were unchecked until then,
+and four of the references inside them were already broken — including one pointing at a skill
+that had never existed. Skill files are where readers follow references from most, so the
+argument for checking the docs applies to them with more force, not less.
 
 Only tokens whose prefix is a real department directory are checked, so ordinary prose with a
 colon in it is ignored rather than guessed at.
@@ -13,7 +18,11 @@ import os
 import re
 import sys
 
-DOCS = ["README.md", "CONTRIBUTING.md"] + sorted(glob.glob("docs/**/*.md", recursive=True))
+DOCS = (
+    ["README.md", "CONTRIBUTING.md"]
+    + sorted(glob.glob("docs/**/*.md", recursive=True))
+    + sorted(glob.glob("plugins/**/SKILL.md", recursive=True))
+)
 # `dept:skill` inside backticks — the convention this repository uses for addressing a skill.
 REF = re.compile(r"`([a-z][a-z0-9-]*):([a-z][a-z0-9-]*)`")
 

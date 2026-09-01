@@ -12,6 +12,11 @@ repository of original work should not give.
 Only exact word forms are listed. Stems are a trap here: "analysis", "analyst", "specialist" and
 "realistic" are correct US English and must never be rewritten, so `analyse` is listed and `analys`
 is not.
+
+One inflection is deliberately absent, per D33: the third-person form of the British verb is
+spelled the same as the plural of "analysis", which is ordinary US English. Listing it flagged
+correct prose, and `--fix` rewrote the noun into a verb — corrupting text rather than merely
+reporting it. The British verb form is rare in this register; the noun plural is common.
 """
 import os
 import re
@@ -26,7 +31,7 @@ PAIRS = {
     "favourable": "favorable", "favourite": "favorite",
     "colour": "color", "colours": "colors", "coloured": "colored",
     "honour": "honor", "honours": "honors", "labour": "labor",
-    "analyse": "analyze", "analysed": "analyzed", "analyses": "analyzes",
+    "analyse": "analyze", "analysed": "analyzed",
     "analysing": "analyzing",
     "organise": "organize", "organised": "organized", "organising": "organizing",
     "organisation": "organization", "organisations": "organizations",
