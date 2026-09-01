@@ -5,7 +5,7 @@
 <p align="center">
   <a href="https://claude.com/claude-code"><img alt="Built for Claude Code" src="https://img.shields.io/badge/built%20for-Claude%20Code-D97757?style=flat-square"></a>
   <img alt="16 departments" src="https://img.shields.io/badge/departments-16-3F4B5B?style=flat-square">
-  <img alt="149 skills" src="https://img.shields.io/badge/skills-149-3F4B5B?style=flat-square">
+  <img alt="151 skills" src="https://img.shields.io/badge/skills-151-3F4B5B?style=flat-square">
   <a href="LICENSE"><img alt="MIT licensed" src="https://img.shields.io/badge/license-MIT-3F4B5B?style=flat-square"></a>
   <a href="CONTRIBUTING.md"><img alt="PRs welcome" src="https://img.shields.io/badge/PRs-welcome-2EA043?style=flat-square"></a>
 </p>
@@ -14,7 +14,7 @@
   <a href="https://cbrock84.github.io/headcount/org-chart.html">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="docs/assets/org-chart-dark.png">
-      <img alt="The headcount org chart — 16 departments, 149 skills, searchable" src="docs/assets/org-chart-light.png" width="840">
+      <img alt="The headcount org chart — 16 departments, 151 skills, searchable" src="docs/assets/org-chart-light.png" width="840">
     </picture>
   </a>
 </p>
@@ -24,7 +24,7 @@
 </p>
 
 An agent organization for [Claude Code](https://claude.com/claude-code), structured as a company:
-a chief executive over 16 departments, 149 skills in total.
+a chief executive over 16 departments, 151 skills in total.
 
 Every department is an independently installable plugin, so a project loads only the functions it
 needs rather than all of them at once.
@@ -254,17 +254,19 @@ to as a subagent with its own exclusive write surface.
 </details>
 
 <details>
-<summary><b>Program Management Office</b> (EPMO / COO) — 7 skills</summary>
+<summary><b>Program Management Office</b> (EPMO / COO) — 9 skills</summary>
 
 | Skill | What it does |
 |---|---|
 | `benefits-realization` | Ensures projects deliver the value they were approved on — defining measurable benefits, baselining, tracking after delivery, and honest post-implementation review. |
 | `change-and-adoption` | Gets people to actually use what was delivered — stakeholder analysis, communication, training, resistance, and measuring adoption. |
 | `dependency-and-risk-management` | Manages delivery risk and cross-team dependencies — identifying, sizing, mitigating and escalating what could stop the work. |
+| `estimating-and-contingency` | Produces a cost or effort estimate someone can defend — decomposing the work, choosing between analogous, parametric and bottom-up methods, documenting the basis an…. |
 | `head-of-pmo` | The EPMO lead's remit — what the PMO governs, what it must never become, and how it earns standing rather than compliance. |
 | `portfolio-governance` | Governs the portfolio of work — intake, prioritization, stage gates, resource contention, and stopping things. |
 | `program-management` | Plans and drives cross-functional programs to delivery — scope, sequencing, dependencies, status, risk, and the escalations that keep work moving. |
 | `project-delivery` | Plans and delivers a single project — scope, estimation, scheduling, critical path, tracking, and recovering when it slips. |
+| `schedule-development-and-analysis` | Builds and interrogates a project schedule — logic-driven sequencing, dependency types and lags, float and the critical path, resource loading and leveling, schedul…. |
 
 </details>
 

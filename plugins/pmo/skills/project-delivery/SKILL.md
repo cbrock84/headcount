@@ -57,6 +57,25 @@ Then present options with consequences — cut scope and name what, extend and s
 capacity, which late in a project usually slows things further. Re-baseline once, visibly. Serial
 one-week slips destroy credibility far faster than a single honest reset.
 
+## Change control is what makes the scope statement mean anything
+
+A scope boundary that anyone can move in a conversation is not a boundary. Change control is the
+mechanism that turns it into one, and it needs to be light enough that people use it rather than
+route around it.
+
+- **A change is anything that moves scope, date, or cost** — including work that arrives described
+  as a clarification. Most scope creep enters as a series of small reasonable requests, none of
+  which was ever assessed against the whole.
+- **Assess impact on all three before deciding.** "Yes, and it adds two weeks" is a decision
+  someone can make. "Yes" alone is how a plan quietly stops being achievable.
+- **The person who can approve a change is the person who owns the consequence.** If the sponsor
+  approves scope but the team absorbs the date, changes will keep being approved.
+- **Log rejected changes too.** The record of what was declined is what stops the same request
+  arriving three more times, and it is the honest answer when someone asks why a feature is missing.
+
+Re-baseline when an approved change makes the old plan meaningless, and not otherwise. A baseline
+re-set to hide variance destroys the only reference you had.
+
 ## Tooling
 
 Delivery tracking: Jira, Asana, Linear, Monday.com, Smartsheet, Microsoft Project, and

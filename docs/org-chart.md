@@ -42,14 +42,14 @@ than into the function they oversee.
 | `revenue` | Revenue | CRO | 8 |
 | `finance` | Finance | CFO | 13 |
 | `operations` | Operations | COO | 10 |
-| `pmo` | Program Management Office | EPMO / COO | 7 |
+| `pmo` | Program Management Office | EPMO / COO | 9 |
 | `customer-experience` | Customer Experience | CCO | 5 |
 | `data-analytics` | Data & Analytics | CDO | 6 |
 | `corporate-strategy` | Corporate Strategy | CSO | 5 |
 | `people` | People | CHRO | 10 |
 | `legal-risk` | Legal & Risk | CLO / CCO | 6 · reviewer-class |
 
-16 departments, 149 skills.
+16 departments, 151 skills.
 <!-- END GENERATED: departments -->
 
 ## Remaining gaps
