@@ -1,6 +1,6 @@
 ---
 name: dependency-and-risk-management
-description: Manages delivery risk and cross-team dependencies — identifying, sizing, mitigating and escalating what could stop the work. Use this to build a risk register that gets used, manage dependencies between teams, decide what to escalate and when, or work out why the same risks keep materialising unmanaged.
+description: Manages delivery risk and cross-team dependencies — identifying, sizing, mitigating and escalating what could stop the work. Use this to build a risk register that gets used, manage dependencies between teams, decide what to escalate and when, or work out why the same risks keep materializing unmanaged.
 ---
 
 # Dependency and risk management
@@ -56,7 +56,7 @@ An escalation naming the decision needed, the options, and the date by which it 
 resolved. A general expression of concern gets acknowledged and nothing happens.
 
 Escalate when the decision exceeds your authority or the decision date is approaching — not when the
-risk has already materialised, at which point it is a status report.
+risk has already materialized, at which point it is a status report.
 
 ## Never
 

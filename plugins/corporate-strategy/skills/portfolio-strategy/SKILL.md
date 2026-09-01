@@ -1,6 +1,6 @@
 ---
 name: portfolio-strategy
-description: Decides where capital and attention go across business lines, products, and markets — what to fund, hold, harvest, or exit, and on what evidence. Use this to allocate budget across businesses, evaluate whether a product line should continue, decide market entry or exit, structure a portfolio review, or when several initiatives compete for the same limited investment.
+description: Decides where capital and attention go across business lines, products, and markets — what to fund, hold, harvest, or exit, and on what evidence. Use this to allocate budget across businesses, evaluate whether a product line should continue, decide whether to exit one, structure a portfolio review, or when several initiatives compete for the same limited investment.
 ---
 
 # Portfolio strategy

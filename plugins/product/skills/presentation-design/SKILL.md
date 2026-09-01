@@ -28,6 +28,39 @@ not "Churn analysis." If the reader only reads headlines, they should get the ar
 **Charts:** one message each, labeled directly rather than through a legend, with the axis honest.
 Strip everything that is not carrying information.
 
+## Board decks and conference talks follow different rules
+
+The structure above is shaped for persuasion to a room you are in. Two of the artifacts this skill
+is asked for are not that.
+
+**A board deck is read before the meeting, not presented at it.** It goes out days ahead and is
+expected to be read, so it has to stand alone — which makes it the read-alone document, not the
+spoken-support deck.
+
+- **Separate what is for decision from what is for information**, and say which is which on the
+  page. A board meeting spent walking through updates is a board meeting with no decisions in it.
+- **Keep the format identical period over period.** The value of a board pack is comparison across
+  time, and a redesign destroys it. Same sections, same order, same metrics with the same
+  definitions.
+- **Lead with what is not working.** A pack that buries the problem on page nineteen costs
+  credibility permanently once someone finds it, and they do.
+- **Bring the open question, not only the resolved one.** A board shown finished thinking cannot
+  help and eventually stops trying.
+
+For how the meeting itself should be run and what belongs at which cadence, see
+`operations:operating-cadence`; for what has to be formally recorded, `legal-risk:corporate-governance`.
+
+**A conference talk is a performance with visual support**, and it fails in the opposite direction
+from a board pack.
+
+- **Fewer words than feels safe.** Slides are read faster than you speak, so text competes with you
+  and wins. Images, one phrase, a single number.
+- **Design for the back of a large room** and for the bottom third being invisible behind heads.
+- **The talk has to survive the projector** — assume poor contrast and bad color reproduction, and
+  never rely on a subtle tonal difference to carry meaning.
+- **Nothing on a slide should require the handout to be understood.** If the deck will be shared
+  afterward, that is a second artifact, not the same one.
+
 ## One-pagers and graphics
 
 A single surface has one job: get one idea across at a glance, and reward a closer read.

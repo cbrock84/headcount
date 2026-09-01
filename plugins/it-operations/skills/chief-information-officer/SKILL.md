@@ -24,6 +24,8 @@ availability, time-to-resolution, and how little anyone has to think about it.
 - `it-operations:virtualization-operations` — the hypervisor layer the servers actually run on
 - `it-operations:cloud-administration` — the corporate cloud and SaaS estate, distinct from the product's
 - `it-operations:telephony-and-conferencing` — voice, rooms, and the obligations they carry
+- `it-operations:collaboration-platform-administration` — mail, chat, meetings and file sharing,
+  where most of the organization's unstructured data actually lives
 
 ## The boundaries that cause arguments
 
