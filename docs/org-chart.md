@@ -32,24 +32,24 @@ than into the function they oversee.
 <!-- BEGIN GENERATED: departments -->
 | Department | Function | Executive | Skills |
 |---|---|---|---|
-| `executive` | Office of the CEO | Chief Executive | 6 |
-| `technology` | Technology | CTO / CIO | 18 |
-| `security` | Security | CISO | 6 · reviewer-class |
-| `it-operations` | IT Operations | CIO | 11 |
-| `product` | Product | CPO | 9 |
-| `marketing` | Marketing | CMO | 18 |
-| `demand-generation` | Demand Generation | CMO | 11 |
-| `revenue` | Revenue | CRO | 8 |
+| `executive` | Office of the CEO | Chief Executive | 7 |
+| `technology` | Technology | CTO / CIO | 19 |
+| `security` | Security | CISO | 8 · reviewer-class |
+| `it-operations` | IT Operations | CIO | 12 |
+| `product` | Product | CPO | 11 |
+| `marketing` | Marketing | CMO | 19 |
+| `demand-generation` | Demand Generation | CMO | 12 |
+| `revenue` | Revenue | CRO | 10 |
 | `finance` | Finance | CFO | 13 |
-| `operations` | Operations | COO | 10 |
-| `pmo` | Program Management Office | EPMO / COO | 7 |
-| `customer-experience` | Customer Experience | CCO | 5 |
-| `data-analytics` | Data & Analytics | CDO | 6 |
-| `corporate-strategy` | Corporate Strategy | CSO | 5 |
-| `people` | People | CHRO | 10 |
-| `legal-risk` | Legal & Risk | CLO / CCO | 6 · reviewer-class |
+| `operations` | Operations | COO | 12 |
+| `pmo` | Program Management Office | EPMO / COO | 9 |
+| `customer-experience` | Customer Experience | CCO | 7 |
+| `data-analytics` | Data & Analytics | CDO | 7 |
+| `corporate-strategy` | Corporate Strategy | CSO | 6 |
+| `people` | People | CHRO | 12 |
+| `legal-risk` | Legal & Risk | CLO / CCO | 8 · reviewer-class |
 
-16 departments, 149 skills.
+16 departments, 172 skills.
 <!-- END GENERATED: departments -->
 
 ## Remaining gaps

@@ -52,7 +52,7 @@ owner, and treat it as part of `finance:financial-reporting-and-close`.
 - `finance:capital-allocation` — after-tax returns are the only ones that matter for a decision
 - `people:workforce-planning` — every hire in a new jurisdiction is a tax question before it is a
   cost question
-- `revenue:revenue-recognition` — book and tax treatment diverge, and the difference is itself
+- `finance:revenue-recognition` — book and tax treatment diverge, and the difference is itself
   something to track
 
 ## Never

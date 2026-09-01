@@ -994,3 +994,83 @@ than assumed — an unproven guard is a comment claiming to be a guard.
 reports which rows defaulted, so a map that never considered the question stays distinguishable
 from one that answered it. The value here is not the single gated row; it is that the axis is now
 expressible and checked instead of remembered — the same argument that justified the surface map.
+
+## D32. Extending the skill-reference checker to skill bodies — 🔵 Open (needs your call)
+
+`scripts/check-skill-refs.py` verifies that every `` `department:skill` `` reference resolves. It
+scans `README.md`, `CONTRIBUTING.md` and `docs/**` — and nothing else. Skill files themselves are
+not scanned, so the 131 cross-references inside `plugins/**/SKILL.md` have never been checked.
+
+**Four of them were broken**, found by running the checker's own logic over the skill tree:
+
+| Reference | In | Actual problem |
+|---|---|---|
+| revenue:revenue-recognition | `finance:tax` | Wrong department prefix |
+| legal-risk:risk-and-controls | `legal-risk:chief-legal-and-risk-officer` | Skill never existed |
+| customer-experience:churn | `revenue:chief-revenue-officer` | Skill never existed |
+| operations:incident-management | `operations:chief-operating-officer` | Skill never existed |
+
+All four are fixed on this branch. The first three were retargeted; the fourth was a genuine
+capability gap and `operations:incident-management` now exists, which is what the reference always
+promised a reader.
+
+That leaves the checker itself, which is `repo-meta` — the one row on the surface map carrying
+`proposes` under D31, so the change is surfaced here rather than made.
+
+- **(a) Extend the checker to scan `plugins/**/SKILL.md` as well.** ← **recommended**
+- (b) Leave it. Skill-to-skill references stay unchecked, and the next broken one is found by a
+  reader rather than by CI.
+- (c) Extend it, but as a warning rather than a failure. Keeps CI green while surfacing rot; also
+  means nothing ever forces the fix, which is how the four above accumulated.
+
+**Recommendation: (a).** The checker's own docstring says a reference to a skill that no longer
+exists is a broken promise to a reader and that nothing else in the tree catches it. That argument
+does not weaken inside a skill file — it strengthens, because that is where readers follow
+references from. The measured cost is zero: 131 references, four failures, all now fixed, no
+false positives from ordinary prose.
+
+**Why it is not simply done here.** The argument that a draft pull request is itself the surfacing
+`proposes` calls for does not hold up. It would license any `repo-meta` change made overnight,
+which collapses `proposes` into `autonomous` and makes the single non-default row on the roster
+decorative — precisely what D31 refused. Note the contrast with this log entry, which is also a
+`repo-meta` write under `docs/**` and is fine because it was explicitly asked for. Same surface,
+different authorization.
+
+**One consequence worth knowing before choosing (a).** CI runs `check-all.sh` on every pull
+request, so the extension turns any unresolved reference into a red build immediately — including a
+forward reference written to a skill that has not been created yet. That is the intended behavior,
+but it changes what writing a cross-reference costs.
+
+## D33. US English check rejects the plural of "analysis" — 🔵 Open (needs your call)
+
+`scripts/check-us-english.py` maps the British spelling of the verb *analyze* and its inflections to
+the American forms. One of those inflections collides with the plural of *analysis*, which is spelled
+identically in both dialects and is ordinary American English. Writing a sentence about several
+pieces of analysis therefore fails the check, and `--fix` rewrites the noun into the third-person
+verb form, producing a sentence that is not English in any dialect.
+
+Caught while writing `data-analytics:quantitative-analysis`, where that plural is the natural word
+in the opening line. Worked around by rephrasing, so nothing fails today.
+
+**Two things make this worth more than a shrug.** The `--fix` path corrupts correct text rather
+than merely flagging it, which is worse than a plain false positive. And the check has no exemption
+for code spans or quoted text, so the defect cannot be described in any file the check scans —
+this entry has to talk around the word rather than name it, which is the clearest demonstration of
+the problem available.
+
+The same noun/verb collision exists in principle for the *practice* and *license* families, where
+British English splits the spelling by part of speech. Both British forms are in the word list, so
+the same trap is set for anyone writing about either.
+
+- **(a) Drop the colliding inflection from the word list.** ← **recommended.** A one-line change.
+  The British verb is rare in this library's register; the noun plural is common.
+- (b) Skip matches inside backticks and block quotes. Fixes the describability problem for every
+  word at once, and leaves the false positive in ordinary prose where it actually bites.
+- (c) Make the rule context-sensitive on the preceding word. More precise, and more machinery than
+  a spelling check should carry.
+- (d) Leave it and rephrase around it, as was done here. Costs nothing today and quietly shapes
+  what people are able to write.
+
+**Recommendation: (a), and consider (b) alongside it** — they solve different halves and neither
+excludes the other. This is repo-meta and carries `proposes` under D31, which is why it is logged
+rather than fixed. It is independent of D32; either can be taken alone.

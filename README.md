@@ -5,7 +5,7 @@
 <p align="center">
   <a href="https://claude.com/claude-code"><img alt="Built for Claude Code" src="https://img.shields.io/badge/built%20for-Claude%20Code-D97757?style=flat-square"></a>
   <img alt="16 departments" src="https://img.shields.io/badge/departments-16-3F4B5B?style=flat-square">
-  <img alt="149 skills" src="https://img.shields.io/badge/skills-149-3F4B5B?style=flat-square">
+  <img alt="172 skills" src="https://img.shields.io/badge/skills-172-3F4B5B?style=flat-square">
   <a href="LICENSE"><img alt="MIT licensed" src="https://img.shields.io/badge/license-MIT-3F4B5B?style=flat-square"></a>
   <a href="CONTRIBUTING.md"><img alt="PRs welcome" src="https://img.shields.io/badge/PRs-welcome-2EA043?style=flat-square"></a>
 </p>
@@ -14,7 +14,7 @@
   <a href="https://cbrock84.github.io/headcount/org-chart.html">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="docs/assets/org-chart-dark.png">
-      <img alt="The headcount org chart — 16 departments, 149 skills, searchable" src="docs/assets/org-chart-light.png" width="840">
+      <img alt="The headcount org chart — 16 departments, 172 skills, searchable" src="docs/assets/org-chart-light.png" width="840">
     </picture>
   </a>
 </p>
@@ -24,7 +24,7 @@
 </p>
 
 An agent organization for [Claude Code](https://claude.com/claude-code), structured as a company:
-a chief executive over 16 departments, 149 skills in total.
+a chief executive over 16 departments, 172 skills in total.
 
 Every department is an independently installable plugin, so a project loads only the functions it
 needs rather than all of them at once.
@@ -64,7 +64,7 @@ to as a subagent with its own exclusive write surface.
 ## Departments
 
 <details>
-<summary><b>Office of the CEO</b> (Chief Executive) — 6 skills</summary>
+<summary><b>Office of the CEO</b> (Chief Executive) — 7 skills</summary>
 
 | Skill | What it does |
 |---|---|
@@ -73,12 +73,13 @@ to as a subagent with its own exclusive write surface.
 | `business-growth-consultant` | Finds the single constraint currently limiting a business's growth and the highest-leverage moves against it, rather than producing a list of everything that could…. |
 | `ceo-advisor` | Pressure-tests a decision, plan, or idea before it is committed to — surfacing the assumption it rests on, the case against it, and what would have to be true for i…. |
 | `chief-executive` | Sets direction, allocates capital and attention, and makes the calls no one else can make. |
+| `fundraising-and-investor-relations` | Raises capital and manages the relationship afterward — deciding how much and why, understanding what dilution and preferences actually cost, running a process with…. |
 | `saas-idea-validator` | Evaluates a software or startup idea against problem, market, competition, monetization, defensibility, and execution, and returns a verdict rather than encourageme…. |
 
 </details>
 
 <details>
-<summary><b>Technology</b> (CTO / CIO) — 18 skills</summary>
+<summary><b>Technology</b> (CTO / CIO) — 19 skills</summary>
 
 | Skill | What it does |
 |---|---|
@@ -89,6 +90,7 @@ to as a subagent with its own exclusive write surface.
 | `cloud-infrastructure` | Designs and runs cloud infrastructure — environments, infrastructure as code, networking and isolation, scaling, and cost. |
 | `code-review` | Conducts and responds to code review — reviewing a change for correctness, design, and risk, and evaluating review feedback received on your own work. |
 | `completion-verification` | Verifies that work is actually complete before it is claimed to be — running the checks, reading the output, and confirming the original request was satisfied rathe…. |
+| `data-migration` | Moves data from one system to another without losing it or corrupting it — profiling the source before mapping, deciding between big-bang and parallel-run cutover,…. |
 | `implementation-planning` | Turns a spec or requirement into a written plan a separate session or agent can execute, then drives that plan through review checkpoints. |
 | `observability-and-reliability` | Makes systems debuggable and reliably operable — instrumentation, alerting that is worth waking for, service objectives, and learning from failure. |
 | `parallel-agent-delivery` | Splits work across multiple agents or sessions running at once, keeping their surfaces disjoint so results merge cleanly. |
@@ -104,12 +106,14 @@ to as a subagent with its own exclusive write surface.
 </details>
 
 <details>
-<summary><b>Security</b> (CISO) — 6 skills · **reviewer-class**</summary>
+<summary><b>Security</b> (CISO) — 8 skills · **reviewer-class**</summary>
 
 | Skill | What it does |
 |---|---|
 | `access-and-identity` | Designs and audits who can reach what — authentication, authorization models, privileged access, service credentials, and joiner-mover-leaver process. |
 | `chief-information-security-officer` | Owns the security posture of the organization — architecture, program strategy, risk acceptance, incident command, and the authority to stop work that creates unacc…. |
+| `data-protection-and-encryption` | Protects data itself rather than the systems around it — classifying what you hold, encrypting in transit and at rest and understanding what each actually defends a…. |
+| `detection-and-monitoring` | Builds the capability to notice an attack in progress — deciding what to log and retain, centralizing it somewhere tamper-resistant, writing detections that fire on…. |
 | `incident-response` | Runs a security incident from detection to closure — triage, containment, investigation, communication, and the review afterward. |
 | `security-architecture-review` | Reviews a design or change for security before it ships — authentication and authorization, data handling, secrets, dependencies, and the secure-development practic…. |
 | `threat-modeling` | Identifies what could go wrong in a system before it is built or changed — the assets worth attacking, the entry points, the trust boundaries, and the controls that…. |
@@ -118,13 +122,14 @@ to as a subagent with its own exclusive write surface.
 </details>
 
 <details>
-<summary><b>IT Operations</b> (CIO) — 11 skills</summary>
+<summary><b>IT Operations</b> (CIO) — 12 skills</summary>
 
 | Skill | What it does |
 |---|---|
 | `backup-and-recovery` | Protects and restores data — backup coverage and scope, retention, immutability against ransomware, and proving restores actually work. |
 | `chief-information-officer` | The CIO's remit — running the technology the company works on, service quality, IT spend, and the boundary with product engineering. |
 | `cloud-administration` | Administers the cloud the company runs on rather than the one it sells — tenant and subscription structure, the SaaS estate and who owns each app, identity as the r…. |
+| `collaboration-platform-administration` | Administers the email, chat, meeting and file-sharing platform the organization runs on — tenant and domain configuration, mail authentication and routing, phishing…. |
 | `endpoint-management` | Manages laptops, desktops and mobile devices — enrollment, configuration, patching, software distribution, and lost or compromised devices. |
 | `identity-lifecycle-administration` | Executes joiner, mover and leaver processes — provisioning, group membership, access changes on role change, and complete deprovisioning. |
 | `it-asset-management` | Tracks hardware and software assets through their life — procurement, ownership, licensing, refresh, and disposal. |
@@ -137,7 +142,7 @@ to as a subagent with its own exclusive write surface.
 </details>
 
 <details>
-<summary><b>Product</b> (CPO) — 9 skills</summary>
+<summary><b>Product</b> (CPO) — 11 skills</summary>
 
 | Skill | What it does |
 |---|---|
@@ -148,13 +153,15 @@ to as a subagent with its own exclusive write surface.
 | `interface-craft` | Raises the visual and interaction quality of an interface — layout, hierarchy, type, spacing, density, and the details that separate a considered product from a gen…. |
 | `interface-redesign` | Upgrades an existing interface to a higher standard without rebuilding it — auditing what is there, identifying what reads as generic or unfinished, and sequencing…. |
 | `presentation-design` | Designs slide decks, one-pagers, and marketing graphics that carry an argument rather than decorate one. |
+| `product-discovery` | Finds out whether a problem is real and a solution would work, before building it — recruiting the right people, interviewing without leading them, separating what…. |
+| `product-requirements` | Writes down what is being built so a team can build it and know when they are done — problem and success measure before solution, scope stated by exclusion, user-vi…. |
 | `ux-product-auditor` | Audits a website, app, onboarding flow, or design for usability, conversion, and product problems, tying every finding to a business outcome and a severity. |
 | `visual-reference-generation` | Produces design reference imagery before implementation — screen concepts, layout directions, and flows for web or mobile that make a verbal brief concrete enough t…. |
 
 </details>
 
 <details>
-<summary><b>Marketing</b> (CMO) — 18 skills</summary>
+<summary><b>Marketing</b> (CMO) — 19 skills</summary>
 
 | Skill | What it does |
 |---|---|
@@ -171,6 +178,7 @@ to as a subagent with its own exclusive write surface.
 | `newsletter-writer` | Writes and edits newsletters and marketing emails people actually open — subject lines, opening, structure, voice, and the conversion turn where there is one. |
 | `partnership-marketing` | Builds reach through other people's audiences — co-marketing partnerships, creator and influencer programs, community building, and affiliate arrangements. |
 | `positioning-and-messaging` | Establishes what a product is understood to be, for whom, and instead of what — then turns that into the messaging every other surface inherits. |
+| `product-launch` | Takes something built and gets it into the market — tiering the launch to match what it actually warrants, sequencing internal readiness before external announcemen…. |
 | `public-relations` | Plans and executes earned media — press strategy, journalist outreach, announcements, commentary, and crisis response. |
 | `social-post-craft` | Writes, structures, and evaluates social posts end to end — hooks, body, formatting for how each platform renders, and a quality check before publishing. |
 | `video-content` | Plans and scripts short-form and long-form video, and designs the packaging — titles, thumbnails, and openings — that determines whether it gets watched. |
@@ -180,10 +188,11 @@ to as a subagent with its own exclusive write surface.
 </details>
 
 <details>
-<summary><b>Demand Generation</b> (CMO) — 11 skills</summary>
+<summary><b>Demand Generation</b> (CMO) — 12 skills</summary>
 
 | Skill | What it does |
 |---|---|
+| `account-based-marketing` | Concentrates marketing and sales effort on a named set of accounts rather than on volume — qualifying whether the model fits your economics at all, building the acc…. |
 | `ai-search-optimization` | Optimizes for AI assistants and AI-generated answers — being retrievable, being cited, and being represented accurately when a model answers on your behalf. |
 | `app-store-optimization` | Improves visibility and conversion in the App Store and Google Play — metadata, keywords, screenshots, ratings, and the listing experience that turns an impression…. |
 | `experimentation` | Designs, runs, and reads A/B tests and growth experiments — hypothesis, sample size, duration, and honest interpretation. |
@@ -199,17 +208,19 @@ to as a subagent with its own exclusive write surface.
 </details>
 
 <details>
-<summary><b>Revenue</b> (CRO) — 8 skills</summary>
+<summary><b>Revenue</b> (CRO) — 10 skills</summary>
 
 | Skill | What it does |
 |---|---|
 | `activation` | Gets new users from signup to first real value — signup flow, onboarding, time-to-value, and the early experience that determines whether someone becomes a user or…. |
 | `chief-revenue-officer` | Owns the revenue engine end to end: sales, monetization, pricing, customer success, retention, and partnerships. |
+| `deal-negotiation` | Negotiates a commercial deal without giving away the terms that matter — preparing your walk-away and theirs, trading concessions rather than conceding them, recogn…. |
 | `outbound-prospecting` | Finds, qualifies, and reaches prospects through cold outreach — list building, qualification criteria, cold email and multi-channel sequences, and the follow-up tha…. |
 | `pricing-and-packaging` | Sets price, structures packages and tiers, and designs the monetization surfaces that carry them — upgrade paths, paywalls, and offer construction. |
 | `referral-programs` | Designs and improves referral, affiliate, and word-of-mouth programs — incentive structure, mechanics, timing, and fraud control. |
 | `retention` | Diagnoses and reduces churn — cancellation flows, save offers, failed-payment recovery, at-risk detection, and the product and service causes underneath. |
 | `revenue-operations` | Runs the mechanics of the revenue engine — lead lifecycle definitions, routing, CRM hygiene, forecasting process, pipeline reporting, and the marketing-to-sales han…. |
+| `sales-compensation-and-territory` | Designs quotas, territories and commission plans that produce the behavior the business needs — sizing territories against real potential, setting quotas people can…. |
 | `sales-enablement` | Builds what a sales team needs to sell — pitch decks, one-pagers, objection handling, competitive battlecards, demo scripts, and case studies. |
 
 </details>
@@ -236,7 +247,7 @@ to as a subagent with its own exclusive write surface.
 </details>
 
 <details>
-<summary><b>Operations</b> (COO) — 10 skills</summary>
+<summary><b>Operations</b> (COO) — 12 skills</summary>
 
 | Skill | What it does |
 |---|---|
@@ -244,6 +255,8 @@ to as a subagent with its own exclusive write surface.
 | `capacity-and-demand-planning` | Matches operational capacity to expected demand — forecasting load, sizing teams and systems, managing queues, and deciding when to add capacity. |
 | `chief-operating-officer` | Owns execution: how work actually gets done across the organization, including process, program management, capacity, vendors, supply chain, and service delivery. |
 | `facilities-and-workplace` | Runs the physical and hybrid workplace — space planning, leases, health and safety, office services, and the operational side of where people work. |
+| `incident-management` | Runs an operational incident from detection to closed action — declaring it and naming a commander, separating the people restoring service from the people communic…. |
+| `operating-cadence` | Designs the rhythm an organization runs on — which reviews happen weekly, monthly and quarterly, what each one decides, who owns the numbers presented, and how a si…. |
 | `process-design` | Designs, documents, and fixes operational processes — mapping the current state, finding where work actually stalls, redesigning the flow, and building controls tha…. |
 | `procurement-and-sourcing` | Buys well — specifying need, running competitive sourcing, negotiating, and category strategy before a contract exists. |
 | `quality-management` | Builds quality into operations — defining standards, catching defects at the right point, root cause analysis, and continuous improvement. |
@@ -254,26 +267,30 @@ to as a subagent with its own exclusive write surface.
 </details>
 
 <details>
-<summary><b>Program Management Office</b> (EPMO / COO) — 7 skills</summary>
+<summary><b>Program Management Office</b> (EPMO / COO) — 9 skills</summary>
 
 | Skill | What it does |
 |---|---|
 | `benefits-realization` | Ensures projects deliver the value they were approved on — defining measurable benefits, baselining, tracking after delivery, and honest post-implementation review. |
 | `change-and-adoption` | Gets people to actually use what was delivered — stakeholder analysis, communication, training, resistance, and measuring adoption. |
 | `dependency-and-risk-management` | Manages delivery risk and cross-team dependencies — identifying, sizing, mitigating and escalating what could stop the work. |
+| `estimating-and-contingency` | Produces a cost or effort estimate someone can defend — decomposing the work, choosing between analogous, parametric and bottom-up methods, documenting the basis an…. |
 | `head-of-pmo` | The EPMO lead's remit — what the PMO governs, what it must never become, and how it earns standing rather than compliance. |
 | `portfolio-governance` | Governs the portfolio of work — intake, prioritization, stage gates, resource contention, and stopping things. |
 | `program-management` | Plans and drives cross-functional programs to delivery — scope, sequencing, dependencies, status, risk, and the escalations that keep work moving. |
 | `project-delivery` | Plans and delivers a single project — scope, estimation, scheduling, critical path, tracking, and recovering when it slips. |
+| `schedule-development-and-analysis` | Builds and interrogates a project schedule — logic-driven sequencing, dependency types and lags, float and the critical path, resource loading and leveling, schedul…. |
 
 </details>
 
 <details>
-<summary><b>Customer Experience</b> (CCO) — 5 skills</summary>
+<summary><b>Customer Experience</b> (CCO) — 7 skills</summary>
 
 | Skill | What it does |
 |---|---|
 | `chief-customer-officer` | Owns the customer's experience after the sale — support, success, escalation, and the feedback loop back into product. |
+| `customer-onboarding-and-implementation` | Takes a new customer from signature to working — setting a definition of live that both sides agreed before the contract was signed, planning and staffing the imple…. |
+| `customer-success-management` | Runs the ongoing relationship with accounts after the sale — segmenting coverage against account value, building a health score that predicts rather than describes,…. |
 | `escalation-management` | Handles customer situations that have exceeded normal support — severity assessment, incident communication, executive escalation, and recovering a relationship aft…. |
 | `self-service-and-knowledge` | Builds the help center, in-product guidance, and knowledge base that let customers resolve problems without contacting anyone — content, findability, maintenance, a…. |
 | `support-operations` | Designs and runs the support function — channels, queues, routing, staffing, service levels, quality, and the metrics that show whether it is working. |
@@ -282,7 +299,7 @@ to as a subagent with its own exclusive write surface.
 </details>
 
 <details>
-<summary><b>Data & Analytics</b> (CDO) — 6 skills</summary>
+<summary><b>Data & Analytics</b> (CDO) — 7 skills</summary>
 
 | Skill | What it does |
 |---|---|
@@ -292,15 +309,17 @@ to as a subagent with its own exclusive write surface.
 | `data-engineering` | Builds and operates data pipelines — ingestion, transformation, orchestration, quality testing, and reliability of data delivery. |
 | `data-governance` | Establishes ownership, definitions, quality, access, and lineage for the organization's data. |
 | `data-modeling` | Designs the warehouse and semantic layer — source-to-mart structure, dimensional modeling, grain, slowly changing dimensions, and the metric layer analytics reads t…. |
+| `quantitative-analysis` | Answers a business question with data without fooling yourself — framing the question so an answer would change something, choosing the right comparison, checking t…. |
 
 </details>
 
 <details>
-<summary><b>Corporate Strategy</b> (CSO) — 5 skills</summary>
+<summary><b>Corporate Strategy</b> (CSO) — 6 skills</summary>
 
 | Skill | What it does |
 |---|---|
 | `chief-strategy-officer` | Owns where the business plays and how it wins over a multi-year horizon — portfolio choices, corporate development, strategic partnerships, and planning under uncer…. |
+| `market-entry` | Decides whether and how to enter a new market — sizing demand from the bottom up rather than from a market report, testing whether your advantage transfers, choosin…. |
 | `mergers-and-acquisitions` | Runs corporate development — deal thesis, target screening, valuation framing, diligence, and integration planning. |
 | `portfolio-strategy` | Decides where capital and attention go across business lines, products, and markets — what to fund, hold, harvest, or exit, and on what evidence. |
 | `scenario-planning` | Plans under genuine uncertainty — building scenarios, identifying which assumptions are load-bearing, setting early-warning indicators, and stress-testing a plan ag…. |
@@ -309,7 +328,7 @@ to as a subagent with its own exclusive write surface.
 </details>
 
 <details>
-<summary><b>People</b> (CHRO) — 10 skills</summary>
+<summary><b>People</b> (CHRO) — 12 skills</summary>
 
 | Skill | What it does |
 |---|---|
@@ -317,24 +336,28 @@ to as a subagent with its own exclusive write surface.
 | `chief-human-resources-officer` | Owns the organization itself: org design, hiring, performance, compensation, development, culture, and employee relations. |
 | `compensation-and-leveling` | Builds and maintains the leveling framework and pay structure — level definitions, salary bands, benchmarking, pay equity, and how raises and promotions are decided. |
 | `employee-relations` | Handles the difficult human situations — grievances, complaints, investigations, conflict, and separations conducted properly. |
+| `employment-compliance` | Covers the employment rules that carry real penalties — exempt and non-exempt classification, overtime and hours, employee versus contractor status, work authorizat…. |
 | `hiring-and-interviewing` | Designs and runs hiring — role definition, sourcing, interview loop design, structured evaluation, and the decision itself. |
 | `learning-and-development` | Builds capability — skills gaps, career frameworks, training that transfers to the job, and internal mobility. |
 | `onboarding-and-offboarding` | Designs the joining and leaving experience — first-day readiness, ramp to productivity, knowledge capture, and clean exits. |
 | `org-design` | Designs how an organization is structured — reporting lines, team boundaries, spans and layers, role definition, and workforce planning against the strategy. |
+| `payroll-operations` | Runs the pay cycle so it is right, on time, and provable — the calendar and cutoffs, what feeds pay from the HRIS and time systems, gross-to-net and the deductions…. |
 | `performance-management` | Runs performance systems that change behavior — expectations, feedback, review cycles, calibration, and handling underperformance. |
 | `workforce-planning` | Plans the shape and size of the workforce — demand for roles, build-versus-buy, attrition, and sequencing hiring against budget. |
 
 </details>
 
 <details>
-<summary><b>Legal & Risk</b> (CLO / CCO) — 6 skills · **reviewer-class**</summary>
+<summary><b>Legal & Risk</b> (CLO / CCO) — 8 skills · **reviewer-class**</summary>
 
 | Skill | What it does |
 |---|---|
 | `chief-legal-and-risk-officer` | Owns legal, contracts, intellectual property, regulatory compliance, privacy, security governance, enterprise risk, and audit readiness. |
 | `contract-review` | Reviews and negotiates commercial agreements — MSAs, SOWs, order forms, NDAs, vendor and data-processing agreements — identifying material risk, proposing positions…. |
 | `corporate-governance` | Maintains the corporate record and the governance machinery — entity records, board and committee support, resolutions and minutes, delegations of authority, insura…. |
+| `disputes-and-legal-holds` | Handles a dispute from the first sign of it — recognizing when preservation obligations attach, issuing and scoping a legal hold, suspending automatic deletion acro…. |
 | `enterprise-risk` | Identifies, assesses, and tracks organizational risk — building and maintaining a risk register, scoring exposure, assigning owners and treatments, and preparing fo…. |
+| `intellectual-property` | Covers what the organization owns and what it is only borrowing — trademarks and clearance, copyright and work-for-hire, patents and trade secrets, open-source lice…. |
 | `privacy-and-data-protection` | Assesses and improves how personal data is collected, used, shared, and retained — data mapping, lawful basis, consent, processor agreements, subject rights, and br…. |
 | `regulatory-compliance` | Identifies which regulations apply and builds the program that keeps you inside them — obligation mapping, controls, monitoring, and responding to regulators. |
 
