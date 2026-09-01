@@ -71,6 +71,13 @@ be unusable within two quarters.
 Never require a field whose value is not used in a decision. Every unnecessary field trains sellers
 to enter garbage in all of them.
 
+## Never
+
+- Change a definition without restating history on the new one. A metric that moved because you redefined it is not a result.
+- Report a forecast number you cannot trace back to named deals.
+- Let two systems each keep their own version of the same field. Pick the source of truth and make the other read from it.
+- Score leads with a model you cannot explain to the reps who have to work them.
+
 ## Return contract
 
 State the definitional gaps found, the process change proposed, what it costs sellers in time, and

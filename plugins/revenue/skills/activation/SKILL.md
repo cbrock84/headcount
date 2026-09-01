@@ -56,3 +56,10 @@ for.
 
 Percentage reaching the activation moment, and time to reach it. Signup conversion alone will
 happily improve while activation falls.
+
+## Never
+
+- Pick an activation moment because it is easy to measure. It has to be the point where the user gets the value they came for.
+- Add a step to onboarding without removing one. Every screen between signup and value costs you users.
+- Ask at signup for anything you do not need to deliver the first result. Collect the rest later, in context.
+- Count signups as activation. A user who never reached the value moment did not activate.

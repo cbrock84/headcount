@@ -51,6 +51,13 @@ system: required fields, blocking gates, defaults that are correct, automated ha
 **Never fix a recurring failure with a reminder.** If people are forgetting a step, the system
 permits forgetting it. Fix that.
 
+## Never
+
+- Redesign from the documented process. Map what people actually do first.
+- Optimize a step that is not the constraint. Everything you speed up ahead of it just queues.
+- Add an approval to prevent a failure that happened once.
+- Hand over a process with no owner and no measure. It reverts within a quarter.
+
 ## Return contract
 
 Current state with elapsed and touch time, the constraint and its evidence, the redesign, what it

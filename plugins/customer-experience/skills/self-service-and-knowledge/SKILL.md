@@ -62,3 +62,10 @@ volume for a topic falls after content ships.
 
 Watch articles with high views *and* a high subsequent contact rate. Those are articles that are
 failing to answer, and they look like your best-performing content.
+
+## Never
+
+- Write an article for a problem the product should not have. Fix the product and delete the article.
+- Publish without an owner and a review date. Stale help is worse than no help.
+- Measure a knowledge base by article count.
+- Hide the path to a human. Deflection that traps people costs more than the ticket would have.

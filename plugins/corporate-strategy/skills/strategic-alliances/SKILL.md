@@ -59,3 +59,10 @@ strategy moved.
 
 Say it plainly and early. Partnerships die quietly for a year before anyone admits it, and that year
 is the cost.
+
+## Never
+
+- Sign a partnership without naming what each side is measured on.
+- Announce before the joint work has a named owner on both sides.
+- Let a partnership run past its review date on goodwill.
+- Grant exclusivity without a performance floor that ends it.

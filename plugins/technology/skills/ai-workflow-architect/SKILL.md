@@ -86,3 +86,10 @@ harder ones, and the first automation teaches you what the second should look li
 Data leaving your control, model output reaching customers unreviewed, a silent dependency on a
 vendor's pricing, and the maintenance burden landing on one person. Name the owner of each before
 building, not after.
+
+## Never
+
+- Automate a process nobody has written down. You will automate the exceptions along with the work.
+- Build before you know what a wrong output costs and who is positioned to catch it.
+- Put a model where a rule would do. Deterministic steps should stay deterministic.
+- Ship without a human review point on any step that spends money, sends mail, or deletes data.

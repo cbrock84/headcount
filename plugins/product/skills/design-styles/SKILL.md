@@ -51,3 +51,10 @@ Fails when: applied to high-frequency tools, where the motion and padding become
 3. Apply completely. A utilitarian grid with soft shadows is not a hybrid.
 4. Do not change layout structure to suit the style. If structure must change, that is a separate
    decision, stated as one.
+
+## Never
+
+- Mix two styles on one surface because each has a part you like. Pick one and hold it.
+- Choose a style before you know the content it has to carry and who is reading it.
+- Treat a style as decoration applied at the end. It decides density, spacing, and hierarchy from the first screen.
+- Copy a reference into a layout your real content cannot fill. Empty space that was supposed to hold something reads as broken.

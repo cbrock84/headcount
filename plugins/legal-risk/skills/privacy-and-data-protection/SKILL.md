@@ -55,3 +55,10 @@ data is located across systems, and the deadline. Locating the data is the part 
 
 For breaches, know your notification clock before you need it — several regimes measure it in hours
 from awareness. Decide in advance who determines that awareness has occurred.
+
+## Never
+
+- Collect data because it may be useful later. Purpose first, then collection.
+- Retain personal data past the period you published.
+- Send personal data to a vendor before the contract terms and the transfer basis are in place.
+- Load production personal data into a test environment.

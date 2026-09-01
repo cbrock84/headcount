@@ -61,6 +61,13 @@ decision is raised, assign it the next number immediately — before it is answe
 lettered options with an explicit recommendation. Never renumber, never reuse a number, and record
 resolutions in place rather than deleting them.
 
+## Never
+
+- Add an agent before the surface it will own exists. The map comes first, the agent second.
+- Let two agents hold a write claim on the same path. Overlap resolves itself as a race.
+- Hand-edit a generated artifact instead of the source it derives from.
+- Skip the guard because the change is small. Small changes are how surfaces drift.
+
 ## References
 
 - `references/playbook.md` — the full 415-line playbook: surface splitting, the guard, the

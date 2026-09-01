@@ -54,6 +54,13 @@ allocation you already had.
 
 Force a ranking. Tiers are how everything stays funded.
 
+## Never
+
+- Fund a line because it is large. Fund it on marginal return.
+- Keep a line alive on sunk cost.
+- Starve a line without deciding to exit it. Slow starvation costs more than a clean exit.
+- Review the portfolio only when a line is already in trouble.
+
 ## Return contract
 
 Each line with its posture and evidence, the recommended allocation and what changed from last

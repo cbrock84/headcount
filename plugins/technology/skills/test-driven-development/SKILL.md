@@ -40,6 +40,13 @@ claim.
 - Never mock what you own — mock the network and the clock, not your own modules. Mocking your own
   code tests the mock.
 
+## Never
+
+- Write the test after the code and call it test-driven. You will test what you built rather than what was required.
+- Skip watching the test fail. A test that has never failed proves nothing.
+- Delete or skip a failing test to unblock a release. Fix it, or revert what broke it.
+- Treat a coverage number as the goal. It counts lines executed, not behavior pinned down.
+
 ## Return contract
 
 Report the tests added, what each pins down, what is deliberately untested and why, and the actual

@@ -53,3 +53,10 @@ you already had.
 
 Track referred-customer retention against baseline. If referred customers retain worse, the
 incentive is buying the wrong behavior and the program is losing money while appearing to work.
+
+## Never
+
+- Launch referrals before the product retains. A referral program amplifies whatever is already there, churn included.
+- Pay a reward before the referred account is real — activated, paid, and past the refund window.
+- Ask for a referral in the same breath as an apology or an open support escalation.
+- Run affiliates and customer referrals on the same terms. They attract different people and need different controls.

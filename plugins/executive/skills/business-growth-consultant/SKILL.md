@@ -68,6 +68,13 @@ Watch for metrics that improve while the business worsens: revenue up with margi
 with activation down, traffic up with conversion down. Each means the mix shifted, and the headline
 number is hiding it.
 
+## Never
+
+- Recommend tactics before naming the constraint. Effort applied away from the constraint does nothing.
+- Stack initiatives until none of them gets the attention it needs to work.
+- Present a plan with no way to tell within a quarter whether it is working.
+- Recommend more spend into a funnel that does not convert what it already receives.
+
 ## Return contract
 
 1. **The constraint**, named, with the evidence.

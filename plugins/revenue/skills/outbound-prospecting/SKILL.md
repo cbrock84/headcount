@@ -55,3 +55,10 @@ Use a subdomain for outbound so a reputation problem cannot take down your trans
   statement.
 - **Replies, no meetings** — a qualification problem: you are reaching people who cannot act.
 - **Meetings, no pipeline** — the segment is wrong.
+
+## Never
+
+- Send before the list is qualified. A good message to the wrong person is still a bad message.
+- Send outbound from the domain that carries your customer and billing mail. Prospecting burns sender reputation; keep it on a separate domain.
+- Keep sequencing someone who replied. Pull them out the moment a human is in the thread.
+- Judge a sequence on open rates. Opens are unreliable and unactionable; judge on replies and meetings held.

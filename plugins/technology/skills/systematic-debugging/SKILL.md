@@ -34,6 +34,13 @@ explanation has not fixed anything — it has moved the failure somewhere you ar
   knowing what threw it.
 - **Trusting the error message's location.** Where it surfaced is rarely where it originated.
 
+## Never
+
+- Close a bug without a reproduction that failed before the fix and passes after it.
+- Deploy a change to production to find out whether it works. Reproduce somewhere you can observe first.
+- Change the environment and the code in the same step.
+- Leave a debugging aid in the code as the fix — a widened timeout, a disabled check, a swallowed exception.
+
 ## Return contract
 
 State the reproduction, the proven cause, the fix, and the verification that the fix addresses that

@@ -86,3 +86,10 @@ Where the right fix is uncertain, propose the cheapest way to find out rather th
 Rank by users affected × severity ÷ effort. Then state the one thing to fix first, and be willing to
 say that most of the list is not worth doing yet. A prioritized audit is more useful than a complete
 one.
+
+## Never
+
+- Report a finding without the path that produces it. A claim nobody can reproduce gets ignored.
+- Rank findings by how easy they are to fix. Rank by cost to the user, then note which ones are cheap.
+- Audit a staging build or a marketing page that real users never touch.
+- Call a preference a defect. Say what breaks and for whom, or leave it out.
