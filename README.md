@@ -5,7 +5,7 @@
 <p align="center">
   <a href="https://claude.com/claude-code"><img alt="Built for Claude Code" src="https://img.shields.io/badge/built%20for-Claude%20Code-D97757?style=flat-square"></a>
   <img alt="16 departments" src="https://img.shields.io/badge/departments-16-3F4B5B?style=flat-square">
-  <img alt="160 skills" src="https://img.shields.io/badge/skills-160-3F4B5B?style=flat-square">
+  <img alt="166 skills" src="https://img.shields.io/badge/skills-166-3F4B5B?style=flat-square">
   <a href="LICENSE"><img alt="MIT licensed" src="https://img.shields.io/badge/license-MIT-3F4B5B?style=flat-square"></a>
   <a href="CONTRIBUTING.md"><img alt="PRs welcome" src="https://img.shields.io/badge/PRs-welcome-2EA043?style=flat-square"></a>
 </p>
@@ -14,7 +14,7 @@
   <a href="https://cbrock84.github.io/headcount/org-chart.html">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="docs/assets/org-chart-dark.png">
-      <img alt="The headcount org chart — 16 departments, 160 skills, searchable" src="docs/assets/org-chart-light.png" width="840">
+      <img alt="The headcount org chart — 16 departments, 166 skills, searchable" src="docs/assets/org-chart-light.png" width="840">
     </picture>
   </a>
 </p>
@@ -24,7 +24,7 @@
 </p>
 
 An agent organization for [Claude Code](https://claude.com/claude-code), structured as a company:
-a chief executive over 16 departments, 160 skills in total.
+a chief executive over 16 departments, 166 skills in total.
 
 Every department is an independently installable plugin, so a project loads only the functions it
 needs rather than all of them at once.
@@ -141,7 +141,7 @@ to as a subagent with its own exclusive write surface.
 </details>
 
 <details>
-<summary><b>Product</b> (CPO) — 9 skills</summary>
+<summary><b>Product</b> (CPO) — 11 skills</summary>
 
 | Skill | What it does |
 |---|---|
@@ -152,6 +152,8 @@ to as a subagent with its own exclusive write surface.
 | `interface-craft` | Raises the visual and interaction quality of an interface — layout, hierarchy, type, spacing, density, and the details that separate a considered product from a gen…. |
 | `interface-redesign` | Upgrades an existing interface to a higher standard without rebuilding it — auditing what is there, identifying what reads as generic or unfinished, and sequencing…. |
 | `presentation-design` | Designs slide decks, one-pagers, and marketing graphics that carry an argument rather than decorate one. |
+| `product-discovery` | Finds out whether a problem is real and a solution would work, before building it — recruiting the right people, interviewing without leading them, separating what…. |
+| `product-requirements` | Writes down what is being built so a team can build it and know when they are done — problem and success measure before solution, scope stated by exclusion, user-vi…. |
 | `ux-product-auditor` | Audits a website, app, onboarding flow, or design for usability, conversion, and product problems, tying every finding to a business outcome and a severity. |
 | `visual-reference-generation` | Produces design reference imagery before implementation — screen concepts, layout directions, and flows for web or mobile that make a verbal brief concrete enough t…. |
 
@@ -203,17 +205,19 @@ to as a subagent with its own exclusive write surface.
 </details>
 
 <details>
-<summary><b>Revenue</b> (CRO) — 8 skills</summary>
+<summary><b>Revenue</b> (CRO) — 10 skills</summary>
 
 | Skill | What it does |
 |---|---|
 | `activation` | Gets new users from signup to first real value — signup flow, onboarding, time-to-value, and the early experience that determines whether someone becomes a user or…. |
 | `chief-revenue-officer` | Owns the revenue engine end to end: sales, monetization, pricing, customer success, retention, and partnerships. |
+| `deal-negotiation` | Negotiates a commercial deal without giving away the terms that matter — preparing your walk-away and theirs, trading concessions rather than conceding them, recogn…. |
 | `outbound-prospecting` | Finds, qualifies, and reaches prospects through cold outreach — list building, qualification criteria, cold email and multi-channel sequences, and the follow-up tha…. |
 | `pricing-and-packaging` | Sets price, structures packages and tiers, and designs the monetization surfaces that carry them — upgrade paths, paywalls, and offer construction. |
 | `referral-programs` | Designs and improves referral, affiliate, and word-of-mouth programs — incentive structure, mechanics, timing, and fraud control. |
 | `retention` | Diagnoses and reduces churn — cancellation flows, save offers, failed-payment recovery, at-risk detection, and the product and service causes underneath. |
 | `revenue-operations` | Runs the mechanics of the revenue engine — lead lifecycle definitions, routing, CRM hygiene, forecasting process, pipeline reporting, and the marketing-to-sales han…. |
+| `sales-compensation-and-territory` | Designs quotas, territories and commission plans that produce the behavior the business needs — sizing territories against real potential, setting quotas people can…. |
 | `sales-enablement` | Builds what a sales team needs to sell — pitch decks, one-pagers, objection handling, competitive battlecards, demo scripts, and case studies. |
 
 </details>
@@ -276,11 +280,13 @@ to as a subagent with its own exclusive write surface.
 </details>
 
 <details>
-<summary><b>Customer Experience</b> (CCO) — 5 skills</summary>
+<summary><b>Customer Experience</b> (CCO) — 7 skills</summary>
 
 | Skill | What it does |
 |---|---|
 | `chief-customer-officer` | Owns the customer's experience after the sale — support, success, escalation, and the feedback loop back into product. |
+| `customer-onboarding-and-implementation` | Takes a new customer from signature to working — setting a definition of live that both sides agreed before the contract was signed, planning and staffing the imple…. |
+| `customer-success-management` | Runs the ongoing relationship with accounts after the sale — segmenting coverage against account value, building a health score that predicts rather than describes,…. |
 | `escalation-management` | Handles customer situations that have exceeded normal support — severity assessment, incident communication, executive escalation, and recovering a relationship aft…. |
 | `self-service-and-knowledge` | Builds the help center, in-product guidance, and knowledge base that let customers resolve problems without contacting anyone — content, findability, maintenance, a…. |
 | `support-operations` | Designs and runs the support function — channels, queues, routing, staffing, service levels, quality, and the metrics that show whether it is working. |
