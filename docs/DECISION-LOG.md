@@ -1040,3 +1040,37 @@ different authorization.
 request, so the extension turns any unresolved reference into a red build immediately — including a
 forward reference written to a skill that has not been created yet. That is the intended behavior,
 but it changes what writing a cross-reference costs.
+
+## D33. US English check rejects the plural of "analysis" — 🔵 Open (needs your call)
+
+`scripts/check-us-english.py` maps the British spelling of the verb *analyze* and its inflections to
+the American forms. One of those inflections collides with the plural of *analysis*, which is spelled
+identically in both dialects and is ordinary American English. Writing a sentence about several
+pieces of analysis therefore fails the check, and `--fix` rewrites the noun into the third-person
+verb form, producing a sentence that is not English in any dialect.
+
+Caught while writing `data-analytics:quantitative-analysis`, where that plural is the natural word
+in the opening line. Worked around by rephrasing, so nothing fails today.
+
+**Two things make this worth more than a shrug.** The `--fix` path corrupts correct text rather
+than merely flagging it, which is worse than a plain false positive. And the check has no exemption
+for code spans or quoted text, so the defect cannot be described in any file the check scans —
+this entry has to talk around the word rather than name it, which is the clearest demonstration of
+the problem available.
+
+The same noun/verb collision exists in principle for the *practice* and *license* families, where
+British English splits the spelling by part of speech. Both British forms are in the word list, so
+the same trap is set for anyone writing about either.
+
+- **(a) Drop the colliding inflection from the word list.** ← **recommended.** A one-line change.
+  The British verb is rare in this library's register; the noun plural is common.
+- (b) Skip matches inside backticks and block quotes. Fixes the describability problem for every
+  word at once, and leaves the false positive in ordinary prose where it actually bites.
+- (c) Make the rule context-sensitive on the preceding word. More precise, and more machinery than
+  a spelling check should carry.
+- (d) Leave it and rephrase around it, as was done here. Costs nothing today and quietly shapes
+  what people are able to write.
+
+**Recommendation: (a), and consider (b) alongside it** — they solve different halves and neither
+excludes the other. This is repo-meta and carries `proposes` under D31, which is why it is logged
+rather than fixed. It is independent of D32; either can be taken alone.

@@ -5,7 +5,7 @@
 <p align="center">
   <a href="https://claude.com/claude-code"><img alt="Built for Claude Code" src="https://img.shields.io/badge/built%20for-Claude%20Code-D97757?style=flat-square"></a>
   <img alt="16 departments" src="https://img.shields.io/badge/departments-16-3F4B5B?style=flat-square">
-  <img alt="167 skills" src="https://img.shields.io/badge/skills-167-3F4B5B?style=flat-square">
+  <img alt="172 skills" src="https://img.shields.io/badge/skills-172-3F4B5B?style=flat-square">
   <a href="LICENSE"><img alt="MIT licensed" src="https://img.shields.io/badge/license-MIT-3F4B5B?style=flat-square"></a>
   <a href="CONTRIBUTING.md"><img alt="PRs welcome" src="https://img.shields.io/badge/PRs-welcome-2EA043?style=flat-square"></a>
 </p>
@@ -14,7 +14,7 @@
   <a href="https://cbrock84.github.io/headcount/org-chart.html">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="docs/assets/org-chart-dark.png">
-      <img alt="The headcount org chart — 16 departments, 167 skills, searchable" src="docs/assets/org-chart-light.png" width="840">
+      <img alt="The headcount org chart — 16 departments, 172 skills, searchable" src="docs/assets/org-chart-light.png" width="840">
     </picture>
   </a>
 </p>
@@ -24,7 +24,7 @@
 </p>
 
 An agent organization for [Claude Code](https://claude.com/claude-code), structured as a company:
-a chief executive over 16 departments, 167 skills in total.
+a chief executive over 16 departments, 172 skills in total.
 
 Every department is an independently installable plugin, so a project loads only the functions it
 needs rather than all of them at once.
@@ -64,7 +64,7 @@ to as a subagent with its own exclusive write surface.
 ## Departments
 
 <details>
-<summary><b>Office of the CEO</b> (Chief Executive) — 6 skills</summary>
+<summary><b>Office of the CEO</b> (Chief Executive) — 7 skills</summary>
 
 | Skill | What it does |
 |---|---|
@@ -73,6 +73,7 @@ to as a subagent with its own exclusive write surface.
 | `business-growth-consultant` | Finds the single constraint currently limiting a business's growth and the highest-leverage moves against it, rather than producing a list of everything that could…. |
 | `ceo-advisor` | Pressure-tests a decision, plan, or idea before it is committed to — surfacing the assumption it rests on, the case against it, and what would have to be true for i…. |
 | `chief-executive` | Sets direction, allocates capital and attention, and makes the calls no one else can make. |
+| `fundraising-and-investor-relations` | Raises capital and manages the relationship afterward — deciding how much and why, understanding what dilution and preferences actually cost, running a process with…. |
 | `saas-idea-validator` | Evaluates a software or startup idea against problem, market, competition, monetization, defensibility, and execution, and returns a verdict rather than encourageme…. |
 
 </details>
@@ -160,7 +161,7 @@ to as a subagent with its own exclusive write surface.
 </details>
 
 <details>
-<summary><b>Marketing</b> (CMO) — 18 skills</summary>
+<summary><b>Marketing</b> (CMO) — 19 skills</summary>
 
 | Skill | What it does |
 |---|---|
@@ -177,6 +178,7 @@ to as a subagent with its own exclusive write surface.
 | `newsletter-writer` | Writes and edits newsletters and marketing emails people actually open — subject lines, opening, structure, voice, and the conversion turn where there is one. |
 | `partnership-marketing` | Builds reach through other people's audiences — co-marketing partnerships, creator and influencer programs, community building, and affiliate arrangements. |
 | `positioning-and-messaging` | Establishes what a product is understood to be, for whom, and instead of what — then turns that into the messaging every other surface inherits. |
+| `product-launch` | Takes something built and gets it into the market — tiering the launch to match what it actually warrants, sequencing internal readiness before external announcemen…. |
 | `public-relations` | Plans and executes earned media — press strategy, journalist outreach, announcements, commentary, and crisis response. |
 | `social-post-craft` | Writes, structures, and evaluates social posts end to end — hooks, body, formatting for how each platform renders, and a quality check before publishing. |
 | `video-content` | Plans and scripts short-form and long-form video, and designs the packaging — titles, thumbnails, and openings — that determines whether it gets watched. |
@@ -186,10 +188,11 @@ to as a subagent with its own exclusive write surface.
 </details>
 
 <details>
-<summary><b>Demand Generation</b> (CMO) — 11 skills</summary>
+<summary><b>Demand Generation</b> (CMO) — 12 skills</summary>
 
 | Skill | What it does |
 |---|---|
+| `account-based-marketing` | Concentrates marketing and sales effort on a named set of accounts rather than on volume — qualifying whether the model fits your economics at all, building the acc…. |
 | `ai-search-optimization` | Optimizes for AI assistants and AI-generated answers — being retrievable, being cited, and being represented accurately when a model answers on your behalf. |
 | `app-store-optimization` | Improves visibility and conversion in the App Store and Google Play — metadata, keywords, screenshots, ratings, and the listing experience that turns an impression…. |
 | `experimentation` | Designs, runs, and reads A/B tests and growth experiments — hypothesis, sample size, duration, and honest interpretation. |
@@ -296,7 +299,7 @@ to as a subagent with its own exclusive write surface.
 </details>
 
 <details>
-<summary><b>Data & Analytics</b> (CDO) — 6 skills</summary>
+<summary><b>Data & Analytics</b> (CDO) — 7 skills</summary>
 
 | Skill | What it does |
 |---|---|
@@ -306,15 +309,17 @@ to as a subagent with its own exclusive write surface.
 | `data-engineering` | Builds and operates data pipelines — ingestion, transformation, orchestration, quality testing, and reliability of data delivery. |
 | `data-governance` | Establishes ownership, definitions, quality, access, and lineage for the organization's data. |
 | `data-modeling` | Designs the warehouse and semantic layer — source-to-mart structure, dimensional modeling, grain, slowly changing dimensions, and the metric layer analytics reads t…. |
+| `quantitative-analysis` | Answers a business question with data without fooling yourself — framing the question so an answer would change something, choosing the right comparison, checking t…. |
 
 </details>
 
 <details>
-<summary><b>Corporate Strategy</b> (CSO) — 5 skills</summary>
+<summary><b>Corporate Strategy</b> (CSO) — 6 skills</summary>
 
 | Skill | What it does |
 |---|---|
 | `chief-strategy-officer` | Owns where the business plays and how it wins over a multi-year horizon — portfolio choices, corporate development, strategic partnerships, and planning under uncer…. |
+| `market-entry` | Decides whether and how to enter a new market — sizing demand from the bottom up rather than from a market report, testing whether your advantage transfers, choosin…. |
 | `mergers-and-acquisitions` | Runs corporate development — deal thesis, target screening, valuation framing, diligence, and integration planning. |
 | `portfolio-strategy` | Decides where capital and attention go across business lines, products, and markets — what to fund, hold, harvest, or exit, and on what evidence. |
 | `scenario-planning` | Plans under genuine uncertainty — building scenarios, identifying which assumptions are load-bearing, setting early-warning indicators, and stress-testing a plan ag…. |
