@@ -1,6 +1,6 @@
 ---
 name: financial-reporting-and-close
-description: Runs the period-end close and produces reporting — close calendar, reconciliations, accruals, variance analysis, and reporting that gets read. Use this to shorten or stabilise a monthly close, design a close checklist, investigate a variance, structure management reporting, or work out why the numbers keep changing after close.
+description: Runs the period-end close and produces reporting — close calendar, reconciliations, accruals, variance analysis, and reporting that gets read. Use this to shorten or stabilize a monthly close, design a close checklist, investigate a variance, structure management reporting, or work out why the numbers keep changing after close.
 ---
 
 # Financial reporting and close

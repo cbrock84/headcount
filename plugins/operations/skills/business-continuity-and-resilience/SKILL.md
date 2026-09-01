@@ -43,7 +43,7 @@ Untested plans are documents, not capabilities. Escalate the rigour:
 2. **Tabletop** — inject a scenario and make the decisions under time pressure.
 3. **Live failover** — actually run on the alternate path, in production, with the real people.
 
-The exercise produces findings or it was theatre. Track them as work with owners and dates, and
+The exercise produces findings or it was theater. Track them as work with owners and dates, and
 re-run the scenario that failed rather than a fresh one, so improvement is demonstrable.
 
 ## Concentration risk

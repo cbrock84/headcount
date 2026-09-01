@@ -1074,3 +1074,36 @@ the same trap is set for anyone writing about either.
 **Recommendation: (a), and consider (b) alongside it** — they solve different halves and neither
 excludes the other. This is repo-meta and carries `proposes` under D31, which is why it is logged
 rather than fixed. It is independent of D32; either can be taken alone.
+
+## D34. Two skills claim social graphics — 🔵 Open (needs your call)
+
+Found by a promise-versus-coverage sweep of all 172 descriptions. `product:presentation-design`
+says "to design a banner, social graphic, or one-pager". `marketing:visual-content` says "create
+social graphics" and covers carousels, infographics, quote graphics and social imagery in depth.
+
+Both are legitimately scoped — one is about carrying an argument in a laid-out artifact, the other
+about visual assets that carry content — but they compete for the same trigger, which is the
+failure `technology:skill-authoring` calls the silent killer. A request to design a social graphic
+can load either, and they give different advice.
+
+The two sit in different departments, so resolving it moves work across surfaces rather than within
+one. That is why it is logged rather than decided.
+
+- **(a) Narrow `presentation-design` to decks and one-pagers**, and drop the social and banner
+  claim from its description. ← **recommended.** `visual-content` is substantially deeper on that
+  material — it covers format selection, carousels, infographics and generation prompts, where
+  `presentation-design` gives it two paragraphs. The narrower skill also matches its own body,
+  which is organized as decks first and everything else second.
+- (b) Narrow `visual-content` instead, leaving all static graphic design in product. Inverts the
+  depth: the shallower treatment would own the topic.
+- (c) Merge them. They are genuinely different jobs — an argument in slides versus an asset in a
+  feed — and merging produces one skill that triggers on both and serves neither well.
+- (d) Leave both. The overlap keeps costing a wrong load occasionally, at no fix cost.
+
+**Recommendation: (a).** It is a description change in one skill, no content moves, and it aligns
+each skill's trigger with where its depth actually is.
+
+**One adjacent overlap was fixed rather than logged**, because it sat inside a single department
+and was introduced by this branch: `corporate-strategy:portfolio-strategy` claimed "decide market
+entry or exit" while the new `corporate-strategy:market-entry` covers entry properly. The
+portfolio skill's description now says exit only, which is what its body is about.

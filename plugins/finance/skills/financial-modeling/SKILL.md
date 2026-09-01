@@ -40,6 +40,29 @@ A single-scenario model tells you nothing about risk. For every model, produce:
 
 If a plan only works in the base case, that is the finding.
 
+## Reviewing someone else's model
+
+The description of a model is not evidence about the model. Check these, in this order, because
+each one invalidates everything after it.
+
+- **Trace one number end to end.** Pick an output that matters and follow it back to inputs. If you
+  cannot, nobody else has either, and the model has never actually been reviewed.
+- **Find the hard-coded constants.** Search the calculation area for typed numbers. Each one is an
+  assumption that escaped the input sheet, and they are where overrides hide.
+- **Check the row consistency.** A formula that differs partway across a row is either a deliberate
+  change nobody documented or an error, and the two look identical.
+- **Test the extremes.** Set a key driver to zero and to double. Models frequently break, go
+  negative in impossible ways, or fail to respond at all — which tells you the driver is decorative.
+- **Check that the statements tie.** Cash flow reconciles to the balance sheet movement; the
+  balance sheet balances in every period, not just the first.
+- **Ask what is missing.** Working capital, hiring lag, churn, price changes, tax, and the step
+  costs that come with growth are the omissions that flatter a plan most.
+
+**Then find the assumption doing the work.** Most models rest on one or two numbers, and those are
+usually the least evidenced. Ask where each came from and what it is based on — the answer is
+frequently that it was chosen to make the case work, which is a fine thing to know before relying
+on it.
+
 ## Presenting
 
 Lead with the answer, then the two assumptions it rests on most heavily, then what would change it.

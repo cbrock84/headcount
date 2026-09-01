@@ -57,7 +57,7 @@ Blameless review, focused on the system rather than the person. The useful quest
 have been detected sooner, what made containment slow, what did we not have that we needed, and what
 made this possible in the first place.
 
-Output actions with owners and dates. A review producing no committed changes is theatre, and the
+Output actions with owners and dates. A review producing no committed changes is theater, and the
 same incident recurs.
 
 ## Preparation
