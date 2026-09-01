@@ -52,3 +52,10 @@ buy one conversion and lose the account.
 - Announce with real notice and a clear reason.
 - Change one thing at a time — price and packaging together makes the result unreadable.
 - Model the downside first: at what churn rate does this increase lose money?
+
+## Never
+
+- Change price without telling existing customers before it takes effect and honoring what they already signed.
+- Pick a pricing metric the customer cannot predict. If they cannot forecast the bill, they will not sign.
+- Add a tier to close a single deal. Tiers are a permanent tax on every conversation after it.
+- Discount without taking something back in exchange — term, scope, payment timing, a reference. A free discount resets the price for everyone.

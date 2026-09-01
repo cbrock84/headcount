@@ -41,6 +41,13 @@ a polish item; it is whether people can use it.
 - Never remove a token or component because it looks unused. You cannot see every consumer from
   inside the system. Deprecate, announce, then remove.
 
+## Never
+
+- Add a component for a single screen. A one-use component is a snippet, not a system.
+- Hard-code a value a token already covers. The exception becomes the next inconsistency.
+- Redefine what an existing token means instead of adding one. Changing a semantic silently redecorates everything downstream.
+- Ship a component without its states documented — empty, loading, error, disabled.
+
 ## Return contract
 
 Report tokens added or changed, components affected, anything now inconsistent with the system, and

@@ -87,3 +87,10 @@ different kinds of value teaches the audience nothing about whether to click the
 
 Plan repurposing before filming — segments meant to stand alone as short-form get shot to stand
 alone.
+
+## Never
+
+- Produce an idea whose title you cannot write. If the title is hard, the idea is not yet clear.
+- Judge a video on its first day. The signal that matters accrues over weeks.
+- Change what the channel is about because one video underperformed.
+- Fix retention by cutting faster when the problem is that the promise was wrong.

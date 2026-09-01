@@ -44,3 +44,10 @@ Collect real surfaces — product, marketing site, email, social, sales collater
 for: palette drift, more type families than the system defines, logo variants nobody sanctioned, and
 tone that changes between surfaces. Report by severity, and separate what breaks the system from
 what merely was not specified.
+
+## Never
+
+- Pick color and type before you know what the brand has to sound like and what it will sit next to.
+- Ship a palette you have not checked for contrast at real sizes on real backgrounds.
+- Use color alone to carry state, meaning, or error.
+- Add a typeface because a page needs variety. Variety comes from weight, size, and spacing inside the system you already have.

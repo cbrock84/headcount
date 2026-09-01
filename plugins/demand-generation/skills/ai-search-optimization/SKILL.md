@@ -44,3 +44,9 @@ correcting the source, not the assistant.
 Click-through will fall on informational queries even as influence rises. Track citation and mention
 frequency, and downstream branded search and direct traffic, rather than judging this program on
 organic sessions — that metric will say you are losing while you are winning.
+
+## Never
+
+- Optimize for one assistant's current behavior. Retrieval and citation rules change without notice and without a changelog.
+- Assume being crawlable means being citable. Models cite sources that answer a question cleanly, not sources that merely exist.
+- Leave an inaccurate representation uncorrected because it is not on your site. The claim propagates whether or not you own the page it came from.

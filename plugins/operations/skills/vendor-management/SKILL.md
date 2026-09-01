@@ -50,3 +50,10 @@ triples its price. For each, know the exit path and roughly what it costs — an
 never been thought through is not an option, it is a hope.
 
 Maintain your own copy of your data continuously where the vendor holds anything critical.
+
+## Never
+
+- Sign before you know what leaving costs — data export, notice period, transition support.
+- Let the vendor write the requirements you evaluate them against.
+- Reach a renewal date without having started the renewal. The auto-renew clause is their leverage.
+- Concentrate a critical dependency on one vendor without saying so out loud and pricing the risk.

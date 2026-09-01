@@ -63,3 +63,10 @@ check every figure by hand.
 
 Dashboards accumulate. Review usage periodically and retire what nobody opens — with a notice period,
 since the one person using it may be using it for something important.
+
+## Never
+
+- Build a dashboard nobody has a decision for. Start from the decision.
+- Ship a metric with two definitions live at the same time.
+- Leave a dashboard published with no owner. Unowned dashboards get trusted, then get wrong.
+- Show a number without the denominator and the window it covers.

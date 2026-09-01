@@ -41,3 +41,10 @@ not the screenshot.
 
 Say explicitly what in the reference is **direction** and what is **placeholder**. A developer
 handed a concept will otherwise implement the lorem ipsum faithfully.
+
+## Never
+
+- Generate before the content, states, and constraints are settled. A reference built on placeholder copy hides every real problem.
+- Present a generated image as a working design. Say what it is.
+- Generate with filler text where real string lengths decide the layout.
+- Hand off an image as the spec. Hand off the tokens, spacing, and states behind it.

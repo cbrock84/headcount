@@ -51,3 +51,10 @@ nobody.
 Show the metric, its comparison period, and the decision it informs. A number with no comparison is
 not information. Where a number moved, the report should say why or say that the cause is unknown —
 "unknown" is a legitimate and useful finding.
+
+## Never
+
+- Add tracking before the plan names the events and their properties. Retrofitting a schema onto live data is a migration, not an edit.
+- Report an attribution number without saying which model produced it. The same period looks like different businesses under first and last touch.
+- Change an event definition without versioning it. Every historical comparison silently becomes wrong.
+- Build a dashboard nobody named a decision for.

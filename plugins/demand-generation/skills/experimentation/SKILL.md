@@ -46,3 +46,10 @@ tests a year — spend them on structural questions, not button colors.
 
 Keep a log of every test: hypothesis, result, decision. Without it, teams re-run the same tests every
 eighteen months and re-learn the same things.
+
+## Never
+
+- Stop a test because it reached significance early. Peeking until it looks conclusive manufactures the result.
+- Run a test that cannot reach adequate sample size in a reasonable window. Ship the change on judgment instead and say so.
+- Change more than one variable and attribute the outcome to the one you liked.
+- Count a flat result as a failure. A well-run test that rules out a plausible idea has bought information.

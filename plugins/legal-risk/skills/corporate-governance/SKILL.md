@@ -63,3 +63,10 @@ destroy anything under a legal hold, and know who can place one.
 Some responsibilities sit between functions and get dropped. When one appears, do not debate the
 right home in the abstract — assign it to whoever bears the consequence if it fails, and record the
 assignment. An owner who is imperfect beats an owner who is undecided.
+
+## Never
+
+- Take an action that requires board or member approval and paper it afterward.
+- Let the corporate record live in someone's inbox.
+- Sign outside a documented delegation of authority because the deal is urgent.
+- Destroy records on schedule while a legal hold is in place. A hold suspends the schedule.

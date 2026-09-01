@@ -49,3 +49,9 @@ Edit in passes; doing them at once does none of them.
 Empty openers ("In today's fast-paced world"), we-focused framing where you-focused works, hedges
 that weaken a true claim, feature lists with no consequence attached, and any adjective a competitor
 could equally use.
+
+## Never
+
+- Write before you know what the reader should do next.
+- Edit for elegance before the argument is right. Polished copy for the wrong claim is the more expensive mistake.
+- Approve copy nobody read aloud. Rhythm problems are inaudible on the page.

@@ -86,3 +86,10 @@ Do not assume a prompt transfers. Models differ in how they weight system versus
 how they handle long context, and how they respond to formatting. Re-test on the target model, and
 be especially suspicious of prompts tuned through many small iterations — those are often fitted to
 one model's quirks.
+
+## Never
+
+- Rewrite a prompt before reading the failing outputs. You will fix the wrong thing.
+- Change more than one thing between test runs.
+- Judge a change on a single output. Sampling variance will fool you.
+- Keep an instruction because it was already there. Every line has to earn its tokens.

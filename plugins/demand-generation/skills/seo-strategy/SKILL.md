@@ -83,6 +83,12 @@ Rank fixes by traffic at risk against effort. In practice the order is almost al
 problems, then intent mismatch on high-value pages, then internal linking, then structured data,
 then everything else.
 
+## Never
+
+- Chase rankings for a term the page cannot satisfy. The click arrives, bounces, and teaches the engine the page was wrong.
+- Restructure a site without a redirect map. Lost link equity does not come back on its own.
+- Judge a change in the first fortnight. Search feedback is slow enough that early movement is usually noise.
+
 ## Return contract
 
 Findings by severity with the evidence for each, the sequenced fix list, expected impact and when it

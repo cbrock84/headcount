@@ -80,3 +80,10 @@ piles: **update** (performing, stale), **consolidate** (several thin pieces on o
 (no traffic, no links, no strategic value).
 
 Most libraries have more value in the promote pile than in anything unwritten.
+
+## Never
+
+- Start production before the brief names the argument. An idea is a title; a piece needs a claim.
+- Fill the calendar to capacity. A pipeline with no slack cannot absorb the one piece worth dropping everything for.
+- Choose the format before the argument. That is how a topic that wanted six hundred words becomes a video series.
+- Retire a piece that has inbound links without redirecting it.

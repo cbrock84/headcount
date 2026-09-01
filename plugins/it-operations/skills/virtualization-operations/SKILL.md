@@ -80,3 +80,10 @@ for.
 Hybrid is the normal end state, not a transitional embarrassment. What makes it painful is running
 two operating models with two sets of habits, so decide deliberately which one owns identity,
 monitoring, and backup rather than letting each side answer differently.
+
+## Never
+
+- Provision a guest without an owner, a lifetime, and a decommission trigger.
+- Size a cluster with no headroom to lose a node during maintenance.
+- Grow a guest's resources before checking whether the guest itself is misbehaving. Oversizing hides the bug and eats the consolidation ratio.
+- Move a workload to cloud to escape a capacity problem you have not diagnosed on-premises.

@@ -65,3 +65,10 @@ same incident recurs.
 The plan matters less than having run it. Exercise once a year at minimum: a tabletop against a
 realistic scenario finds the gaps — who has authority out of hours, where the credentials are, who
 calls counsel — at a time when finding them is free.
+
+## Never
+
+- Rebuild or wipe a compromised host before evidence is captured.
+- Let the person running the technical response also own external communication.
+- Close an incident before you can say how entry happened and that the path is shut.
+- Speculate about cause or attribution outside the response channel while the incident is open.

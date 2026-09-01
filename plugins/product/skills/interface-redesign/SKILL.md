@@ -47,6 +47,13 @@ Fix in this order, because each makes the next easier to see:
 Rebuild only when the structure is wrong — when the information architecture does not match how
 people work. Everything else is a restyle, and a restyle that ships beats a rebuild that stalls.
 
+## Never
+
+- Restyle a screen whose problem is structural. New paint on a broken flow buys nothing.
+- Change navigation and visual language in the same release. When something breaks you will not know which one did it.
+- Remove a path because it looks unused without checking who uses it and what they do next.
+- Ship a redesign with no way back. Keep the old path reachable until the new one is proven.
+
 ## Return contract
 
 Findings by category with severity, the sequenced plan, what you would do first if only one day were

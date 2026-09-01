@@ -53,3 +53,10 @@ found then cannot be fixed retroactively.
 Leadership needs the few risks whose residual exposure is above appetite, what is being done, and
 what needs a decision. Not the whole register. A risk report that requires reading forty rows to
 find the three that matter will not be read.
+
+## Never
+
+- Score residual risk on controls that are planned rather than operating.
+- Accept a risk without naming who accepted it and when it is reviewed again.
+- Keep a register with no review cadence. That is documentation, not risk management.
+- Close a risk because the project that raised it ended.

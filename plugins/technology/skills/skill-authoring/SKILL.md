@@ -47,3 +47,10 @@ family into one skill with references, over adding a near-neighbor.
 
 Write three requests that should trigger it and two that should not, and check the description
 actually discriminates. If a near-miss request would pull it in, tighten the description.
+
+## Never
+
+- Ship a skill whose description does not say when to use it. A skill that never triggers is dead weight.
+- Write a skill that restates what the model already does well without prompting.
+- Let two skills claim the same trigger. Move the boundary or merge them.
+- Ship without running the skill against the case that motivated writing it.

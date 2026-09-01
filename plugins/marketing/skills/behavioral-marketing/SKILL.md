@@ -69,3 +69,9 @@ buy anyway.
 - **Effects are contextual and interact.** Published effect sizes are directional, not predictions.
   Treat every application as a hypothesis to test rather than a known quantity — this is where
   behavioral marketing most often overreaches.
+
+## Never
+
+- Deploy an effect without being able to name the mechanism. A tactic borrowed without its mechanism fails silently in a context that differs in ways nobody checked.
+- Manufacture scarcity, urgency, or social proof that is not true. It works once and costs the relationship permanently.
+- Treat a published effect size as a guaranteed lift. Those numbers come from populations and contexts that are not yours.

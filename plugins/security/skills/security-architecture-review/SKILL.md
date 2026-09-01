@@ -61,6 +61,13 @@ What data leaves, under what agreement, with what access, and what happens if th
 Scope credentials to the minimum, prefer short-lived tokens, and know how to revoke without an
 outage.
 
+## Never
+
+- Approve a design on the promise of a control with no named owner and no date.
+- Accept "it is internal" as an authorization boundary.
+- Review the diagram instead of the change. Read what is actually being built.
+- Sign off on a third-party integration without knowing what data leaves and under what terms.
+
 ## Return contract
 
 Findings by severity, each with: the concrete attack, what the attacker gains, whether it blocks

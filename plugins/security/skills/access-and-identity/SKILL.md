@@ -64,3 +64,10 @@ unnecessary or belongs to someone who left.
 Look for: permissions granted to individuals rather than roles, roles nobody can define, standing
 administrative access, accounts whose owner has left, service credentials with no owner, and systems
 outside SSO. Each is a specific fix, and the list is nearly always the same list.
+
+## Never
+
+- Grant standing access where time-bound access would do the same job.
+- Leave an account active while an offboarding ticket works its way through. Cut access first, reconcile after.
+- Share a credential between people. If two people can use it, no log tells you which one did.
+- Approve your own access request, or review a group you belong to.

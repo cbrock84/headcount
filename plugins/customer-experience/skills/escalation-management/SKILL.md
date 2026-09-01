@@ -57,3 +57,10 @@ correctly, did we communicate on time, and what would have prevented it.
 
 Escalation volume is a health metric for the whole function. Rising escalations mean the normal path
 is failing more often, and that is the thing to fix.
+
+## Never
+
+- Escalate without naming an owner. An escalation with no name on it is a broadcast.
+- Commit to a fix date on the customer's call before engineering has said one exists.
+- Let the executive sponsor become the case owner. Sponsors unblock; they do not run the case.
+- Close on the technical fix. It closes when the customer says it is closed.

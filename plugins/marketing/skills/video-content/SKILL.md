@@ -49,3 +49,9 @@ uniformly intense video is as tiring as a flat one.
 Plan derivatives before filming, not after. Segments intended to stand alone get shot to stand
 alone. Extracting short-form from a video not built for it produces clips that need context they do
 not have.
+
+## Never
+
+- Produce before the title and thumbnail exist. Packaging decides whether anything you shot gets seen.
+- Open with a preamble. The first seconds are where an audience is lost, not where it is warmed up.
+- Diagnose a video on view count alone. Impressions, click-through, and retention fail differently and need different fixes.

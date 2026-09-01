@@ -48,3 +48,10 @@ moment inside five minutes when time gets cut.
 Collateral rots. Every asset needs an owner and a review date, and anything referencing pricing,
 competitors, or product capability needs checking every quarter. A battlecard describing a
 competitor's old product loses deals.
+
+## Never
+
+- Build collateral before you know where deals actually stall. Ask the reps and read the losses first.
+- Ship a deck or one-pager with no owner and no review date. Unmaintained collateral is worse than none.
+- Order a demo around the product's feature list instead of the order the buyer's problem unfolds in.
+- Count enablement as done at delivery. It is done when reps use it in live deals.

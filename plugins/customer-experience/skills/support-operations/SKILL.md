@@ -68,3 +68,10 @@ by a wide margin and then blames the team.
 
 Review a sample of resolved contacts against a rubric agreed with the team, and coach against it.
 Reviewing only escalations trains for defense rather than quality.
+
+## Never
+
+- Staff to average volume. Support arrives in peaks.
+- Publish a service level you have not staffed to meet.
+- Manage on handle time. It optimizes for closing tickets, not for solving problems.
+- Let a repeat driver stay a support problem. Route it to whoever owns the cause.
