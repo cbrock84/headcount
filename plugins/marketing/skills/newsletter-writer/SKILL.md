@@ -81,3 +81,9 @@ read-aloud pass catches what silent reading never does.
 
 One issue contains several short-form posts, a talk track, and often a longer piece. Plan which
 before writing, so the sections that should stand alone are written to.
+
+## Never
+
+- Write a subject line the opening does not pay off. It buys one open and costs the next.
+- Sell in an issue that gave nothing else. The trust spent is not recovered by the next good one.
+- Send an offer to the whole list when it applies to part of it.

@@ -52,3 +52,9 @@ set is worse than nothing.
 
 Set a periodic sweep: listings drift out of date, and an aggregator showing your old pricing will
 outrank your own page for some queries.
+
+## Never
+
+- List everywhere available. Directories with no traffic cost maintenance and dilute nothing but your attention.
+- Let listing copy drift from the positioning of record. Every stale listing is a competing description of the product.
+- Solicit reviews only after a customer complains, or only from customers you know are happy. Both distort the signal you are buying.

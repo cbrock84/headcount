@@ -80,6 +80,13 @@ contact with a considered buyer.
 - What happens if it works far better than expected — can delivery, support, and inventory absorb
   it?
 
+## Never
+
+- Run a campaign carrying more than one story. A second message halves the first.
+- Add a channel because it is available. Every channel added is one somebody has to run properly.
+- Set a launch date before the assets that gate it have named owners.
+- Commit to an objective you cannot measure with a number you already collect.
+
 ## Return contract
 
 The story in one sentence, objective and leading indicator, channels with sequencing rationale,

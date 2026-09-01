@@ -46,3 +46,10 @@ explicitly agreed in advance — and even then, assume it may not hold.
   guarantee a second story.
 - Correct genuine errors privately, with evidence, and specifically. Vague complaints about tone
   achieve nothing.
+
+## Never
+
+- Pitch a story that is only news to you. A funding round, a hire, and a redesign are not news outside the company.
+- Send a pitch to a journalist whose recent work you have not read.
+- Enter an interview without deciding in advance what you will not say.
+- Respond to a damaging story before establishing whether it is accurate.

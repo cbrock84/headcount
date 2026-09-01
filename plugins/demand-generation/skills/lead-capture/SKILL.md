@@ -52,3 +52,10 @@ Popups work and are widely hated; both facts matter.
 Every field costs conversion. Ask for what you need to do the next step and nothing for a later one
 — enrichment can fill the rest. Explain any field whose purpose is not obvious, since unexplained
 fields are where people abandon.
+
+## Never
+
+- Gate something the buyer can get ungated elsewhere in one click.
+- Ask for a field nobody downstream uses. Every additional field costs conversion and the sales team is not reading it.
+- Trigger a popup before the visitor has seen anything worth staying for.
+- Treat a form fill as intent. Most of them are people who wanted the asset.

@@ -50,3 +50,9 @@ Write the prompt as a brief: subject, composition, lighting, palette, mood, and 
 constraints. Generate one concept per image. Then check the output actually renders any embedded
 text correctly and matches the brand palette — generated imagery drifts, and drifted brand color is
 worse than no brand color.
+
+## Never
+
+- Choose a visual format before knowing whether the content is a sequence, a comparison, or a single claim.
+- Design at full size for something that will be seen at thumbnail size.
+- Put load-bearing information in an image alone. It is unsearchable, untranslatable, and invisible to a screen reader.

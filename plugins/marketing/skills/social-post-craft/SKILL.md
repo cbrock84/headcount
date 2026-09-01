@@ -51,3 +51,9 @@ most platforms strip formatting.
 - Would you send this to one person you respect? If not, do not send it to everyone.
 
 A draft that fails these gets rewritten, not published with a caveat.
+
+## Never
+
+- Publish a post whose first line only works after the reader expands it.
+- Reuse one format across platforms unchanged. Line breaks and truncation differ, and the post breaks in ways the composer does not show you.
+- Post a link without deciding whether the platform suppresses them.

@@ -46,3 +46,9 @@ Include a **do-not** list. Voice guides fail on what they permit, not what they 
 Draft two paragraphs and read them to the person cold. If they say "close, but I wouldn't say it
 that way," ask exactly what they would say — that correction is the most valuable data in the
 process.
+
+## Never
+
+- Build a voice guide from copy the person did not write. Agency and ghostwritten material describes someone else's voice.
+- Describe voice in adjectives alone. "Friendly but authoritative" is unusable without paired examples of what passes and what fails.
+- Apply a voice guide to a format it was never sampled from. How someone writes an email is not how they write a keynote.

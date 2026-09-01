@@ -46,3 +46,10 @@ Watch review text for recurring themes — it is the cheapest continuous product
 
 Change one element at a time and let it run a full weekly cycle; app traffic is strongly
 day-of-week seasonal. Attributing a lift to the wrong change is worse than not testing.
+
+## Never
+
+- Chase a keyword the app does not deliver on. Installs from a mismatched query become one-star reviews and a worse ranking than you started with.
+- Change metadata, screenshots, and the icon in the same release. Nothing that moves afterward can be attributed.
+- Solicit ratings from a user mid-task. The prompt lands where frustration is highest and the score reflects that.
+- Ignore reviews on the version you just shipped. They are the fastest signal you will get that a release broke something.

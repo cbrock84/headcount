@@ -70,6 +70,12 @@ objections handled, and visual hierarchy supporting the path.
 Publish the criteria with the score. A page scored 6/10 with no rubric produces an argument; the
 same score with the rubric produces a work list.
 
+## Never
+
+- Rewrite before diagnosing. Most pages that fail to convert are failing above the fold or off the page entirely, in the traffic.
+- Test a variant you cannot explain the hypothesis for. A win you cannot account for does not generalize.
+- Remove an objection from the page because it is uncomfortable. It does not leave the buyer's head, only your copy.
+
 ## Return contract
 
 Findings ordered by expected impact, each with the evidence, the specific fix, and effort. The one

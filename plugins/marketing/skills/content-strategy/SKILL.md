@@ -48,6 +48,12 @@ everything on traffic is why content programs drift toward the reach end and sta
 Set a review point where a topic that is not working gets dropped. Content strategies fail by
 accumulation.
 
+## Never
+
+- Claim a territory you cannot sustain publishing on. Withdrawing from one costs more than never entering it.
+- Commit to a platform without deciding who runs it every week.
+- Judge a content program on traffic when the objective was demand.
+
 ## Return contract
 
 Territory, audience, the four-way format budget, cadence, platforms with rationale, first ten pieces
