@@ -1,6 +1,6 @@
 ---
 name: presentation-design
-description: Designs slide decks, one-pagers, and marketing graphics that carry an argument rather than decorate one. Use this to build or fix a pitch deck, board deck, or conference talk; to design a banner, social graphic, or one-pager; or when a deck is dense, unfocused, or being read aloud from the slides.
+description: Designs slide decks and one-pagers that carry an argument rather than decorate one — deck structure, headlines that state the takeaway, charts that make a single point, and the different rules board decks and conference talks follow. Use this to build or fix a pitch deck, board deck, or conference talk, to design a one-pager, or when a deck is dense, unfocused, or being read aloud from the slides. For social graphics, carousels and infographics, use `marketing:visual-content` instead.
 ---
 
 # Presentation design
@@ -61,7 +61,7 @@ from a board pack.
 - **Nothing on a slide should require the handout to be understood.** If the deck will be shared
   afterward, that is a second artifact, not the same one.
 
-## One-pagers and graphics
+## One-pagers
 
 A single surface has one job: get one idea across at a glance, and reward a closer read.
 
@@ -69,8 +69,12 @@ A single surface has one job: get one idea across at a glance, and reward a clos
   lands first.
 - Hierarchy in three levels at most. More reads as noise.
 - Everything aligns to a grid, including the things that look like exceptions.
-- Design for where it will be seen. A social graphic is viewed at thumbnail size on a phone; if the
-  headline is unreadable there, the design has failed regardless of how it looks at full size.
+- Design for where it will actually be read. A page printed and handed across a table, attached to
+  an email, and projected in a room impose different minimum type sizes, and the one you designed
+  on screen at full width is usually the least representative of the three.
+
+Social graphics, carousels and infographics are a different job with different constraints — the
+feed decides how they are seen. `marketing:visual-content` covers them.
 
 ## Never
 
