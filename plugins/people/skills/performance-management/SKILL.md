@@ -59,6 +59,17 @@ Where a formal plan is warranted it needs specific outcomes, a real timeframe, d
 stated consequence. A plan that is only a paper trail for a decision already taken is recognized as
 such and does damage well beyond the individual.
 
+## Tooling
+
+Review and feedback: Lattice, Culture Amp, 15Five, Leapsome, Workday Talent, and similar.
+
+Engagement measurement usually ships in the same platforms, which is convenient and creates a
+temptation worth resisting: engagement data and performance data should not be joined at the
+individual level, because people answer honestly only while that is true.
+
+The tool cannot fix a process problem. If reviews are late, unspecific, or a surprise to the person
+receiving them, changing platforms will produce the same reviews on a nicer form.
+
 ## Never
 
 - Assess against expectations that were not set in advance.

@@ -71,6 +71,18 @@ Mid-period changes are occasionally necessary and always expensive in trust. Giv
 the reason, and never restate a commission already earned under the prior plan. A team that
 believes the plan can be changed retroactively stops treating it as an incentive.
 
+## Tooling
+
+Commission calculation: CaptivateIQ, Spiff, Everstage, Xactly, and similar. The threshold for
+buying is not headcount, it is the point at which a spreadsheet error would go unnoticed — which
+arrives earlier than most teams expect.
+
+Territory and quota planning: Fullcast, Salesforce Maps, Varicent, and similar; a well-built model
+covers a single-segment team.
+
+Whatever calculates it, reps need a statement they can check themselves. Disputes are expensive in
+trust long before they are expensive in money.
+
 ## Never
 
 - Assign a quota to a territory that cannot mathematically support it.

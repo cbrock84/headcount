@@ -50,6 +50,17 @@ Plan derivatives before filming, not after. Segments intended to stand alone get
 alone. Extracting short-form from a video not built for it produces clips that need context they do
 not have.
 
+## Tooling
+
+Editing: DaVinci Resolve, Adobe Premiere Pro, Final Cut Pro, CapCut, and similar; Descript for
+transcript-driven editing, which is faster for talking-head and interview formats than a timeline.
+
+Recording remote: Riverside, Zoom, StreamYard, and similar — record local tracks per participant
+where the tool supports it, because the connection quality on the day decides the ceiling otherwise.
+
+Repurposing and captions: Opus Clip, Submagic, and similar. Burned-in captions are not optional;
+most viewing is silent, and the caption is the packaging on every platform that autoplays.
+
 ## Never
 
 - Produce before the title and thumbnail exist. Packaging decides whether anything you shot gets seen.

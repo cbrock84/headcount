@@ -50,6 +50,20 @@ Disposal is where data escapes. Require certified destruction or verified wipe, 
 and treat storage devices as data until proven otherwise. A drive in a cupboard nobody logged is a
 breach with no date attached.
 
+## Tooling
+
+Discovery and hardware inventory: Lansweeper, Snipe-IT, ServiceNow ITAM, Device42, and similar;
+the endpoint management platform already knows most of the fleet and is the cheapest starting
+point.
+
+Software licensing and SaaS spend: Flexera, Torii, Zylo, Productiv, and similar. The SaaS half is
+where the money hides, and it is discovered through the expense system and single sign-on logs as
+much as through any inventory tool.
+
+Reconcile the register against the endpoint platform, the identity provider and the finance system
+on a schedule. Three systems each holding a partial truth is the normal state, and the gaps between
+them are the assets nobody is managing.
+
 ## Never
 
 - Maintain a register by hand and trust it.

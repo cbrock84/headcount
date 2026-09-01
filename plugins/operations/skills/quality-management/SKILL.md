@@ -52,6 +52,19 @@ and pair any rate metric with a volume metric so improvement by doing less is vi
 
 Escaped defects — those the customer found — are the honest measure. Everything else is a proxy.
 
+## Tooling
+
+A quality management system is a regulatory purchase before it is an operational one. Greenlight
+Guru, Qualio, MasterControl, ETQ and similar exist because regulated industries need document
+control, training records and corrective actions in an auditable system. Outside those industries
+a well-run issue tracker and a document repository cover the same ground.
+
+Corrective and preventive action tracking is the part worth having in one place regardless of tool,
+because the recurring finding is always an action from last time that was never closed.
+
+Statistical process control needs measurement more than software. A control chart in a spreadsheet
+built on real measurements beats a platform fed by nobody.
+
 ## Never
 
 - Attribute a defect to carelessness and stop there.

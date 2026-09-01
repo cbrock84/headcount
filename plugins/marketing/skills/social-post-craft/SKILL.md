@@ -52,6 +52,15 @@ most platforms strip formatting.
 
 A draft that fails these gets rewritten, not published with a caveat.
 
+## Tooling
+
+Scheduling and publishing: Buffer, Hootsuite, Later, Sprout Social, Typefully, and similar. Native
+composers usually get better reach handling and newer formats first, so schedule what benefits from
+timing and post natively what benefits from features.
+
+Whatever you use, keep the draft somewhere the copy can be reviewed before it enters the scheduler.
+Editing inside a publishing queue is how a typo goes out at 6am.
+
 ## Never
 
 - Publish a post whose first line only works after the reader expands it.

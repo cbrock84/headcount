@@ -55,6 +55,18 @@ Track influenced pipeline with the assumption stated, alongside the honest direc
 compare cost per opportunity against your other channels through
 `demand-generation:marketing-analytics`.
 
+## Tooling
+
+Event and webinar platforms, roughly by scale: Luma or Zoom Webinars for small and recurring
+formats; Goldcast, ON24 or Bizzabo where the recording and the follow-up data matter; Cvent for
+large multi-track events, and similar.
+
+Lead capture at physical events: the organizer's badge scanning, or your own — and whichever it is,
+test the export path into the CRM before the event rather than discovering the format afterward.
+
+The tooling that actually decides the outcome is the follow-up sequence, which lives in your
+lifecycle platform and should be built before the event opens.
+
 ## Never
 
 - Sponsor an event without a single stated goal.

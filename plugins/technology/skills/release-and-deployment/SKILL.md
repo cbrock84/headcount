@@ -50,6 +50,17 @@ of both shapes throughout.
 Test the migration against production-scale data. A migration that is instant on a development
 dataset can lock a large table for a length of time nobody modeled.
 
+## Tooling
+
+Pipelines: GitHub Actions, GitLab CI, CircleCI, Buildkite, Jenkins, and similar.
+
+Continuous delivery and progressive rollout: Argo CD, Flux, Spinnaker, and similar; feature flags
+for decoupling deploy from release — LaunchDarkly, Unleash, Split, and similar.
+
+Schema migrations: Flyway, Liquibase, Alembic, and similar. Whichever you use, the property that
+matters is that migrations are versioned, ordered, and applied by the pipeline rather than by a
+person with a database client.
+
 ## Never
 
 - Couple deploying code to exposing behavior.

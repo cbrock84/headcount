@@ -47,6 +47,18 @@ explicitly agreed in advance — and even then, assume it may not hold.
 - Correct genuine errors privately, with evidence, and specifically. Vague complaints about tone
   achieve nothing.
 
+## Tooling
+
+Media databases and pitching: Muck Rack, Cision, Prowly, Roxhill, and similar. They are expensive,
+and their value is contact accuracy and beat data rather than the ability to send in bulk — a
+list-blast through one of them is the fastest way to be ignored by the journalists on it.
+
+Wire distribution: Business Wire, PR Newswire, and similar. A wire buys disclosure and syndication,
+not coverage; treat it as a compliance or record-keeping tool unless you have a reason otherwise.
+
+Monitoring: Meltwater, Brandwatch, Google Alerts, and similar. Set it up before the story you need
+to see, not after.
+
 ## Never
 
 - Pitch a story that is only news to you. A funding round, a hire, and a redesign are not news outside the company.
