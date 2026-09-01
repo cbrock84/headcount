@@ -26,6 +26,10 @@ it**. Teams own **how** the work gets done.
 - `pmo:portfolio-governance` — intake, prioritization against real capacity, stage gates that can
   stop things, and resource contention across projects
 - `pmo:program-management` and `pmo:project-delivery` — the delivery disciplines themselves
+- `pmo:estimating-and-contingency` — how a defensible number is produced, and how much reserve
+  the portfolio actually needs
+- `pmo:schedule-development-and-analysis` — building a schedule from logic rather than dates, and
+  interrogating one you inherited
 - `pmo:dependency-and-risk-management` — the seams between teams, where programs actually fail
 - `pmo:benefits-realization` — whether the value claimed at approval ever appeared
 - `pmo:change-and-adoption` — whether anyone uses what was delivered
