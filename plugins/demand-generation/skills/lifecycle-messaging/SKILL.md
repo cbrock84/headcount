@@ -77,6 +77,17 @@ it, and never leave it to default to the first line of the body.
 - **Click but no conversion** — the destination, not the email.
 - **Rising unsubscribes** — frequency or relevance. Usually frequency.
 
+## Tooling
+
+Lifecycle automation: Customer.io, Braze, Iterable, Klaviyo for commerce, HubSpot or
+Marketo for B2B, and similar.
+
+Transactional sending is a separate job with separate reputation: Postmark, SendGrid,
+Resend, and similar. Keep it off the marketing domain.
+
+In-product messaging: Intercom, Appcues, Pendo, and similar. An email that should have been
+an in-app prompt reaches half the audience at best.
+
 ## Never
 
 - Send to a list that did not opt in.

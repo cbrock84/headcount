@@ -51,6 +51,17 @@ is valid but wrong. Assert on the data itself, in the pipeline, and fail loudly:
 A silent failure is worse than a loud one. Prefer stopping the pipeline to publishing data you do not
 trust.
 
+## Tooling
+
+Warehouses and lakehouses: Snowflake, BigQuery, Databricks, Redshift, and Postgres or
+DuckDB at small scale, and similar.
+
+Ingestion: Fivetran, Airbyte, Stitch, and similar. Transformation: dbt, SQLMesh.
+Orchestration: Airflow, Dagster, Prefect, and similar.
+
+Buy ingestion and build transformation. Connector maintenance returns nothing for the time
+your team puts into it.
+
 ## Never
 
 - Transform on ingest for business reasons and discard the raw copy.

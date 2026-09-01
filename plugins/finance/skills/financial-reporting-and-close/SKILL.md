@@ -50,6 +50,16 @@ during a crisis.
 Separate **timing** from **run-rate**. A miss caused by something slipping a week is a different
 business fact from a miss caused by demand falling, and conflating them produces the wrong reaction.
 
+## Tooling
+
+Ledger, by scale: QuickBooks, Xero, or FreshBooks for a single entity; NetSuite, Sage
+Intacct, or Dynamics 365 Business Central once you consolidate multiple entities; SAP
+S/4HANA or Oracle Fusion at the top end, and similar.
+
+Close management — BlackLine, FloQast, Numeric, and similar — sits on the ledger and
+tracks the checklist, the reconciliations, and the sign-offs. It buys you an audit trail,
+not discipline. A shared checklist does the same job until the trail is what you lack.
+
 ## Never
 
 - Leave the ledger open for late entries after the stated cutoff.

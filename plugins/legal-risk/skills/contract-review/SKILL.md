@@ -44,6 +44,16 @@ with pre-approved fallbacks, thresholds below which the business signs without r
 escalation path. Review every contract personally and you become the bottleneck the process was
 meant to prevent.
 
+## Tooling
+
+Contract lifecycle management: Ironclad, Icertis, Agiloft, DocuSign CLM, LinkSquares, and
+similar. Signature alone — DocuSign, Dropbox Sign, PandaDoc — is a different and much
+smaller purchase.
+
+The value in CLM is the clause library and the searchable repository, not the approval
+workflow. If you cannot answer "which of our contracts cap indemnity below the fee paid"
+in a minute, that is the gap worth buying against.
+
 ## Never
 
 - Approve terms whose operational obligations you have not confirmed are achievable.

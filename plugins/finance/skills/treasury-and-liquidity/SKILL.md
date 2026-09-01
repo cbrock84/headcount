@@ -52,6 +52,16 @@ Do not reach for yield with money you have a date for. The return on operating c
 liquidity risk, and treasury losses of this kind are always described afterwards as conservative
 investments.
 
+## Tooling
+
+Cash visibility and forecasting: Kyriba, Trovata, Tesorio, and similar. Bank portals plus
+a spreadsheet cover a single-bank, single-currency position honestly.
+
+Payments and AP: Bill.com, Tipalti, Ramp, Brex, and similar.
+
+The control that matters is not in the tool list — it is dual approval on payment release,
+by whatever means you get it.
+
 ## Never
 
 - Run the business on an indirect cash forecast.

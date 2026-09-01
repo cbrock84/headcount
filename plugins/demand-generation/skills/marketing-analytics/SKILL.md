@@ -52,6 +52,18 @@ Show the metric, its comparison period, and the decision it informs. A number wi
 not information. Where a number moved, the report should say why or say that the cause is unknown —
 "unknown" is a legitimate and useful finding.
 
+## Tooling
+
+Product and web analytics: Google Analytics 4, Amplitude, Mixpanel, PostHog, Plausible,
+and similar.
+
+Attribution: HubSpot or Salesforce campaign reporting, Dreamdata, Rockerbox, and similar.
+All of them model rather than observe — treat the output as directional and say so when
+you present it.
+
+Warehouse-native reporting beats a vendor dashboard the moment you need to join spend to
+revenue on your own definitions.
+
 ## Never
 
 - Add tracking before the plan names the events and their properties. Retrofitting a schema onto live data is a migration, not an edit.

@@ -82,6 +82,17 @@ sync. Retention settings are not backups, and the recycle bin is not a recovery 
 deliberately what needs independent protection under `it-operations:backup-and-recovery` rather
 than assuming the vendor's durability promise covers your mistakes.
 
+## Tooling
+
+Platforms: AWS, Microsoft Azure, Google Cloud, and similar.
+
+Infrastructure as code: Terraform, OpenTofu, Pulumi, Bicep, CloudFormation, and similar.
+
+Cost visibility: the native cost tools, or CloudZero, Vantage, Finout, and similar.
+Guardrails: AWS Control Tower, Azure Policy, Wiz, and similar.
+
+Console changes nobody can reproduce in code become the outage you cannot rebuild from.
+
 ## Never
 
 - Buy an application that cannot federate without recording the manual offboarding step.

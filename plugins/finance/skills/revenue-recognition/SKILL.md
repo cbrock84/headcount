@@ -54,6 +54,14 @@ The deferred balance is work owed, not money banked. Track it by cohort and obli
 answer what it is composed of and when it releases. A balance nobody can decompose is one that
 surprises you.
 
+## Tooling
+
+Subledgers that carry recognition schedules: NetSuite Advanced Revenue Management, Zuora
+Revenue, Maxio, Chargebee, Stripe Revenue Recognition, and similar.
+
+Spreadsheet schedules hold up until contracts carry multiple performance obligations or
+take mid-term modifications. That is the point to move, not a revenue threshold.
+
 ## Never
 
 - Recognize on invoice date or cash receipt as a shortcut.
