@@ -56,6 +56,16 @@ Use a subdomain for outbound so a reputation problem cannot take down your trans
 - **Replies, no meetings** — a qualification problem: you are reaching people who cannot act.
 - **Meetings, no pipeline** — the segment is wrong.
 
+## Tooling
+
+Sequencing: Outreach, Salesloft, Apollo, Lemlist, Instantly, and similar.
+
+Contact data: ZoomInfo, Apollo, Clay, LinkedIn Sales Navigator, and similar. Every
+provider's data decays; verify before you send, whichever you buy.
+
+Deliverability: a separate sending domain, plus warmup and monitoring — Instantly,
+Smartlead, Google Postmaster Tools, and similar.
+
 ## Never
 
 - Send before the list is qualified. A good message to the wrong person is still a bad message.

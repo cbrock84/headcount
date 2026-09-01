@@ -54,6 +54,16 @@ defect, and it is the part that repeats.
 Produce a small number of real actions with owners and dates. A review generating fifteen actions
 generates none.
 
+## Tooling
+
+Metrics and traces: Datadog, Grafana with Prometheus, New Relic, Honeycomb, and similar.
+Errors: Sentry, Rollbar, and similar. Logs: Elastic, OpenSearch, Loki, Splunk, and similar.
+
+On-call and incident management: PagerDuty, Opsgenie, incident.io, FireHydrant, and similar.
+
+Instrument with OpenTelemetry wherever you can. Vendor-specific instrumentation is the part
+that makes leaving expensive.
+
 ## Never
 
 - Page a human for something they cannot act on.

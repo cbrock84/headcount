@@ -41,6 +41,15 @@ a polish item; it is whether people can use it.
 - Never remove a token or component because it looks unused. You cannot see every consumer from
   inside the system. Deprecate, announce, then remove.
 
+## Tooling
+
+Design source: Figma, and similar. Component documentation and review: Storybook.
+
+Token pipelines: Style Dictionary, Tokens Studio, Figma variables exported to code, and
+similar. Visual regression: Chromatic, Percy, Playwright snapshots, and similar.
+
+The system is the code, not the design file. When the two disagree, the code is what ships.
+
 ## Never
 
 - Add a component for a single screen. A one-use component is a snippet, not a system.

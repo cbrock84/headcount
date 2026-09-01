@@ -64,6 +64,16 @@ check every figure by hand.
 Dashboards accumulate. Review usage periodically and retire what nobody opens — with a notice period,
 since the one person using it may be using it for something important.
 
+## Tooling
+
+BI: Power BI, Looker, Tableau, Metabase, Omni, Hex, and similar.
+
+Metric definitions belong in a semantic layer — dbt's, Looker's LookML, Cube — rather than
+in each dashboard's SQL, or the same metric will disagree with itself across two tabs.
+
+Spreadsheets remain the most-used BI tool in every organization. Plan for the export rather
+than pretending it will not happen.
+
 ## Never
 
 - Build a dashboard nobody has a decision for. Start from the decision.

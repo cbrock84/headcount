@@ -55,6 +55,16 @@ the only honest input to an RTO, and it is invariably longer than assumed.
 Test the full-scale case at least annually. Restoring one file proves the mechanism; restoring the
 system proves the plan.
 
+## Tooling
+
+Backup platforms: Veeam, Rubrik, Cohesity, Commvault, Acronis, and similar.
+
+SaaS data is the gap people miss. Microsoft 365, Google Workspace, and Salesforce retain
+for a short window and no longer; Veeam, Druva, AvePoint, Keepit, and similar cover it.
+
+The tool is not the control. An untested restore is not a backup, whatever the console
+reports.
+
 ## Never
 
 - Report backup health from job success rather than tested restores.

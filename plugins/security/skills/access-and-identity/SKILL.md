@@ -65,6 +65,16 @@ Look for: permissions granted to individuals rather than roles, roles nobody can
 administrative access, accounts whose owner has left, service credentials with no owner, and systems
 outside SSO. Each is a specific fix, and the list is nearly always the same list.
 
+## Tooling
+
+Identity providers: Okta, Microsoft Entra ID, Google Workspace, JumpCloud, and similar.
+
+Privileged access and secrets: CyberArk, HashiCorp Vault, 1Password, Doppler, and similar.
+
+Access reviews and provisioning: Okta Identity Governance, Entra ID Governance, Lumos,
+ConductorOne, and similar. Worth buying at the point a manual quarterly review stops
+finishing rather than the point it gets tedious.
+
 ## Never
 
 - Grant standing access where time-bound access would do the same job.

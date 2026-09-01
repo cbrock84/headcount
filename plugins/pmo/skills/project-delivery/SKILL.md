@@ -57,6 +57,17 @@ Then present options with consequences — cut scope and name what, extend and s
 capacity, which late in a project usually slows things further. Re-baseline once, visibly. Serial
 one-week slips destroy credibility far faster than a single honest reset.
 
+## Tooling
+
+Delivery tracking: Jira, Asana, Linear, Monday.com, Smartsheet, Microsoft Project, and
+similar.
+
+Portfolio and capacity: Jira Align, Planview, Adaptive Work, and similar. Worth it when you
+are reconciling many teams' plans against one capacity pool, not before.
+
+The tool records the plan; it does not make the plan true. A status field nobody updates
+between meetings is worse than no field at all.
+
 ## Never
 
 - Agree scope without written exclusions.

@@ -44,6 +44,16 @@ recurring costs compound and are constantly under-reacted to.
 Explain the top few by value, not every line. A variance report covering everything gets read as
 nothing.
 
+## Tooling
+
+Planning: Anaplan, Pigment, Workday Adaptive Planning, Vena, Cube, and similar. A
+well-built spreadsheet on a clean chart of accounts beats a planning tool nobody has been
+staffed to maintain; move when budget owners outnumber the people who can hold the model
+in their head.
+
+Driver data comes from the ledger, the CRM, and the HRIS. The planning tool is only ever
+as current as those connections.
+
 ## Never
 
 - Present a forecast without saying what changed since the last one.

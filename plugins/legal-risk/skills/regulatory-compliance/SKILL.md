@@ -58,6 +58,15 @@ conversation become an undocumented commitment.
 Findings get root-caused like any other failure. A remediation that consists of retraining people on
 a process that made the failure easy will produce the same finding next cycle.
 
+## Tooling
+
+Compliance automation — Vanta, Drata, Secureframe, Keel GRC, and similar — collects
+evidence continuously and maps one control across several frameworks. It earns its cost on
+the second audit far more often than the first.
+
+Policy and attestation lives in those same tools, or in the HRIS, or in Confluence. What
+matters is that a policy carries a version, an owner, and a record of who acknowledged it.
+
 ## Never
 
 - Treat a certification as evidence of legal compliance.
