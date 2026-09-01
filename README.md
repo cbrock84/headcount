@@ -5,7 +5,7 @@
 <p align="center">
   <a href="https://claude.com/claude-code"><img alt="Built for Claude Code" src="https://img.shields.io/badge/built%20for-Claude%20Code-D97757?style=flat-square"></a>
   <img alt="16 departments" src="https://img.shields.io/badge/departments-16-3F4B5B?style=flat-square">
-  <img alt="151 skills" src="https://img.shields.io/badge/skills-151-3F4B5B?style=flat-square">
+  <img alt="155 skills" src="https://img.shields.io/badge/skills-155-3F4B5B?style=flat-square">
   <a href="LICENSE"><img alt="MIT licensed" src="https://img.shields.io/badge/license-MIT-3F4B5B?style=flat-square"></a>
   <a href="CONTRIBUTING.md"><img alt="PRs welcome" src="https://img.shields.io/badge/PRs-welcome-2EA043?style=flat-square"></a>
 </p>
@@ -14,7 +14,7 @@
   <a href="https://cbrock84.github.io/headcount/org-chart.html">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="docs/assets/org-chart-dark.png">
-      <img alt="The headcount org chart — 16 departments, 151 skills, searchable" src="docs/assets/org-chart-light.png" width="840">
+      <img alt="The headcount org chart — 16 departments, 155 skills, searchable" src="docs/assets/org-chart-light.png" width="840">
     </picture>
   </a>
 </p>
@@ -24,7 +24,7 @@
 </p>
 
 An agent organization for [Claude Code](https://claude.com/claude-code), structured as a company:
-a chief executive over 16 departments, 151 skills in total.
+a chief executive over 16 departments, 155 skills in total.
 
 Every department is an independently installable plugin, so a project loads only the functions it
 needs rather than all of them at once.
@@ -118,13 +118,14 @@ to as a subagent with its own exclusive write surface.
 </details>
 
 <details>
-<summary><b>IT Operations</b> (CIO) — 11 skills</summary>
+<summary><b>IT Operations</b> (CIO) — 12 skills</summary>
 
 | Skill | What it does |
 |---|---|
 | `backup-and-recovery` | Protects and restores data — backup coverage and scope, retention, immutability against ransomware, and proving restores actually work. |
 | `chief-information-officer` | The CIO's remit — running the technology the company works on, service quality, IT spend, and the boundary with product engineering. |
 | `cloud-administration` | Administers the cloud the company runs on rather than the one it sells — tenant and subscription structure, the SaaS estate and who owns each app, identity as the r…. |
+| `collaboration-platform-administration` | Administers the email, chat, meeting and file-sharing platform the organization runs on — tenant and domain configuration, mail authentication and routing, phishing…. |
 | `endpoint-management` | Manages laptops, desktops and mobile devices — enrollment, configuration, patching, software distribution, and lost or compromised devices. |
 | `identity-lifecycle-administration` | Executes joiner, mover and leaver processes — provisioning, group membership, access changes on role change, and complete deprovisioning. |
 | `it-asset-management` | Tracks hardware and software assets through their life — procurement, ownership, licensing, refresh, and disposal. |
@@ -236,7 +237,7 @@ to as a subagent with its own exclusive write surface.
 </details>
 
 <details>
-<summary><b>Operations</b> (COO) — 10 skills</summary>
+<summary><b>Operations</b> (COO) — 11 skills</summary>
 
 | Skill | What it does |
 |---|---|
@@ -244,6 +245,7 @@ to as a subagent with its own exclusive write surface.
 | `capacity-and-demand-planning` | Matches operational capacity to expected demand — forecasting load, sizing teams and systems, managing queues, and deciding when to add capacity. |
 | `chief-operating-officer` | Owns execution: how work actually gets done across the organization, including process, program management, capacity, vendors, supply chain, and service delivery. |
 | `facilities-and-workplace` | Runs the physical and hybrid workplace — space planning, leases, health and safety, office services, and the operational side of where people work. |
+| `operating-cadence` | Designs the rhythm an organization runs on — which reviews happen weekly, monthly and quarterly, what each one decides, who owns the numbers presented, and how a si…. |
 | `process-design` | Designs, documents, and fixes operational processes — mapping the current state, finding where work actually stalls, redesigning the flow, and building controls tha…. |
 | `procurement-and-sourcing` | Buys well — specifying need, running competitive sourcing, negotiating, and category strategy before a contract exists. |
 | `quality-management` | Builds quality into operations — defining standards, catching defects at the right point, root cause analysis, and continuous improvement. |
@@ -311,7 +313,7 @@ to as a subagent with its own exclusive write surface.
 </details>
 
 <details>
-<summary><b>People</b> (CHRO) — 10 skills</summary>
+<summary><b>People</b> (CHRO) — 12 skills</summary>
 
 | Skill | What it does |
 |---|---|
@@ -319,10 +321,12 @@ to as a subagent with its own exclusive write surface.
 | `chief-human-resources-officer` | Owns the organization itself: org design, hiring, performance, compensation, development, culture, and employee relations. |
 | `compensation-and-leveling` | Builds and maintains the leveling framework and pay structure — level definitions, salary bands, benchmarking, pay equity, and how raises and promotions are decided. |
 | `employee-relations` | Handles the difficult human situations — grievances, complaints, investigations, conflict, and separations conducted properly. |
+| `employment-compliance` | Covers the employment rules that carry real penalties — exempt and non-exempt classification, overtime and hours, employee versus contractor status, work authorizat…. |
 | `hiring-and-interviewing` | Designs and runs hiring — role definition, sourcing, interview loop design, structured evaluation, and the decision itself. |
 | `learning-and-development` | Builds capability — skills gaps, career frameworks, training that transfers to the job, and internal mobility. |
 | `onboarding-and-offboarding` | Designs the joining and leaving experience — first-day readiness, ramp to productivity, knowledge capture, and clean exits. |
 | `org-design` | Designs how an organization is structured — reporting lines, team boundaries, spans and layers, role definition, and workforce planning against the strategy. |
+| `payroll-operations` | Runs the pay cycle so it is right, on time, and provable — the calendar and cutoffs, what feeds pay from the HRIS and time systems, gross-to-net and the deductions…. |
 | `performance-management` | Runs performance systems that change behavior — expectations, feedback, review cycles, calibration, and handling underperformance. |
 | `workforce-planning` | Plans the shape and size of the workforce — demand for roles, build-versus-buy, attrition, and sequencing hiring against budget. |
 

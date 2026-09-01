@@ -35,21 +35,21 @@ than into the function they oversee.
 | `executive` | Office of the CEO | Chief Executive | 6 |
 | `technology` | Technology | CTO / CIO | 18 |
 | `security` | Security | CISO | 6 · reviewer-class |
-| `it-operations` | IT Operations | CIO | 11 |
+| `it-operations` | IT Operations | CIO | 12 |
 | `product` | Product | CPO | 9 |
 | `marketing` | Marketing | CMO | 18 |
 | `demand-generation` | Demand Generation | CMO | 11 |
 | `revenue` | Revenue | CRO | 8 |
 | `finance` | Finance | CFO | 13 |
-| `operations` | Operations | COO | 10 |
+| `operations` | Operations | COO | 11 |
 | `pmo` | Program Management Office | EPMO / COO | 9 |
 | `customer-experience` | Customer Experience | CCO | 5 |
 | `data-analytics` | Data & Analytics | CDO | 6 |
 | `corporate-strategy` | Corporate Strategy | CSO | 5 |
-| `people` | People | CHRO | 10 |
+| `people` | People | CHRO | 12 |
 | `legal-risk` | Legal & Risk | CLO / CCO | 6 · reviewer-class |
 
-16 departments, 151 skills.
+16 departments, 155 skills.
 <!-- END GENERATED: departments -->
 
 ## Remaining gaps
