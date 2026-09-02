@@ -55,6 +55,7 @@ PAIRS = {
     "authorisation": "authorization",
     "customise": "customize", "customised": "customized",
     "utilise": "utilize", "utilised": "utilized", "utilising": "utilizing",
+    "utilisation": "utilization", "utilisations": "utilizations",
     "capitalise": "capitalize", "capitalised": "capitalized",
     "amortise": "amortize", "amortised": "amortized", "amortisation": "amortization",
     "pseudonymise": "pseudonymize", "pseudonymised": "pseudonymized",

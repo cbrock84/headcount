@@ -74,11 +74,11 @@ rather than a support problem — and this role decides which it is.
 ## Never
 
 - Let a recurring issue stay a support workaround because a fix is inconvenient. Count the contacts
-- Do not report themes where the unit that can be acted on is a mechanism
-- Do not keep escalating a finding the organization has decided not to fix
   and put the number in front of the decision.
 - Measure the team on speed alone. Time-to-close optimizes for closing, not for solving.
 - Promise a customer something the delivering team has not agreed to.
+- Do not report themes where the unit that can be acted on is a mechanism
+- Do not keep escalating a finding the organization has decided not to fix
 
 ## Return contract
 

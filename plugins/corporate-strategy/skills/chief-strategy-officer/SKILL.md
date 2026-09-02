@@ -86,11 +86,11 @@ attached is a hobby.
 
 - Confuse a plan with a strategy. A sequence of initiatives is not a choice about where to compete.
 - Pursue an acquisition because it is available rather than because it serves a thesis written
-- Do not call a strategy decided until the resourcing artifacts moved
-- Do not produce a competitive map that answers no pending question
   beforehand.
 - Let a strategy survive an assumption being falsified. When the thing you bet on turns out untrue,
   say so and revise.
+- Do not call a strategy decided until the resourcing artifacts moved
+- Do not produce a competitive map that answers no pending question
 
 ## Return contract
 
