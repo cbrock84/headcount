@@ -57,6 +57,32 @@
     margin:12px 0 0; text-wrap:balance;
   }
   .lede { color:var(--ink-2); margin:12px 0 0; max-width:60ch; }
+  .use {
+    margin:30px 0 0; padding:20px 22px; border:1px solid var(--rule);
+    border-radius:10px; background:var(--paper-2);
+  }
+  .use h2 {
+    margin:0 0 4px; font-family:Archivo,sans-serif; font-size:15px;
+    letter-spacing:-.01em; font-weight:700;
+  }
+  .use p { margin:8px 0 0; color:var(--ink-2); max-width:72ch; }
+  .use code {
+    background:var(--paper); border:1px solid var(--rule); border-radius:4px;
+    padding:1px 5px; font-size:12.5px;
+  }
+  .use pre {
+    margin:10px 0 0; padding:11px 13px; background:var(--paper);
+    border:1px solid var(--rule); border-radius:7px; overflow-x:auto;
+  }
+  .use pre code { background:none; border:none; padding:0; }
+  .use .steps { display:flex; flex-wrap:wrap; gap:22px; margin-top:14px; }
+  .use .step { flex:1 1 240px; min-width:0; }
+  .use .step b {
+    display:block; font-family:Archivo,sans-serif; font-size:12px;
+    text-transform:uppercase; letter-spacing:.07em; color:var(--ink-3);
+  }
+  .use .links { margin-top:16px; padding-top:14px; border-top:1px solid var(--rule); }
+  .use .links a { margin-right:18px; white-space:nowrap; }
   .figures { display:flex; flex-wrap:wrap; gap:26px; margin-top:26px; }
   .figure b {
     display:block; font-family:Archivo,sans-serif; font-weight:700;
@@ -249,6 +275,38 @@
     independently. Search across every skill, or open a department to see what it holds.
   </p>
   <div class="figures" id="figures"></div>
+
+  <section class="use">
+    <h2>Using this</h2>
+    <p>
+      Sixteen departments, each an independently installable plugin for Claude Code. Install the
+      ones you need — a smaller set triggers more sharply than all of them at once.
+    </p>
+    <div class="steps">
+      <div class="step">
+        <b>1 · Add the marketplace</b>
+        <pre><code>/plugin marketplace add cbrock84/headcount</code></pre>
+      </div>
+      <div class="step">
+        <b>2 · Install a department</b>
+        <pre><code>/plugin install security@headcount</code></pre>
+        <p>Every card below carries its own install line — click one to copy it.</p>
+      </div>
+      <div class="step">
+        <b>3 · Ask</b>
+        <p>
+          Skills load themselves when a request matches. Name one directly —
+          <code>/finance:cost-accounting</code> — when you want a specific lens instead.
+        </p>
+      </div>
+    </div>
+    <p class="links">
+      <a href="https://github.com/cbrock84/headcount/blob/main/docs/GETTING-STARTED.md">Getting started</a>
+      <a href="https://github.com/cbrock84/headcount/blob/main/docs/USE-CASES.md">Worked situations</a>
+      <a href="https://github.com/cbrock84/headcount/discussions">Ask a question</a>
+      <a href="https://github.com/cbrock84/headcount">Source</a>
+    </p>
+  </section>
 
   <div class="controls">
     <input id="q" type="search" placeholder="Search 172 skills — try “threat”, “pricing”, “backup”…" autocomplete="off">

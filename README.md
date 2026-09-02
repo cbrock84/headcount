@@ -53,10 +53,14 @@ right specialist engages:
 
 Invoke one directly by name when you want a specific lens: `/finance:financial-modeling`.
 
-Seven situations that cross departments — a SOC 2 demand from an enterprise prospect, a
-security incident, a stalled funnel — are worked through end to end in
-[docs/USE-CASES.md](docs/USE-CASES.md), including where a reviewer-class department stops the
-work rather than adding an opinion.
+New to this? [docs/GETTING-STARTED.md](docs/GETTING-STARTED.md) covers which departments to
+install first, the three ways to invoke a skill, and what reviewer-class departments do
+differently.
+
+Eleven situations that cross departments — a SOC 2 demand from an enterprise prospect, a link
+down between two sites, a renewal that auto-renewed because nobody owned the date — are worked
+through end to end in [docs/USE-CASES.md](docs/USE-CASES.md), including what comes back and
+where a reviewer-class department stops the work rather than adding an opinion.
 
 Each department also ships an agent charter in `.claude/agents/`, so a department can be delegated
 to as a subagent with its own exclusive write surface.
@@ -376,6 +380,7 @@ plugins/<department>/
 .claude/agents/<id>.md         one charter per department
 docs/AGENT-SURFACES.md         every path has exactly one owner, enforced in CI
 docs/DECISION-LOG.md           numbered decisions with options and recommendations
+docs/GETTING-STARTED.md        install, what to take first, and how to invoke a skill
 docs/USE-CASES.md              situations worked end to end across departments
 docs/org-chart.html           interactive org chart, searchable across every skill
 docs/index.html               GitHub Pages entry point, redirects to the chart

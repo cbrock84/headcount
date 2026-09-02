@@ -7,6 +7,9 @@ These are the situations this catalog is shaped around. Every skill named here e
 in CI fails if a reference stops resolving, so this page cannot rot as skills are renamed or
 consolidated.
 
+New here? [Getting started](GETTING-STARTED.md) covers installing, which departments to take first,
+and the three ways to invoke a skill.
+
 ## Single asks
 
 The fastest path is to just ask. Skills load themselves when a request matches.
@@ -124,6 +127,118 @@ A buyer's checklist reads your company back to you.
 4. `security:vulnerability-management` — the open findings you will be asked about
 5. `data-analytics:data-governance` — what data you hold, under what basis
 6. `technology:code-review` — what a technical reviewer will find first
+
+---
+
+## Situations from an operating company
+
+The situations above are shaped like a software business. These four are shaped like a company with
+sites, contracts, staff and customers — and they are where the catalog's operations, IT and finance
+depth actually shows. Each one names what comes back, not only what engages.
+
+### Two sites, one lost its link at 6am, and nobody can say whether it is the carrier or us
+
+The first hour goes to arguing about whose problem it is, which is the hour that matters.
+
+1. `operations:incident-management` — declare it, name a commander whose hands stay out of the
+   system, and start a timeline. The instinct to skip this because "it's just the link" is what
+   turns a thirty-minute outage into a four-hour one.
+2. `it-operations:network-administration` — diagnose in layers, from physical upward. The
+   multi-site section is the relevant one: a second site multiplies the failure modes, not the work.
+3. `operations:vendor-management` — the carrier is a supplier with a contract, and what you can
+   demand of them is written down somewhere nobody has read this morning.
+4. `operations:service-level-management` — whether their service level was breached, what the
+   remedy is, and whether the credit is worth the claim.
+5. `operations:business-continuity-and-resilience` — only if it runs long enough to matter, and
+   the answer is usually that the impact analysis was never done for this site.
+
+**What comes back.** A separation of two questions that get merged under pressure: *restore service*
+and *establish whose fault it is*. The first is yours regardless. The second decides whether you get
+a credit and whether you change carriers, and it is answered from the timeline you kept — not from
+memory afterward, which is unreliable within hours.
+
+**The hard part it will name.** You almost certainly cannot demonstrate the demarcation point from
+your own monitoring, which is why the carrier conversation goes in circles. That is a gap to close
+before the next outage, not during this one.
+
+### A vendor renewal auto-renewed at a 22% increase because nobody owned the date
+
+The increase is the symptom. The absence of an owner is the finding.
+
+1. `operations:vendor-management` — the renewal was lost at the notice date, not at the price. Its
+   Never list has this exact failure: reaching a renewal date without having started the renewal,
+   because the auto-renew clause is the vendor's leverage and it is designed to be.
+2. `legal-risk:contract-review` — what the notice period actually required, whether the increase is
+   within a cap you already agreed, and what leaving now costs.
+3. `finance:budgeting-and-forecasting` — the variance against plan, and whether this repeats across
+   other contracts nobody is tracking either.
+4. `it-operations:it-asset-management` — if it is software. The SaaS half of the estate is where
+   spend hides, and it is found through the expense system and single sign-on logs as much as
+   through any inventory.
+5. `operations:operating-cadence` — the actual fix: a named owner and a date that surfaces before
+   the notice window, rather than a resolution to be more careful.
+
+**What comes back.** Two separate pieces of work. The immediate one is a negotiation you are
+entering from a weak position, and it will tell you so plainly — the leverage was in the notice
+period and it is spent. The structural one is a renewal register with owners and dates, because a
+single renegotiated contract changes nothing about the next four.
+
+**Worth stating.** The honest answer on the 22% may be that you pay it this year. What you can get
+is a shorter term, a cap on the next increase, or a co-terminus date that makes the portfolio
+manageable — which is `revenue:deal-negotiation` read from the buying side.
+
+### Someone left and still had access to a shared mailbox three weeks later
+
+Every part of this is a process failure, and one part may be an incident.
+
+1. `it-operations:identity-lifecycle-administration` — the leaver path, completely. Shared mailboxes
+   and group memberships are the two that survive an offboarding built around the primary account.
+2. `it-operations:collaboration-platform-administration` — a shared mailbox with a sign-in-capable
+   account is an unmonitored identity with a password, and that is the specific shape of what
+   happened here.
+3. `security:access-and-identity` — whether the access review would ever have caught it, and
+   whether anything else is in the same state right now.
+4. `people:onboarding-and-offboarding` — offboarding has to reach identity, devices and payroll on
+   the same day, with one owner running the checklist end to end. Split ownership is exactly how
+   accounts stay live.
+5. `security:detection-and-monitoring` — the uncomfortable question: would you know whether the
+   access was used? If the answer is no, that is a bigger finding than the access itself.
+
+**Where it stops.** `security` is reviewer-class. If the mailbox held anything regulated and the
+logs cannot rule out access, that becomes an incident with notification clocks attached, and
+`legal-risk:privacy-and-data-protection` sets the obligation — a conclusion IT does not get to
+overrule on the grounds that it was probably fine.
+
+**What comes back.** A same-day containment step, a sweep for other accounts in the same condition,
+and a rewritten leaver checklist. Also a question you may not want: how you found out, because
+discovering it three weeks later by accident says the control that should have caught it does not
+exist.
+
+### Client rate cards have not been reviewed and now there is a margin problem
+
+The margin moved for a reason, and it is rarely the one people reach for first.
+
+1. `finance:cost-accounting` — decompose price, volume and mix before anything else. Without that,
+   a shift toward lower-margin work gets reported as a pricing failure and priced accordingly.
+2. `finance:financial-statement-analysis` — the trend and where it started, against prior period
+   and against plan, which answer different questions.
+3. `finance:unit-economics` — margin by client and by service rather than blended. Blended
+   economics almost always conceal one account subsidizing another, and the average is the least
+   useful number on the page.
+4. `revenue:pricing-and-packaging` — whether the rate card structure is the problem, not just the
+   levels. A metric clients cannot predict produces the disputes that erode realized rates.
+5. `revenue:deal-negotiation` — repricing an existing client is a negotiation where you have less
+   leverage than a new deal, and the concessions have to be traded rather than conceded.
+6. `customer-experience:customer-success-management` — which accounts survive a price change and
+   which are single-threaded on someone who will not defend it internally.
+
+**What comes back.** Almost always the same finding: it is not one rate card. It is a mix shift,
+an allocation basis that flatters some work and punishes other work, and two or three accounts
+priced years ago that nobody revisited. Those are three different fixes and only one of them is a
+conversation with clients.
+
+**The order matters.** Going to the client with a rate increase before the cost decomposition is
+done means arguing for a number you cannot defend, in a conversation you only get once.
 
 ---
 
