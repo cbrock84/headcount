@@ -163,6 +163,8 @@ TEMPLATE = r"""<meta charset="utf-8">
     font-size:clamp(34px,5vw,50px); letter-spacing:-.03em; line-height:1.05;
     margin:12px 0 0; text-wrap:balance;
   }
+  a { color:var(--accent); text-decoration:none; }
+  a:hover { text-decoration:underline; }
   .lede { color:var(--ink-2); margin:12px 0 0; max-width:60ch; }
   .use {
     margin:30px 0 0; padding:20px 22px; border:1px solid var(--rule);
@@ -189,7 +191,7 @@ TEMPLATE = r"""<meta charset="utf-8">
     text-transform:uppercase; letter-spacing:.07em; color:var(--ink-3);
   }
   .use .links { margin-top:16px; padding-top:14px; border-top:1px solid var(--rule); }
-  .use .links a { margin-right:18px; white-space:nowrap; }
+  .use .links a { margin-right:18px; white-space:nowrap; font-weight:500; }
   .figures { display:flex; flex-wrap:wrap; gap:26px; margin-top:26px; }
   .figure b {
     display:block; font-family:Archivo,sans-serif; font-weight:700;

@@ -62,6 +62,21 @@ Buyers know the calendar. If discounting concentrates at period end, that is a f
 pipeline problem being paid for out of margin, and it will repeat every period until the pipeline
 changes.
 
+## It reads the same from the buying side
+
+Everything here inverts cleanly when you are the one purchasing — the walk-away, the trade rather
+than the concession, the shrinking increments, and the tactics you should name rather than mirror.
+Two differences worth holding onto.
+
+**Your alternative is usually weaker than you think**, because switching cost is real and the
+incumbent knows it. Establish what leaving actually costs — data export, notice period, retraining,
+transition help — before you open, or you are negotiating without knowing your own floor.
+
+**The leverage is in the calendar, and it expires.** A renewal approached inside the notice window
+is a negotiation you have already lost the strongest part of. `operations:vendor-management` covers
+the renewal discipline that keeps that from happening, and `operations:procurement-and-sourcing`
+covers running a competitive process, which is what makes a buy-side walk-away credible at all.
+
 ## Close on terms someone can deliver
 
 A deal won on a commitment nobody in delivery has agreed to is a churn event with a delay. Anything
