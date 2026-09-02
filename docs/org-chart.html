@@ -84,6 +84,18 @@
     text-transform:uppercase; letter-spacing:.07em; color:var(--ink-3);
   }
   .use .links { margin-top:16px; padding-top:14px; border-top:1px solid var(--rule); }
+  .demos { margin-top:18px; padding-top:16px; border-top:1px solid var(--rule); }
+  .demos b {
+    display:block; font-family:Archivo,sans-serif; font-size:12px; text-transform:uppercase;
+    letter-spacing:.07em; color:var(--ink-3); margin-bottom:10px;
+  }
+  .demo-grid { display:flex; flex-wrap:wrap; gap:14px; }
+  .demo { flex:1 1 240px; min-width:0; }
+  .demo video {
+    width:100%; display:block; border:1px solid var(--rule); border-radius:8px;
+    background:var(--paper); cursor:pointer;
+  }
+  .demo span { display:block; margin-top:6px; font-size:12.5px; color:var(--ink-2); }
   .use .links a { margin-right:18px; white-space:nowrap; font-weight:500; }
   .figures { display:flex; flex-wrap:wrap; gap:26px; margin-top:26px; }
   .figure b {
@@ -300,6 +312,26 @@
           Skills load themselves when a request matches. Name one directly —
           <code>/finance:cost-accounting</code> — when you want a specific lens instead.
         </p>
+      </div>
+    </div>
+    <div class="demos">
+      <b>Watch it work &mdash; illustrative, click to play</b>
+      <div class="demo-grid">
+        <div class="demo">
+          <video src="assets/demo/headcount-install.mp4" poster="assets/demo/poster-install.jpg"
+                 controls preload="none" playsinline muted loop></video>
+          <span>Installing three departments</span>
+        </div>
+        <div class="demo">
+          <video src="assets/demo/headcount-usage.mp4" poster="assets/demo/poster-usage.jpg"
+                 controls preload="none" playsinline muted loop></video>
+          <span>A leaver who still had access</span>
+        </div>
+        <div class="demo">
+          <video src="assets/demo/headcount-marketing.mp4" poster="assets/demo/poster-marketing.jpg"
+                 controls preload="none" playsinline muted loop></video>
+          <span>Updating an old blog post</span>
+        </div>
       </div>
     </div>
     <p class="links">
