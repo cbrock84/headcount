@@ -865,13 +865,13 @@ changes.
 
 ---
 
-## D29. Publishing the org chart so the README can link to it — 🔵 Open (needs your hands)
+## D29. Publishing the org chart so the README can link to it — ✅ Resolved
 
 The README now leads with a screenshot of the org chart. The screenshot is honest but static; the
 value is in the live page, and **GitHub does not render HTML from a repository** — a link to
 `docs/org-chart.html` shows a reader the source, not the chart.
 
-- **(a) GitHub Pages, serving `/docs` from `main`.** ← **recommended**
+- **(a) GitHub Pages, serving `/docs` from `main`.** ← **chosen**
 - (b) A third-party HTML preview proxy.
 - (c) Screenshot only, no link.
 - (d) A hosted site on a purchased domain.
@@ -902,6 +902,15 @@ shipping this before the setting is flipped, and it is a single line to revert i
 not publish a site.
 
 **To enable:** Settings → Pages → Source: *Deploy from a branch* → Branch: `main`, folder `/docs`.
+
+**Resolution: (a), enabled before the repository was made public.** Verified live rather than
+assumed: `/org-chart.html`, the site root and `/USE-CASES.md` all return 200, and the published
+chart reads 172 skills — the current count — so Pages is republishing on push as (a) predicted.
+The README's two links are live, not dead.
+
+**This entry sat open long after the work was done**, and was read back as current state. An open
+decision that is not open is worse than no entry, because it is trusted. Close a decision when the
+thing is done, not when someone next reads the log.
 
 ---
 
