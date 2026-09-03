@@ -289,14 +289,28 @@ function check() {
 
 /* ── diff ───────────────────────────────────────────────────────────────────── */
 function changedPaths(base) {
+  // `-z` on both commands. Without it git wraps any path containing a space in literal quotes
+  // and octal-escapes non-ASCII bytes, so `plugins/finance/skills/a b.md` arrives as
+  // `"plugins/finance/skills/a b.md"` and fails the prefix test below — the guard then reports
+  // no violation for a file squarely inside another agent's surface. NUL-delimited output is
+  // the raw byte path, and it also removes the need to guess where a ` -> ` is a rename arrow
+  // rather than part of a filename.
   if (base) {
-    return execFileSync('git', ['diff', '--name-only', `${base}...HEAD`], { encoding: 'utf8' })
-      .split('\n').filter(Boolean);
+    return execFileSync('git', ['diff', '--name-only', '-z', `${base}...HEAD`], { encoding: 'utf8' })
+      .split('\0').filter(Boolean);
   }
   // Default: the working tree, because a builder has not committed. That is the point
   // at which this is worth running.
-  const porcelain = execFileSync('git', ['status', '--porcelain'], { encoding: 'utf8' });
-  return porcelain.split('\n').filter(Boolean).map((l) => l.slice(3).split(' -> ').pop().trim());
+  const records = execFileSync('git', ['status', '--porcelain', '-z'], { encoding: 'utf8' })
+    .split('\0').filter(Boolean);
+  const paths = [];
+  for (let i = 0; i < records.length; i += 1) {
+    const status = records[i].slice(0, 2);
+    paths.push(records[i].slice(3));
+    // A rename or copy writes the destination in this record and the source in the next one.
+    if (status.includes('R') || status.includes('C')) i += 1;
+  }
+  return paths;
 }
 
 function diff(agentId, base) {

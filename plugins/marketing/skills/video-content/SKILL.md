@@ -1,9 +1,14 @@
 ---
 name: video-content
-description: Plans and scripts short-form and long-form video, and designs the packaging — titles, thumbnails, and openings — that determines whether it gets watched. Use this to script a video, plan a series, fix retention or click-through problems, design thumbnail and title concepts, or turn written content into video.
+description: Plans and scripts short-form and long-form video, and designs the packaging — titles, thumbnails, and openings — that determines whether it gets watched. Use this to script a video, plan a series, fix retention or click-through problems, design thumbnail and title concepts, or turn written content into video. For a YouTube channel specifically — idea selection, retention teardowns, and channel-level strategy — use `youtube-producer`.
 ---
 
 # Video content
+
+This covers video as a format across platforms — short-form, long-form, and the packaging that
+decides whether either gets watched. `youtube-producer` covers one platform in depth: channel
+strategy, idea selection against a channel's history, and retention teardowns against YouTube's
+own curves. When the question is about a channel rather than a video, it belongs there.
 
 ## Packaging is most of the outcome
 

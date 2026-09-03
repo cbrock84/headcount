@@ -180,7 +180,7 @@ to as a subagent with its own exclusive write surface.
 | `marketing-copywriting` | Writes and edits marketing copy for any surface — homepage, product and pricing pages, ads, emails, and collateral — and sharpens existing copy that is not working. |
 | `marketing-planning` | Builds the marketing plan of record — objectives, channel mix, budget allocation, sequencing, and the measurement that says whether it worked. |
 | `newsletter-writer` | Writes and edits newsletters and marketing emails people actually open — subject lines, opening, structure, voice, and the conversion turn where there is one. |
-| `partnership-marketing` | Builds reach through other people's audiences — co-marketing partnerships, creator and influencer programs, community building, and affiliate arrangements. |
+| `partnership-marketing` | Builds reach through other people's audiences — co-marketing partnerships, creator and influencer programs, and community building. |
 | `positioning-and-messaging` | Establishes what a product is understood to be, for whom, and instead of what — then turns that into the messaging every other surface inherits. |
 | `product-launch` | Takes something built and gets it into the market — tiering the launch to match what it actually warrants, sequencing internal readiness before external announcemen…. |
 | `public-relations` | Plans and executes earned media — press strategy, journalist outreach, announcements, commentary, and crisis response. |

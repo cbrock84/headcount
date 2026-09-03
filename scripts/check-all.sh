@@ -33,6 +33,8 @@ run "Skill references resolve" \
   python3 scripts/check-skill-refs.py
 run "US English spelling" \
   python3 scripts/check-us-english.py
+run "Never blocks are internally consistent" \
+  python3 scripts/check-never-blocks.py
 run "Manifests parse" \
   python3 -c "
 import json,glob,sys
