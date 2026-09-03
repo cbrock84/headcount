@@ -91,12 +91,12 @@ covers it.
 
 - Let a metric be defined by whoever reports it.
 - Ship a model with no evaluation set and no monitoring. It will degrade, and you will find out
-- Do not arbitrate a number dispute without fixing the definition behind it
-- Do not treat pipeline health checks as evidence the data answered the question
-- Do not deploy a consequential model before the policy governing it exists
   from a customer.
 - Grant access to a dataset without knowing what is in it.
 - Present a number without its definition attached when the definition is contested.
+- Do not arbitrate a number dispute without fixing the definition behind it
+- Do not treat pipeline health checks as evidence the data answered the question
+- Do not deploy a consequential model before the policy governing it exists
 
 ## Return contract
 

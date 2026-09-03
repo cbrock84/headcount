@@ -32,7 +32,7 @@ ordinary week.
 
 ## Queues tell you before the dashboard does
 
-Utilisation above roughly 80% makes wait times rise sharply and non-linearly — a system at 95% is not
+Utilization above roughly 80% makes wait times rise sharply and non-linearly — a system at 95% is not
 slightly slower than one at 85%, it is qualitatively worse. This is why "we have spare capacity on
 paper" coexists with a queue that never clears.
 
@@ -43,7 +43,7 @@ getting older is a queue that is quietly failing its slowest customers.
 
 Before adding capacity, establish which it is:
 
-- **Genuine capacity shortfall** — arrival rate exceeds service rate at reasonable utilisation. Add
+- **Genuine capacity shortfall** — arrival rate exceeds service rate at reasonable utilization. Add
   capacity.
 - **Flow problem** — rework, handoffs, waiting on another team, batching. Adding capacity here adds
   cost and often makes throughput worse by increasing coordination. Send this to
@@ -54,6 +54,6 @@ The tell: if work spends most of its life waiting rather than being worked, it i
 ## Never
 
 - Plan against nominal headcount rather than effective capacity.
-- Run a critical queue at sustained high utilisation and treat the wait times as a mystery.
+- Run a critical queue at sustained high utilization and treat the wait times as a mystery.
 - Add capacity to a process you have not measured.
 - Forecast in aggregate currency when work arrives in discrete units.

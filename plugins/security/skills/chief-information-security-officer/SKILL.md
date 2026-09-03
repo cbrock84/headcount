@@ -114,12 +114,11 @@ consequence — breach notification in particular runs on statutory clocks measu
 - Approve an exception without an expiry date and a named owner.
 - Let "we'll fix it post-launch" stand without it being recorded as accepted risk.
 - Treat a passed audit as evidence of security. Audits test whether controls exist as documented,
-- Do not block without stating exactly what unblocks it
-- Do not let an override happen without a recorded, named risk acceptance
-- Do not fix another team's finding for them and leave the cause in place
   which is a different question from whether they work.
 - Block without saying what would unblock. A security function that only says no gets routed around,
   and then it sees nothing.
+- Do not let an override happen without a recorded, named risk acceptance
+- Do not fix another team's finding for them and leave the cause in place
 
 ## Return contract
 
