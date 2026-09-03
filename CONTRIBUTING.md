@@ -50,14 +50,18 @@ departments are split by exclusive write surface rather than by topic.
 ./scripts/check-all.sh
 ```
 
-Four checks, the same ones CI runs:
+Every check CI runs, in one script — the workflow calls this same file, so the two cannot drift:
 
 | Check | What it enforces |
 |---|---|
 | Surface map | Every tracked path has exactly one owner |
 | Skill frontmatter | `name` equals the directory name, lowercase-hyphenated, unique, description substantial |
 | Provenance | No license headers, copyright notices, license-named files, or font assets |
-| Generated docs | README and org-chart tables match the tree |
+| Generated docs | README, social card and org chart match the tree |
+| Skill references | Every `department:skill` mentioned in the docs or in a skill body resolves |
+| US English spelling | No British spellings, by exact word form |
+| `## Never` blocks | Bullets inside one block agree on terminal punctuation |
+| Manifests | The marketplace file and every `plugin.json` parse |
 
 **Stage your files first.** The surface guard reads `git ls-files`, so an unstaged file is invisible
 to it — the check will pass and then fail once committed. The script warns when untracked files are
@@ -79,6 +83,18 @@ British spellings and `--fix` rewrites them.
 
 The list is of exact word forms, not stems, because stems are a trap here: *analysis*, *analyst*,
 *specialist* and *realistic* are already correct US English and must never be rewritten.
+
+**A skill references only what it ships.** A skill is installed as part of its department plugin and
+nothing else comes with it, so a pointer to `docs/SOMETHING.md` resolves for a reader of this
+repository and dangles for everyone who installed the plugin. Say the thing inline instead. The
+exception is `executive:agent-hierarchy`, whose `docs/` paths are instructions to create those files
+in the reader's own repository, not references to files here.
+
+**`## Never` bullets agree with each other.** Two styles are in use and both are fine — bare
+imperatives ending in a period, or the chief-level `Never …` / `Do not …` lines without terminal
+punctuation. Mixing them inside a single block is what a list spliced in from somewhere else looks
+like, and it is how four skills ended up with a wrapped bullet's continuation stranded on an
+unrelated rule. `scripts/check-never-blocks.py` fails the build on a block that mixes them.
 
 ## Adding a department
 

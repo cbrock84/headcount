@@ -89,8 +89,8 @@ attached is a hobby.
   beforehand.
 - Let a strategy survive an assumption being falsified. When the thing you bet on turns out untrue,
   say so and revise.
-- Do not call a strategy decided until the resourcing artifacts moved
-- Do not produce a competitive map that answers no pending question
+- Call a strategy decided before the resourcing artifacts have moved.
+- Produce a competitive map that answers no pending question.
 
 ## Return contract
 

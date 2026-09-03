@@ -45,12 +45,13 @@ Every process needs a named owner and a review date, or the estate accumulates p
 explain and nobody may remove. Ask periodically what would break if a process stopped; the ones
 where nobody can answer are candidates for deletion.
 
-## Utilization above ninety percent is a queue
+## Utilization above roughly eighty percent is a queue
 
-A system run near full capacity does not degrade gracefully; queues grow without bound as
-utilization approaches one. That is why the fully-booked team, the fully-loaded machine, and the
-completely allocated calendar all produce the same experience — everything takes longer than it
-should and small disruptions cascade.
+A system run near full capacity does not degrade gracefully; wait times rise sharply and
+non-linearly past roughly eighty percent, and queues grow without bound as utilization approaches
+one. That is why the fully-booked team, the fully-loaded machine, and the completely allocated
+calendar all produce the same experience — everything takes longer than it should and small
+disruptions cascade.
 
 Deliberate slack is what makes a system responsive, and it is the first thing an efficiency drive
 removes. Defend it explicitly, with the reasoning stated, or it will be cut by someone measuring a
@@ -58,6 +59,8 @@ number that improves as service worsens.
 
 Variability matters as much as average load. A team with steady demand can run hotter than one with
 spiky demand and the same average, and treating them identically starves the second.
+`operations:capacity-and-demand-planning` holds the working version of this — which threshold
+applies to a given queue, and how to tell a capacity shortfall from a flow problem.
 
 ## Incidents are information the organization paid for
 

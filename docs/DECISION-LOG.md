@@ -28,6 +28,25 @@ recorded rather than being deleted.
 | D14 | Enforcing the surface map in CI | ✅ Resolved |
 | D15 | PR #2 readiness and merge timing | ✅ Resolved |
 | D16 | Repo visibility versus marketplace distribution | ✅ Resolved |
+| D17 | Which department is the next real gap | ✅ Resolved |
+| D18 | Repository visibility, now that all content is original | ✅ Resolved |
+| D19 | README drift | ✅ Resolved |
+| D20 | Publishing steps that need your hands | ✅ Resolved |
+| D21 | MIT or Apache-2.0 for the long term | ✅ Resolved |
+| D22 | What to call this | ✅ Resolved |
+| D23 | Buttoning up the repository now that it is public | ✅ Resolved |
+| D24 | Whether to add sponsorship | ✅ Resolved |
+| D25 | Whether to register a domain for the About field | ✅ Resolved |
+| D26 | Where project management lives | ✅ Resolved |
+| D27 | Splitting CIO-side IT operations out of `technology` | ✅ Resolved |
+| D28 | US English as house style | ✅ Resolved |
+| D29 | Publishing the org chart so the README can link to it | ✅ Resolved |
+| D30 | Coverage QC against public occupational taxonomies | ✅ Resolved |
+| D31 | Authority as a second axis on the surface map | ✅ Resolved |
+| D32 | Extending the skill-reference checker to skill bodies | ✅ Resolved |
+| D33 | US English check rejects the plural of "analysis" | ✅ Resolved |
+| D34 | Two skills claim social graphics | ✅ Resolved |
+| D35 | Whether description shape is a checkable convention | 🔵 Open (needs your call) |
 
 ---
 
@@ -1144,3 +1163,36 @@ body both moved, so the trigger and the content agree.
 The one-pager section kept its last bullet in changed form. It had been about a social graphic at
 thumbnail size; it is now about a one-pager's real reading contexts — printed, attached, projected —
 which is the same lesson applied to the surface this skill actually keeps.
+
+---
+
+## D35. Whether description shape is a checkable convention — 🔵 Open (needs your call)
+
+An outside read of all 172 skills reported that descriptions do not follow one pattern. Some open
+with a capability sentence and then a `Use this to…` trigger sentence; some run the two together;
+some name a sibling skill to route away from, most do not. Two checks already constrain
+descriptions — a minimum length, and the promise-versus-coverage relationship that D34 came out of
+— but nothing constrains their shape.
+
+This is a convention question rather than a defect, and it touches every skill in the tree, so it
+is logged rather than decided.
+
+- **(a) Leave shape unconstrained.** ← **recommended.** The two checks that exist catch the
+  failures that actually cost something: a description too thin to route on, and a description
+  that promises what the body does not cover. Shape is not one of those. Normalizing 172
+  descriptions to a template would be a large diff whose only beneficiary is the reader of the
+  diff.
+- (b) Fix a two-sentence template — capability, then trigger — and normalize all 172, with a check
+  to hold it. Consistent, and the check is easy to write. It is also 172 files of churn for a
+  problem no one has reported hitting.
+- (c) Require only the trigger sentence, leaving the rest free. Half the discipline for a third of
+  the churn, but "a sentence beginning `Use this`" is the part a checker can verify and the part
+  that matters least — the trigger's *content* is what routes, and no check can read that.
+
+**Recommendation: (a).**
+
+**One item in the same report needs no decision, recorded here so the next read does not re-raise
+it.** The figure "~24 agents over a 1,500-file monorepo" in `executive:agent-hierarchy` was read as
+a claim about this roster, which currently runs 17 builders and 2 reviewers. It is not: both
+instances say the method was *extracted from* a working implementation of that size. The sentence
+describes the source the method came from, and changing the number would make it wrong.

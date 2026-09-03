@@ -34,9 +34,9 @@ enforcement; all three carry consequences.
 SOC 2, ISO 27001 and their equivalents demonstrate that controls exist and operate. They do not
 establish that you meet any legal obligation, and a clean report is not a defense to a regulator.
 
-Where they earn their cost is commercially — unblocking deals, as in the SOC 2 situation in
-`docs/USE-CASES.md`. Scope them to what the market asks for rather than to everything, since scope
-drives cost more than any other decision.
+Where they earn their cost is commercially — an enterprise prospect makes the certification a
+condition of the deal, and the certification is what unblocks it. Scope them to what the market
+asks for rather than to everything, since scope drives cost more than any other decision.
 
 ## The program is monitoring, not documentation
 

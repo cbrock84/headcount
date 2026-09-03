@@ -117,8 +117,8 @@ consequence — breach notification in particular runs on statutory clocks measu
   which is a different question from whether they work.
 - Block without saying what would unblock. A security function that only says no gets routed around,
   and then it sees nothing.
-- Do not let an override happen without a recorded, named risk acceptance
-- Do not fix another team's finding for them and leave the cause in place
+- Let an override happen without a recorded, named risk acceptance.
+- Fix another team's finding for them and leave the cause in place.
 
 ## Return contract
 

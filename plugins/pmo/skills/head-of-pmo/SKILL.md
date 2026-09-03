@@ -90,5 +90,5 @@ it appears in a review, the padding returns and the data becomes worthless.
 - Take a delivery decision that belongs to the team doing the work.
 - Run a portfolio gate that has never stopped anything.
 - Let the PMO report into the function whose work it governs.
-- Do not accept a status color without the facts that produced it
-- Do not use estimate accuracy as a performance measure
+- Accept a status color without the facts that produced it.
+- Use estimate accuracy as a performance measure.

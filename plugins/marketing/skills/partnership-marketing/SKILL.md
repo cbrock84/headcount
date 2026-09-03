@@ -1,11 +1,14 @@
 ---
 name: partnership-marketing
-description: Builds reach through other people's audiences — co-marketing partnerships, creator and influencer programs, community building, and affiliate arrangements. Use this to find and evaluate partners, structure a joint campaign or creator deal, plan a community strategy, or decide whether a partnership is worth the coordination cost.
+description: Builds reach through other people's audiences — co-marketing partnerships, creator and influencer programs, and community building. Use this to find and evaluate partners, structure a joint campaign or creator deal, plan a community strategy, or decide whether a partnership is worth the coordination cost.
 ---
 
 # Partnership marketing
 
 Borrowing an audience is the cheapest reach available and the easiest to do badly.
+
+Affiliates sit next to this rather than inside it: they are a paid channel with commercial terms,
+their own mechanics and their own fraud controls. `revenue:referral-programs` covers them.
 
 ## Evaluating a partner
 
