@@ -46,7 +46,7 @@ recorded rather than being deleted.
 | D32 | Extending the skill-reference checker to skill bodies | ✅ Resolved |
 | D33 | US English check rejects the plural of "analysis" | ✅ Resolved |
 | D34 | Two skills claim social graphics | ✅ Resolved |
-| D35 | Whether description shape is a checkable convention | 🔵 Open (needs your call) |
+| D35 | Whether description shape is a checkable convention | ✅ Resolved |
 
 ---
 
@@ -1166,7 +1166,7 @@ which is the same lesson applied to the surface this skill actually keeps.
 
 ---
 
-## D35. Whether description shape is a checkable convention — 🔵 Open (needs your call)
+## D35. Whether description shape is a checkable convention — ✅ Resolved
 
 An outside read of all 172 skills reported that descriptions do not follow one pattern. Some open
 with a capability sentence and then a `Use this to…` trigger sentence; some run the two together;
@@ -1177,7 +1177,7 @@ descriptions — a minimum length, and the promise-versus-coverage relationship 
 This is a convention question rather than a defect, and it touches every skill in the tree, so it
 is logged rather than decided.
 
-- **(a) Leave shape unconstrained.** ← **recommended.** The two checks that exist catch the
+- **(a) Leave shape unconstrained.** ← **chosen.** The two checks that exist catch the
   failures that actually cost something: a description too thin to route on, and a description
   that promises what the body does not cover. Shape is not one of those. Normalizing 172
   descriptions to a template would be a large diff whose only beneficiary is the reader of the
@@ -1190,6 +1190,17 @@ is logged rather than decided.
   that matters least — the trigger's *content* is what routes, and no check can read that.
 
 **Recommendation: (a).**
+
+**Resolution: (a).** Nothing changes in the tree. The two checks that exist stay the whole of what
+is enforced about a description: it must be substantial enough to route on, and it must not promise
+what the body does not cover. Shape is left to whoever writes the skill.
+
+Recorded so the next full read does not re-raise it as a defect: the variation is deliberate, not
+drift. A description that names a sibling skill does so because that pair actually collides; one
+that runs capability and trigger together does so because the sentence reads better that way. A
+template would flatten both, and the part a checker can verify — that a sentence beginning `Use
+this` exists — is the part that matters least. What routes a request is the trigger's content, and
+no check can read that.
 
 **One item in the same report needs no decision, recorded here so the next read does not re-raise
 it.** The figure "~24 agents over a 1,500-file monorepo" in `executive:agent-hierarchy` was read as
