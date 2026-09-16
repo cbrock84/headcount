@@ -41,7 +41,27 @@ emit — the failure `build-readme.py` already guards against for departments.
 |---|---|
 | Add a skill | `skills/<department>/<skill>/SKILL.md`. Colliding with a core skill's name fails the emit. |
 | Extend a core skill | `context/<department>/<skill>.md`, spliced in ahead of the skill's `## Never` block. |
+| Add a department | A `[[department]]` entry in the config. |
 | Drop a department | `[emit] exclude_departments` in the config. |
+
+**A vertical may bring a department the core has no reason to carry.** Industrial does not: its
+skills belong to `operations` and `people`, which already exist. Education does — a curriculum
+function is not a thinner version of anything in a cross-industry core, and filing it under an
+existing department to avoid the feature would misroute every request that reached it.
+
+```toml
+[[department]]
+name = "education"
+title = "Education"
+description = "Standards alignment, learning-materials design, assessment construction."
+keywords = ["curriculum", "standards"]
+```
+
+The generator does what the surface map requires of a new department, because nobody is there to do
+it by hand: it writes the plugin manifest, adds the marketplace entry, inserts the roster row and
+surface block into the emitted map, and generates the charter. It also drops the `verticals` and
+`sources` rows from the emitted map — their inputs stay upstream, so downstream those rows would
+claim paths that are not there.
 
 It may **not** edit a core skill in place. A core skill that is wrong for every industry is wrong in
 the core; fixing it there means every vertical gets the fix on its next emit, which is the whole

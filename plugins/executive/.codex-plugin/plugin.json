@@ -1,0 +1,23 @@
+{
+  "name": "executive",
+  "version": "1.0.0",
+  "description": "Direction, capital and attention allocation, cross-functional arbitration, strategy validation, and the method for structuring the organization itself.",
+  "author": {
+    "name": "Chris Brock"
+  },
+  "repository": "https://github.com/cbrock84/headcount",
+  "license": "MIT",
+  "keywords": [
+    "strategy",
+    "executive",
+    "decision-making"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Office of the CEO",
+    "category": "Productivity",
+    "shortDescription": "Office of the CEO, as an installable department",
+    "longDescription": "Direction, capital and attention allocation, cross-functional arbitration, strategy validation, and the method for structuring the organization itself.",
+    "developerName": "Chris Brock"
+  }
+}

@@ -61,6 +61,7 @@ Every check CI runs, in one script — the workflow calls this same file, so the
 | Skill references | Every `department:skill` mentioned in the docs or in a skill body resolves |
 | US English spelling | No British spellings, by exact word form |
 | `## Never` blocks | Bullets inside one block agree on terminal punctuation |
+| OpenAI/Codex manifests | The second set of manifests matches the Claude ones |
 | Source catalog | Structure, license vocabulary, and every skill it names resolves |
 | Skill source files | Each skill's `references/sources.md` matches the catalog |
 | Verticals | Every vertical emits, and the emitted repository passes its own checks |
@@ -115,6 +116,16 @@ department cannot end up missing from the README and the org chart while the che
 
 Give it a chief before any specialists — the department's remit should exist before things are added
 to it.
+
+## Two tools, one tree
+
+The skills install in Claude Code and in ChatGPT/Codex from the same repository. The `SKILL.md`
+format is common to both; only the manifests differ, and the second set is generated from the first
+by `scripts/build-port.py` and verified with `--check`.
+
+There is no Codex copy of the tree and there should never be one. A fork of 172 skills diverges
+within a quarter and the divergence is invisible — which is the whole argument for generating
+sixteen small manifests instead.
 
 ## Adding a source
 

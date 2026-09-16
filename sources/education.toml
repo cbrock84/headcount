@@ -1,0 +1,160 @@
+# Education standards, frameworks and primary-source collections.
+#
+# Almost nothing here is openly licensed, and that is the point of recording it. The public-domain
+# core is the federal and national-collection material — Head Start, the Library of Congress, the
+# National Archives. Common Core is usable only with its required attribution notice. Everything
+# else is copyrighted and free to read.
+#
+# For anyone generating learning material the consequence is specific: align to a standard and cite
+# its code, and write your own objective in your own words beside it. A paraphrase close enough to
+# be useful is close enough to be a derivative.
+#
+# Reachability note. Several publishers here — thecorestandards.org, eclkc.ohs.acf.hhs.gov, loc.gov,
+# naeyc.org — refuse automated requests from some networks with a 403. That is a bot filter rather
+# than a dead link, and `check-sources.py --online` reports it as a warning for exactly that reason.
+# The weekly workflow runs from a different network and is the real verification. Where a specific
+# page could not be confirmed, the entry points at the publisher's canonical landing page rather
+# than at a deep link nobody has fetched.
+
+[[source]]
+id = "ccss-math"
+title = "Common Core State Standards — Mathematics"
+publisher = "NGA Center for Best Practices & CCSSO"
+url = "https://www.thecorestandards.org/Math/"
+license = "attribution-required"
+jurisdiction = "US"
+authoritative_for = "The mathematics standards most US states adopted, by grade and domain, and the standard codes an alignment claim cites. The public license permits use with the required attribution notice — this is not public domain."
+skills = ["education:standards-alignment", "education:assessment-design"]
+checked = "2026-09-16"
+
+[[source]]
+id = "ccss-ela"
+title = "Common Core State Standards — English Language Arts and Literacy"
+publisher = "NGA Center for Best Practices & CCSSO"
+url = "https://www.thecorestandards.org/ELA-Literacy/"
+license = "attribution-required"
+jurisdiction = "US"
+authoritative_for = "Reading, writing, language and foundational-skills standards by grade — including the reading foundational skills that stop after grade 5, which is a common source of wrong alignment above it."
+skills = ["education:standards-alignment", "education:learning-materials-design"]
+checked = "2026-09-16"
+
+[[source]]
+id = "ccss-math-practice"
+title = "Standards for Mathematical Practice"
+publisher = "NGA Center for Best Practices & CCSSO"
+url = "https://www.thecorestandards.org/Math/Practice/"
+license = "attribution-required"
+jurisdiction = "US"
+authoritative_for = "The eight practice standards that run across every grade. Material claiming to build reasoning rather than procedure is aligning here, and usually does not say so."
+skills = ["education:standards-alignment", "education:assessment-design"]
+checked = "2026-09-16"
+
+[[source]]
+id = "ngss"
+title = "Next Generation Science Standards"
+publisher = "NGSS Lead States / Achieve"
+url = "https://www.nextgenscience.org/search-standards"
+license = "free-to-read"
+jurisdiction = "US"
+authoritative_for = "Science performance expectations by grade, each bundling a practice, a core idea and a crosscutting concept. Copyrighted, and the name is a registered trademark — cite the expectation code, never the wording."
+skills = ["education:standards-alignment", "education:assessment-design"]
+checked = "2026-09-16"
+
+[[source]]
+id = "ngss-appendices"
+title = "NGSS appendices — practices, crosscutting concepts, core ideas"
+publisher = "NGSS Lead States / Achieve"
+url = "https://www.nextgenscience.org/resources/ngss-appendices"
+license = "free-to-read"
+jurisdiction = "US"
+authoritative_for = "What three-dimensional learning means in practice, and why aligning to the disciplinary content alone misses two thirds of what a performance expectation asks."
+skills = ["education:standards-alignment"]
+checked = "2026-09-16"
+
+[[source]]
+id = "ncss-c3"
+title = "C3 Framework for Social Studies State Standards"
+publisher = "National Council for the Social Studies"
+url = "https://www.socialstudies.org/standards/c3"
+license = "free-to-read"
+jurisdiction = "US"
+authoritative_for = "The social studies inquiry arc — question, investigate, evaluate, act. It enumerates no facts, so an alignment claim to it is a claim about the shape of the task rather than its subject."
+skills = ["education:standards-alignment"]
+checked = "2026-09-16"
+
+[[source]]
+id = "head-start-elof"
+title = "Head Start Early Learning Outcomes Framework, birth to five"
+publisher = "US Department of Health and Human Services, Office of Head Start"
+url = "https://eclkc.ohs.acf.hhs.gov/interactive-head-start-early-learning-outcomes-framework-ages-birth-five"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "What is expected of children from birth to five across approaches to learning, social-emotional, language, cognition and physical development. The one comprehensive pre-K framework that is freely usable, where Common Core does not reach."
+skills = ["education:early-childhood-practice", "education:standards-alignment"]
+checked = "2026-09-16"
+
+[[source]]
+id = "naeyc-position-statements"
+title = "NAEYC position statements, including Developmentally Appropriate Practice"
+publisher = "National Association for the Education of Young Children"
+url = "https://www.naeyc.org/resources/position-statements"
+license = "free-to-read"
+jurisdiction = "US"
+authoritative_for = "What practice should look like for children under eight, and the statement most often cited when a task is challenged as too advanced. Not a standards document — it constrains method, not content."
+skills = ["education:early-childhood-practice", "education:learning-materials-design"]
+checked = "2026-09-16"
+
+[[source]]
+id = "nctm-standards"
+title = "NCTM Principles and Standards and position statements"
+publisher = "National Council of Teachers of Mathematics"
+url = "https://www.nctm.org/standards-and-positions/principles-and-standards/"
+license = "free-to-read"
+jurisdiction = "US"
+authoritative_for = "The process standards — problem solving, reasoning and proof, communication, connections, representation — and the profession's position on what mathematics instruction should do. Some material requires membership."
+skills = ["education:assessment-design", "education:learning-materials-design"]
+checked = "2026-09-16"
+
+[[source]]
+id = "nsta-positions"
+title = "NSTA official positions"
+publisher = "National Science Teaching Association"
+url = "https://www.nsta.org/nstas-official-positions"
+license = "free-to-read"
+jurisdiction = "US"
+authoritative_for = "The profession's positions on early childhood and elementary science instruction, including what inquiry-based means in practice at an age that cannot yet read the procedure."
+skills = ["education:early-childhood-practice", "education:standards-alignment"]
+checked = "2026-09-16"
+
+[[source]]
+id = "ila-resources"
+title = "International Literacy Association position statements and briefs"
+publisher = "International Literacy Association"
+url = "https://www.literacyworldwide.org/get-resources"
+license = "free-to-read"
+jurisdiction = "global"
+authoritative_for = "Research-informed positions on phonics, phonemic awareness, comprehension and writing instruction — the evidence base a literacy product's claims are judged against."
+skills = ["education:learning-materials-design", "education:assessment-design"]
+checked = "2026-09-16"
+
+[[source]]
+id = "loc-classroom"
+title = "Library of Congress classroom materials"
+publisher = "Library of Congress"
+url = "https://www.loc.gov/classroom-materials/"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "Primary sources usable in published material without a rights problem, with teaching context already attached. The first place to look before licensing an image."
+skills = ["education:learning-materials-design"]
+checked = "2026-09-16"
+
+[[source]]
+id = "nara-docsteach"
+title = "DocsTeach"
+publisher = "US National Archives and Records Administration"
+url = "https://www.docsteach.org/"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "Primary-source documents for US history material, freely usable, organized for classroom activities rather than for archivists."
+skills = ["education:learning-materials-design"]
+checked = "2026-09-16"

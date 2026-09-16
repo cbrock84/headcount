@@ -1,0 +1,28 @@
+{
+  "name": "it-operations",
+  "version": "1.0.0",
+  "description": "Corporate IT: service desk, systems and network administration, virtualization and cloud, telephony and conferencing, endpoints, assets, identity lifecycle, and backup and recovery.",
+  "author": {
+    "name": "Chris Brock"
+  },
+  "repository": "https://github.com/cbrock84/headcount",
+  "license": "MIT",
+  "keywords": [
+    "it-operations",
+    "service-desk",
+    "sysadmin",
+    "network",
+    "endpoint-management",
+    "virtualization",
+    "cloud",
+    "telephony"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "IT Operations",
+    "category": "Productivity",
+    "shortDescription": "IT Operations, as an installable department",
+    "longDescription": "Corporate IT: service desk, systems and network administration, virtualization and cloud, telephony and conferencing, endpoints, assets, identity lifecycle, and backup and recovery.",
+    "developerName": "Chris Brock"
+  }
+}

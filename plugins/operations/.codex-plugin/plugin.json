@@ -1,0 +1,24 @@
+{
+  "name": "operations",
+  "version": "1.0.0",
+  "description": "Program management, process design, vendor and supplier management, and operational delivery.",
+  "author": {
+    "name": "Chris Brock"
+  },
+  "repository": "https://github.com/cbrock84/headcount",
+  "license": "MIT",
+  "keywords": [
+    "operations",
+    "process",
+    "program-management",
+    "vendors"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Operations",
+    "category": "Productivity",
+    "shortDescription": "Operations, as an installable department",
+    "longDescription": "Program management, process design, vendor and supplier management, and operational delivery.",
+    "developerName": "Chris Brock"
+  }
+}

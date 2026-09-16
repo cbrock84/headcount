@@ -23,18 +23,26 @@
   <a href="https://cbrock84.github.io/headcount/org-chart.html"><b>Open the interactive org chart</b></a> — search every skill, open a department, jump to the source.
 </p>
 
-An agent organization for [Claude Code](https://claude.com/claude-code), structured as a company:
-a chief executive over 16 departments, 172 skills in total.
+An agent organization structured as a company: a chief executive over
+16 departments, 172 skills in total.
 
 Every department is an independently installable plugin, so a project loads only the functions it
 needs rather than all of them at once.
 
 ## Install
 
+**[Claude Code](https://claude.com/claude-code)**
+
 ```
 /plugin marketplace add cbrock84/headcount
 /plugin install security@headcount
 ```
+
+**ChatGPT and Codex** — the same repository. Add it as a plugin marketplace, or drop the
+department you want into `.agents/skills/` in your own project.
+
+The skills are identical in both; only the manifests differ, and both sets are generated from
+this tree, so a fix reaches both at once. See `AGENTS.md`.
 
 Install as many departments as the project needs. Skills are addressed as `department:skill` —
 `security:threat-modeling`, `finance:unit-economics` — so names never collide.

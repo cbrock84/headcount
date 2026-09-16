@@ -1,0 +1,25 @@
+{
+  "name": "corporate-strategy",
+  "version": "1.0.0",
+  "description": "Portfolio strategy, corporate development, strategic alliances, and scenario planning.",
+  "author": {
+    "name": "Chris Brock"
+  },
+  "repository": "https://github.com/cbrock84/headcount",
+  "license": "MIT",
+  "keywords": [
+    "strategy",
+    "corp-dev",
+    "m-and-a",
+    "partnerships",
+    "scenario-planning"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Corporate Strategy",
+    "category": "Productivity",
+    "shortDescription": "Corporate Strategy, as an installable department",
+    "longDescription": "Portfolio strategy, corporate development, strategic alliances, and scenario planning.",
+    "developerName": "Chris Brock"
+  }
+}

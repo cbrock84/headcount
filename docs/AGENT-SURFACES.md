@@ -155,6 +155,8 @@ sources/**
 ```surface:repo-meta
 LICENSE
 .gitignore
+AGENTS.md
+.agents/**
 CONTRIBUTING.md
 .gitattributes
 docs/**

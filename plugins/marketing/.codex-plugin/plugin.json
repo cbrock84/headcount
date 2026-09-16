@@ -1,0 +1,25 @@
+{
+  "name": "marketing",
+  "version": "1.0.0",
+  "description": "Positioning, content strategy and production, social and video, brand voice, copywriting, PR, and partnerships.",
+  "author": {
+    "name": "Chris Brock"
+  },
+  "repository": "https://github.com/cbrock84/headcount",
+  "license": "MIT",
+  "keywords": [
+    "marketing",
+    "content",
+    "brand",
+    "social",
+    "communications"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Marketing",
+    "category": "Productivity",
+    "shortDescription": "Marketing, as an installable department",
+    "longDescription": "Positioning, content strategy and production, social and video, brand voice, copywriting, PR, and partnerships.",
+    "developerName": "Chris Brock"
+  }
+}
