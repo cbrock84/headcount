@@ -29,6 +29,22 @@ ID = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 SKILL_REF = re.compile(r"^([a-z][a-z0-9-]*):([a-z][a-z0-9-]*)$")
 
 
+def skill_path(department, skill):
+    """Where a `department:skill` reference resolves, in the core or in any vertical.
+
+    A vertical's skills are real skills — they are emitted into a shipped repository and an agent
+    loads them the same way. Resolving only against `plugins/` would mean the catalog could never
+    reach them, which is backwards: a vertical is where the outside authority matters most, because
+    that is where the advice is industry-specific and therefore regulated by somebody.
+    """
+    core = f"plugins/{department}/skills/{skill}/SKILL.md"
+    if os.path.exists(core):
+        return core
+    for path in sorted(glob.glob(f"verticals/*/skills/{department}/{skill}/SKILL.md")):
+        return path
+    return None
+
+
 def load():
     """Every source in the catalog, with the file it came from."""
     entries = []
@@ -72,7 +88,7 @@ def validate(entries):
             if not match:
                 problems.append(f"{where}: {ref!r} is not a department:skill reference")
                 continue
-            if not os.path.exists(f"plugins/{match[1]}/skills/{match[2]}/SKILL.md"):
+            if not skill_path(match[1], match[2]):
                 problems.append(f"{where}: `{ref}` does not exist")
     return problems
 
@@ -115,9 +131,12 @@ def pointers(entries):
     """
     problems = []
     with_sources = {ref for _, e in entries for ref in e.get("skills", [])}
-    for path in sorted(glob.glob("plugins/*/skills/*/SKILL.md")):
-        parts = path.split(os.sep)
-        ref = f"{parts[1]}:{parts[3]}"
+    every = ([(p, p.split(os.sep)[1], p.split(os.sep)[3])
+              for p in glob.glob("plugins/*/skills/*/SKILL.md")]
+             + [(p, p.split(os.sep)[3], p.split(os.sep)[4])
+                for p in glob.glob("verticals/*/skills/*/*/SKILL.md")])
+    for path, department, skill in sorted(every):
+        ref = f"{department}:{skill}"
         mentions = "\n## Sources\n" in open(path, encoding="utf-8").read()
         if ref in with_sources and not mentions:
             problems.append(f"{path}: has catalog sources but no `## Sources` section — "

@@ -1,0 +1,42 @@
+# The education vertical: curriculum-aligned learning materials.
+#
+# The second vertical, and the one that made the generator support a department the core does not
+# have. Industrial's skills belong to operations and people, which already exist. A curriculum
+# function is not a thinner version of anything in a cross-industry core, and filing it under an
+# existing department to avoid building the feature would misroute every request that reached it.
+
+[vertical]
+slug = "education"
+name = "headcount-education"
+title = "Education"
+tagline = "An agent organization for people who make learning materials — the full cross-industry core, plus standards alignment, materials design and assessment."
+description = "An agent organization for curriculum publishers, learning-materials authors and education programs. Each department installs independently so only the relevant function loads."
+keywords = ["education", "curriculum", "learning-materials", "standards-alignment"]
+rationale = """
+Making learning materials is a publishing business with a compliance problem attached. The core
+covers the publishing side — positioning, pricing, content operations, unit economics — and says
+nothing about the part that decides whether the material is any good or lawful to sell: whether it
+aligns to the standard it claims to, whether the task is developmentally plausible for the age on
+the cover, and whether the alignment can be stated without reproducing text that is not yours.
+
+That last constraint is not incidental. Most education standards are free to read and not free to
+reproduce. Common Core is usable only with its required attribution notice; NGSS is copyrighted
+with a registered trademark on its name. A generator that paraphrases a standard into a worksheet
+header is a legal problem, not a formatting choice. The skills here treat citing the code and
+reproducing the text as different acts, and the source catalog records which is permitted for each
+publisher.
+"""
+
+[repo]
+url = "https://github.com/cbrock84/headcount-education"
+upstream = "https://github.com/cbrock84/headcount"
+
+[[department]]
+name = "education"
+title = "Education"
+description = "Standards alignment, learning-materials design, assessment construction, and developmentally appropriate practice."
+keywords = ["curriculum", "standards", "assessment", "pedagogy"]
+category = "education"
+
+[emit]
+exclude_departments = []

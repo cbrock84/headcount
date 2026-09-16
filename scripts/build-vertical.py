@@ -34,6 +34,7 @@ import glob
 import json
 import os
 import re
+import re
 import shutil
 import subprocess
 import sys
@@ -209,6 +210,44 @@ def collect(slug):
     return skills, context
 
 
+def charter(entry, vertical_title):
+    """The agent charter for a department a vertical brings with it."""
+    name, title = entry["name"], entry["title"]
+    return f"""---
+name: {name}
+description: {title}. Owns plugins/{name}/** and nothing else. Delegate work in this department's remit here.
+---
+
+# {title}
+
+## Why this agent exists
+
+The single owner of `plugins/{name}/**`. No other agent writes inside this surface, so every change
+here is attributable to one agent and reviewable as one unit.
+
+This department does not exist in the cross-industry core. It is brought by the {vertical_title}
+vertical, because its remit is specific to that industry rather than a thinner version of something
+every company has.
+
+## Surface
+
+Writes: `plugins/{name}/**`.
+Reads: anything. Commits: nothing; the orchestrator is the sole committer.
+
+## Standard
+
+Skills in this department follow the conventions in `technology:skill-authoring`: the frontmatter
+`name` equals the directory name, and the description carries both what the skill does and when to
+reach for it.
+
+## Verification this surface implies
+
+- `python3 scripts/validate-skills.py` passes.
+- `python3 scripts/check-provenance.py` passes — all content here is original.
+- No change outside `plugins/{name}/**`. Needing one means coordinating with that surface's owner.
+"""
+
+
 def emit(slug, config, out):
     vertical, repo = config["vertical"], config["repo"]
     title = vertical["title"]
@@ -218,6 +257,21 @@ def emit(slug, config, out):
     unknown = excluded - set(core_departments())
     if unknown:
         die("exclude_departments names department(s) that are not on disk: " + ", ".join(sorted(unknown)))
+
+    # A vertical may bring a department the core has no reason to carry. Industrial did not need
+    # this — its skills belong to operations and people, which already exist. Education does: a
+    # curriculum function is not a thinner version of anything in a cross-industry core, and
+    # filing it under an existing department to avoid the feature would misroute every request.
+    added = config.get("department", [])
+    for entry in added:
+        for field in ("name", "title", "description"):
+            if not entry.get(field):
+                die(f"verticals/{slug}: a [[department]] entry is missing {field}")
+        if entry["name"] in departments:
+            die(f"verticals/{slug}: department {entry['name']!r} already exists in the core — "
+                f"add skills to it instead of declaring it")
+    departments += [e["name"] for e in added]
+    new_departments = {e["name"]: e for e in added}
 
     skills, context = collect(slug)
     for (dept, skill) in list(skills) + list(context):
@@ -242,9 +296,24 @@ def emit(slug, config, out):
     # Departments, with the vertical's material folded in.
     counts = {}
     for dept in departments:
-        src = os.path.join(ROOT, "plugins", dept)
         dst = os.path.join(out, "plugins", dept)
-        shutil.copytree(src, dst)
+        if dept in new_departments:
+            entry = new_departments[dept]
+            os.makedirs(os.path.join(dst, "skills"))
+            os.makedirs(os.path.join(dst, ".claude-plugin"))
+            with open(os.path.join(dst, ".claude-plugin", "plugin.json"), "w",
+                      encoding="utf-8") as handle:
+                json.dump({
+                    "name": dept,
+                    "description": entry["description"],
+                    "version": "1.0.0",
+                    "author": {"name": vertical.get("author", "Chris Brock")},
+                    "repository": repo["url"],
+                    "keywords": entry.get("keywords", []),
+                }, handle, indent=2)
+                handle.write("\n")
+        else:
+            shutil.copytree(os.path.join(ROOT, "plugins", dept), dst)
         for path in glob.glob(os.path.join(dst, "skills", "*", "SKILL.md")):
             skill = os.path.basename(os.path.dirname(path))
             fragment = context.get((dept, skill))
@@ -255,9 +324,9 @@ def emit(slug, config, out):
         for (d, skill), path in skills.items():
             if d != dept:
                 continue
-            target = os.path.join(dst, "skills", skill)
-            os.makedirs(target, exist_ok=True)
-            shutil.copy2(path, os.path.join(target, "SKILL.md"))
+            # The whole directory, not just SKILL.md — a skill's `references/` is where its
+            # sources live, and copying the file alone would ship the pointer without the target.
+            shutil.copytree(os.path.dirname(path), os.path.join(dst, "skills", skill))
         manifest_path = os.path.join(dst, ".claude-plugin", "plugin.json")
         manifest = json.load(open(manifest_path, encoding="utf-8"))
         manifest["repository"] = repo["url"]
@@ -271,6 +340,18 @@ def emit(slug, config, out):
     marketplace["name"] = name
     marketplace["metadata"]["description"] = vertical.get("description", marketplace["metadata"]["description"])
     marketplace["plugins"] = [p for p in marketplace["plugins"] if p["name"] in departments]
+    marketplace["plugins"] += [
+        {
+            "name": e["name"],
+            "source": f"./plugins/{e['name']}",
+            "description": e["description"],
+            "version": "1.0.0",
+            "author": {"name": vertical.get("author", "Chris Brock")},
+            "keywords": e.get("keywords", []),
+            "category": e.get("category", e["name"]),
+        }
+        for e in added
+    ]
     os.makedirs(os.path.join(out, ".claude-plugin"))
     with open(os.path.join(out, ".claude-plugin", "marketplace.json"), "w", encoding="utf-8") as handle:
         json.dump(marketplace, handle, indent=2)
@@ -278,8 +359,28 @@ def emit(slug, config, out):
 
     # The surface map, charters, and the checks that still apply downstream.
     os.makedirs(os.path.join(out, "docs"))
-    shutil.copy2(os.path.join(ROOT, "docs", "AGENT-SURFACES.md"), os.path.join(out, "docs"))
+    surfaces = open(os.path.join(ROOT, "docs", "AGENT-SURFACES.md"), encoding="utf-8").read()
     shutil.copytree(os.path.join(ROOT, ".claude"), os.path.join(out, ".claude"))
+    for entry in added:
+        name = entry["name"]
+        # A roster row, a surface block and a charter, in the same change — the rule the map states
+        # for a new department, applied by the generator because nobody is there to apply it by hand.
+        surfaces = surfaces.replace(
+            "verticals            builder    installed  proposes\n",
+            f"{name:<20} builder    installed  autonomous\n", 1)
+        surfaces = surfaces.replace(
+            "```surface:repo-meta",
+            f"```surface:{name}\nplugins/{name}/**\n```\n\n```surface:repo-meta", 1)
+        with open(os.path.join(out, ".claude", "agents", f"{name}.md"), "w",
+                  encoding="utf-8") as handle:
+            handle.write(charter(entry, title))
+    # `verticals` and `sources` own nothing in an emitted repository — their inputs stay upstream —
+    # so their rows would claim paths that are not here. Dropping them keeps the emitted map true.
+    for gone in ("verticals", "sources"):
+        surfaces = re.sub(rf"^{gone}\s+builder\s+installed\s+\w+\n", "", surfaces, flags=re.M)
+        surfaces = re.sub(rf"```surface:{gone}\n.*?```\n\n", "", surfaces, flags=re.S)
+        os.remove(os.path.join(out, ".claude", "agents", f"{gone}.md"))
+    open(os.path.join(out, "docs", "AGENT-SURFACES.md"), "w", encoding="utf-8").write(surfaces)
     os.makedirs(os.path.join(out, "scripts"))
     for script in EMIT_SCRIPTS:
         shutil.copy2(os.path.join(ROOT, "scripts", script), os.path.join(out, "scripts"))

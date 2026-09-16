@@ -50,6 +50,7 @@ recorded rather than being deleted.
 | D36 | Where emitted vertical repositories live | ✅ Resolved |
 | D37 | Authoritative sources as a catalog of references | ✅ Resolved |
 | D38 | Running in ChatGPT as well as Claude Code | ✅ Resolved |
+| D39 | A vertical that brings its own department | ✅ Resolved |
 
 ---
 
@@ -1350,3 +1351,42 @@ which is a different job from the skills, which describe how to do the work of a
 **The Codex category vocabulary is not published**, and Codex's own marketplace uses a small set of
 broad labels. Every department here is a business function, so all sixteen carry one conservative
 label rather than sixteen guesses. Revisit if a vocabulary is documented.
+
+---
+
+## D39. A vertical that brings its own department — ✅ Resolved
+
+The education vertical was the second one built, and it immediately failed in a way industrial never
+could. Industrial's skills belong to `operations` and `people`, which already exist; the generator
+only ever had to add skills to departments it was already emitting. A curriculum function has no
+home in a cross-industry core, because it is not a thinner version of anything every company has.
+
+- **(a) Let a vertical declare a department, and have the generator do everything a new department
+  requires.** ← **chosen**
+- (b) File the education skills under an existing department — `product`, as curriculum-as-product,
+  or `operations`. Needs no code, and misroutes every request that reaches it: a question about
+  standards alignment loading a software product skill is the silent-collision failure
+  `technology:skill-authoring` names.
+- (c) Add `education` to the core, excluded from every other vertical. Puts a department nobody
+  outside one industry wants into the default install, and inverts the exclusion list from a rare
+  exception into the normal case.
+
+**Resolution: (a).** A `[[department]]` entry in the vertical config, and the generator does what
+the surface map requires of a new department because nobody is there to do it by hand: the plugin
+manifest, the marketplace entry, the roster row, the surface block, and the charter — all in the
+same emit, which is the rule the map states for a new department.
+
+**Two adjacent things this exposed and fixed.**
+
+Vertical skills were being copied as a lone `SKILL.md` rather than as a directory, so a skill's
+`references/` never shipped. That went unnoticed while no vertical skill had any; the source catalog
+gave education four that do, and the pointer would have shipped without its target.
+
+The catalog could not reach a vertical's skills at all, because it resolved `department:skill` only
+against `plugins/`. That was backwards: a vertical is where an outside authority matters *most*,
+since the advice is industry-specific and therefore regulated by somebody. Both the checker and the
+emitter now resolve against the core and every vertical.
+
+**The emitted map drops the `verticals` and `sources` rows.** Their inputs stay upstream, so
+downstream those rows would claim paths that are not there — a map that governs nothing, which is
+the condition the authority column was added to eliminate.

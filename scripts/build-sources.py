@@ -82,10 +82,19 @@ def targets():
     for _, entry in load_catalog():
         for ref in entry.get("skills", []):
             by_skill[ref].append(entry)
+    import importlib.util
+    spec = importlib.util.spec_from_file_location(
+        "check_sources", os.path.join(os.path.dirname(os.path.abspath(__file__)), "check-sources.py"))
+    checker = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(checker)
+
     out = {}
     for ref, entries in by_skill.items():
         department, skill = ref.split(":")
-        out[f"plugins/{department}/skills/{skill}/references/sources.md"] = render(ref, entries)
+        path = checker.skill_path(department, skill)
+        if not path:
+            continue  # check-sources.py reports this; emitting is not the place to fail on it
+        out[os.path.join(os.path.dirname(path), "references", "sources.md")] = render(ref, entries)
     return out
 
 
@@ -97,7 +106,8 @@ def main():
     wanted = targets()
     # A skill that loses its last source must lose the file too, or the catalog and the tree
     # disagree in the one direction a content comparison cannot see.
-    existing = {p for p in glob.glob("plugins/*/skills/*/references/sources.md")}
+    existing = (set(glob.glob("plugins/*/skills/*/references/sources.md"))
+                | set(glob.glob("verticals/*/skills/*/*/references/sources.md")))
     stale = sorted(existing - set(wanted))
 
     if args.check:
