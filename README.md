@@ -8,6 +8,14 @@
   <img alt="172 skills" src="https://img.shields.io/badge/skills-172-3F4B5B?style=flat-square">
   <a href="docs/SOURCES.md"><img alt="181 cited sources" src="https://img.shields.io/badge/cited%20sources-181-3F4B5B?style=flat-square"></a>
   <a href="LICENSE"><img alt="MIT licensed" src="https://img.shields.io/badge/license-MIT-3F4B5B?style=flat-square"></a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/cbrock84/headcount/actions/workflows/checks.yml"><img alt="Checks" src="https://img.shields.io/github/actions/workflow/status/cbrock84/headcount/checks.yml?style=flat-square&label=checks"></a>
+  <a href="https://github.com/cbrock84/headcount/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/cbrock84/headcount?style=flat-square&color=3F4B5B"></a>
+  <a href="https://github.com/cbrock84/headcount/graphs/contributors"><img alt="Contributors" src="https://img.shields.io/github/contributors/cbrock84/headcount?style=flat-square&color=3F4B5B"></a>
+  <img alt="Last commit" src="https://img.shields.io/github/last-commit/cbrock84/headcount?style=flat-square&color=3F4B5B">
+  <img alt="Visitors" src="https://visitor-badge.laobi.icu/badge?page_id=cbrock84.headcount&title=visitors&color=3F4B5B">
   <a href="CONTRIBUTING.md"><img alt="PRs welcome" src="https://img.shields.io/badge/PRs-welcome-2EA043?style=flat-square"></a>
 </p>
 
@@ -445,6 +453,21 @@ cannot drift.
 A new department needs its roster row in `docs/AGENT-SURFACES.md`, a surface block, a charter in
 `.claude/agents/`, and an entry in `.claude-plugin/marketplace.json` — all in the same change, or
 the check fails.
+
+## Contributors
+
+<a href="https://github.com/cbrock84/headcount/graphs/contributors">
+  <img alt="Contributors to headcount" src="https://contrib.rocks/image?repo=cbrock84/headcount">
+</a>
+
+The ChatGPT and Codex support in this repository started as a contribution from
+[@adi-dibra](https://github.com/adi-dibra), who worked out that the same `SKILL.md` files load
+in both tools and that only the manifests differ.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=cbrock84/headcount&type=Date&theme=dark">
+  <img alt="Star history" src="https://api.star-history.com/svg?repos=cbrock84/headcount&type=Date" width="600">
+</picture>
 
 ## Writing
 

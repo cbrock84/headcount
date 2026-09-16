@@ -83,7 +83,12 @@ def skills(dept):
 total = sum(len(skills(d)) for d, _, _ in ORDER)
 # Badge counts come from the same tree walk as the tables below, so they cannot drift from
 # reality — a wrong count fails `build-readme.py --check` in CI like any other staleness.
-B = "https://img.shields.io/badge"
+# Two bases, and the difference matters: the static `/badge/` endpoint takes a literal
+# label-message-color triple, while the live endpoints hang off the root. Interpolating the
+# `/badge` base into a `github/...` path produces a URL that returns a picture of itself.
+SHIELDS = "https://img.shields.io"
+B = f"{SHIELDS}/badge"
+REPO = "cbrock84/headcount"
 out = [
     '<h1 align="center">headcount</h1>',
     "",
@@ -99,6 +104,21 @@ out = [
     f'  <a href="docs/SOURCES.md"><img alt="{SOURCE_COUNT} cited sources"'
     f' src="{B}/cited%20sources-{SOURCE_COUNT}-3F4B5B?style=flat-square"></a>',
     f'  <a href="LICENSE"><img alt="MIT licensed" src="{B}/license-MIT-3F4B5B?style=flat-square"></a>',
+    "</p>",
+    "",
+    # A second row, live rather than generated. The first row says what this is and is computed
+    # from the tree; this one says how it is doing and is fetched when someone loads the page.
+    # The build badge is the one that earns its place: fourteen checks run on every push, and a
+    # reader has no other way to know they pass.
+    '<p align="center">',
+    f'  <a href="https://github.com/{REPO}/actions/workflows/checks.yml"><img alt="Checks"'
+    f' src="{SHIELDS}/github/actions/workflow/status/{REPO}/checks.yml?style=flat-square&label=checks"></a>',
+    f'  <a href="https://github.com/{REPO}/stargazers"><img alt="Stars"'
+    f' src="{SHIELDS}/github/stars/{REPO}?style=flat-square&color=3F4B5B"></a>',
+    f'  <a href="https://github.com/{REPO}/graphs/contributors"><img alt="Contributors"'
+    f' src="{SHIELDS}/github/contributors/{REPO}?style=flat-square&color=3F4B5B"></a>',
+    f'  <img alt="Last commit" src="{SHIELDS}/github/last-commit/{REPO}?style=flat-square&color=3F4B5B">',
+    f'  <img alt="Visitors" src="https://visitor-badge.laobi.icu/badge?page_id={REPO.replace("/", ".")}&title=visitors&color=3F4B5B">',
     f'  <a href="CONTRIBUTING.md"><img alt="PRs welcome" src="{B}/PRs-welcome-2EA043?style=flat-square"></a>',
     "</p>",
     "",
@@ -251,6 +271,24 @@ out += [
     "A new department needs its roster row in `docs/AGENT-SURFACES.md`, a surface block, a charter in",
     "`.claude/agents/`, and an entry in `.claude-plugin/marketplace.json` — all in the same change, or",
     "the check fails.",
+    "",
+    "## Contributors",
+    "",
+    # Both images are fetched when the page loads rather than committed, so neither can go stale
+    # and neither adds a binary to the tree. The star chart carries a dark variant because the
+    # plotted line is drawn on a light canvas by default and disappears on GitHub's dark theme.
+    f'<a href="https://github.com/{REPO}/graphs/contributors">',
+    f'  <img alt="Contributors to headcount" src="https://contrib.rocks/image?repo={REPO}">',
+    "</a>",
+    "",
+    "The ChatGPT and Codex support in this repository started as a contribution from",
+    "[@adi-dibra](https://github.com/adi-dibra), who worked out that the same `SKILL.md` files load",
+    "in both tools and that only the manifests differ.",
+    "",
+    "<picture>",
+    f'  <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos={REPO}&type=Date&theme=dark">',
+    f'  <img alt="Star history" src="https://api.star-history.com/svg?repos={REPO}&type=Date" width="600">',
+    "</picture>",
     "",
     "## Writing",
     "",
