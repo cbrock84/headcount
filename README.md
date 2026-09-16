@@ -3,9 +3,10 @@
 <p align="center"><b>Add a department, not a prompt.</b></p>
 
 <p align="center">
-  <a href="https://claude.com/claude-code"><img alt="Built for Claude Code" src="https://img.shields.io/badge/built%20for-Claude%20Code-D97757?style=flat-square"></a>
+  <a href="AGENTS.md"><img alt="Runs in Claude Code and ChatGPT" src="https://img.shields.io/badge/runs%20in-Claude%20Code%20%C2%B7%20ChatGPT-D97757?style=flat-square"></a>
   <img alt="16 departments" src="https://img.shields.io/badge/departments-16-3F4B5B?style=flat-square">
   <img alt="172 skills" src="https://img.shields.io/badge/skills-172-3F4B5B?style=flat-square">
+  <a href="docs/SOURCES.md"><img alt="181 cited sources" src="https://img.shields.io/badge/cited%20sources-181-3F4B5B?style=flat-square"></a>
   <a href="LICENSE"><img alt="MIT licensed" src="https://img.shields.io/badge/license-MIT-3F4B5B?style=flat-square"></a>
   <a href="CONTRIBUTING.md"><img alt="PRs welcome" src="https://img.shields.io/badge/PRs-welcome-2EA043?style=flat-square"></a>
 </p>
@@ -408,6 +409,8 @@ plugins/<department>/
   .codex-plugin/plugin.json    the same department, ChatGPT and Codex
   skills/<skill>/SKILL.md      frontmatter name equals the directory name
   skills/<skill>/references/   supporting files, including the skill's sources
+.claude-plugin/marketplace.json  the marketplace Claude Code reads
+.agents/plugins/marketplace.json the same departments, for ChatGPT and Codex
 sources/*.toml                 the source catalog, mapped to the skills it serves
 verticals/<name>/              industry packs, emitted as standalone repositories
 .claude/agents/<id>.md         one charter per department

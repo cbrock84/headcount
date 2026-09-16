@@ -49,6 +49,22 @@ def load_departments():
 ORDER = load_departments()
 
 
+def _catalog_counts():
+    """Catalog totals, read from the catalog so the README cannot claim a number it does not hold."""
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("check_sources", "scripts/check-sources.py")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    entries = module.load()
+    skills = {ref for _, e in entries for ref in e.get("skills", [])}
+    quotable = {"public-domain-usgov", "public-domain", "cc0", "cc-by", "open-data",
+                "attribution-required"}
+    return len(entries), len(skills), sum(1 for _, e in entries if e["license"] in quotable)
+
+
+SOURCE_COUNT, SOURCE_SKILLS, SOURCE_QUOTABLE = _catalog_counts()
+
+
 def summarize(path, limit=165):
     text = open(path, encoding="utf-8").read()
     front = re.match(r"^---\s*\n(.*?)\n---", text, re.S).group(1)
@@ -74,10 +90,14 @@ out = [
     '<p align="center"><b>Add a department, not a prompt.</b></p>',
     "",
     '<p align="center">',
-    f'  <a href="https://claude.com/claude-code"><img alt="Built for Claude Code"'
-    f' src="{B}/built%20for-Claude%20Code-D97757?style=flat-square"></a>',
+    # "Built for Claude Code" stopped being true when the ChatGPT manifests landed. Both tools read
+    # the same skills from this tree, and the badge is the first thing anyone reads.
+    f'  <a href="AGENTS.md"><img alt="Runs in Claude Code and ChatGPT"'
+    f' src="{B}/runs%20in-Claude%20Code%20%C2%B7%20ChatGPT-D97757?style=flat-square"></a>',
     f'  <img alt="{len(ORDER)} departments" src="{B}/departments-{len(ORDER)}-3F4B5B?style=flat-square">',
     f'  <img alt="{total} skills" src="{B}/skills-{total}-3F4B5B?style=flat-square">',
+    f'  <a href="docs/SOURCES.md"><img alt="{SOURCE_COUNT} cited sources"'
+    f' src="{B}/cited%20sources-{SOURCE_COUNT}-3F4B5B?style=flat-square"></a>',
     f'  <a href="LICENSE"><img alt="MIT licensed" src="{B}/license-MIT-3F4B5B?style=flat-square"></a>',
     f'  <a href="CONTRIBUTING.md"><img alt="PRs welcome" src="{B}/PRs-welcome-2EA043?style=flat-square"></a>',
     "</p>",
@@ -161,21 +181,6 @@ for dept, title, exec_role in ORDER:
         out.append(f"| `{os.path.basename(os.path.dirname(p))}` | {summarize(p)}. |")
     out += ["", "</details>", ""]
 
-def catalog():
-    """The source catalog, read the same way check-sources.py reads it."""
-    import importlib.util
-    spec = importlib.util.spec_from_file_location("check_sources", "scripts/check-sources.py")
-    module = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(module)
-    entries = module.load()
-    skills = {ref for _, e in entries for ref in e.get("skills", [])}
-    quotable = {"public-domain-usgov", "public-domain", "cc0", "cc-by", "open-data",
-                "attribution-required"}
-    return len(entries), len(skills), sum(1 for _, e in entries if e["license"] in quotable)
-
-
-SOURCE_COUNT, SOURCE_SKILLS, SOURCE_QUOTABLE = catalog()
-
 out += [
     "**Reviewer-class departments** (`security`, `legal-risk`) review what other departments build, and",
     "their blocking findings are not overrulable by the department under review. That is why the CISO",
@@ -210,6 +215,8 @@ out += [
     "  .codex-plugin/plugin.json    the same department, ChatGPT and Codex",
     "  skills/<skill>/SKILL.md      frontmatter name equals the directory name",
     "  skills/<skill>/references/   supporting files, including the skill's sources",
+    ".claude-plugin/marketplace.json  the marketplace Claude Code reads",
+    ".agents/plugins/marketplace.json the same departments, for ChatGPT and Codex",
     "sources/*.toml                 the source catalog, mapped to the skills it serves",
     "verticals/<name>/              industry packs, emitted as standalone repositories",
     ".claude/agents/<id>.md         one charter per department",
