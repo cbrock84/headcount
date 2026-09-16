@@ -1,0 +1,26 @@
+{
+  "name": "demand-generation",
+  "version": "1.0.0",
+  "description": "Organic and paid acquisition, conversion, measurement, experimentation, lifecycle messaging, and distribution.",
+  "author": {
+    "name": "Chris Brock"
+  },
+  "repository": "https://github.com/cbrock84/headcount",
+  "license": "MIT",
+  "keywords": [
+    "seo",
+    "paid-ads",
+    "cro",
+    "analytics",
+    "lifecycle",
+    "growth"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Demand Generation",
+    "category": "Productivity",
+    "shortDescription": "Demand Generation, as an installable department",
+    "longDescription": "Organic and paid acquisition, conversion, measurement, experimentation, lifecycle messaging, and distribution.",
+    "developerName": "Chris Brock"
+  }
+}

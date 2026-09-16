@@ -1,0 +1,25 @@
+{
+  "name": "pmo",
+  "version": "1.0.0",
+  "description": "Enterprise program management office: portfolio governance, program and project delivery, dependencies and delivery risk, benefits realization, and adoption.",
+  "author": {
+    "name": "Chris Brock"
+  },
+  "repository": "https://github.com/cbrock84/headcount",
+  "license": "MIT",
+  "keywords": [
+    "pmo",
+    "portfolio",
+    "project-management",
+    "program-management",
+    "delivery"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Program Management Office",
+    "category": "Productivity",
+    "shortDescription": "Program Management Office, as an installable department",
+    "longDescription": "Enterprise program management office: portfolio governance, program and project delivery, dependencies and delivery risk, benefits realization, and adoption.",
+    "developerName": "Chris Brock"
+  }
+}

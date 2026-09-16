@@ -49,6 +49,7 @@ recorded rather than being deleted.
 | D35 | Whether description shape is a checkable convention | ✅ Resolved |
 | D36 | Where emitted vertical repositories live | ✅ Resolved |
 | D37 | Authoritative sources as a catalog of references | ✅ Resolved |
+| D38 | Running in ChatGPT as well as Claude Code | ✅ Resolved |
 
 ---
 
@@ -1308,3 +1309,44 @@ its body, which the waiver was tested against by pasting some in and watching it
 **Coverage is `security`, `legal-risk` and `finance` first** — the three departments where citing
 the authority changes the answer rather than decorating it. Extending it is adding entries, not
 changing the mechanism.
+
+---
+
+## D38. Running in ChatGPT as well as Claude Code — ✅ Resolved
+
+The ask was to port the catalog so it works outside Claude Code. Checking what a port now requires
+turned out to make the decision, because the answer changed: **ChatGPT reads the same `SKILL.md`** —
+YAML frontmatter with `name` and `description`, a body, and optional `scripts/`, `references/` and
+`assets/` alongside. There is no content to port. What differs is where each tool looks for the
+manifests that describe a bundle.
+
+| | Plugin manifest | Marketplace |
+|---|---|---|
+| Claude Code | `plugins/<dept>/.claude-plugin/plugin.json` | `.claude-plugin/marketplace.json` |
+| OpenAI / Codex | `plugins/<dept>/.codex-plugin/plugin.json` | `.agents/plugins/marketplace.json` |
+
+- **(a) A second set of manifests over the same tree, generated and `--check`ed.** ← **chosen**
+- (b) Emit a standalone `headcount-openai` repository, the way `build-vertical.py` emits verticals.
+  Consistent with the machinery already built, and wrong here: a vertical emits a *different*
+  catalog, while this would emit the same 172 skills twice. Two install sources for identical
+  content, and every skill fix needing a re-emit before it reaches half the users.
+- (c) Commit a `Codex/` copy of the tree. This was offered to the repository as a contribution. It
+  is the fork D8 rejected, and the copy was a month stale before it was reviewed.
+
+**Resolution: (a).** Sixteen small manifests, a marketplace file and an `AGENTS.md`, all generated
+from the Claude manifests and the tree, all verified by `--check`. One clone installs in either
+tool, and a skill fixed once is fixed for both because there is only one copy of it.
+
+**Two things this settles beyond the mechanism.**
+
+The per-department split stops being merely tidy and becomes required. ChatGPT budgets skill
+descriptions at roughly 8,000 characters; 172 descriptions is about 50,000. Installing the whole
+catalog at once was never the intended use and on that surface it is not a possible one.
+
+`AGENTS.md` is generated rather than written, because it states counts. It is read by Codex, Cursor,
+Gemini CLI and Copilot among others, and describes the repository to an agent working *on* it —
+which is a different job from the skills, which describe how to do the work of a function.
+
+**The Codex category vocabulary is not published**, and Codex's own marketplace uses a small set of
+broad labels. Every department here is a business function, so all sixteen carry one conservative
+label rather than sixteen guesses. Revisit if a vocabulary is documented.

@@ -1,0 +1,25 @@
+{
+  "name": "customer-experience",
+  "version": "1.0.0",
+  "description": "Support operations, escalation management, voice of customer, and self-service. Owns what the customer experiences after the sale.",
+  "author": {
+    "name": "Chris Brock"
+  },
+  "repository": "https://github.com/cbrock84/headcount",
+  "license": "MIT",
+  "keywords": [
+    "support",
+    "customer-success",
+    "escalation",
+    "voice-of-customer",
+    "service"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Customer Experience",
+    "category": "Productivity",
+    "shortDescription": "Customer Experience, as an installable department",
+    "longDescription": "Support operations, escalation management, voice of customer, and self-service. Owns what the customer experiences after the sale.",
+    "developerName": "Chris Brock"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "product",
+  "version": "1.0.0",
+  "description": "Product strategy, UX and usability audit, design systems, interface craft, brand expression, and visual direction.",
+  "author": {
+    "name": "Chris Brock"
+  },
+  "repository": "https://github.com/cbrock84/headcount",
+  "license": "MIT",
+  "keywords": [
+    "product",
+    "ux",
+    "design",
+    "design-system",
+    "brand"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Product",
+    "category": "Productivity",
+    "shortDescription": "Product, as an installable department",
+    "longDescription": "Product strategy, UX and usability audit, design systems, interface craft, brand expression, and visual direction.",
+    "developerName": "Chris Brock"
+  }
+}

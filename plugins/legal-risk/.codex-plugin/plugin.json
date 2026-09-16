@@ -1,0 +1,25 @@
+{
+  "name": "legal-risk",
+  "version": "1.0.0",
+  "description": "Contract review, privacy and data protection, enterprise risk, corporate governance, compliance, and audit readiness. Reviewer-class: its findings are not overrulable by the department under review.",
+  "author": {
+    "name": "Chris Brock"
+  },
+  "repository": "https://github.com/cbrock84/headcount",
+  "license": "MIT",
+  "keywords": [
+    "legal",
+    "privacy",
+    "risk",
+    "compliance",
+    "contracts"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Legal & Risk",
+    "category": "Productivity",
+    "shortDescription": "Legal & Risk, as an installable department",
+    "longDescription": "Contract review, privacy and data protection, enterprise risk, corporate governance, compliance, and audit readiness. Reviewer-class: its findings are not overrulable by the department under review.",
+    "developerName": "Chris Brock"
+  }
+}

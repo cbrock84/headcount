@@ -35,6 +35,8 @@ run "US English spelling" \
   python3 scripts/check-us-english.py
 run "Never blocks are internally consistent" \
   python3 scripts/check-never-blocks.py
+run "OpenAI/Codex manifests are current" \
+  python3 scripts/build-port.py --check
 run "Source catalog is valid" \
   python3 scripts/check-sources.py
 run "Skill source files are current" \
@@ -45,7 +47,7 @@ run "Manifests parse" \
   python3 -c "
 import json,glob,sys
 bad=[]
-for f in ['.claude-plugin/marketplace.json']+glob.glob('plugins/*/.claude-plugin/plugin.json'):
+for f in ['.claude-plugin/marketplace.json','.agents/plugins/marketplace.json']+glob.glob('plugins/*/.claude-plugin/plugin.json')+glob.glob('plugins/*/.codex-plugin/plugin.json'):
     try: json.load(open(f))
     except Exception as e: bad.append(f'{f}: {e}')
 for b in bad: print(' ',b)

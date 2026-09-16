@@ -1,0 +1,26 @@
+{
+  "name": "security",
+  "version": "1.0.0",
+  "description": "Threat modeling, security architecture review, incident response, vulnerability management, and access and identity. Reviewer-class: blocking findings are not overrulable by the department under review.",
+  "author": {
+    "name": "Chris Brock"
+  },
+  "repository": "https://github.com/cbrock84/headcount",
+  "license": "MIT",
+  "keywords": [
+    "security",
+    "appsec",
+    "threat-modeling",
+    "incident-response",
+    "vulnerability-management",
+    "identity"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Security",
+    "category": "Productivity",
+    "shortDescription": "Security, as an installable department",
+    "longDescription": "Threat modeling, security architecture review, incident response, vulnerability management, and access and identity. Reviewer-class: blocking findings are not overrulable by the department under review.",
+    "developerName": "Chris Brock"
+  }
+}

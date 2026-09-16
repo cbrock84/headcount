@@ -1,0 +1,24 @@
+{
+  "name": "finance",
+  "version": "1.0.0",
+  "description": "Financial modeling, budgeting and forecasting, unit economics, and financial decision support.",
+  "author": {
+    "name": "Chris Brock"
+  },
+  "repository": "https://github.com/cbrock84/headcount",
+  "license": "MIT",
+  "keywords": [
+    "finance",
+    "budgeting",
+    "forecasting",
+    "unit-economics"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Finance",
+    "category": "Productivity",
+    "shortDescription": "Finance, as an installable department",
+    "longDescription": "Financial modeling, budgeting and forecasting, unit economics, and financial decision support.",
+    "developerName": "Chris Brock"
+  }
+}

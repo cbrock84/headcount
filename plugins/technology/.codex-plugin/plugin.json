@@ -1,0 +1,25 @@
+{
+  "name": "technology",
+  "version": "1.0.0",
+  "description": "Architecture, engineering delivery, development discipline, debugging, review, and AI and automation systems.",
+  "author": {
+    "name": "Chris Brock"
+  },
+  "repository": "https://github.com/cbrock84/headcount",
+  "license": "MIT",
+  "keywords": [
+    "engineering",
+    "tdd",
+    "debugging",
+    "code-review",
+    "automation"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Technology",
+    "category": "Productivity",
+    "shortDescription": "Technology, as an installable department",
+    "longDescription": "Architecture, engineering delivery, development discipline, debugging, review, and AI and automation systems.",
+    "developerName": "Chris Brock"
+  }
+}

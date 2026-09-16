@@ -1,0 +1,26 @@
+{
+  "name": "data-analytics",
+  "version": "1.0.0",
+  "description": "Data governance, warehouse and semantic modeling, business intelligence, and AI/ML governance.",
+  "author": {
+    "name": "Chris Brock"
+  },
+  "repository": "https://github.com/cbrock84/headcount",
+  "license": "MIT",
+  "keywords": [
+    "data",
+    "analytics",
+    "governance",
+    "warehouse",
+    "business-intelligence",
+    "ai-governance"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Data & Analytics",
+    "category": "Productivity",
+    "shortDescription": "Data & Analytics, as an installable department",
+    "longDescription": "Data governance, warehouse and semantic modeling, business intelligence, and AI/ML governance.",
+    "developerName": "Chris Brock"
+  }
+}

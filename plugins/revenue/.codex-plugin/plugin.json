@@ -1,0 +1,25 @@
+{
+  "name": "revenue",
+  "version": "1.0.0",
+  "description": "Outbound, sales enablement, revenue operations, pricing and packaging, activation, retention, and referrals.",
+  "author": {
+    "name": "Chris Brock"
+  },
+  "repository": "https://github.com/cbrock84/headcount",
+  "license": "MIT",
+  "keywords": [
+    "sales",
+    "pricing",
+    "revenue",
+    "retention",
+    "revops"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Revenue",
+    "category": "Productivity",
+    "shortDescription": "Revenue, as an installable department",
+    "longDescription": "Outbound, sales enablement, revenue operations, pricing and packaging, activation, retention, and referrals.",
+    "developerName": "Chris Brock"
+  }
+}

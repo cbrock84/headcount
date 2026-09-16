@@ -1,0 +1,25 @@
+{
+  "name": "people",
+  "version": "1.0.0",
+  "description": "Org design, hiring and interviewing, compensation and leveling, and workforce planning.",
+  "author": {
+    "name": "Chris Brock"
+  },
+  "repository": "https://github.com/cbrock84/headcount",
+  "license": "MIT",
+  "keywords": [
+    "people",
+    "hr",
+    "org-design",
+    "hiring",
+    "compensation"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "People",
+    "category": "Productivity",
+    "shortDescription": "People, as an installable department",
+    "longDescription": "Org design, hiring and interviewing, compensation and leveling, and workforce planning.",
+    "developerName": "Chris Brock"
+  }
+}

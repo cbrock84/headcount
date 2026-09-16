@@ -1,0 +1,184 @@
+{
+  "name": "headcount",
+  "interface": {
+    "displayName": "headcount"
+  },
+  "plugins": [
+    {
+      "name": "executive",
+      "source": {
+        "source": "local",
+        "path": "./plugins/executive"
+      },
+      "policy": {
+        "installation": "AVAILABLE"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "technology",
+      "source": {
+        "source": "local",
+        "path": "./plugins/technology"
+      },
+      "policy": {
+        "installation": "AVAILABLE"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "it-operations",
+      "source": {
+        "source": "local",
+        "path": "./plugins/it-operations"
+      },
+      "policy": {
+        "installation": "AVAILABLE"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "product",
+      "source": {
+        "source": "local",
+        "path": "./plugins/product"
+      },
+      "policy": {
+        "installation": "AVAILABLE"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "marketing",
+      "source": {
+        "source": "local",
+        "path": "./plugins/marketing"
+      },
+      "policy": {
+        "installation": "AVAILABLE"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "demand-generation",
+      "source": {
+        "source": "local",
+        "path": "./plugins/demand-generation"
+      },
+      "policy": {
+        "installation": "AVAILABLE"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "revenue",
+      "source": {
+        "source": "local",
+        "path": "./plugins/revenue"
+      },
+      "policy": {
+        "installation": "AVAILABLE"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "finance",
+      "source": {
+        "source": "local",
+        "path": "./plugins/finance"
+      },
+      "policy": {
+        "installation": "AVAILABLE"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "operations",
+      "source": {
+        "source": "local",
+        "path": "./plugins/operations"
+      },
+      "policy": {
+        "installation": "AVAILABLE"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "pmo",
+      "source": {
+        "source": "local",
+        "path": "./plugins/pmo"
+      },
+      "policy": {
+        "installation": "AVAILABLE"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "people",
+      "source": {
+        "source": "local",
+        "path": "./plugins/people"
+      },
+      "policy": {
+        "installation": "AVAILABLE"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "legal-risk",
+      "source": {
+        "source": "local",
+        "path": "./plugins/legal-risk"
+      },
+      "policy": {
+        "installation": "AVAILABLE"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "security",
+      "source": {
+        "source": "local",
+        "path": "./plugins/security"
+      },
+      "policy": {
+        "installation": "AVAILABLE"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "customer-experience",
+      "source": {
+        "source": "local",
+        "path": "./plugins/customer-experience"
+      },
+      "policy": {
+        "installation": "AVAILABLE"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "data-analytics",
+      "source": {
+        "source": "local",
+        "path": "./plugins/data-analytics"
+      },
+      "policy": {
+        "installation": "AVAILABLE"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "corporate-strategy",
+      "source": {
+        "source": "local",
+        "path": "./plugins/corporate-strategy"
+      },
+      "policy": {
+        "installation": "AVAILABLE"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
