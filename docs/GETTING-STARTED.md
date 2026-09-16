@@ -1,13 +1,19 @@
 # Getting started
 
-This is a library of expertise, packaged as sixteen independently installable departments for
-[Claude Code](https://claude.com/claude-code). You install the ones you need, and the relevant
-specialist loads itself when you ask something in its territory.
+This is a library of expertise, packaged as sixteen independently installable departments. You
+install the ones you need, and the relevant specialist loads itself when you ask something in its
+territory.
 
-Nothing here changes your project. Installing a department adds skills to Claude Code — it does not
-write to your repository, add dependencies, or run anything on its own.
+It runs in [Claude Code](https://claude.com/claude-code) and in ChatGPT and Codex. The skills are
+the same files in both — only the manifests differ, and both sets are generated from the same tree,
+so a fix reaches both at once.
+
+Nothing here changes your project. Installing a department adds skills to the assistant — it does
+not write to your repository, add dependencies, or run anything on its own.
 
 ## Install
+
+### Claude Code
 
 Add the marketplace once:
 
@@ -23,6 +29,16 @@ Then install departments one at a time:
 ```
 
 `/plugin` on its own opens the plugin menu, where installed plugins can be reviewed and managed.
+
+### ChatGPT and Codex
+
+The same repository. Add it as a plugin marketplace — the manifest ChatGPT reads is at
+`.agents/plugins/marketplace.json` — or copy the department you want into `.agents/skills/` in your
+own project.
+
+One thing worth knowing on that side: skill descriptions share a context budget of roughly eight
+thousand characters, and all sixteen departments together come to about fifty thousand. Installing
+a few departments is not just tidier there, it is the only thing that works.
 
 **Install what you will use, not everything.** Sixteen departments is a lot of surface, and a
 smaller set produces sharper triggering. You can add more at any point.
@@ -51,13 +67,15 @@ to reach for first.
 
 > *"Our margins slipped this quarter and nobody can tell me why."*
 
-**2. Name the skill** when you want a specific lens rather than the one that would trigger:
+**2. Name the skill** when you want a specific lens rather than the one that would trigger. In
+Claude Code:
 
 ```
 /finance:cost-accounting
 ```
 
-Skills are addressed as `department:skill`, so names never collide across departments.
+Elsewhere, name it in the sentence — "use the cost accounting skill" — since the slash form is
+Claude Code's. Skills are addressed as `department:skill` throughout, so names never collide.
 
 **3. Delegate a whole department.** Each department ships an agent charter in `.claude/agents/`,
 so it can be handed a body of work as a subagent with its own exclusive write surface. See

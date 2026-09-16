@@ -7,8 +7,12 @@ These are the situations this catalog is shaped around. Every skill named here e
 in CI fails if a reference stops resolving, so this page cannot rot as skills are renamed or
 consolidated.
 
-New here? [Getting started](GETTING-STARTED.md) covers installing, which departments to take first,
-and the three ways to invoke a skill.
+Where a situation turns on something an outside authority settles — an obligation, a threshold, a
+standard — the skill carries that authority in its own `references/sources.md` and cites it. See
+[the source catalog](SOURCES.md) for what is covered and what may be quoted from it.
+
+New here? [Getting started](GETTING-STARTED.md) covers installing in Claude Code or in ChatGPT,
+which departments to take first, and the three ways to invoke a skill.
 
 ## Single asks
 

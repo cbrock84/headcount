@@ -27,7 +27,9 @@ Every check CI runs, in one script — the workflow calls this same file, so the
 
 - **One owner per path.** `docs/AGENT-SURFACES.md` maps every tracked path to exactly one agent, and no two owners may claim the same path. A new department adds its roster row, its surface block and its charter in the same change.
 - **Generated files are never hand-edited.** The README, the org chart, the social card, each skill's `references/sources.md`, and these manifests are all emitted from the tree and verified with `--check`. An edit to one is lost on the next regenerate.
-- **US English**, by exact word form. `scripts/check-us-english.py --fix` rewrites.
+- **Sources are references, never copies.** `sources/*.toml` maps outside authorities to the skills they settle questions for, and `scripts/build-sources.py` emits each skill's list into its own `references/sources.md`. The `license` field decides whether an agent may quote a source or only cite it — most of what a professional must cite is not open, so when torn between two classes take the more restrictive one.
+- **Verticals emit one way.** `verticals/<slug>/` plus the core emits a standalone repository via `scripts/build-vertical.py`. Generated output is never hand-edited and is not committed; `--verify` emits to a temporary directory and runs the emitted repository's own checks instead.
+- **US English**, by exact word form. `scripts/check-us-english.py --fix` rewrites. It leaves URLs alone, which it did not always do.
 - **No third-party licensed content.** All prose here is original; `scripts/check-provenance.py` is the backstop.
 
 ## Departments

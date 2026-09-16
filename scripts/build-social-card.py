@@ -25,6 +25,15 @@ WIDTH, HEIGHT = 1280, 640  # GitHub's recommended social preview size; rendered 
 
 # Same glob as build-readme.py. Both walk the tree directly rather than sharing state, so the
 # card and the README cannot report different numbers for the same commit.
+def source_total():
+    """Distinct sources in the catalog, read from the catalog rather than typed."""
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("check_sources", "scripts/check-sources.py")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return len({entry["id"] for _, entry in module.load()})
+
+
 def counts():
     depts = sorted(
         os.path.basename(os.path.dirname(os.path.dirname(m)))
@@ -107,7 +116,8 @@ TEMPLATE = """<meta charset="utf-8">
 <div class="meta">
   <b>{DEPTS}</b> departments <span class="sep">/</span>
   <b>{SKILLS}</b> skills <span class="sep">/</span>
-  MIT <span class="sep">/</span> for Claude Code
+  <b>{SOURCES}</b> cited sources <span class="sep">/</span>
+  MIT <span class="sep">/</span> Claude Code &amp; ChatGPT
 </div>
 
 <!-- The chart is the organization's actual shape: one chief executive, departments beneath, and
@@ -159,7 +169,7 @@ TEMPLATE = """<meta charset="utf-8">
 
 def render_html():
     depts, skills = counts()
-    return TEMPLATE.format(W=WIDTH, H=HEIGHT, DEPTS=depts, SKILLS=skills)
+    return TEMPLATE.format(W=WIDTH, H=HEIGHT, DEPTS=depts, SKILLS=skills, SOURCES=source_total())
 
 
 def find_chromium():
