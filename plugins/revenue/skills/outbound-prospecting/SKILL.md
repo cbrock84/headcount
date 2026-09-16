@@ -56,6 +56,13 @@ Use a subdomain for outbound so a reputation problem cannot take down your trans
 - **Replies, no meetings** — a qualification problem: you are reaching people who cannot act.
 - **Meetings, no pipeline** — the segment is wrong.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Tooling
 
 Sequencing: Outreach, Salesloft, Apollo, Lemlist, Instantly, and similar.

@@ -68,7 +68,7 @@ license = "attribution-required"
 jurisdiction = "global"
 authoritative_for = "The shared vocabulary for adversary tactics and techniques — what to name a behavior so a detection, a threat model and an incident report refer to the same thing."
 data = "https://github.com/mitre-attack/attack-stix-data"
-skills = ["security:threat-modeling", "security:incident-response", "security:security-architecture-review"]
+skills = ["security:threat-modeling", "security:incident-response", "security:security-architecture-review", "security:detection-and-monitoring"]
 checked = "2026-09-16"
 
 [[source]]

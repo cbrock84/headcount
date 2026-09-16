@@ -65,6 +65,13 @@ This is the single most useful technique here and the one most often skipped. Wi
 shift toward an expensive product gets reported as a pricing win, and a discount gets buried under
 volume growth.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Never
 
 - Allocate overhead on revenue and present the result as a product margin.

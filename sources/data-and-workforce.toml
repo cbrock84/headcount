@@ -1,0 +1,352 @@
+# AI governance, data specifications, statistical method, and the employment rules that constrain
+# how people are hired, classified and paid.
+#
+# One finding from the research is worth carrying: a federal agency's technical assistance document
+# on AI in hiring — widely cited — was withdrawn from its own site. A skill citing it would send an
+# agent to a dead link. The durable substitute is the regulation underneath it, which is far harder
+# to withdraw than a guidance page. That is a general lesson for this catalog: prefer the rule to
+# the explainer, because the explainer is what disappears.
+
+# ── AI governance ─────────────────────────────────────────────────────────────
+
+[[source]]
+id = "nist-ai-rmf"
+title = "NIST AI Risk Management Framework, AI 100-1"
+publisher = "NIST"
+url = "https://www.nist.gov/itl/ai-risk-management-framework"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "What the four AI risk functions are and what an organization must be able to evidence under each. It ends the argument about what claiming to have an AI governance program has to mean concretely."
+data = "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf"
+skills = ["data-analytics:ai-ml-governance", "data-analytics:chief-data-officer", "executive:ai-research-analyst"]
+checked = "2026-09-16"
+
+[[source]]
+id = "nist-ai-rmf-playbook"
+title = "NIST AI RMF Playbook"
+publisher = "NIST"
+url = "https://airc.nist.gov/airmf-resources/playbook/"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "For each framework subcategory, which actions and documentation artifacts satisfy it. The operational layer the framework itself deliberately leaves abstract."
+skills = ["data-analytics:ai-ml-governance"]
+checked = "2026-09-16"
+
+[[source]]
+id = "nist-ai-genai-profile"
+title = "NIST AI 600-1: Generative AI Profile"
+publisher = "NIST"
+url = "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "Which risks are unique to or amplified by generative models, as distinct from general machine learning risk. Settles the claim that generative systems are just another model."
+data = "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf"
+skills = ["data-analytics:ai-ml-governance", "executive:ai-research-analyst"]
+checked = "2026-09-16"
+
+[[source]]
+id = "oecd-ai-principles"
+title = "OECD Recommendation of the Council on Artificial Intelligence"
+publisher = "OECD"
+url = "https://legalinstruments.oecd.org/en/instruments/OECD-LEGAL-0449"
+license = "attribution-required"
+jurisdiction = "global"
+authoritative_for = "The intergovernmentally agreed definition of an AI system, which other regimes adopt by reference. That definitional question is the one it actually settles."
+skills = ["data-analytics:ai-ml-governance"]
+checked = "2026-09-16"
+
+[[source]]
+id = "iso-42001"
+title = "ISO/IEC 42001 — AI management systems"
+publisher = "ISO"
+url = "https://www.iso.org/standard/42001.html"
+license = "paywalled"
+jurisdiction = "global"
+authoritative_for = "What a certifiable AI management system requires — the only thing an external auditor can certify against, and increasingly what enterprise customers ask for by name. Sold, so name the clause and never reproduce it."
+skills = ["data-analytics:ai-ml-governance"]
+checked = "2026-09-16"
+
+# ── Data specifications ───────────────────────────────────────────────────────
+
+[[source]]
+id = "w3c-dcat"
+title = "Data Catalog Vocabulary"
+publisher = "World Wide Web Consortium"
+url = "https://www.w3.org/TR/vocab-dcat-3/"
+license = "free-to-read"
+jurisdiction = "global"
+authoritative_for = "The interoperable vocabulary for describing datasets and catalogs — what a catalog entry must carry to be exchangeable rather than specific to one tool."
+skills = ["data-analytics:chief-data-officer", "data-analytics:data-engineering"]
+checked = "2026-09-16"
+
+[[source]]
+id = "w3c-shacl"
+title = "Shapes Constraint Language"
+publisher = "World Wide Web Consortium"
+url = "https://www.w3.org/TR/shacl/"
+license = "free-to-read"
+jurisdiction = "global"
+authoritative_for = "How a data constraint is expressed and what conformance means — the normative answer to whether a record is valid against a model, rather than each tool inventing its own semantics."
+skills = ["data-analytics:data-modeling", "data-analytics:data-engineering"]
+checked = "2026-09-16"
+
+[[source]]
+id = "apache-iceberg-spec"
+title = "Apache Iceberg table specification"
+publisher = "Apache Software Foundation"
+url = "https://iceberg.apache.org/spec/"
+license = "attribution-required"
+jurisdiction = "global"
+authoritative_for = "The on-disk contract — metadata layout, snapshots, schema and partition evolution, and what isolation a reader may assume. The document that decides whether two engines agree on what a table is."
+skills = ["data-analytics:data-engineering", "data-analytics:data-modeling"]
+checked = "2026-09-16"
+
+[[source]]
+id = "apache-parquet-spec"
+title = "Apache Parquet file format specification"
+publisher = "Apache Software Foundation"
+url = "https://parquet.apache.org/docs/file-format/"
+license = "attribution-required"
+jurisdiction = "global"
+authoritative_for = "Physical layout, encodings, nesting and the statistics a reader may rely on for predicate pushdown. The normative answer to why a file is slow or unreadable."
+skills = ["data-analytics:data-engineering"]
+checked = "2026-09-16"
+
+[[source]]
+id = "openlineage-spec"
+title = "OpenLineage object model"
+publisher = "LF AI and Data Foundation"
+url = "https://openlineage.io/docs/spec/object-model/"
+license = "attribution-required"
+jurisdiction = "global"
+authoritative_for = "The vendor-neutral event schema for lineage — what an event must contain to be portable, rather than whatever one catalog happens to record."
+skills = ["data-analytics:data-engineering", "data-analytics:chief-data-officer"]
+checked = "2026-09-16"
+
+[[source]]
+id = "nara-general-records-schedules"
+title = "General Records Schedules"
+publisher = "US National Archives and Records Administration"
+url = "https://www.archives.gov/records-mgmt/grs"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "Minimum retention and disposition periods for common administrative record classes. Binding on federal agencies only — for a private company it is a defensible published baseline rather than law, which is still better than arguing from habit."
+skills = ["data-analytics:chief-data-officer", "legal-risk:disputes-and-legal-holds"]
+checked = "2026-09-16"
+
+# ── Statistical method ────────────────────────────────────────────────────────
+
+[[source]]
+id = "nist-sematech-handbook"
+title = "NIST/SEMATECH e-Handbook of Statistical Methods"
+publisher = "NIST"
+url = "https://www.itl.nist.gov/div898/handbook/"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "The correct procedure, assumptions and interpretation for a named statistical technique. A neutral referee when two analysts disagree on method — strong on classical methods, silent on modern causal inference."
+skills = ["data-analytics:quantitative-analysis"]
+checked = "2026-09-16"
+
+[[source]]
+id = "census-quality-standards"
+title = "Statistical Quality Standards"
+publisher = "US Census Bureau"
+url = "https://www.census.gov/about/policies/quality/standards.html"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "The quality requirements at each stage of producing a statistical product, including when an estimate must be suppressed or flagged rather than published."
+skills = ["data-analytics:quantitative-analysis", "data-analytics:business-intelligence"]
+checked = "2026-09-16"
+
+[[source]]
+id = "bls-handbook-of-methods"
+title = "BLS Handbook of Methods"
+publisher = "US Bureau of Labor Statistics"
+url = "https://www.bls.gov/opub/hom/"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "What each labor statistic actually measures and how. Ends the common error of comparing two series that measure different things, which is most disagreements about labor market data."
+data = "https://www.bls.gov/developers/"
+skills = ["data-analytics:quantitative-analysis", "people:workforce-planning"]
+checked = "2026-09-16"
+
+[[source]]
+id = "onet-database"
+title = "O*NET database"
+publisher = "National Center for O*NET Development, US Department of Labor"
+url = "https://www.onetcenter.org/database.html"
+license = "cc-by"
+jurisdiction = "US"
+authoritative_for = "The canonical task, skill, knowledge and ability content of an occupation. A neutral reference when arguing about what a role comprises or how two roles overlap — and openly licensed, which is rare here."
+skills = ["people:workforce-planning", "people:org-design", "people:learning-and-development"]
+checked = "2026-09-16"
+
+# ── Employment law that constrains design ─────────────────────────────────────
+
+[[source]]
+id = "uniform-guidelines-selection"
+title = "29 CFR Part 1607 — Uniform Guidelines on Employee Selection Procedures"
+publisher = "US Equal Employment Opportunity Commission"
+url = "https://www.ecfr.gov/current/title-29/subtitle-B/chapter-XIV/part-1607"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "What counts as a selection procedure, when adverse impact exists, and what validation evidence an employer must hold to defend one that has it. This is the document that settles disputes about hiring tests, scored assessments and promotion criteria — including automated ones."
+skills = ["people:hiring-and-interviewing", "people:performance-management", "data-analytics:ai-ml-governance"]
+checked = "2026-09-16"
+
+[[source]]
+id = "eeoc-ai-and-ada"
+title = "Artificial Intelligence and the ADA"
+publisher = "US Equal Employment Opportunity Commission"
+url = "https://www.eeoc.gov/eeoc-disability-related-resources/artificial-intelligence-and-ada"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "When an algorithmic assessment screens out a person with a disability, and what accommodation is owed inside an automated hiring flow."
+skills = ["people:hiring-and-interviewing", "data-analytics:ai-ml-governance"]
+checked = "2026-09-16"
+
+[[source]]
+id = "fmla-regulations"
+title = "29 CFR Part 825 — Family and Medical Leave Act regulations"
+publisher = "US Department of Labor, Wage and Hour Division"
+url = "https://www.ecfr.gov/current/title-29/subtitle-B/chapter-V/subchapter-C/part-825"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "Employer coverage and employee eligibility, what counts as a serious health condition, intermittent leave, notice and certification, and reinstatement. Ends nearly every operational leave dispute."
+skills = ["people:benefits-and-leave", "people:employment-compliance"]
+checked = "2026-09-16"
+
+[[source]]
+id = "flsa-exemption-541"
+title = "29 CFR Part 541 — exemption regulations"
+publisher = "US Department of Labor, Wage and Hour Division"
+url = "https://www.ecfr.gov/current/title-29/subtitle-B/chapter-V/subchapter-A/part-541"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "Whether a role can lawfully be classified exempt — the salary basis, salary level and duties tests. Organization design is judgment, but which levels may be exempt and what a manager must actually do is settled law."
+skills = ["people:org-design", "people:compensation-and-leveling", "people:employment-compliance"]
+checked = "2026-09-16"
+
+[[source]]
+id = "dol-ebsa-erisa"
+title = "ERISA — laws and regulations"
+publisher = "US Department of Labor, Employee Benefits Security Administration"
+url = "https://www.dol.gov/agencies/ebsa/laws-and-regulations/laws/erisa"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "Fiduciary duty, plan documents, reporting, participant disclosure and claims procedure for employer-sponsored plans — what a plan sponsor is legally on the hook for."
+skills = ["people:benefits-and-leave"]
+checked = "2026-09-16"
+
+[[source]]
+id = "irs-pub-15b"
+title = "IRS Publication 15-B: Employer's Tax Guide to Fringe Benefits"
+publisher = "US Internal Revenue Service"
+url = "https://www.irs.gov/pub/irs-pdf/p15b.pdf"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "Which fringe benefits are excludable from income and which are taxable, with valuation and withholding treatment. Reissued annually at a stable address, so it is never stale."
+skills = ["people:benefits-and-leave", "finance:tax"]
+checked = "2026-09-16"
+
+[[source]]
+id = "uscis-i9-handbook"
+title = "Handbook for Employers M-274: guidance for completing Form I-9"
+publisher = "US Citizenship and Immigration Services"
+url = "https://www.uscis.gov/i-9-central/form-i-9-resources/handbook-for-employers-m-274"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "Which documents are acceptable for employment eligibility verification, how to correct an error, what triggers reverification, and the retention clock."
+skills = ["people:onboarding-and-offboarding", "people:employment-compliance"]
+checked = "2026-09-16"
+
+# ── Finance, governance and security gaps ─────────────────────────────────────
+
+[[source]]
+id = "cost-accounting-standards"
+title = "48 CFR Chapter 99 — Cost Accounting Standards"
+publisher = "Cost Accounting Standards Board"
+url = "https://www.ecfr.gov/current/title-48/chapter-99"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "For covered government contractors, the mandatory treatment of cost allocation — consistency in estimating and reporting, indirect and home-office allocation, and the disclosure statement. Where it applies, cost accounting stops being a matter of preference."
+skills = ["finance:cost-accounting"]
+checked = "2026-09-16"
+
+[[source]]
+id = "fed-leveraged-lending"
+title = "Interagency Guidance on Leveraged Lending, SR 13-3"
+publisher = "Board of Governors of the Federal Reserve System"
+url = "https://www.federalreserve.gov/supervisionreg/srletters/sr1303.htm"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "What regulators treat as a leveraged transaction and the repayment-capacity, covenant and valuation analysis they expect behind a credit agreement. Supervisory guidance rather than a rule — the analytical lens, not binding law."
+skills = ["finance:capital-structure-and-covenants"]
+checked = "2026-09-16"
+
+[[source]]
+id = "frcp"
+title = "Federal Rules of Civil Procedure"
+publisher = "Administrative Office of the US Courts"
+url = "https://www.uscourts.gov/forms-rules/current-rules-practice-procedure/federal-rules-civil-procedure"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "The duty to preserve and what follows from failing it — proportionality, the discovery conference, form of production, and the exclusive framework and intent threshold for sanctions over lost electronic evidence."
+skills = ["legal-risk:disputes-and-legal-holds"]
+checked = "2026-09-16"
+
+[[source]]
+id = "sedona-conference"
+title = "The Sedona Principles and Commentary on Legal Holds"
+publisher = "The Sedona Conference"
+url = "https://www.thesedonaconference.org/publications"
+license = "free-to-read"
+jurisdiction = "US"
+authoritative_for = "The operational standard of care for electronic discovery that federal courts routinely cite — when the duty to preserve triggers, the scope of a defensible hold, and custodian notice practice. Free to download, copyrighted, so cite rather than reproduce."
+skills = ["legal-risk:disputes-and-legal-holds"]
+checked = "2026-09-16"
+
+[[source]]
+id = "nyse-listed-company-manual"
+title = "NYSE Listed Company Manual"
+publisher = "New York Stock Exchange"
+url = "https://nyse.wolterskluwer.cloud/listed-company-manual"
+license = "free-to-read"
+jurisdiction = "US"
+authoritative_for = "What a listed issuer must do to stay listed — board independence tests, committee composition, shareholder approval thresholds and immediate disclosure obligations. Binding as a listing condition."
+skills = ["legal-risk:corporate-governance", "executive:fundraising-and-investor-relations"]
+checked = "2026-09-16"
+
+[[source]]
+id = "fips-140-3"
+title = "FIPS 140-3: Security Requirements for Cryptographic Modules"
+publisher = "NIST"
+url = "https://csrc.nist.gov/pubs/fips/140-3/final"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "Whether a cryptographic module is validated and at what level. Not an opinion about cryptographic quality — a certification fact that federal and many regulated buyers depend on."
+data = "https://csrc.nist.gov/projects/cryptographic-module-validation-program/validated-modules"
+skills = ["security:data-protection-and-encryption"]
+checked = "2026-09-16"
+
+[[source]]
+id = "nist-sp-800-57-key-management"
+title = "NIST SP 800-57 Part 1: Recommendation for Key Management"
+publisher = "NIST"
+url = "https://csrc.nist.gov/pubs/sp/800/57/pt1/r5/final"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "Approved algorithms and key lengths, cryptoperiods by key type, and the full key lifecycle. The referee for how long a key may stay in use and whether a length is still acceptable."
+skills = ["security:data-protection-and-encryption"]
+checked = "2026-09-16"
+
+[[source]]
+id = "nist-sp-800-92-logging"
+title = "NIST SP 800-92: Guide to Computer Security Log Management"
+publisher = "NIST"
+url = "https://csrc.nist.gov/pubs/sp/800/92/final"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "What log management must provide — source prioritization, retention and rotation, log integrity, and the review responsibility that makes logs useful rather than merely voluminous. The final version is old and a revision is in draft, so check for a newer one."
+skills = ["security:detection-and-monitoring"]
+checked = "2026-09-16"

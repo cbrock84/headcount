@@ -1,0 +1,263 @@
+# Accessibility, selling law, contract mechanics and the platform rules that decide whether a
+# pricing flow ships.
+#
+# Two negative findings shaped this file and are worth stating plainly, because the obvious
+# candidates fail. There is no free normative definition of the common revenue metrics — annual
+# recurring revenue, net retention, customer acquisition cost — and the best-known satisfaction
+# metric is a trademark whose method belongs to its owner. What authority exists applies at the
+# disclosure boundary: if you publish a metric, you must define it and calculate it consistently.
+# Anything claiming to define the metric itself is a vendor, and the skills say so.
+
+[[source]]
+id = "w3c-aria-apg"
+title = "WAI-ARIA and the ARIA Authoring Practices Guide"
+publisher = "World Wide Web Consortium"
+url = "https://www.w3.org/WAI/ARIA/apg/"
+license = "free-to-read"
+jurisdiction = "global"
+authoritative_for = "Which roles, states and keyboard interactions a given widget must implement. Settles whether Escape should close a dialog and whether a role is the right one, without appeal to preference."
+data = "https://www.w3.org/TR/wai-aria-1.2/"
+skills = ["product:interface-craft", "product:design-system", "product:interface-redesign", "product:ux-product-auditor"]
+checked = "2026-09-16"
+
+[[source]]
+id = "section-508-ict"
+title = "36 CFR Part 1194 — Section 508 information and communication technology standards"
+publisher = "US Access Board"
+url = "https://www.ecfr.gov/current/title-36/subtitle-B/chapter-XI/part-1194"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "What a product must satisfy to be lawfully procurable by a US federal agency. This decides a public-sector deal rather than expressing a design preference, which is why it reaches sales as often as engineering."
+skills = ["product:product-requirements", "product:ux-product-auditor", "revenue:sales-enablement"]
+checked = "2026-09-16"
+
+[[source]]
+id = "en-301-549"
+title = "EN 301 549 — accessibility requirements for ICT products and services"
+publisher = "ETSI"
+url = "https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf"
+license = "free-to-read"
+jurisdiction = "EU"
+authoritative_for = "The requirement set an EU public-sector buyer measures against, including non-web software, documents and hardware that the web guidelines do not cover. Which version is legally operative depends on what the Official Journal currently cites — check before relying on a newer one."
+skills = ["product:product-requirements", "product:ux-product-auditor", "revenue:sales-enablement"]
+checked = "2026-09-16"
+
+[[source]]
+id = "ftc-telemarketing-sales-rule"
+title = "16 CFR Part 310 — Telemarketing Sales Rule"
+publisher = "US Federal Trade Commission"
+url = "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-310"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "What an outbound seller must disclose before taking payment, which misrepresentations are prohibited, and what records the program must keep. The rule that makes a call script lawful or not."
+skills = ["revenue:outbound-prospecting", "revenue:sales-enablement", "revenue:revenue-operations"]
+checked = "2026-09-16"
+
+[[source]]
+id = "wiretap-act-2511"
+title = "18 U.S.C. 2511 — interception of communications"
+publisher = "US Congress, via the Office of the Law Revision Counsel"
+url = "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section2511&num=0&edition=prelim"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "The federal one-party-consent floor for recording a call, and the criminal exposure for recording without it. It settles only the floor: several states require all-party consent, and there is no free authoritative single document for that matrix — it must be looked up per state."
+skills = ["revenue:outbound-prospecting", "customer-experience:support-operations"]
+checked = "2026-09-16"
+
+[[source]]
+id = "rosca-auto-renewal"
+title = "15 U.S.C. 8403 — Restore Online Shoppers' Confidence Act"
+publisher = "US Congress, via the Office of the Law Revision Counsel"
+url = "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title15-section8403&num=0&edition=prelim"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "Whether an online auto-renewal offer is lawful — clear disclosure of material terms before billing, express informed consent, and a simple cancellation mechanism. This area has seen rules issued and struck down, so cite the statute rather than a rule summary."
+skills = ["revenue:pricing-and-packaging", "revenue:retention", "revenue:activation", "product:product-requirements"]
+checked = "2026-09-16"
+
+[[source]]
+id = "california-arl"
+title = "California Automatic Renewal Law, Business and Professions Code 17600-17606"
+publisher = "California Legislative Counsel"
+url = "https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?division=7.&chapter=1.&part=3.&lawCode=BPC&article=9."
+license = "public-domain"
+jurisdiction = "US-CA"
+authoritative_for = "The concrete cancellation obligations a subscription business actually has to meet, because California's requirements are stricter than the federal floor and apply to any California customer — which in practice makes them the binding ones."
+skills = ["revenue:pricing-and-packaging", "revenue:retention", "product:product-requirements", "product:interface-craft"]
+checked = "2026-09-16"
+
+[[source]]
+id = "ucc-article-2"
+title = "Uniform Commercial Code, Article 2 — Sales"
+publisher = "American Law Institute and Uniform Law Commission"
+url = "https://www.law.cornell.edu/ucc/2"
+license = "free-to-read"
+jurisdiction = "US"
+authoritative_for = "When a contract for goods is formed, whose terms prevail in a battle of the forms, and what warranty disclaimer language is effective. Settles a purchase-order-versus-order-form dispute as law rather than as negotiating posture."
+skills = ["revenue:deal-negotiation", "revenue:revenue-operations"]
+checked = "2026-09-16"
+
+[[source]]
+id = "esign-act"
+title = "15 U.S.C. 7001 — Electronic Signatures in Global and National Commerce Act"
+publisher = "US Congress, via the Office of the Law Revision Counsel"
+url = "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title15-section7001&num=0&edition=prelim"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "Whether an electronically signed contract, a clickwrap acceptance or an emailed order form is enforceable, and what consumer consent steps must precede it."
+skills = ["revenue:deal-negotiation", "revenue:revenue-operations", "customer-experience:customer-onboarding-and-implementation"]
+checked = "2026-09-16"
+
+[[source]]
+id = "eidas"
+title = "Regulation (EU) 910/2014 — eIDAS"
+publisher = "Publications Office of the European Union"
+url = "https://eur-lex.europa.eu/eli/reg/2014/910/oj"
+license = "attribution-required"
+jurisdiction = "EU"
+authoritative_for = "Whether an electronic signature has legal effect in the EU and which of the three tiers a given contract requires. Settles whether an ordinary e-signature suffices for a particular European deal."
+skills = ["revenue:deal-negotiation", "revenue:revenue-operations"]
+checked = "2026-09-16"
+
+[[source]]
+id = "sec-mda-metrics-guidance"
+title = "Commission Guidance on Management's Discussion and Analysis, Release 33-10751"
+publisher = "US Securities and Exchange Commission"
+url = "https://www.federalregister.gov/documents/2020/02/25/2020-02296/commission-guidance-on-managements-discussion-and-analysis-of-financial-condition-and-results-of"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "What a company must do when it publishes an operating metric — define it, disclose how it is calculated, apply it consistently, and explain any change in method. It disciplines metrics like recurring revenue and net retention without defining them, which is the honest ceiling on authority here."
+skills = ["revenue:revenue-operations", "finance:unit-economics", "data-analytics:business-intelligence"]
+checked = "2026-09-16"
+
+[[source]]
+id = "sec-non-gaap-cdi"
+title = "Non-GAAP financial measures — compliance and disclosure interpretations"
+publisher = "US Securities and Exchange Commission, Division of Corporation Finance"
+url = "https://www.sec.gov/corpfin/non-gaap-financial-measures"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "When a non-GAAP measure becomes misleading and therefore prohibited — individually tailored recognition, excluding normal operating costs, improper labeling, and the equal-prominence requirement."
+skills = ["finance:unit-economics", "finance:capital-structure-and-covenants"]
+checked = "2026-09-16"
+
+[[source]]
+id = "ico-childrens-code"
+title = "Age Appropriate Design Code"
+publisher = "UK Information Commissioner's Office"
+url = "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/childrens-information/childrens-code-guidance-and-resources/"
+license = "attribution-required"
+jurisdiction = "UK"
+authoritative_for = "What default settings, nudges and profiling are permissible in a service likely to be used by children. A statutory code, so it settles whether onboarding may default a toggle on."
+skills = ["product:product-requirements", "product:interface-craft", "revenue:activation"]
+checked = "2026-09-16"
+
+[[source]]
+id = "cppa-regulations"
+title = "CCPA regulations, California Code of Regulations title 11"
+publisher = "California Privacy Protection Agency"
+url = "https://cppa.ca.gov/regulations/consumer_privacy_act.html"
+license = "public-domain"
+jurisdiction = "US-CA"
+authoritative_for = "Symmetry in choice, as law. It settles whether a consent flow where accepting is one click and declining is three is permissible — converting what is usually argued as design taste into a compliance question."
+skills = ["product:interface-craft", "product:ux-product-auditor", "product:interface-redesign", "marketing:behavioral-marketing"]
+checked = "2026-09-16"
+
+[[source]]
+id = "pci-dss"
+title = "PCI Data Security Standard"
+publisher = "PCI Security Standards Council"
+url = "https://www.pcisecuritystandards.org/document_library/"
+license = "registration-required"
+jurisdiction = "global"
+authoritative_for = "Whether a support agent may take a card number by phone, whether that call may be recorded, and what must happen to card data in ticket attachments and screen shares. Assessed by a qualified assessor, so genuinely dispositive."
+skills = ["customer-experience:support-operations", "security:data-protection-and-encryption", "security:detection-and-monitoring"]
+checked = "2026-09-16"
+
+[[source]]
+id = "apple-hig"
+title = "Human Interface Guidelines"
+publisher = "Apple"
+url = "https://developer.apple.com/design/human-interface-guidelines"
+license = "free-to-read"
+jurisdiction = "global"
+authoritative_for = "What correct platform behavior is on Apple platforms — control semantics, navigation structure, touch targets. Its authority is not taste: deviation is grounds for review rejection."
+skills = ["product:interface-craft", "product:design-system", "product:interface-redesign"]
+checked = "2026-09-16"
+
+[[source]]
+id = "unicode-cldr"
+title = "Unicode Common Locale Data Repository"
+publisher = "Unicode Consortium"
+url = "https://cldr.unicode.org/"
+license = "attribution-required"
+jurisdiction = "global"
+authoritative_for = "Correct date, number, currency, name-order, plural and sort behavior for a locale. Settles how something should render in a given language with data rather than guesswork, and every platform's internationalization library derives from it."
+skills = ["product:interface-craft", "product:design-system", "product:product-requirements"]
+checked = "2026-09-16"
+
+[[source]]
+id = "plain-language-guidelines"
+title = "Federal Plain Language Guidelines"
+publisher = "Plain Language Action and Information Network"
+url = "https://www.plainlanguage.gov/guidelines/"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "What counts as plain language in user-facing writing — audience-first structure, active voice, short sections. Backed by statute for federal agencies, and the only free normative writing standard that is not one author's style preference."
+skills = ["customer-experience:self-service-and-knowledge", "customer-experience:support-operations"]
+checked = "2026-09-16"
+
+[[source]]
+id = "uspto-tmep"
+title = "Trademark Manual of Examining Procedure"
+publisher = "US Patent and Trademark Office"
+url = "https://tmep.uspto.gov/"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "Whether a proposed name, logo or tagline is registrable — distinctiveness, descriptiveness refusals, likelihood of confusion, specimen requirements. Settles whether you can actually own a name."
+skills = ["product:brand-identity", "legal-risk:intellectual-property"]
+checked = "2026-09-16"
+
+[[source]]
+id = "copyright-compendium"
+title = "Compendium of U.S. Copyright Office Practices"
+publisher = "US Copyright Office"
+url = "https://www.copyright.gov/comp3/"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "What is protectable and registrable, including the Office's position on human authorship for machine-generated material and how much of a layout or typeface is protectable at all."
+skills = ["product:visual-reference-generation", "product:brand-identity", "legal-risk:intellectual-property"]
+checked = "2026-09-16"
+
+[[source]]
+id = "sil-open-font-license"
+title = "SIL Open Font License"
+publisher = "SIL International"
+url = "https://openfontlicense.org/"
+license = "free-to-read"
+jurisdiction = "global"
+authoritative_for = "Whether a typeface may be embedded in a product, bundled into a design system, modified or redistributed. The font-licensing question that surfaces reliably when a brand system ships."
+skills = ["product:brand-identity", "product:design-system"]
+checked = "2026-09-16"
+
+[[source]]
+id = "california-labor-2751"
+title = "California Labor Code 2751 — commission agreements in writing"
+publisher = "California Legislative Counsel"
+url = "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=LAB&sectionNum=2751"
+license = "public-domain"
+jurisdiction = "US-CA"
+authoritative_for = "Whether a commission arrangement is enforceable. California requires a signed written contract setting out how commission is computed and paid, which settles whether a plan can be changed mid-year by email."
+skills = ["revenue:sales-compensation-and-territory", "revenue:revenue-operations"]
+checked = "2026-09-16"
+
+[[source]]
+id = "dol-outside-sales-exemption"
+title = "Fact Sheet 17F: exemption for outside sales employees"
+publisher = "US Department of Labor, Wage and Hour Division"
+url = "https://www.dol.gov/agencies/whd/fact-sheets/17f-overtime-outside-sales"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "Whether a sales role is exempt from overtime — the inside against outside classification question that territory design quietly creates."
+skills = ["revenue:sales-compensation-and-territory", "people:employment-compliance"]
+checked = "2026-09-16"

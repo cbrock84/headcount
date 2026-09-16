@@ -56,6 +56,14 @@ Publications Office of the European Union · EU · free to use with attribution 
 
 **Authoritative for:** The operative text of the GDPR. EU legal texts are reusable with attribution under the Commission's reuse decision, so this is quotable where a national summary is not.
 
+## Regulation (EU) 2024/1689 — the AI Act
+
+Publications Office of the European Union · EU · free to use with attribution — credit the publisher
+
+<https://eur-lex.europa.eu/eli/reg/2024/1689/oj>
+
+**Authoritative for:** Whether an AI system is prohibited, high-risk or limited-risk in the EU and what obligations attach. Binding law rather than guidance, and only the Official Journal version is authentic.
+
 ## SANS Information Security Policy Templates
 
 SANS Institute · global · **read and cite only — copyrighted, do not reproduce**

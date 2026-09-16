@@ -64,6 +64,13 @@ Some responsibilities sit between functions and get dropped. When one appears, d
 right home in the abstract — assign it to whoever bears the consequence if it fails, and record the
 assignment. An owner who is imperfect beats an owner who is undecided.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Never
 
 - Take an action that requires board or member approval and paper it afterward.

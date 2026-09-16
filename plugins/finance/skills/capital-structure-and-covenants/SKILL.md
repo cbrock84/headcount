@@ -57,6 +57,13 @@ equity cure is permitted and how often, and whether cross-default provisions pul
 in behind this one. Consequences escalate rather than arriving all at once — a fee, then a rate
 step-up, then tightened covenants, then a cash sweep, then acceleration.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Never
 
 - Sign a facility without modeling its covenants against the downside case.

@@ -58,6 +58,13 @@ correctly, did we communicate on time, and what would have prevented it.
 Escalation volume is a health metric for the whole function. Rising escalations mean the normal path
 is failing more often, and that is the thing to fix.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Never
 
 - Escalate without naming an owner. An escalation with no name on it is a broadcast.

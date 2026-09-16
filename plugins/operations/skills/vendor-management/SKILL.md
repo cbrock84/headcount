@@ -51,6 +51,13 @@ never been thought through is not an option, it is a hope.
 
 Maintain your own copy of your data continuously where the vendor holds anything critical.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Never
 
 - Sign before you know what leaving costs — data export, notice period, transition support.

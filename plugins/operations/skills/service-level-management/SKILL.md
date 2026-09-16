@@ -50,6 +50,13 @@ Then separate the incident from the pattern. One breach is an incident, handled 
 `customer-experience:escalation-management`. Repeated breaches of the same target mean the target was
 never fundable — renegotiate it honestly rather than continuing to miss it.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Never
 
 - Commit to a level you have not measured yourself achieving for a sustained period.

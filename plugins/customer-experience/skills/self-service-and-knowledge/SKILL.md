@@ -63,6 +63,13 @@ volume for a topic falls after content ships.
 Watch articles with high views *and* a high subsequent contact rate. Those are articles that are
 failing to answer, and they look like your best-performing content.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Never
 
 - Write an article for a problem the product should not have. Fix the product and delete the article.

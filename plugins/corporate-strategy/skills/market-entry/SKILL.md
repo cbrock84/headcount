@@ -71,6 +71,13 @@ was producing better returns on.
 
 Review against the criteria on the date, not when someone finally raises it.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Never
 
 - Size a market from a published figure without building it up from countable units.

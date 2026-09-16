@@ -71,6 +71,13 @@ These are not polish items — below them, some people cannot use the interface 
 - Real semantic elements — buttons that are buttons, headings in order. A styled div is invisible to
   assistive technology.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Never
 
 - Add visual weight to fix a hierarchy problem caused by too many equal elements. Remove instead.

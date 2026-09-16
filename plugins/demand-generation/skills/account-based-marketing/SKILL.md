@@ -74,6 +74,13 @@ Expect the timeline to be long. Judging an account-based program on a quarter is
 any of its mechanism has had time to work, and canceling it there is the most common way the
 investment is wasted entirely.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Never
 
 - Adopt the model without checking whether the deal size carries the per-account cost.

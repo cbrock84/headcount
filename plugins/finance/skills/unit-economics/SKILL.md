@@ -43,6 +43,13 @@ Good unit economics by segment tell you where to spend. Bad ones tell you to fix
 scaling — no acquisition efficiency rescues a negative contribution margin, it only reaches the
 loss faster.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Never
 
 - Compare acquisition cost against revenue rather than contribution.

@@ -67,6 +67,13 @@ warehouse queries are full scans of a table that could have been partitioned by 
 Denormalize deliberately, and write down why. Undocumented denormalization is indistinguishable from
 a modeling error six months later.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Never
 
 - Build a mart directly on raw. The coupling means every source change breaks the business layer.

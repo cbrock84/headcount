@@ -78,6 +78,13 @@ Board material goes out days ahead and is read before the meeting, so the meetin
 rather than presentation. Bring the real questions, including the ones you do not have answers to —
 a board only shown finished thinking cannot help with anything and eventually stops trying.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Never
 
 - Optimize a term sheet on valuation without modeling the preference stack at mediocre exits.

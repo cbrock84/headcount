@@ -47,6 +47,13 @@ Fix in this order, because each makes the next easier to see:
 Rebuild only when the structure is wrong — when the information architecture does not match how
 people work. Everything else is a restyle, and a restyle that ships beats a rebuild that stalls.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Never
 
 - Restyle a screen whose problem is structural. New paint on a broken flow buys nothing.

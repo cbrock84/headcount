@@ -84,6 +84,13 @@ These are the artifacts of record. Where two of them disagree, this one is right
 
 Escalate to Chief Executive when the roadmap and the strategy have diverged; to CTO when the technically feasible scope will not meet the commitment.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Never
 
 - Never ship a feature whose success metric was never stated

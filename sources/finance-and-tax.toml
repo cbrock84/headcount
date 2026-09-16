@@ -91,7 +91,7 @@ url = "https://asc.fasb.org/"
 license = "registration-required"
 jurisdiction = "US"
 authoritative_for = "US GAAP as it actually reads — revenue recognition, leases, impairment. The Basic View is free with an account and the text is copyrighted: cite the ASC number, do not reproduce the wording."
-skills = ["finance:revenue-recognition", "finance:financial-reporting-and-close", "finance:chief-financial-officer"]
+skills = ["finance:revenue-recognition", "finance:financial-reporting-and-close", "finance:chief-financial-officer", "revenue:revenue-operations", "revenue:pricing-and-packaging"]
 checked = "2026-09-16"
 
 [[source]]

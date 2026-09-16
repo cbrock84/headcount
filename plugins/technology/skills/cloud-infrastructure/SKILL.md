@@ -57,6 +57,13 @@ tagging, cost becomes an unattributable aggregate that only ever gets addressed 
 The usual large wins are unglamorous: idle non-production resources, over-provisioned instances,
 storage nobody deleted, and cross-zone data transfer nobody accounted for.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Tooling
 
 Platforms: AWS, Google Cloud, Microsoft Azure, and similar; managed application platforms —

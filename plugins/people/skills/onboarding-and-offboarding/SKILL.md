@@ -56,6 +56,13 @@ Exit conversations produce candid information that is unavailable any other way,
 collected and never used. Aggregate themes over time and look by manager and by team; a single exit
 is an anecdote, a pattern across four is a finding for `people:chief-human-resources-officer`.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Tooling
 
 HRIS as the record of who works here and when they started or left: Workday, BambooHR,

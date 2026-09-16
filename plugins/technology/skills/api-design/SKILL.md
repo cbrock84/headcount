@@ -51,6 +51,13 @@ offset pagination silently skips and duplicates records under concurrent writes.
 State rate limits in the contract and communicate them in responses. An undocumented limit is
 discovered in the consumer's production incident.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Tooling
 
 Specification and documentation: OpenAPI with Redocly, Stoplight, or Scalar; gRPC with protocol

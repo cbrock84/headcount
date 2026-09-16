@@ -4,6 +4,22 @@
 
 Check these before answering on anything they cover, and cite what you used. The use note on each one is binding: most of what a professional cites is free to read and not free to reproduce.
 
+## 29 CFR Part 541 — exemption regulations
+
+US Department of Labor, Wage and Hour Division · US · public domain (US government) — quote freely
+
+<https://www.ecfr.gov/current/title-29/subtitle-B/chapter-V/subchapter-A/part-541>
+
+**Authoritative for:** Whether a role can lawfully be classified exempt — the salary basis, salary level and duties tests. Organization design is judgment, but which levels may be exempt and what a manager must actually do is settled law.
+
+## 29 CFR Part 825 — Family and Medical Leave Act regulations
+
+US Department of Labor, Wage and Hour Division · US · public domain (US government) — quote freely
+
+<https://www.ecfr.gov/current/title-29/subtitle-B/chapter-V/subchapter-C/part-825>
+
+**Authoritative for:** Employer coverage and employee eligibility, what counts as a serious health condition, intermittent leave, notice and certification, and reinstatement. Ends nearly every operational leave dispute.
+
 ## Consolidated State Minimum Wage and Overtime tables
 
 US Department of Labor · US · public domain (US government) — quote freely
@@ -19,6 +35,22 @@ US Equal Employment Opportunity Commission · US · public domain (US government
 <https://www.eeoc.gov/laws-guidance>
 
 **Authoritative for:** Federal anti-discrimination obligation as the agency that enforces it reads it — including guidance on selection procedures, accommodation, and automated decision tools in hiring.
+
+## Fact Sheet 17F: exemption for outside sales employees
+
+US Department of Labor, Wage and Hour Division · US · public domain (US government) — quote freely
+
+<https://www.dol.gov/agencies/whd/fact-sheets/17f-overtime-outside-sales>
+
+**Authoritative for:** Whether a sales role is exempt from overtime — the inside against outside classification question that territory design quietly creates.
+
+## Handbook for Employers M-274: guidance for completing Form I-9
+
+US Citizenship and Immigration Services · US · public domain (US government) — quote freely
+
+<https://www.uscis.gov/i-9-central/form-i-9-resources/handbook-for-employers-m-274>
+
+**Authoritative for:** Which documents are acceptable for employment eligibility verification, how to correct an error, what triggers reverification, and the retention clock.
 
 ## National Labor Relations Board — decisions and guidance
 

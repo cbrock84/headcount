@@ -12,6 +12,14 @@ US Internal Revenue Service · US · public domain (US government) — quote fre
 
 **Authoritative for:** The minimum interest rate an intercompany or related-party loan must carry to avoid imputed interest, published monthly.
 
+## IRS Publication 15-B: Employer's Tax Guide to Fringe Benefits
+
+US Internal Revenue Service · US · public domain (US government) — quote freely
+
+<https://www.irs.gov/pub/irs-pdf/p15b.pdf>
+
+**Authoritative for:** Which fringe benefits are excludable from income and which are taxable, with valuation and withholding treatment. Reissued annually at a stable address, so it is never stale.
+
 ## IRS forms, instructions and publications
 
 US Internal Revenue Service · US · public domain (US government) — quote freely

@@ -4,6 +4,22 @@
 
 Check these before answering on anything they cover, and cite what you used. The use note on each one is binding: most of what a professional cites is free to read and not free to reproduce.
 
+## 29 CFR Part 1607 — Uniform Guidelines on Employee Selection Procedures
+
+US Equal Employment Opportunity Commission · US · public domain (US government) — quote freely
+
+<https://www.ecfr.gov/current/title-29/subtitle-B/chapter-XIV/part-1607>
+
+**Authoritative for:** What counts as a selection procedure, when adverse impact exists, and what validation evidence an employer must hold to defend one that has it. This is the document that settles disputes about hiring tests, scored assessments and promotion criteria — including automated ones.
+
+## Artificial Intelligence and the ADA
+
+US Equal Employment Opportunity Commission · US · public domain (US government) — quote freely
+
+<https://www.eeoc.gov/eeoc-disability-related-resources/artificial-intelligence-and-ada>
+
+**Authoritative for:** When an algorithmic assessment screens out a person with a disability, and what accommodation is owed inside an automated hiring flow.
+
 ## EEOC Laws, Regulations, Guidance and MOUs
 
 US Equal Employment Opportunity Commission · US · public domain (US government) — quote freely

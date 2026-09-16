@@ -36,6 +36,13 @@ Then decide how it integrates:
   merits. A reviewer given three concerns in one diff reviews none of them well.
 - **Exploratory** — keep the useful commits, drop the rest.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Never
 
 - Rewrite history on a branch someone else has checked out. Merge instead; a force-push breaks their

@@ -52,6 +52,13 @@ Show the metric, its comparison period, and the decision it informs. A number wi
 not information. Where a number moved, the report should say why or say that the cause is unknown —
 "unknown" is a legitimate and useful finding.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Tooling
 
 Product and web analytics: Google Analytics 4, Amplitude, Mixpanel, PostHog, Plausible,

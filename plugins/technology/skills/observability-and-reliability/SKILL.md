@@ -54,6 +54,13 @@ defect, and it is the part that repeats.
 Produce a small number of real actions with owners and dates. A review generating fifteen actions
 generates none.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Tooling
 
 Metrics and traces: Datadog, Grafana with Prometheus, New Relic, Honeycomb, and similar.

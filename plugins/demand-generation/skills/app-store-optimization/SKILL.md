@@ -47,6 +47,13 @@ Watch review text for recurring themes — it is the cheapest continuous product
 Change one element at a time and let it run a full weekly cycle; app traffic is strongly
 day-of-week seasonal. Attributing a lift to the wrong change is worse than not testing.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Tooling
 
 The consoles are the source of truth: App Store Connect and Google Play Console, including their

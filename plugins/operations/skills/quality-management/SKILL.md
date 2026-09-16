@@ -52,6 +52,13 @@ and pair any rate metric with a volume metric so improvement by doing less is vi
 
 Escaped defects — those the customer found — are the honest measure. Everything else is a proxy.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Tooling
 
 A quality management system is a regulatory purchase before it is an operational one. Greenlight

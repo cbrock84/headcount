@@ -64,6 +64,13 @@ check every figure by hand.
 Dashboards accumulate. Review usage periodically and retire what nobody opens — with a notice period,
 since the one person using it may be using it for something important.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Tooling
 
 BI: Power BI, Looker, Tableau, Metabase, Omni, Hex, and similar.

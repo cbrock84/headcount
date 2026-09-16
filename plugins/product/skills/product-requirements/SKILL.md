@@ -59,6 +59,13 @@ A specification that diverges from what was built becomes a trap for the next pe
 it as decisions change, or mark it as-of-a-date and point at wherever the truth now lives. The
 worst outcome is a document that looks current and is not.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Never
 
 - Open with a solution and leave the problem implied.

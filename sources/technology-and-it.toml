@@ -1,0 +1,374 @@
+# Protocol specifications, hardening baselines and platform reference architectures.
+#
+# This is the department where the "does an authority settle it" test does the most work. Protocol
+# and format questions have exact answers published by the body that defines them. Practice
+# questions — how to review code, how to debug, when a thing is done — have none, and the skills
+# that cover them deliberately carry no sources. A blog post with a confident tone is not an
+# authority, and this area has more of those than any other.
+
+# ── Interfaces and protocols ──────────────────────────────────────────────────
+
+[[source]]
+id = "rfc-9110-http"
+title = "RFC 9110: HTTP Semantics"
+publisher = "IETF"
+url = "https://www.rfc-editor.org/rfc/rfc9110.html"
+license = "free-to-read"
+jurisdiction = "global"
+authoritative_for = "What an HTTP method, status code or header actually means. Settles whether PUT is idempotent, whether 409 or 422 is correct, and what a conditional request obliges a server to do."
+skills = ["technology:api-design"]
+checked = "2026-09-16"
+
+[[source]]
+id = "rfc-9457-problem-details"
+title = "RFC 9457: Problem Details for HTTP APIs"
+publisher = "IETF"
+url = "https://www.rfc-editor.org/rfc/rfc9457.html"
+license = "free-to-read"
+jurisdiction = "global"
+authoritative_for = "The wire format of an API error body. It obsoletes RFC 7807, so it also settles which of the two a new service should follow."
+skills = ["technology:api-design"]
+checked = "2026-09-16"
+
+[[source]]
+id = "rfc-9700-oauth-bcp"
+title = "RFC 9700: Best Current Practice for OAuth 2.0 Security"
+publisher = "IETF"
+url = "https://www.rfc-editor.org/rfc/rfc9700.html"
+license = "free-to-read"
+jurisdiction = "global"
+authoritative_for = "Which OAuth 2.0 patterns remain permitted — that the implicit grant and password grant must not be used, that PKCE is required, and that redirect URIs must match exactly."
+skills = ["technology:api-design", "it-operations:identity-lifecycle-administration"]
+checked = "2026-09-16"
+
+[[source]]
+id = "openapi-spec"
+title = "OpenAPI Specification"
+publisher = "OpenAPI Initiative, Linux Foundation"
+url = "https://spec.openapis.org/oas/latest.html"
+license = "attribution-required"
+jurisdiction = "global"
+authoritative_for = "What a valid API description document contains. Settles whether a given file is conformant rather than merely accepted by one tool."
+skills = ["technology:api-design"]
+checked = "2026-09-16"
+
+[[source]]
+id = "semver"
+title = "Semantic Versioning 2.0.0"
+publisher = "Semantic Versioning project"
+url = "https://semver.org/"
+license = "cc-by"
+jurisdiction = "global"
+authoritative_for = "What a version increment is allowed to mean, and therefore whether a given change requires a major bump. A community specification rather than a standards body, but the one every dependency resolver assumes."
+skills = ["technology:api-design", "technology:branch-and-worktree-workflow"]
+checked = "2026-09-16"
+
+[[source]]
+id = "conventional-commits"
+title = "Conventional Commits 1.0.0"
+publisher = "Conventional Commits project"
+url = "https://www.conventionalcommits.org/en/v1.0.0/"
+license = "cc-by"
+jurisdiction = "global"
+authoritative_for = "The grammar of a commit message, and how a breaking change is marked so that tooling can derive a version bump from history."
+skills = ["technology:branch-and-worktree-workflow"]
+checked = "2026-09-16"
+
+[[source]]
+id = "git-reference"
+title = "Git reference manual"
+publisher = "Git project"
+url = "https://git-scm.com/docs"
+license = "free-to-read"
+jurisdiction = "global"
+authoritative_for = "What a Git operation actually does — what a worktree is, what rebase rewrites, what detached HEAD means. It settles behavior, not which workflow a team should adopt."
+skills = ["technology:branch-and-worktree-workflow", "technology:parallel-agent-delivery"]
+checked = "2026-09-16"
+
+[[source]]
+id = "mcp-spec"
+title = "Model Context Protocol specification"
+publisher = "Model Context Protocol project"
+url = "https://modelcontextprotocol.io/specification/latest"
+license = "free-to-read"
+jurisdiction = "global"
+authoritative_for = "The protocol between an agent host and a tool or resource server — message shapes, lifecycle, transports, and what a conformant server must implement."
+skills = ["technology:ai-workflow-architect"]
+checked = "2026-09-16"
+
+# ── Observability ─────────────────────────────────────────────────────────────
+
+[[source]]
+id = "opentelemetry-spec"
+title = "OpenTelemetry specification and semantic conventions"
+publisher = "OpenTelemetry project, Cloud Native Computing Foundation"
+url = "https://opentelemetry.io/docs/specs/otel/"
+license = "cc-by"
+jurisdiction = "global"
+authoritative_for = "The data model for traces, metrics and logs, and — in the semantic conventions — the attribute names themselves, which is what naming arguments actually turn on."
+data = "https://opentelemetry.io/docs/specs/semconv/"
+skills = ["technology:observability-and-reliability"]
+checked = "2026-09-16"
+
+[[source]]
+id = "w3c-trace-context"
+title = "Trace Context"
+publisher = "World Wide Web Consortium"
+url = "https://www.w3.org/TR/trace-context/"
+license = "free-to-read"
+jurisdiction = "global"
+authoritative_for = "The on-the-wire format of the traceparent and tracestate headers, which settles how trace context propagates between tools from different vendors."
+skills = ["technology:observability-and-reliability"]
+checked = "2026-09-16"
+
+[[source]]
+id = "google-sre-book"
+title = "Site Reliability Engineering and The SRE Workbook"
+publisher = "Google"
+url = "https://sre.google/sre-book/table-of-contents/"
+license = "free-to-read"
+jurisdiction = "global"
+authoritative_for = "The definitions the reliability vocabulary rests on — indicator against objective against agreement, error budget, toil. It settles what the words mean, not whether a practice suits your organization."
+data = "https://sre.google/workbook/table-of-contents/"
+skills = ["technology:observability-and-reliability"]
+checked = "2026-09-16"
+
+# ── Cloud and architecture ────────────────────────────────────────────────────
+
+[[source]]
+id = "nist-sp-800-145-cloud"
+title = "NIST SP 800-145: The NIST Definition of Cloud Computing"
+publisher = "NIST"
+url = "https://csrc.nist.gov/pubs/sp/800/145/final"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "What counts as infrastructure, platform or software as a service, and what public, private, community and hybrid mean. Still the definition contracts and audits cite."
+skills = ["technology:cloud-infrastructure", "it-operations:cloud-administration"]
+checked = "2026-09-16"
+
+[[source]]
+id = "aws-well-architected"
+title = "AWS Well-Architected Framework"
+publisher = "Amazon Web Services"
+url = "https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html"
+license = "free-to-read"
+jurisdiction = "global"
+authoritative_for = "What AWS itself considers a correct design on AWS, and therefore what an AWS architecture review will be graded against."
+skills = ["technology:cloud-infrastructure", "technology:solution-architecture", "it-operations:cloud-administration"]
+checked = "2026-09-16"
+
+[[source]]
+id = "azure-well-architected"
+title = "Azure Well-Architected Framework"
+publisher = "Microsoft"
+url = "https://learn.microsoft.com/en-us/azure/well-architected/"
+license = "free-to-read"
+jurisdiction = "global"
+authoritative_for = "Microsoft's own normative design guidance for Azure, and the basis of its assessment tooling."
+skills = ["technology:cloud-infrastructure", "it-operations:cloud-administration"]
+checked = "2026-09-16"
+
+[[source]]
+id = "google-cloud-architecture-framework"
+title = "Google Cloud Architecture Framework"
+publisher = "Google Cloud"
+url = "https://cloud.google.com/architecture/framework"
+license = "free-to-read"
+jurisdiction = "global"
+authoritative_for = "Google Cloud's own normative design guidance, and what its architecture reviews assess against."
+skills = ["technology:cloud-infrastructure", "it-operations:cloud-administration"]
+checked = "2026-09-16"
+
+[[source]]
+id = "omg-atdm"
+title = "Automated Technical Debt Measure"
+publisher = "Object Management Group"
+url = "https://www.omg.org/spec/ATDM/"
+license = "free-to-read"
+jurisdiction = "global"
+authoritative_for = "How technical debt is computed from source code as a standardized measure. It settles why two debt numbers disagree; it settles nothing about whether to pay the debt down."
+skills = ["technology:technical-debt-management"]
+checked = "2026-09-16"
+
+[[source]]
+id = "eu-ai-act"
+title = "Regulation (EU) 2024/1689 — the AI Act"
+publisher = "Publications Office of the European Union"
+url = "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"
+license = "attribution-required"
+jurisdiction = "EU"
+authoritative_for = "Whether an AI system is prohibited, high-risk or limited-risk in the EU and what obligations attach. Binding law rather than guidance, and only the Official Journal version is authentic."
+skills = ["technology:chief-technology-officer", "data-analytics:ai-ml-governance", "legal-risk:regulatory-compliance"]
+checked = "2026-09-16"
+
+[[source]]
+id = "anthropic-agent-skills"
+title = "Agent Skills documentation"
+publisher = "Anthropic"
+url = "https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview"
+license = "free-to-read"
+jurisdiction = "global"
+authoritative_for = "The SKILL.md format and its loading semantics — required frontmatter, body, and how bundled resources are surfaced. The format, not what makes a skill good."
+skills = ["technology:skill-authoring"]
+checked = "2026-09-16"
+
+# ── Identity, hardening and the network ───────────────────────────────────────
+
+[[source]]
+id = "nist-sp-800-63"
+title = "NIST SP 800-63: Digital Identity Guidelines"
+publisher = "NIST"
+url = "https://csrc.nist.gov/pubs/sp/800/63/4/final"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "What each identity, authenticator and federation assurance level requires — and, notably, that forced periodic password rotation and composition rules are not among them."
+data = "https://pages.nist.gov/800-63-4/"
+skills = ["it-operations:identity-lifecycle-administration", "security:access-and-identity"]
+checked = "2026-09-16"
+
+[[source]]
+id = "scim-rfc-7644"
+title = "RFC 7644: System for Cross-domain Identity Management Protocol"
+publisher = "IETF"
+url = "https://www.rfc-editor.org/rfc/rfc7644.html"
+license = "free-to-read"
+jurisdiction = "global"
+authoritative_for = "How provisioning and deprovisioning are transacted between an identity provider and a downstream application — endpoints, patch semantics, filtering, and the canonical user and group attributes."
+data = "https://www.rfc-editor.org/rfc/rfc7643.html"
+skills = ["it-operations:identity-lifecycle-administration"]
+checked = "2026-09-16"
+
+[[source]]
+id = "openid-connect-core"
+title = "OpenID Connect Core 1.0"
+publisher = "OpenID Foundation"
+url = "https://openid.net/specs/openid-connect-core-1_0.html"
+license = "free-to-read"
+jurisdiction = "global"
+authoritative_for = "What an ID token is, which claims are standard, and what a conformant party must do in each flow. Settles arguments that begin 'our provider does it differently'."
+skills = ["it-operations:identity-lifecycle-administration"]
+checked = "2026-09-16"
+
+[[source]]
+id = "nist-sp-800-207-zero-trust"
+title = "NIST SP 800-207: Zero Trust Architecture"
+publisher = "NIST"
+url = "https://csrc.nist.gov/pubs/sp/800/207/final"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "What zero trust denotes — the policy engine, administrator and enforcement point model, and the tenets — so that a vendor cannot redefine the term mid-conversation."
+skills = ["it-operations:identity-lifecycle-administration", "it-operations:network-administration", "it-operations:cloud-administration"]
+checked = "2026-09-16"
+
+[[source]]
+id = "disa-stigs"
+title = "Security Technical Implementation Guides"
+publisher = "Defense Information Systems Agency, US Department of Defense"
+url = "https://public.cyber.mil/stigs/"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "The exact required configuration of a given operating system, hypervisor or appliance, setting by setting with severity. When two administrators disagree about a hardening value, this states the required one."
+data = "https://public.cyber.mil/stigs/downloads/"
+skills = ["it-operations:systems-administration", "it-operations:endpoint-management", "it-operations:virtualization-operations", "it-operations:network-administration"]
+checked = "2026-09-16"
+
+[[source]]
+id = "cis-benchmarks"
+title = "CIS Benchmarks"
+publisher = "Center for Internet Security"
+url = "https://www.cisecurity.org/cis-benchmarks"
+license = "registration-required"
+jurisdiction = "global"
+authoritative_for = "The consensus hardening baseline for a specific product version, with two profile levels. The non-defense equivalent of a STIG and the baseline most commercial audits cite."
+skills = ["it-operations:systems-administration", "it-operations:endpoint-management", "it-operations:cloud-administration", "it-operations:virtualization-operations"]
+checked = "2026-09-16"
+
+[[source]]
+id = "nist-sp-800-40-patch"
+title = "NIST SP 800-40: Guide to Enterprise Patch Management Planning"
+publisher = "NIST"
+url = "https://csrc.nist.gov/pubs/sp/800/40/r4/final"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "What a defensible patch program contains — maintenance windows, phased deployment, and the position that leaving something unpatched requires documented compensating controls rather than silence."
+skills = ["it-operations:endpoint-management", "it-operations:systems-administration", "security:vulnerability-management"]
+checked = "2026-09-16"
+
+[[source]]
+id = "nist-sp-800-124-mobile"
+title = "NIST SP 800-124: Guidelines for Managing the Security of Mobile Devices"
+publisher = "NIST"
+url = "https://csrc.nist.gov/pubs/sp/800/124/r2/final"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "The baseline control set for mobile endpoints and the deployment-model distinctions — corporate-owned, personally enabled, bring-your-own — that mobile policy arguments turn on."
+skills = ["it-operations:endpoint-management"]
+checked = "2026-09-16"
+
+[[source]]
+id = "nist-sp-800-34-contingency"
+title = "NIST SP 800-34: Contingency Planning Guide for Federal Information Systems"
+publisher = "NIST"
+url = "https://csrc.nist.gov/pubs/sp/800/34/r1/upd1/final"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "What recovery time and recovery point objectives formally mean, what a business impact analysis must contain, and which plan covers what — contingency, disaster recovery, continuity of operations."
+skills = ["it-operations:backup-and-recovery", "operations:business-continuity-and-resilience", "operations:incident-management"]
+checked = "2026-09-16"
+
+[[source]]
+id = "rfc-1918-private-addresses"
+title = "RFC 1918: Address Allocation for Private Internets"
+publisher = "IETF"
+url = "https://www.rfc-editor.org/rfc/rfc1918.html"
+license = "free-to-read"
+jurisdiction = "global"
+authoritative_for = "Which address ranges are private and must not be routed publicly. The definitive answer whenever an addressing plan is proposed."
+skills = ["it-operations:network-administration"]
+checked = "2026-09-16"
+
+[[source]]
+id = "rfc-1035-dns"
+title = "RFC 1035: Domain Names — Implementation and Specification"
+publisher = "IETF"
+url = "https://www.rfc-editor.org/rfc/rfc1035.html"
+license = "free-to-read"
+jurisdiction = "global"
+authoritative_for = "DNS record semantics and constraints, including why a CNAME cannot coexist with other records at the same name, and how TTL behaves."
+data = "https://www.rfc-editor.org/rfc/rfc1034.html"
+skills = ["it-operations:network-administration"]
+checked = "2026-09-16"
+
+[[source]]
+id = "rfc-3261-sip"
+title = "RFC 3261: SIP — Session Initiation Protocol"
+publisher = "IETF"
+url = "https://www.rfc-editor.org/rfc/rfc3261.html"
+license = "free-to-read"
+jurisdiction = "global"
+authoritative_for = "SIP signaling semantics — dialog and transaction state, response code meanings, registration, and the role of proxies. What an interop dispute between a phone system and a carrier is settled against."
+data = "https://www.rfc-editor.org/rfc/rfc3550.html"
+skills = ["it-operations:telephony-and-conferencing"]
+checked = "2026-09-16"
+
+[[source]]
+id = "w3c-webrtc"
+title = "WebRTC: Real-Time Communication in Browsers"
+publisher = "World Wide Web Consortium"
+url = "https://www.w3.org/TR/webrtc/"
+license = "free-to-read"
+jurisdiction = "global"
+authoritative_for = "The browser API surface and behavior for real-time audio, video and data — the normative reference for what a conferencing client can and must do."
+skills = ["it-operations:telephony-and-conferencing"]
+checked = "2026-09-16"
+
+[[source]]
+id = "fcc-911-part-9"
+title = "47 CFR Part 9 — 911 requirements"
+publisher = "US Federal Communications Commission"
+url = "https://www.ecfr.gov/current/title-47/chapter-I/subchapter-B/part-9"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "The obligations on a multi-line telephone system — direct 911 dialing, on-site notification and dispatchable location. A hard compliance question for anyone administering a phone or conferencing platform in the US, and one that is usually discovered late."
+skills = ["it-operations:telephony-and-conferencing"]
+checked = "2026-09-16"

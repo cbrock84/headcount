@@ -1,0 +1,285 @@
+# Advertising regulation, messaging law, and the platform documentation that decides whether a
+# tactic is sanctionable.
+#
+# The pattern worth noticing: almost nothing here settles how to market well. What it settles is
+# where the boundary is — what you may claim, how you must disclose it, whom you may contact, and
+# what will get a page or a listing penalized. Craft skills in this department deliberately carry no
+# sources, because no authority decides how to write a good line and a source pretending otherwise
+# would lend false weight.
+
+# ── Claims, endorsements and disclosure ───────────────────────────────────────
+
+[[source]]
+id = "ftc-endorsement-guides"
+title = "Guides Concerning the Use of Endorsements and Testimonials in Advertising, 16 CFR 255"
+publisher = "US Federal Trade Commission"
+url = "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-255"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "Whether a given influencer, affiliate, employee or review arrangement requires disclosure, and what counts as an adequate one. The regulation itself, rather than a summary of it."
+skills = ["marketing:partnership-marketing", "marketing:social-post-craft", "marketing:public-relations", "marketing:youtube-producer", "revenue:referral-programs"]
+checked = "2026-09-16"
+
+[[source]]
+id = "ftc-disclosures-101"
+title = "Disclosures 101 for Social Media Influencers"
+publisher = "US Federal Trade Commission"
+url = "https://www.ftc.gov/business-guidance/resources/disclosures-101-social-media-influencers"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "Where in a post a disclosure has to sit for the regulator to treat it as clear and conspicuous — the placement question the regulation leaves open."
+skills = ["marketing:social-post-craft", "marketing:partnership-marketing", "marketing:video-content", "marketing:youtube-producer"]
+checked = "2026-09-16"
+
+[[source]]
+id = "ftc-dot-com-disclosures"
+title = ".com Disclosures: How to Make Effective Disclosures in Digital Advertising"
+publisher = "US Federal Trade Commission"
+url = "https://www.ftc.gov/business-guidance/resources/com-disclosures-how-make-effective-disclosures-digital-advertising"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "What 'clear and conspicuous' means on a screen — proximity, hyperlinks, scrolling, pop-ups, and space-constrained formats."
+skills = ["demand-generation:landing-page-cro-expert", "demand-generation:paid-advertising", "marketing:marketing-copywriting", "demand-generation:lead-capture"]
+checked = "2026-09-16"
+
+[[source]]
+id = "ftc-native-advertising"
+title = "Native Advertising: A Guide for Businesses"
+publisher = "US Federal Trade Commission"
+url = "https://www.ftc.gov/business-guidance/resources/native-advertising-guide-businesses"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "When sponsored content is deceptively formatted, and what labeling makes a paid placement non-deceptive."
+skills = ["marketing:content-strategy", "marketing:public-relations", "marketing:partnership-marketing", "demand-generation:paid-advertising"]
+checked = "2026-09-16"
+
+[[source]]
+id = "ftc-ad-substantiation"
+title = "Policy Statement Regarding Advertising Substantiation"
+publisher = "US Federal Trade Commission"
+url = "https://www.ftc.gov/legal-library/browse/ftc-policy-statement-regarding-advertising-substantiation"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "What evidence you must already hold before making an objective claim. This is the document that answers whether you may say 'number one', 'three times faster' or 'clinically proven'."
+skills = ["marketing:positioning-and-messaging", "marketing:marketing-copywriting", "marketing:product-launch", "demand-generation:paid-advertising"]
+checked = "2026-09-16"
+
+[[source]]
+id = "ftc-deceptive-pricing"
+title = "Guides Against Deceptive Pricing, 16 CFR 233"
+publisher = "US Federal Trade Commission"
+url = "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-233"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "Whether a 'was $X, now $Y', list-price, free-offer or percentage-off claim is lawful as presented."
+skills = ["demand-generation:paid-advertising", "demand-generation:landing-page-cro-expert", "marketing:marketing-copywriting", "revenue:pricing-and-packaging"]
+checked = "2026-09-16"
+
+# ── Email, SMS and contact permission ─────────────────────────────────────────
+
+[[source]]
+id = "ftc-can-spam"
+title = "CAN-SPAM Act: A Compliance Guide for Business"
+publisher = "US Federal Trade Commission"
+url = "https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "The mandatory elements of a US commercial email — header accuracy, subject-line honesty, physical address, opt-out mechanism and the window for honoring it — and that hiring an agency does not move the liability."
+data = "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-316"
+skills = ["marketing:newsletter-writer", "demand-generation:lifecycle-messaging", "demand-generation:lead-capture", "demand-generation:account-based-marketing", "revenue:outbound-prospecting"]
+checked = "2026-09-16"
+
+[[source]]
+id = "casl"
+title = "Canada's Anti-Spam Legislation, S.C. 2010 c. 23"
+publisher = "Department of Justice Canada"
+url = "https://laws-lois.justice.gc.ca/eng/acts/E-1.6/index.html"
+license = "attribution-required"
+jurisdiction = "CA"
+authoritative_for = "Whether you may send a commercial message to a Canadian address at all. CASL is opt-in by default, which inverts the US assumption, and this is the text governing express versus implied consent."
+skills = ["marketing:newsletter-writer", "demand-generation:lifecycle-messaging", "demand-generation:lead-capture", "revenue:outbound-prospecting"]
+checked = "2026-09-16"
+
+[[source]]
+id = "fcc-tcpa-64-1200"
+title = "Delivery restrictions and telephone solicitation rules, 47 CFR 64.1200"
+publisher = "US Federal Communications Commission"
+url = "https://www.ecfr.gov/current/title-47/chapter-I/subchapter-B/part-64/subpart-L/section-64.1200"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "The consent standard for marketing SMS and autodialed calls — what prior express written consent requires, how revocation must be handled, and the identification rules. Read the current text rather than a summary; this area moves in court."
+skills = ["demand-generation:lifecycle-messaging", "demand-generation:lead-capture", "marketing:behavioral-marketing", "revenue:outbound-prospecting"]
+checked = "2026-09-16"
+
+[[source]]
+id = "coppa-rule"
+title = "Children's Online Privacy Protection Rule, 16 CFR 312"
+publisher = "US Federal Trade Commission"
+url = "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-312"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "Whether a property counts as directed to children, and therefore whether behavioral advertising, retargeting pixels or lead capture may run on it at all."
+data = "https://www.ftc.gov/business-guidance/resources/complying-coppa-frequently-asked-questions"
+skills = ["marketing:behavioral-marketing", "demand-generation:lead-capture", "demand-generation:paid-advertising", "demand-generation:app-store-optimization", "product:product-requirements"]
+checked = "2026-09-16"
+
+[[source]]
+id = "edpb-consent-guidelines"
+title = "Guidelines 05/2020 on consent under Regulation 2016/679"
+publisher = "European Data Protection Board"
+url = "https://www.edpb.europa.eu/our-work-tools/our-documents/guidelines/guidelines-052020-consent-under-regulation-2016679_en"
+license = "attribution-required"
+jurisdiction = "EU"
+authoritative_for = "Whether a consent interface is valid — cookie walls, scroll-as-consent, pre-ticked boxes, granularity and bundling. More decisive in practice than the regulation text, because this is what supervisory authorities apply."
+skills = ["marketing:behavioral-marketing", "demand-generation:lead-capture", "demand-generation:marketing-analytics", "demand-generation:landing-page-cro-expert"]
+checked = "2026-09-16"
+
+[[source]]
+id = "ico-pecr-cookies"
+title = "Guide to PECR: cookies and similar technologies"
+publisher = "UK Information Commissioner's Office"
+url = "https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guide-to-pecr/cookies-and-similar-technologies/"
+license = "attribution-required"
+jurisdiction = "UK"
+authoritative_for = "Which trackers are strictly necessary and therefore exempt from consent, and which are not. Analytics, A/B testing and personalization are addressed by name, which is where most internal arguments about test tooling end."
+skills = ["demand-generation:experimentation", "marketing:behavioral-marketing", "demand-generation:marketing-analytics"]
+checked = "2026-09-16"
+
+# ── Platform rules, which decide whether work ships at all ────────────────────
+
+[[source]]
+id = "google-search-spam-policies"
+title = "Spam policies for Google web search"
+publisher = "Google"
+url = "https://developers.google.com/search/docs/essentials/spam-policies"
+license = "cc-by"
+jurisdiction = "global"
+authoritative_for = "Whether a tactic is sanctionable — scaled content abuse, site reputation abuse, expired-domain abuse, cloaking, doorway pages. The only authoritative answer to whether a programmatic build will be penalized."
+skills = ["demand-generation:programmatic-seo", "demand-generation:seo-strategy", "demand-generation:ai-search-optimization", "marketing:content-strategy"]
+checked = "2026-09-16"
+
+[[source]]
+id = "google-crawlers"
+title = "Google crawlers and user-triggered fetchers"
+publisher = "Google"
+url = "https://developers.google.com/search/docs/crawling-indexing/overview-google-crawlers"
+license = "cc-by"
+jurisdiction = "global"
+authoritative_for = "Which user agents Google operates and what each one is for, including the separate control over training and AI surfaces — the question behind every robots.txt argument about blocking AI."
+data = "https://developers.google.com/search/docs/crawling-indexing/robots/intro"
+skills = ["demand-generation:seo-strategy", "demand-generation:programmatic-seo", "demand-generation:ai-search-optimization"]
+checked = "2026-09-16"
+
+[[source]]
+id = "google-structured-data-gallery"
+title = "Structured data markup that Google Search supports"
+publisher = "Google"
+url = "https://developers.google.com/search/docs/appearance/structured-data/search-gallery"
+license = "cc-by"
+jurisdiction = "global"
+authoritative_for = "Which structured data types Google actually acts on, as opposed to which exist in the vocabulary. Pair it with schema.org: one defines the vocabulary, the other says what is honored."
+skills = ["demand-generation:seo-strategy", "demand-generation:programmatic-seo", "demand-generation:listing-distribution"]
+checked = "2026-09-16"
+
+[[source]]
+id = "schema-org"
+title = "Schema.org vocabulary"
+publisher = "Schema.org community group"
+url = "https://schema.org/"
+license = "cc-by-sa"
+jurisdiction = "global"
+authoritative_for = "The canonical property names and expected types for structured markup. Share-alike, so cite and link rather than folding definitions into your own documentation."
+data = "https://schema.org/version/latest/schemaorg-current-https.jsonld"
+skills = ["demand-generation:seo-strategy", "demand-generation:programmatic-seo", "demand-generation:listing-distribution"]
+checked = "2026-09-16"
+
+[[source]]
+id = "rfc-9309-robots"
+title = "RFC 9309: Robots Exclusion Protocol"
+publisher = "IETF"
+url = "https://www.rfc-editor.org/rfc/rfc9309.html"
+license = "free-to-read"
+jurisdiction = "global"
+authoritative_for = "The formal parsing rules for robots.txt — precedence, wildcards, size limits, and what a crawler is obliged to do. Settles at the protocol level whether disallow prevents indexing, which it does not."
+skills = ["demand-generation:seo-strategy", "demand-generation:programmatic-seo", "demand-generation:ai-search-optimization"]
+checked = "2026-09-16"
+
+[[source]]
+id = "apple-app-review-guidelines"
+title = "App Store Review Guidelines"
+publisher = "Apple"
+url = "https://developer.apple.com/app-store/review/guidelines/"
+license = "free-to-read"
+jurisdiction = "global"
+authoritative_for = "Whether a listing, screenshot set, price presentation or subscription flow will be rejected. Binding for anything shipping through the App Store, and copyrighted — cite the rule number, do not mirror the text."
+data = "https://developer.apple.com/app-store/search/"
+skills = ["demand-generation:app-store-optimization", "marketing:product-launch", "revenue:pricing-and-packaging", "product:chief-product-officer"]
+checked = "2026-09-16"
+
+[[source]]
+id = "google-play-policy"
+title = "Google Play Developer Program Policy"
+publisher = "Google"
+url = "https://play.google.com/about/developer-content-policy/"
+license = "free-to-read"
+jurisdiction = "global"
+authoritative_for = "Store listing, metadata, ads, data-safety and monetization rules for Android distribution, including the explicit prohibitions on keyword stuffing and incentivized ratings."
+skills = ["demand-generation:app-store-optimization", "marketing:product-launch"]
+checked = "2026-09-16"
+
+[[source]]
+id = "google-merchant-product-spec"
+title = "Product data specification"
+publisher = "Google"
+url = "https://support.google.com/merchants/answer/7052112"
+license = "free-to-read"
+jurisdiction = "global"
+authoritative_for = "The required attributes, formats and accepted values for a product feed — whether a listing is accepted is a specification question rather than an opinion."
+skills = ["demand-generation:listing-distribution", "demand-generation:paid-advertising"]
+checked = "2026-09-16"
+
+[[source]]
+id = "wcag-22"
+title = "Web Content Accessibility Guidelines 2.2"
+publisher = "World Wide Web Consortium"
+url = "https://www.w3.org/TR/WCAG22/"
+license = "free-to-read"
+jurisdiction = "global"
+authoritative_for = "Whether a page, email or video is accessible. It is the criteria list that US Section 508, the EU's EN 301 549 and most enterprise procurement point at, so it settles any argument that reaches a buyer's accessibility requirement."
+skills = ["demand-generation:landing-page-cro-expert", "marketing:video-content", "marketing:visual-content", "marketing:newsletter-writer", "product:interface-craft", "product:design-system", "product:ux-product-auditor", "product:interface-redesign", "customer-experience:self-service-and-knowledge"]
+checked = "2026-09-16"
+
+# ── Measurement definitions, as opposed to vendors' versions of them ──────────
+
+[[source]]
+id = "mrc-standards"
+title = "MRC standards and guidelines"
+publisher = "Media Rating Council"
+url = "https://mediaratingcouncil.org/standards-and-guidelines"
+license = "free-to-read"
+jurisdiction = "US"
+authoritative_for = "The primary definitions behind ad measurement — what counts as an impression, what counts as viewable, and what counts as invalid traffic. This is what every vendor dashboard claims to implement."
+skills = ["demand-generation:marketing-analytics", "demand-generation:paid-advertising", "marketing:video-content"]
+checked = "2026-09-16"
+
+[[source]]
+id = "asa-p-value-statement"
+title = "ASA Statement on Statistical Significance and P-Values"
+publisher = "American Statistical Association"
+url = "https://www.amstat.org/asa/files/pdfs/p-valuestatement.pdf"
+license = "free-to-read"
+jurisdiction = "global"
+authoritative_for = "What a p-value does and does not mean. It settles the most common error in marketing experimentation, which is reading a test that crossed ninety-five percent as a result."
+skills = ["demand-generation:experimentation", "demand-generation:landing-page-cro-expert", "demand-generation:marketing-analytics"]
+checked = "2026-09-16"
+
+[[source]]
+id = "aapor-standard-definitions"
+title = "Standard Definitions: final dispositions of case codes and outcome rates for surveys"
+publisher = "American Association for Public Opinion Research"
+url = "https://aapor.org/standards-and-ethics/standard-definitions/"
+license = "free-to-read"
+jurisdiction = "global"
+authoritative_for = "How a response rate, cooperation rate, refusal rate and contact rate are computed. The arbiter when two people report different response rates from the same fieldwork."
+skills = ["marketing:customer-research", "demand-generation:marketing-analytics"]
+checked = "2026-09-16"

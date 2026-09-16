@@ -59,6 +59,13 @@ Where a formal plan is warranted it needs specific outcomes, a real timeframe, d
 stated consequence. A plan that is only a paper trail for a decision already taken is recognized as
 such and does damage well beyond the individual.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Tooling
 
 Review and feedback: Lattice, Culture Amp, 15Five, Leapsome, Workday Talent, and similar.

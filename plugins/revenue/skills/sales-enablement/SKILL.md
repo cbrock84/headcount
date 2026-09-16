@@ -49,6 +49,13 @@ Collateral rots. Every asset needs an owner and a review date, and anything refe
 competitors, or product capability needs checking every quarter. A battlecard describing a
 competitor's old product loses deals.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Never
 
 - Build collateral before you know where deals actually stall. Ask the reps and read the losses first.
