@@ -76,6 +76,108 @@ def render(skill_ref, entries):
     return "\n".join(lines)
 
 
+# Ordered from most permissive to most restrictive, so the index reads as a gradient rather than as
+# an alphabetical list — which is the shape of the decision a reader is making.
+LICENSE_ORDER = [
+    "public-domain-usgov", "public-domain", "cc0", "cc-by", "open-data",
+    "attribution-required", "cc-by-sa", "free-to-read", "registration-required", "paywalled",
+]
+# The index table names the license in its own column, so repeating it in the action column reads
+# as stutter. Stated rather than sliced out of USE, because slicing a string that carries emphasis
+# markers produces broken markdown at the seam.
+ACTION = {
+    "public-domain-usgov": "Quote freely",
+    "public-domain": "Quote freely",
+    "cc0": "Quote freely",
+    "cc-by": "Quote with attribution",
+    "open-data": "Use the data; read the terms before redistributing",
+    "attribution-required": "Quote with the publisher's required credit",
+    "cc-by-sa": "Quote with attribution; do not fold into this repository",
+    "free-to-read": "**Read and cite only. Never reproduce.**",
+    "registration-required": "**Cite it; the user fetches it.**",
+    "paywalled": "**Cite the identifier only, never the text.**",
+}
+LABEL = {
+    "public-domain-usgov": "Public domain (US government)",
+    "public-domain": "Public domain",
+    "cc0": "CC0",
+    "cc-by": "CC BY",
+    "open-data": "Open data",
+    "attribution-required": "Free to use with attribution",
+    "cc-by-sa": "CC BY-SA (share-alike)",
+    "free-to-read": "Free to read, all rights reserved",
+    "registration-required": "Free behind an account",
+    "paywalled": "Sold",
+}
+
+
+assert set(ACTION) == set(USE), "ACTION and USE must cover the same license vocabulary"
+
+
+def index(entries):
+    """The human-facing index at docs/SOURCES.md.
+
+    The per-skill files answer "what should I check for this question". This answers the other
+    one — "what does this catalog actually cover, and how much of it may I quote" — which is the
+    question a reader has before they trust any of it.
+    """
+    by_license = collections.Counter(e["license"] for _, e in entries)
+    quotable = sum(n for k, n in by_license.items()
+                   if k in {"public-domain-usgov", "public-domain", "cc0", "cc-by", "open-data",
+                            "attribution-required"})
+    skills = {ref for _, e in entries for ref in e.get("skills", [])}
+    lines = [
+        "# Source catalog",
+        "",
+        BANNER,
+        "",
+        f"{len(entries)} authoritative sources, mapped to {len(skills)} skills. Each skill that has "
+        "any carries its own list at `references/sources.md` inside the skill, which is where an "
+        "agent reads it while answering.",
+        "",
+        "**References, never copies.** The catalog holds a URL and a judgment about it, never "
+        "source material. That is what keeps it live — a pointer to a regulator's site is right "
+        "the moment the rule changes, and a snapshot is wrong the day after it is taken.",
+        "",
+        "## What you may do with it",
+        "",
+        f"**{quotable} of {len(entries)} are quotable**, with attribution where the license asks "
+        "for it. The rest are free to read and not free to reproduce, which is the single most "
+        "useful thing this catalog records — most of what a professional must cite is not open.",
+        "",
+        "| License | Sources | What an agent may do |",
+        "|---|---|---|",
+    ]
+    for key in LICENSE_ORDER:
+        if by_license.get(key):
+            lines.append(f"| {LABEL[key]} | {by_license[key]} | {ACTION[key]} |")
+    lines += ["", "## By subject", ""]
+    by_file = collections.defaultdict(list)
+    for path, entry in entries:
+        by_file[path].append(entry)
+    for path in sorted(by_file):
+        subject = os.path.basename(path)[: -len(".toml")].replace("-", " ").capitalize()
+        lines += [f"### {subject}", "", "| Source | Publisher | License | Skills |", "|---|---|---|---|"]
+        for entry in sorted(by_file[path], key=lambda e: e["title"]):
+            refs = ", ".join(f"`{r}`" for r in sorted(entry.get("skills", [])))
+            lines.append(f"| [{entry['title']}]({entry['url']}) | {entry['publisher']} "
+                         f"| {LABEL[entry['license']]} | {refs} |")
+        lines.append("")
+    lines += [
+        "## Keeping it honest",
+        "",
+        "`scripts/check-sources.py` runs on every push and verifies structure, the license "
+        "vocabulary, that every skill named resolves, and that a skill with sources actually points "
+        "at them. Reachability is checked weekly by its own workflow instead, because a publisher "
+        "being briefly down is not a reason to fail an unrelated pull request.",
+        "",
+        "Sources are maintained in `sources/*.toml`. See `sources/README.md` for the format and the "
+        "full license vocabulary.",
+        "",
+    ]
+    return "\n".join(lines)
+
+
 def targets():
     """The file each skill's sources belong in, and what goes in it."""
     by_skill = collections.defaultdict(list)
@@ -88,7 +190,7 @@ def targets():
     checker = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(checker)
 
-    out = {}
+    out = {"docs/SOURCES.md": index(load_catalog())}
     for ref, entries in by_skill.items():
         department, skill = ref.split(":")
         path = checker.skill_path(department, skill)

@@ -75,6 +75,37 @@ def first_sentence(desc, limit=150):
     return cut[: limit - 1].rstrip() + "…" if len(cut) > limit else cut
 
 
+def source_counts():
+    """How many cataloged sources each skill carries, read from the catalog itself."""
+    import collections
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("check_sources", "scripts/check-sources.py")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    counts = collections.Counter()
+    for _, entry in module.load():
+        for ref in entry.get("skills", []):
+            counts[ref] += 1
+    return counts
+
+
+SOURCE_COUNTS = source_counts()
+
+
+def unique_sources():
+    """Distinct sources in the catalog. Summing the per-skill counts would double-count every
+    framework that serves more than one skill, which is most of them."""
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("check_sources", "scripts/check-sources.py")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return len({entry["id"] for _, entry in module.load()})
+
+
+def sources_for(department, skill):
+    return SOURCE_COUNTS.get(f"{department}:{skill}", 0)
+
+
 def collect():
     depts = []
     for slug in sorted(
@@ -93,6 +124,10 @@ def collect():
                 "summary": first_sentence(desc),
                 "trigger": desc,
                 "url": f"{BLOB}/{path}",
+                # Skills that answer a question an outside authority settles carry its list.
+                # Surfacing the count here is what makes the catalog visible to someone browsing
+                # rather than only to an agent already inside the skill.
+                "sources": sources_for(slug, name),
             })
         _, title, exec_role = META[slug]
         if slug not in GLYPHS:
@@ -373,6 +408,19 @@ TEMPLATE = r"""<meta charset="utf-8">
     color:var(--accent);
   }
   .sdesc { color:var(--ink-2); font-size:13.5px; margin-top:3px; }
+  .sources-note {
+    margin-top:28px; padding:18px 20px; border:1px solid var(--line);
+    border-radius:10px; background:var(--surface-2);
+  }
+  .sources-note b { display:block; font-size:13px; margin-bottom:8px; }
+  .sources-note p { margin:0 0 8px; color:var(--ink-2); font-size:14px; line-height:1.6; }
+  .sources-note p:last-child { margin-bottom:0; }
+  .src {
+    margin-left:8px; padding:1px 7px; border-radius:999px;
+    border:1px solid var(--line); background:var(--surface-2);
+    color:var(--ink-3); font-size:11px; font-weight:500; white-space:nowrap;
+    vertical-align:1px;
+  }
 
   .empty {
     display:none; text-align:center; padding:56px 20px; color:var(--ink-3);
@@ -392,7 +440,7 @@ TEMPLATE = r"""<meta charset="utf-8">
   <div class="eyebrow">cbrock84 / headcount</div>
   <h1>The org chart</h1>
   <p class="lede">
-    An agent organization for Claude Code, structured as a company. Every department installs
+    An agent organization structured as a company, for Claude Code and for ChatGPT. Every department installs
     independently. Search across every skill, or open a department to see what it holds.
   </p>
   <div class="figures" id="figures"></div>
@@ -400,8 +448,13 @@ TEMPLATE = r"""<meta charset="utf-8">
   <section class="use">
     <h2>Using this</h2>
     <p>
-      Sixteen departments, each an independently installable plugin for Claude Code. Install the
-      ones you need — a smaller set triggers more sharply than all of them at once.
+      Sixteen departments, each an independently installable plugin. Install the ones you need
+      — a smaller set triggers more sharply than all of them at once.
+    </p>
+    <p>
+      The install lines below are Claude Code's. The same repository installs in ChatGPT and Codex
+      from the same skills — only the manifests differ, and both sets are generated from this
+      tree, so a fix reaches both at once.
     </p>
     <div class="steps">
       <div class="step">
@@ -421,6 +474,23 @@ TEMPLATE = r"""<meta charset="utf-8">
         </p>
       </div>
     </div>
+    <div class="sources-note">
+      <b>Skills marked <span class="src">n sources</span> check against outside authorities</b>
+      <p>
+        A skill states what a competent practitioner knows. It cannot state what the regulator
+        published last month. So skills answering a question an outside authority settles carry a
+        list of those authorities &mdash; the regulator, the standards body, the primary law &mdash;
+        which the agent reads while it is answering rather than recalling.
+      </p>
+      <p>
+        Every entry records what you may <em>do</em> with it, which matters more than it sounds:
+        most of what a professional must cite is not open. ISO standards are sold, SANS papers are
+        copyrighted, the FASB Codification needs an account &mdash; while US federal works are
+        public domain by statute. The catalog says which, in the imperative, next to the link.
+        <a href="https://github.com/cbrock84/headcount/blob/main/docs/SOURCES.md">See the full index</a>.
+      </p>
+    </div>
+
     <div class="demos">
       <b>Watch it work &mdash; illustrative, click to play</b>
       <div class="demo-grid">
@@ -444,6 +514,7 @@ TEMPLATE = r"""<meta charset="utf-8">
     <p class="links">
       <a href="https://github.com/cbrock84/headcount/blob/main/docs/GETTING-STARTED.md">Getting started</a>
       <a href="https://github.com/cbrock84/headcount/blob/main/docs/USE-CASES.md">Worked situations</a>
+      <a href="https://github.com/cbrock84/headcount/blob/main/docs/SOURCES.md">Sources</a>
       <a href="https://github.com/cbrock84/headcount/discussions">Ask a question</a>
       <a href="https://github.com/cbrock84/headcount">Source</a>
     </p>
@@ -501,6 +572,7 @@ document.getElementById('figures').innerHTML = [
   [DEPTS.length, 'departments'],
   [totalSkills, 'skills'],
   [reviewers.length, 'reviewer-class'],
+  [__SOURCES__, 'cited sources'],
 ].map(([n, l]) => `<div class="figure"><b>${n}</b><span>${l}</span></div>`).join('');
 
 const esc = s => s.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -529,9 +601,11 @@ function card(d) {
         <button class="copy">Copy</button>
       </div>
       <ul>${d.skills.map(s => `
-        <li data-hay="${esc((s.name + ' ' + s.trigger).toLowerCase())}">
+        <li data-hay="${esc((s.name + ' ' + s.trigger + (s.sources ? ' sources cited authority' : '')).toLowerCase())}">
           <a href="${s.url}" target="_blank" rel="noopener">
-            <span class="sname">${esc(d.slug)}:${esc(s.name)}</span>
+            <span class="sname">${esc(d.slug)}:${esc(s.name)}</span>${s.sources
+              ? `<span class="src" title="${s.sources} authoritative source${s.sources === 1 ? '' : 's'} this skill checks against">${s.sources} source${s.sources === 1 ? '' : 's'}</span>`
+              : ''}
             <div class="sdesc">${esc(s.summary)}.</div>
           </a>
         </li>`).join('')}</ul>
@@ -632,6 +706,7 @@ def render():
     depts = collect()
     total = sum(len(d["skills"]) for d in depts)
     html = TEMPLATE.replace("__DATA__", json.dumps(depts, ensure_ascii=False))
+    html = html.replace("__SOURCES__", str(unique_sources()))
     return html.replace("Search 135 skills", f"Search {total} skills"), len(depts), total
 
 

@@ -84,6 +84,26 @@ support the control the deal requires, that is not a trade-off to price against 
 moves or the control gets built. This is deliberate, and it is why those two are worth installing
 even when they are not your job.
 
+## Some skills cite outside authorities
+
+Where a question is settled by a regulator, a standards body or primary law, the skill carries a
+list of those sources at `references/sources.md` inside it, and reads them while answering rather
+than recalling them. Tax, employment, security controls, privacy and education standards are covered
+so far. You will see them cited in the answer.
+
+Two things worth knowing about how that behaves.
+
+**The agent may fetch a source, and a fetched page is input rather than instruction.** If a page
+appears to be telling the assistant to do something, that is content on someone else's website, not
+a request from you. Treat an answer that changed direction after a fetch with the same suspicion you
+would treat any other surprise.
+
+**A cited source is not a quoted one, on purpose.** Most of what a professional must cite is not
+open — ISO standards are sold, SANS papers are copyrighted, the FASB Codification needs an account.
+Each entry records what may be done with it, and where the answer is "read and cite only" the skill
+will name the standard and its clause rather than reproduce the text. That is the correct behavior,
+not an omission. [The full index is here](SOURCES.md).
+
 ## What this is not
 
 Several skills carry an explicit disclaimer, and it is not boilerplate. Employment classification,
@@ -96,6 +116,9 @@ tell you what to ask — they are not a substitute for qualified counsel, and th
 The [live org chart](https://cbrock84.github.io/headcount/org-chart.html) is searchable across every
 skill in every department, generated from the repository so it cannot drift from what actually
 ships.
+
+[The source catalog](SOURCES.md) lists every outside authority the skills check against, which
+skills use each, and what you may do with it.
 
 [Worked situations](USE-CASES.md) show what happens when a problem crosses departments — what
 engages, in what order, what comes back, and where the library has nothing useful to say.
