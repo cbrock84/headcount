@@ -78,6 +78,13 @@ address range someone reused. Budget for a periodic physical visit — remote ma
 show you the cable run someone added, and the sites without permanent IT staff are exactly the ones
 that drift furthest from the standard.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Never
 
 - Run a flat network and rely on host controls alone.

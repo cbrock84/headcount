@@ -48,6 +48,13 @@ Attribute honestly. Partnership traffic is often assisted rather than last-touch
 attribution will under-count it and you will kill something that was working. Agree the measurement
 method before launch, when neither side is defending a result.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Never
 
 - Partner with someone whose audience you have not actually looked at.

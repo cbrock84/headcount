@@ -60,6 +60,13 @@ and the workaround is data about what the new system fails to do, not merely non
 Adoption is the mechanism by which `pmo:benefits-realization` becomes possible; without it there is
 nothing to realize.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Never
 
 - Treat resistance as a communication deficit without asking what the change costs.

@@ -49,6 +49,13 @@ scramble.
 Offers, notice periods and some contractor arrangements are commitments before anyone starts. Know
 which parts of the plan can still be unwound and by when.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Never
 
 - Build a plan on salary rather than fully loaded cost.

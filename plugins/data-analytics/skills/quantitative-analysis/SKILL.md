@@ -75,6 +75,13 @@ gets trusted on the things it can determine.
 **Distinguish what the data shows from what you infer.** Both belong in the report; conflating them
 is how a plausible interpretation becomes a fact by the third time it is repeated.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Never
 
 - Run an analysis that leads to the same action whatever it finds.

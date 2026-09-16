@@ -69,6 +69,13 @@ by a wide margin and then blames the team.
 Review a sample of resolved contacts against a rubric agreed with the team, and coach against it.
 Reviewing only escalations trains for defense rather than quality.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Tooling
 
 Ticketing: Zendesk, Freshdesk, Intercom, Front, Help Scout, and similar; Jira Service

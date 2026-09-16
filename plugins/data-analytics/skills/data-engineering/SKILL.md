@@ -51,6 +51,13 @@ is valid but wrong. Assert on the data itself, in the pipeline, and fail loudly:
 A silent failure is worse than a loud one. Prefer stopping the pipeline to publishing data you do not
 trust.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Tooling
 
 Warehouses and lakehouses: Snowflake, BigQuery, Databricks, Redshift, and Postgres or

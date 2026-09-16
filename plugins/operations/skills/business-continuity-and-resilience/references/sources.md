@@ -4,6 +4,22 @@
 
 Check these before answering on anything they cover, and cite what you used. The use note on each one is binding: most of what a professional cites is free to read and not free to reproduce.
 
+## NIST SP 800-34: Contingency Planning Guide for Federal Information Systems
+
+NIST · US · public domain (US government) — quote freely
+
+<https://csrc.nist.gov/pubs/sp/800/34/r1/upd1/final>
+
+**Authoritative for:** What recovery time and recovery point objectives formally mean, what a business impact analysis must contain, and which plan covers what — contingency, disaster recovery, continuity of operations.
+
+## National Incident Management System doctrine
+
+Federal Emergency Management Agency · US · public domain (US government) — quote freely
+
+<https://www.fema.gov/emergency-managers/nims>
+
+**Authoritative for:** Who is in charge during an incident and how command transfers — incident command structure, unified command, span of control, and the action-plan cycle. Settles the role and escalation disputes that incidents actually produce.
+
 ## OSHA law and regulations
 
 US Occupational Safety and Health Administration · US · public domain (US government) — quote freely

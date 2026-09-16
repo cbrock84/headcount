@@ -38,6 +38,13 @@ would change if it is true. A finding that changes nothing is trivia.
 Separate what people **said**, what they **did**, and what you **inferred**. Conflating the three is
 the most common way research misleads.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Never
 
 - Recruit only happy customers. The sample that answers your email is not your market.

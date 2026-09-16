@@ -49,6 +49,13 @@ is affected), or add capacity (which rarely helps late, and often hurts).
 Re-baseline once, visibly, rather than slipping a week at a time. Serial small slips destroy
 credibility far faster than one honest reset.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Never
 
 - Report green on a program with an unresolved blocker.

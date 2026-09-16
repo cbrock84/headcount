@@ -73,6 +73,13 @@ predecessor or successor, hard date constraints, negative float, durations longe
 period, tasks that have been 90% complete for more than one period, and a baseline that has been
 re-set so often it no longer means anything.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Never
 
 - Accept a date on a task with no logic behind it.

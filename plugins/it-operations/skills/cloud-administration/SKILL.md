@@ -82,6 +82,13 @@ sync. Retention settings are not backups, and the recycle bin is not a recovery 
 deliberately what needs independent protection under `it-operations:backup-and-recovery` rather
 than assuming the vendor's durability promise covers your mistakes.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Tooling
 
 Platforms: AWS, Microsoft Azure, Google Cloud, and similar.

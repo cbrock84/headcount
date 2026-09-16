@@ -42,6 +42,13 @@ Stale programmatic pages rot faster than editorial ones because there are so man
 cadence tied to the data source, and prune: pages with no impressions after two quarters should be
 consolidated or removed. Volume is not the goal.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Never
 
 - Generate pages for instances with no data.

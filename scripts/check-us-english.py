@@ -95,6 +95,17 @@ SKIP_FILES = {"LICENSE", os.path.basename(__file__)}
 TEXT_EXT = {".md", ".py", ".sh", ".json", ".yml", ".yaml", ".html", ".txt", ".mjs", ".js"}
 
 
+# A URL is an address, not prose. Spelling it "correctly" changes where it points — and because
+# --fix rewrites in place, a British spelling inside a link silently became a broken link and the
+# build then went green. The UK regulator whose own path is /for-organisations/ is what exposed it.
+# Masked rather than skipped line-by-line, so a sentence with a link in it is still checked.
+URL = re.compile(r"""(?:https?://|www\.)[^\s<>"'`)\]]+""")
+
+
+def mask_urls(text):
+    return URL.sub(lambda m: "\0" * len(m.group(0)), text)
+
+
 def match_case(british, american):
     if british.isupper():
         return american.upper()
@@ -121,16 +132,24 @@ def main():
             text = open(path, encoding="utf-8").read()
         except (UnicodeDecodeError, OSError):
             continue
-        if not WORD.search(text):
+        masked = mask_urls(text)
+        if not WORD.search(masked):
             continue
 
         if fix:
-            new = WORD.sub(lambda m: match_case(m.group(1), PAIRS[m.group(1).lower()]), text)
+            # Rebuild from the original text, using the mask only to decide which spans to touch.
+            out, last = [], 0
+            for m in WORD.finditer(masked):
+                out.append(text[last:m.start()])
+                out.append(match_case(m.group(1), PAIRS[m.group(1).lower()]))
+                last = m.end()
+            out.append(text[last:])
+            new = "".join(out)
             if new != text:
                 open(path, "w", encoding="utf-8").write(new)
                 changed += 1
         else:
-            for n, line in enumerate(text.splitlines(), 1):
+            for n, line in enumerate(masked.splitlines(), 1):
                 for m in WORD.finditer(line):
                     b = m.group(1)
                     problems.append(f"{path}:{n}: '{b}' -> '{match_case(b, PAIRS[b.lower()])}'")

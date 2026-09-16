@@ -46,6 +46,13 @@ schedule are a way of appearing to hit a target while failing the customer.
 Diagnose misses by cause: supply, capacity, information, or process. The remedies do not overlap,
 and a fulfillment problem attributed to the wrong one gets more expensive rather than better.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Never
 
 - Size safety stock from average demand without accounting for variability.

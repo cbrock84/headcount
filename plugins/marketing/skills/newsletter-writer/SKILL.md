@@ -82,6 +82,13 @@ read-aloud pass catches what silent reading never does.
 One issue contains several short-form posts, a talk track, and often a longer piece. Plan which
 before writing, so the sections that should stand alone are written to.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Never
 
 - Write a subject line the opening does not pay off. It buys one open and costs the next.

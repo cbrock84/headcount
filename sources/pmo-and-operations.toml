@@ -1,0 +1,253 @@
+# Delivery assurance, procurement, safety and the regulators who arrive at a site.
+#
+# The best material here is unexpected: the US Government Accountability Office publishes the most
+# rigorous free guidance anywhere on whether a schedule is reliable and whether a cost estimate is
+# defensible, and it is public domain. The commercial project-management bodies of knowledge are
+# sold, and — for the questions this catalog cares about, like how much contingency is justified or
+# what float threshold matters — they settle less than the GAO guides do.
+
+[[source]]
+id = "gao-schedule-assessment"
+title = "GAO Schedule Assessment Guide: best practices for project schedules"
+publisher = "US Government Accountability Office"
+url = "https://www.gao.gov/products/gao-16-89g"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "Whether a schedule is reliable — the ten criteria an auditor applies, covering the work breakdown, sequencing, resource loading, critical path, total float and schedule risk analysis."
+data = "https://www.gao.gov/assets/gao-16-89g.pdf"
+skills = ["pmo:schedule-development-and-analysis", "pmo:project-delivery", "pmo:dependency-and-risk-management"]
+checked = "2026-09-16"
+
+[[source]]
+id = "gao-cost-estimating"
+title = "GAO Cost Estimating and Assessment Guide"
+publisher = "US Government Accountability Office"
+url = "https://www.gao.gov/products/gao-20-195g"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "What makes a cost estimate defensible, and specifically how much contingency is justified — via risk and uncertainty analysis at a stated confidence level, rather than a percentage somebody remembers."
+data = "https://www.gao.gov/assets/gao-20-195g.pdf"
+skills = ["pmo:estimating-and-contingency", "pmo:portfolio-governance", "pmo:program-management"]
+checked = "2026-09-16"
+
+[[source]]
+id = "gao-agile-assessment"
+title = "GAO Agile Assessment Guide"
+publisher = "US Government Accountability Office"
+url = "https://www.gao.gov/products/gao-24-105506"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "Whether an organization has actually adopted an iterative delivery model or relabeled a staged one. Gives testable criteria, which is rare in this area, and reconciles iterative delivery with cost and schedule assurance."
+skills = ["pmo:project-delivery", "pmo:change-and-adoption", "pmo:head-of-pmo"]
+checked = "2026-09-16"
+
+[[source]]
+id = "nasa-systems-engineering-handbook"
+title = "NASA Systems Engineering Handbook"
+publisher = "NASA"
+url = "https://www.nasa.gov/reference/systems-engineering-handbook/"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "What a phase gate must contain before a technical project may proceed — the review structure, entrance and success criteria, and how the technical baseline is controlled."
+skills = ["pmo:program-management", "pmo:project-delivery", "pmo:portfolio-governance"]
+checked = "2026-09-16"
+
+[[source]]
+id = "uk-green-book"
+title = "The Green Book: appraisal and evaluation in central government"
+publisher = "HM Treasury"
+url = "https://www.gov.uk/government/publications/the-green-book-appraisal-and-evaluation-in-central-governent"
+license = "attribution-required"
+jurisdiction = "UK"
+authoritative_for = "Whether a claimed benefit may be counted at all — what separates a benefit from a transfer, how optimism bias is corrected for, and what a business case must contain. The best free treatment of benefits discipline anywhere, and openly licensed."
+skills = ["pmo:benefits-realization", "pmo:estimating-and-contingency", "pmo:portfolio-governance", "corporate-strategy:portfolio-strategy"]
+checked = "2026-09-16"
+
+[[source]]
+id = "far"
+title = "Federal Acquisition Regulation"
+publisher = "US General Services Administration, on behalf of the FAR Council"
+url = "https://www.acquisition.gov/browse/index/far"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "What a competitive sourcing process must do to be lawful — solicitation types, evaluation criteria, competition requirements, and how contract type allocates risk. Binding for federal buying and the reference everywhere else."
+data = "https://www.acquisition.gov/far/part-31"
+skills = ["operations:procurement-and-sourcing", "operations:vendor-management", "finance:cost-accounting"]
+checked = "2026-09-16"
+
+[[source]]
+id = "interagency-third-party-risk"
+title = "Interagency Guidance on Third-Party Relationships: Risk Management"
+publisher = "Federal Reserve, FDIC and OCC"
+url = "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20230606a.htm"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "What due diligence, contract terms, monitoring and termination planning a vendor relationship requires, scaled to how critical it is. The clearest published statement of the lifecycle, and the one regulated buyers will hold you to."
+skills = ["operations:vendor-management", "operations:procurement-and-sourcing", "operations:service-level-management"]
+checked = "2026-09-16"
+
+[[source]]
+id = "fema-nims"
+title = "National Incident Management System doctrine"
+publisher = "Federal Emergency Management Agency"
+url = "https://www.fema.gov/emergency-managers/nims"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "Who is in charge during an incident and how command transfers — incident command structure, unified command, span of control, and the action-plan cycle. Settles the role and escalation disputes that incidents actually produce."
+skills = ["operations:incident-management", "operations:business-continuity-and-resilience"]
+checked = "2026-09-16"
+
+[[source]]
+id = "nist-sp-800-61-incident-response"
+title = "NIST SP 800-61: Incident Response Recommendations and Considerations"
+publisher = "NIST"
+url = "https://csrc.nist.gov/pubs/sp/800/61/r3/final"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "What an incident response capability must contain and what evidence must be captured at each stage. The current revision is a substantial rewrite that drops the older four-phase framing, so do not mix guidance across revisions."
+skills = ["security:incident-response", "security:detection-and-monitoring", "operations:incident-management", "customer-experience:escalation-management"]
+checked = "2026-09-16"
+
+[[source]]
+id = "iso-9001"
+title = "ISO 9001 — Quality management systems: requirements"
+publisher = "ISO"
+url = "https://www.iso.org/standard/62085.html"
+license = "paywalled"
+jurisdiction = "global"
+authoritative_for = "Whether a quality system is certifiable — the auditable requirements a nonconformity procedure or management review is judged against. Sold, so cite the clause number and never the wording."
+skills = ["operations:quality-management", "operations:process-design", "operations:vendor-management"]
+checked = "2026-09-16"
+
+[[source]]
+id = "fda-preventive-controls"
+title = "21 CFR Part 117 — preventive controls for human food"
+publisher = "US Food and Drug Administration"
+url = "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-B/part-117"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "Whether a food operation's hazard analysis, preventive controls and supplier verification are legally sufficient. Binding law rather than guidance."
+skills = ["operations:quality-management", "operations:supply-chain-and-logistics", "operations:procurement-and-sourcing"]
+checked = "2026-09-16"
+
+[[source]]
+id = "usda-haccp"
+title = "9 CFR Part 417 — Hazard Analysis and Critical Control Point systems"
+publisher = "US Department of Agriculture, Food Safety and Inspection Service"
+url = "https://www.ecfr.gov/current/title-9/chapter-III/subchapter-E/part-417"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "What a HACCP plan must contain for meat and poultry — control points, critical limits, monitoring, corrective action and reassessment. A different regulator from the FDA, and which one governs depends on the product."
+skills = ["operations:quality-management", "operations:process-design"]
+checked = "2026-09-16"
+
+[[source]]
+id = "fmcsa-hours-of-service"
+title = "49 CFR Part 395 — hours of service of drivers"
+publisher = "Federal Motor Carrier Safety Administration"
+url = "https://www.ecfr.gov/current/title-49/subtitle-B/chapter-III/subchapter-B/part-395"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "How many hours a commercial driver may lawfully drive and work, and what records prove it. A hard cap that any realistic transit or capacity plan has to respect."
+skills = ["operations:supply-chain-and-logistics", "operations:capacity-and-demand-planning"]
+checked = "2026-09-16"
+
+[[source]]
+id = "osha-1910"
+title = "29 CFR Part 1910 — occupational safety and health standards"
+publisher = "US Occupational Safety and Health Administration"
+url = "https://www.ecfr.gov/current/title-29/subtitle-B/chapter-XVII/part-1910"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "Whether a workplace configuration is lawful — egress, emergency action plans, walking and working surfaces, hazard communication. Settles facilities questions that are otherwise argued as preference."
+skills = ["operations:facilities-and-workplace", "people:learning-and-development"]
+checked = "2026-09-16"
+
+[[source]]
+id = "ada-2010-standards"
+title = "2010 ADA Standards for Accessible Design"
+publisher = "US Department of Justice"
+url = "https://www.ada.gov/law-and-regs/design-standards/2010-stds/"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "The enforceable dimensional requirements for an accessible facility — routes, clearances, reach ranges, restrooms, seating. Applies to a workplace and to an event venue alike."
+skills = ["operations:facilities-and-workplace", "marketing:events-and-field-marketing"]
+checked = "2026-09-16"
+
+[[source]]
+id = "incoterms"
+title = "Incoterms rules"
+publisher = "International Chamber of Commerce"
+url = "https://iccwbo.org/business-solutions/incoterms-rules/"
+license = "paywalled"
+jurisdiction = "global"
+authoritative_for = "Exactly where risk, cost and delivery obligation transfer between buyer and seller under a named three-letter term. Courts and contracts defer to it, and the full rules text is sold — name the term, do not reproduce the definition."
+skills = ["operations:supply-chain-and-logistics", "operations:procurement-and-sourcing"]
+checked = "2026-09-16"
+
+[[source]]
+id = "ftc-doj-merger-guidelines"
+title = "Merger Guidelines"
+publisher = "US Department of Justice and Federal Trade Commission"
+url = "https://www.ftc.gov/reports/merger-guidelines-2023"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "Whether an acquisition is likely to be challenged — the concentration thresholds, how the agencies define a market, and the theories of harm they actually apply. The closest thing to a decision procedure for whether you can buy someone."
+skills = ["corporate-strategy:portfolio-strategy", "corporate-strategy:chief-strategy-officer", "corporate-strategy:mergers-and-acquisitions"]
+checked = "2026-09-16"
+
+[[source]]
+id = "ftc-hsr-premerger"
+title = "Hart-Scott-Rodino premerger notification program"
+publisher = "US Federal Trade Commission"
+url = "https://www.ftc.gov/enforcement/premerger-notification-program"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "Whether a transaction must be reported before closing, at what size, and how long the parties must then wait. A threshold question with one right answer — and the thresholds are revised annually, so resolve them here rather than from memory."
+skills = ["corporate-strategy:mergers-and-acquisitions", "corporate-strategy:chief-strategy-officer"]
+checked = "2026-09-16"
+
+[[source]]
+id = "trade-gov-country-guides"
+title = "Country Commercial Guides"
+publisher = "US Department of Commerce, International Trade Administration"
+url = "https://www.trade.gov/country-commercial-guides"
+license = "public-domain-usgov"
+jurisdiction = "global"
+authoritative_for = "The factual regulatory picture for entering a named foreign market — licensing, customs, standards, distribution and investment restrictions. It settles the factual questions in a market entry, not the strategic ones."
+skills = ["corporate-strategy:market-entry", "operations:supply-chain-and-logistics"]
+checked = "2026-09-16"
+
+[[source]]
+id = "delaware-dgcl"
+title = "Delaware General Corporation Law"
+publisher = "State of Delaware"
+url = "https://delcode.delaware.gov/title8/c001/index.html"
+license = "public-domain"
+jurisdiction = "US-DE"
+authoritative_for = "What a board may and may not do — board power, interested-director transactions, exculpation, merger mechanics and appraisal rights. Primary law for most US public companies and nearly every venture-backed one."
+skills = ["legal-risk:corporate-governance", "executive:chief-executive", "executive:fundraising-and-investor-relations"]
+checked = "2026-09-16"
+
+[[source]]
+id = "sec-reg-fd"
+title = "17 CFR Part 243 — Regulation FD"
+publisher = "US Securities and Exchange Commission"
+url = "https://www.ecfr.gov/current/title-17/chapter-II/part-243"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "When selective disclosure of material nonpublic information triggers a mandatory public disclosure, and on what timeline. The rule that decides whether a given investor conversation was lawful."
+skills = ["executive:fundraising-and-investor-relations", "legal-risk:corporate-governance"]
+checked = "2026-09-16"
+
+[[source]]
+id = "sec-exempt-offerings"
+title = "Exempt offerings and Regulation D"
+publisher = "US Securities and Exchange Commission"
+url = "https://www.sec.gov/education/smallbusiness/exemptofferings"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "Whether a private raise is lawful — whether general solicitation is permitted, how many non-accredited investors may participate, what disclosure is owed and when the filing is due."
+data = "https://www.ecfr.gov/current/title-17/chapter-II/part-230"
+skills = ["executive:fundraising-and-investor-relations", "executive:chief-executive"]
+checked = "2026-09-16"

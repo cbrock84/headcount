@@ -386,7 +386,7 @@ published last month — it is written once and the obligation moves. So skills 
 questions an outside authority settles carry a list of those authorities, in
 `references/sources.md` inside the skill, which is where an agent reads it while answering.
 
-50 sources across 36 skills so far — tax and accounting, law and
+181 sources across 144 skills so far — tax and accounting, law and
 employment, security and controls frameworks, education standards.
 [The full index is in `docs/SOURCES.md`](docs/SOURCES.md).
 
@@ -394,7 +394,7 @@ employment, security and controls frameworks, education standards.
 second part is the point: most of what a professional must cite is not open. ISO standards are
 sold, SANS papers are copyrighted, the FASB Codification needs an account — while US federal
 works are public domain by statute and EU legal texts are reusable with attribution.
-32 of the 50 are quotable; the rest are read-and-cite, and the entry
+122 of the 181 are quotable; the rest are read-and-cite, and the entry
 says so in the imperative next to the link.
 
 Links are re-checked weekly by their own workflow rather than on every push, because a

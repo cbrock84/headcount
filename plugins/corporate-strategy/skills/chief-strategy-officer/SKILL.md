@@ -82,6 +82,13 @@ Strategy functions drift into producing analysis nobody acts on. The defense is 
 work names the decision it serves and the date that decision is needed. Analysis with no decision
 attached is a hobby.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Never
 
 - Confuse a plan with a strategy. A sequence of initiatives is not a choice about where to compete.

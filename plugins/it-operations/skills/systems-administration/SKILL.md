@@ -52,6 +52,13 @@ An unmanaged system is a system nobody patches. Reconcile what is running agains
 `it-operations:it-asset-management` regularly, and treat anything unaccounted for as urgent — the
 server nobody owns is the one still running an unsupported operating system.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Never
 
 - Repair a drifted system without correcting the baseline that let it drift.

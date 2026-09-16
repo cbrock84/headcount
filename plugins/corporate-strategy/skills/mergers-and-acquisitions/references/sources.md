@@ -14,6 +14,22 @@ Machine-readable: <https://www.sec.gov/search-filings/edgar-application-programm
 
 **Authoritative for:** What public companies actually reported, in their own filings — the primary source for a competitor's economics, a comparable's margin structure, or how a peer disclosed an accounting policy.
 
+## Hart-Scott-Rodino premerger notification program
+
+US Federal Trade Commission · US · public domain (US government) — quote freely
+
+<https://www.ftc.gov/enforcement/premerger-notification-program>
+
+**Authoritative for:** Whether a transaction must be reported before closing, at what size, and how long the parties must then wait. A threshold question with one right answer — and the thresholds are revised annually, so resolve them here rather than from memory.
+
+## Merger Guidelines
+
+US Department of Justice and Federal Trade Commission · US · public domain (US government) — quote freely
+
+<https://www.ftc.gov/reports/merger-guidelines-2023>
+
+**Authoritative for:** Whether an acquisition is likely to be challenged — the concentration thresholds, how the agencies define a market, and the theories of harm they actually apply. The closest thing to a decision procedure for whether you can buy someone.
+
 ---
 
 Sources are maintained in `sources/` upstream, not here. If one is wrong, out of date, or missing, fix it there — this file is regenerated and an edit to it is lost.

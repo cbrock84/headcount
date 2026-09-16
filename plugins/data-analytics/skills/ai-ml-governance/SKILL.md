@@ -64,6 +64,13 @@ asks why a decision was made — and increasingly what a regulator expects to se
 Have a way to turn it off. Know what happens to the process when you do, and confirm the fallback
 still works — a manual path that has not been exercised in two years is not a fallback.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Never
 
 - Deploy without an evaluation set and a monitoring plan.

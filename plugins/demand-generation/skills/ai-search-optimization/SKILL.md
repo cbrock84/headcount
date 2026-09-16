@@ -45,6 +45,13 @@ Click-through will fall on informational queries even as influence rises. Track 
 frequency, and downstream branded search and direct traffic, rather than judging this program on
 organic sessions — that metric will say you are losing while you are winning.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Never
 
 - Optimize for one assistant's current behavior. Retrieval and citation rules change without notice and without a changelog.

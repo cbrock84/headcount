@@ -4,6 +4,14 @@
 
 Check these before answering on anything they cover, and cite what you used. The use note on each one is binding: most of what a professional cites is free to read and not free to reproduce.
 
+## Compendium of U.S. Copyright Office Practices
+
+US Copyright Office · US · public domain (US government) — quote freely
+
+<https://www.copyright.gov/comp3/>
+
+**Authoritative for:** What is protectable and registrable, including the Office's position on human authorship for machine-generated material and how much of a layout or typeface is protectable at all.
+
 ## SPDX License List
 
 The Linux Foundation · global · CC BY — quote with attribution
@@ -13,6 +21,14 @@ The Linux Foundation · global · CC BY — quote with attribution
 Machine-readable: <https://github.com/spdx/license-list-data>
 
 **Authoritative for:** The canonical identifier and full text of every common open-source license — the reference for an inbound license review, and for what a share-alike obligation actually says.
+
+## Trademark Manual of Examining Procedure
+
+US Patent and Trademark Office · US · public domain (US government) — quote freely
+
+<https://tmep.uspto.gov/>
+
+**Authoritative for:** Whether a proposed name, logo or tagline is registrable — distinctiveness, descriptiveness refusals, likelihood of confusion, specimen requirements. Settles whether you can actually own a name.
 
 ## USPTO search and guidance
 

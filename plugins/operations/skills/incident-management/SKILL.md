@@ -79,6 +79,13 @@ actually happened.
 does not, and an unclosed action from a previous incident is the most common finding in the next
 one. Track them to completion somewhere visible, with owners and dates.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Never
 
 - Debug while nobody is commanding.

@@ -62,6 +62,13 @@ An implementation that ends when the project ends leaves the account with nobody
 context — what was configured and why, what was deferred, what is fragile, who the people are —
 and confirm the receiving side has it rather than assuming.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Never
 
 - Start an implementation without written go-live criteria both sides agreed.

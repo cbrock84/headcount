@@ -70,6 +70,13 @@ objections handled, and visual hierarchy supporting the path.
 Publish the criteria with the score. A page scored 6/10 with no rubric produces an argument; the
 same score with the rubric produces a work list.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Never
 
 - Rewrite before diagnosing. Most pages that fail to convert are failing above the fold or off the page entirely, in the traffic.

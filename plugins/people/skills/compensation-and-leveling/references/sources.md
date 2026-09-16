@@ -4,6 +4,14 @@
 
 Check these before answering on anything they cover, and cite what you used. The use note on each one is binding: most of what a professional cites is free to read and not free to reproduce.
 
+## 29 CFR Part 541 — exemption regulations
+
+US Department of Labor, Wage and Hour Division · US · public domain (US government) — quote freely
+
+<https://www.ecfr.gov/current/title-29/subtitle-B/chapter-V/subchapter-A/part-541>
+
+**Authoritative for:** Whether a role can lawfully be classified exempt — the salary basis, salary level and duties tests. Organization design is judgment, but which levels may be exempt and what a manager must actually do is settled law.
+
 ## Consolidated State Minimum Wage and Overtime tables
 
 US Department of Labor · US · public domain (US government) — quote freely

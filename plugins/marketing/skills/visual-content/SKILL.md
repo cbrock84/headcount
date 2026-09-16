@@ -51,6 +51,13 @@ constraints. Generate one concept per image. Then check the output actually rend
 text correctly and matches the brand palette — generated imagery drifts, and drifted brand color is
 worse than no brand color.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Never
 
 - Choose a visual format before knowing whether the content is a sequence, a comparison, or a single claim.

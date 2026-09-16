@@ -14,6 +14,16 @@ Machine-readable: <https://github.com/usnistgov/oscal-content>
 
 **Authoritative for:** The control catalog US federal systems are assessed against, and the control vocabulary FedRAMP and many private frameworks inherit.
 
+## NIST SP 800-63: Digital Identity Guidelines
+
+NIST · US · public domain (US government) — quote freely
+
+<https://csrc.nist.gov/pubs/sp/800/63/4/final>
+
+Machine-readable: <https://pages.nist.gov/800-63-4/>
+
+**Authoritative for:** What each identity, authenticator and federation assurance level requires — and, notably, that forced periodic password rotation and composition rules are not among them.
+
 ---
 
 Sources are maintained in `sources/` upstream, not here. If one is wrong, out of date, or missing, fix it there — this file is regenerated and an edit to it is lost.

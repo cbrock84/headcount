@@ -38,6 +38,13 @@ Read the one-liner to someone in the target segment and ask what they think it d
 for. If they answer with your category but the wrong use case, the frame is wrong. If they answer
 with a competitor's name, the differentiation is not landing.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Never
 
 - Position against a competitor the buyer has not heard of.

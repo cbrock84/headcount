@@ -51,6 +51,13 @@ Fix the incentive rather than the policy: make developing and releasing people s
 evaluated on. A mobility policy that costs a manager their best person and gives them nothing will be
 quietly resisted, and quiet resistance always wins.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Tooling
 
 Delivery: TalentLMS, Docebo, WorkRamp, Absorb, and similar; smaller organizations often do better

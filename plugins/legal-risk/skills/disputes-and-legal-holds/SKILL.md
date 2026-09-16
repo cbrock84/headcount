@@ -68,6 +68,13 @@ the cost most consistently omitted and is often the largest.
 Consider what a settlement signals to other potential claimants, and get releases that are broad
 enough to actually end it.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Never
 
 - Wait for a filing before preserving.

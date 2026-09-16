@@ -53,6 +53,13 @@ Every field costs conversion. Ask for what you need to do the next step and noth
 — enrichment can fill the rest. Explain any field whose purpose is not obvious, since unexplained
 fields are where people abandon.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Never
 
 - Gate something the buyer can get ungated elsewhere in one click.

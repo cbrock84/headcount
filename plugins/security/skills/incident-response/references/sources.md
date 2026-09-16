@@ -24,6 +24,14 @@ Machine-readable: <https://github.com/mitre-attack/attack-stix-data>
 
 **Authoritative for:** The shared vocabulary for adversary tactics and techniques — what to name a behavior so a detection, a threat model and an incident report refer to the same thing.
 
+## NIST SP 800-61: Incident Response Recommendations and Considerations
+
+NIST · US · public domain (US government) — quote freely
+
+<https://csrc.nist.gov/pubs/sp/800/61/r3/final>
+
+**Authoritative for:** What an incident response capability must contain and what evidence must be captured at each stage. The current revision is a substantial rewrite that drops the older four-phase framing, so do not mix guidance across revisions.
+
 ---
 
 Sources are maintained in `sources/` upstream, not here. If one is wrong, out of date, or missing, fix it there — this file is regenerated and an edit to it is lost.

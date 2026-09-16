@@ -74,6 +74,13 @@ Detection coverage is assumed far more often than it is verified. Run the behavi
 version of the technique — and confirm the alert arrives, reaches a person, and carries enough
 context to act on. Coverage claimed from a configuration page is not coverage.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Never
 
 - Retain logs for a window shorter than the time it typically takes to discover an intrusion.

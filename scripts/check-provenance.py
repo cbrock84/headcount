@@ -2,7 +2,7 @@
 """All content here is original. This is a heuristic backstop, not proof: it catches the common
 shapes of third-party license text and vendored assets. It cannot detect prose copied without a
 notice, so it supplements review rather than replacing it."""
-import glob, os, re, sys
+import fnmatch, glob, os, re, sys
 
 # Markers for the licenses most likely to arrive with vendored material.
 PATTERNS = [
@@ -48,12 +48,20 @@ OWN_LICENSE_PATTERN = r"\bMIT License\b"
 # (c)", "Redistribution and use..."), which no real license lacks. This is the same reasoning as the
 # MIT waiver above: a name is a reference, a body is a copy.
 #
-# The catalog itself holds no license names to waive — entries carry a short slug (`cc-by-sa`) and
-# never the family's prose name — so the waiver deliberately does not extend to `sources/*.toml`.
-LICENSE_FAMILY_MENTION = {"sources/README.md", ".claude/agents/sources.md"}
+# This originally excluded the catalog files themselves, on the reasoning that entries carry a short
+# slug (`cc-by-sa`) and never a family's prose name. That stopped being true the moment a license
+# became a *source*: a font license is the authority on whether a typeface may be embedded, so its
+# title is the family name. The waiver now covers the catalog and what is generated from it.
+LICENSE_FAMILY_MENTION_GLOBS = (
+    "sources/*.toml",
+    "sources/README.md",
+    ".claude/agents/sources.md",
+    "docs/SOURCES.md",
+    "plugins/*/skills/*/references/sources.md",
+)
 LICENSE_FAMILY_PATTERNS = {r"\bCreative Commons Attribution\b", r"\bMIT License\b",
                            r"\bApache License\b", r"\bBSD \d-Clause\b",
-                           r"\bMozilla Public License\b"}
+                           r"\bMozilla Public License\b", r"\bSIL Open Font License\b"}
 
 # Generated output and build byproducts are not this repository's content. `dist/` in particular
 # is a copy of the tree already being checked, so scanning it doubles every finding.
@@ -97,7 +105,8 @@ for path in glob.glob("**/*", recursive=True):
         continue
     text = open(path, encoding="utf-8", errors="replace").read()
     waived = {OWN_LICENSE_PATTERN} if path in OWN_LICENSE_MENTION else set()
-    if path in LICENSE_FAMILY_MENTION:
+    if any(fnmatch.fnmatch(path.replace(os.sep, "/").lstrip("./"), g)
+           for g in LICENSE_FAMILY_MENTION_GLOBS):
         waived |= LICENSE_FAMILY_PATTERNS
     for pattern in PATTERNS:
         if pattern in waived:

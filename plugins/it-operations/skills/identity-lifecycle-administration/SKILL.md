@@ -54,6 +54,13 @@ formality that certifies whatever exists.
 Hunt specifically for orphaned accounts — accounts with no owner, service accounts nobody claims,
 and credentials that have not been used in months but still work.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Tooling
 
 Directory and SSO: Microsoft Entra ID, Okta, Google Workspace, JumpCloud, and similar.

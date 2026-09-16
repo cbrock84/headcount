@@ -41,6 +41,13 @@ a polish item; it is whether people can use it.
 - Never remove a token or component because it looks unused. You cannot see every consumer from
   inside the system. Deprecate, announce, then remove.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Tooling
 
 Design source: Figma, and similar. Component documentation and review: Storybook.

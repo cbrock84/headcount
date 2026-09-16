@@ -66,6 +66,13 @@ intended people are using the thing and whether it did what the roadmap claimed.
 Decide the number before launch — how many of which accounts, doing what, by when. A launch
 evaluated on engagement metrics chosen afterward is always a success and teaches you nothing.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Never
 
 - Announce externally before support and sales can answer the obvious questions.

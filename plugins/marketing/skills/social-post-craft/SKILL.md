@@ -52,6 +52,13 @@ most platforms strip formatting.
 
 A draft that fails these gets rewritten, not published with a caveat.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Tooling
 
 Scheduling and publishing: Buffer, Hootsuite, Later, Sprout Social, Typefully, and similar. Native

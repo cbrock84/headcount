@@ -71,6 +71,13 @@ Mid-period changes are occasionally necessary and always expensive in trust. Giv
 the reason, and never restate a commission already earned under the prior plan. A team that
 believes the plan can be changed retroactively stops treating it as an incentive.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Tooling
 
 Commission calculation: CaptivateIQ, Spiff, Everstage, Xactly, and similar. The threshold for

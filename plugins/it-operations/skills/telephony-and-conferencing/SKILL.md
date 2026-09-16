@@ -75,6 +75,13 @@ summaries are records too, and they are increasingly produced automatically by t
 whether or not anyone chose it. `legal-risk:privacy-and-data-protection` owns the obligations; this
 skill owns knowing the feature creates them.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Never
 
 - Deploy softphones without solving location for emergency calls.
