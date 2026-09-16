@@ -161,24 +161,66 @@ for dept, title, exec_role in ORDER:
         out.append(f"| `{os.path.basename(os.path.dirname(p))}` | {summarize(p)}. |")
     out += ["", "</details>", ""]
 
+def catalog():
+    """The source catalog, read the same way check-sources.py reads it."""
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("check_sources", "scripts/check-sources.py")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    entries = module.load()
+    skills = {ref for _, e in entries for ref in e.get("skills", [])}
+    quotable = {"public-domain-usgov", "public-domain", "cc0", "cc-by", "open-data",
+                "attribution-required"}
+    return len(entries), len(skills), sum(1 for _, e in entries if e["license"] in quotable)
+
+
+SOURCE_COUNT, SOURCE_SKILLS, SOURCE_QUOTABLE = catalog()
+
 out += [
     "**Reviewer-class departments** (`security`, `legal-risk`) review what other departments build, and",
     "their blocking findings are not overrulable by the department under review. That is why the CISO",
     "and the CLO report to the chief executive rather than into the function they oversee.",
     "",
+    "## Sources",
+    "",
+    "A skill states what a competent practitioner knows. It cannot state what the regulator",
+    "published last month — it is written once and the obligation moves. So skills that answer",
+    "questions an outside authority settles carry a list of those authorities, in",
+    "`references/sources.md` inside the skill, which is where an agent reads it while answering.",
+    "",
+    f"{SOURCE_COUNT} sources across {SOURCE_SKILLS} skills so far — tax and accounting, law and",
+    "employment, security and controls frameworks, education standards.",
+    "[The full index is in `docs/SOURCES.md`](docs/SOURCES.md).",
+    "",
+    "**References, never copies**, and every entry carries what you may actually do with it. That",
+    "second part is the point: most of what a professional must cite is not open. ISO standards are",
+    "sold, SANS papers are copyrighted, the FASB Codification needs an account — while US federal",
+    "works are public domain by statute and EU legal texts are reusable with attribution.",
+    f"{SOURCE_QUOTABLE} of the {SOURCE_COUNT} are quotable; the rest are read-and-cite, and the entry",
+    "says so in the imperative next to the link.",
+    "",
+    "Links are re-checked weekly by their own workflow rather than on every push, because a",
+    "publisher being briefly down is not a reason to fail an unrelated pull request.",
+    "",
     "## How it is organized",
     "",
     "```",
     "plugins/<department>/",
-    "  .claude-plugin/plugin.json   department manifest",
+    "  .claude-plugin/plugin.json   department manifest, Claude Code",
+    "  .codex-plugin/plugin.json    the same department, ChatGPT and Codex",
     "  skills/<skill>/SKILL.md      frontmatter name equals the directory name",
+    "  skills/<skill>/references/   supporting files, including the skill's sources",
+    "sources/*.toml                 the source catalog, mapped to the skills it serves",
+    "verticals/<name>/              industry packs, emitted as standalone repositories",
     ".claude/agents/<id>.md         one charter per department",
+    "AGENTS.md                      repository context for any agent working on this repo",
     "docs/AGENT-SURFACES.md         every path has exactly one owner, enforced in CI",
     "docs/DECISION-LOG.md           numbered decisions with options and recommendations",
     "docs/GETTING-STARTED.md        install, what to take first, and how to invoke a skill",
+    "docs/SOURCES.md                every source in the catalog, and what may be done with it",
     "docs/USE-CASES.md              situations worked end to end across departments",
-    "docs/org-chart.html           interactive org chart, searchable across every skill",
-    "docs/index.html               GitHub Pages entry point, redirects to the chart",
+    "docs/org-chart.html            interactive org chart, searchable across every skill",
+    "docs/index.html                GitHub Pages entry point, redirects to the chart",
     "```",
     "",
     "Agents split by **exclusive write surface**, not by topic — a topic split has no checkable",
@@ -191,11 +233,13 @@ out += [
     "./scripts/check-all.sh",
     "```",
     "",
-    "Verifies the surface map is coherent, every skill's frontmatter is valid and unique, no",
-    "third-party license text has appeared, the generated README and social card are current, every",
-    "`department:skill` reference in the docs resolves, spelling is US English, and every manifest",
-    "parses. CI runs the same",
-    "script, so local and CI cannot drift.",
+    "Every check CI runs, in one script. The surface map is coherent; every skill's frontmatter is",
+    "valid and unique; no third-party license text has appeared; the README, social card and org",
+    "chart are current; every `department:skill` reference resolves; spelling is US English; no",
+    "`## Never` block mixes two styles; the source catalog is valid and every skill's source file",
+    "matches it; the ChatGPT manifests match the Claude ones; every vertical emits a repository that",
+    "passes its own checks; and every manifest parses. CI calls this same script, so local and CI",
+    "cannot drift.",
     "",
     "A new department needs its roster row in `docs/AGENT-SURFACES.md`, a surface block, a charter in",
     "`.claude/agents/`, and an entry in `.claude-plugin/marketplace.json` — all in the same change, or",
