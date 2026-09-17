@@ -77,6 +77,13 @@ letting it be the residue after everything else. An estate consuming everything 
 lights on has no capacity to improve, and next year it will consume more — the ratio decays on its
 own unless someone holds it.
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Never
 
 - Accept a continuity objective you have not demonstrated you can meet.

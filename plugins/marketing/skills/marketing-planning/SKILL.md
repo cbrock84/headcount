@@ -35,6 +35,13 @@ Each implies a different plan. A plan that funds all five funds none properly.
 - Which line item would you cut first? If nothing, the plan is not prioritized.
 - Where does this depend on another team delivering, and have they agreed?
 
+## Sources
+
+`references/sources.md` in this skill lists the outside authorities that settle the questions
+here — what each one is authoritative for, and what you may do with it. Check them before
+answering on anything they cover, and cite what you used. Most are free to read and not free
+to reproduce; the use note on each is binding.
+
 ## Never
 
 - Plan channel activity before positioning is settled.

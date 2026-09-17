@@ -6,7 +6,7 @@
   <a href="AGENTS.md"><img alt="Runs in Claude Code and ChatGPT" src="https://img.shields.io/badge/runs%20in-Claude%20Code%20%C2%B7%20ChatGPT-D97757?style=flat-square"></a>
   <img alt="16 departments" src="https://img.shields.io/badge/departments-16-3F4B5B?style=flat-square">
   <img alt="172 skills" src="https://img.shields.io/badge/skills-172-3F4B5B?style=flat-square">
-  <a href="docs/SOURCES.md"><img alt="181 cited sources" src="https://img.shields.io/badge/cited%20sources-181-3F4B5B?style=flat-square"></a>
+  <a href="docs/SOURCES.md"><img alt="184 cited sources" src="https://img.shields.io/badge/cited%20sources-184-3F4B5B?style=flat-square"></a>
   <a href="LICENSE"><img alt="MIT licensed" src="https://img.shields.io/badge/license-MIT-3F4B5B?style=flat-square"></a>
 </p>
 
@@ -395,7 +395,7 @@ published last month — it is written once and the obligation moves. So skills 
 questions an outside authority settles carry a list of those authorities, in
 `references/sources.md` inside the skill, which is where an agent reads it while answering.
 
-181 sources across 144 skills so far — tax and accounting, law and
+184 sources across 150 skills so far — tax and accounting, law and
 employment, security and controls frameworks, education standards.
 [The full index is in `docs/SOURCES.md`](docs/SOURCES.md).
 
@@ -403,7 +403,7 @@ employment, security and controls frameworks, education standards.
 second part is the point: most of what a professional must cite is not open. ISO standards are
 sold, SANS papers are copyrighted, the FASB Codification needs an account — while US federal
 works are public domain by statute and EU legal texts are reusable with attribution.
-122 of the 181 are quotable; the rest are read-and-cite, and the entry
+125 of the 184 are quotable; the rest are read-and-cite, and the entry
 says so in the imperative next to the link.
 
 Links are re-checked weekly by their own workflow rather than on every push, because a

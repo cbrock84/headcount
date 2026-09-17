@@ -283,3 +283,14 @@ jurisdiction = "global"
 authoritative_for = "How a response rate, cooperation rate, refusal rate and contact rate are computed. The arbiter when two people report different response rates from the same fieldwork."
 skills = ["marketing:customer-research", "demand-generation:marketing-analytics"]
 checked = "2026-09-16"
+
+[[source]]
+id = "ftc-truth-in-advertising"
+title = "FTC Business Guidance: Advertising and Marketing"
+publisher = "US Federal Trade Commission"
+url = "https://www.ftc.gov/business-guidance/advertising-marketing"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "What US advertising law requires at the level a CMO or campaign manager must own — the truthfulness standard, the evidence threshold for health and environmental claims, the influencer disclosure framework, and which FTC rules apply to online, children's, and telemarketing channels."
+skills = ["marketing:chief-marketing-officer", "marketing:marketing-campaign-planner", "marketing:marketing-planning"]
+checked = "2026-09-17"

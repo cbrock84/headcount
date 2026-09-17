@@ -372,3 +372,27 @@ jurisdiction = "US"
 authoritative_for = "The obligations on a multi-line telephone system — direct 911 dialing, on-site notification and dispatchable location. A hard compliance question for anyone administering a phone or conferencing platform in the US, and one that is usually discovered late."
 skills = ["it-operations:telephony-and-conferencing"]
 checked = "2026-09-16"
+
+# ── Asset management and corporate IT governance ──────────────────────────────
+
+[[source]]
+id = "nist-sp-1800-5-itam"
+title = "NIST SP 1800-5: IT Asset Management"
+publisher = "NIST / National Cybersecurity Center of Excellence"
+url = "https://csrc.nist.gov/pubs/sp/1800/5/final"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "What an ITAM solution must be able to answer — which assets exist, who owns them, what software is running, whether it is licensed, and the discrepancy list that flags unmanaged devices as the primary security indicator."
+skills = ["it-operations:it-asset-management", "it-operations:chief-information-officer"]
+checked = "2026-09-17"
+
+[[source]]
+id = "cisa-scuba"
+title = "Secure Cloud Business Applications (SCuBA)"
+publisher = "CISA"
+url = "https://www.cisa.gov/scuba"
+license = "public-domain-usgov"
+jurisdiction = "US"
+authoritative_for = "The secure configuration baselines for Microsoft 365 and Google Workspace tenants, with the ScubaGear and ScubaGoggles automated assessment tools. What a collaboration platform administrator should harden to rather than relying on vendor defaults."
+skills = ["it-operations:collaboration-platform-administration"]
+checked = "2026-09-17"
