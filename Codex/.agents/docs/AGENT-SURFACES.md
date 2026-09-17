@@ -53,8 +53,6 @@ corporate-strategy   builder    installed  autonomous
 security             builder    installed  autonomous
 it-operations        builder    installed  autonomous
 pmo                  builder    installed  autonomous
-verticals            builder    installed  proposes
-sources              builder    installed  autonomous
 repo-meta            builder    installed  proposes
 legal-risk-review    reviewer   installed  autonomous
 security-review      reviewer   installed  autonomous
@@ -64,13 +62,6 @@ security-review      reviewer   installed  autonomous
 generators every document is built from, and this map. A change inside `plugins/finance/**` is
 wrong in one department. A change to `scripts/check-all.sh` can make every other check stop
 reporting, and nothing downstream would fail to say so.
-
-`verticals` is the second, for the same reason in a different direction. It owns the per-vertical
-configs and content that `scripts/build-vertical.py` emits standalone repositories from, so a change
-inside `verticals/**` does not land in this repository — it lands in a distributable artifact
-carrying somebody's industry advice, and the emit is one-way, so nothing downstream can correct it
-locally. It owns the input rather than the generator; the generator is a script and belongs to
-`repo-meta` with the others.
 
 Charters live in `.claude/agents/`, one per installed row. A row marked `installed` without a
 charter, or a charter without a row, fails the check — the two cannot drift apart silently.
@@ -144,19 +135,9 @@ plugins/pmo/**
 plugins/security/**
 ```
 
-```surface:verticals
-verticals/**
-```
-
-```surface:sources
-sources/**
-```
-
 ```surface:repo-meta
 LICENSE
 .gitignore
-AGENTS.md
-.agents/**
 CONTRIBUTING.md
 .gitattributes
 docs/**
