@@ -164,6 +164,7 @@ scripts/**
 .github/**
 .claude/**
 .claude-plugin/**
+Codex/**
 README.md
 ```
 
