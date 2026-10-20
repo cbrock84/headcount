@@ -97,6 +97,18 @@ one that answers everything confidently is the failure mode this catalog is buil
 they report to the chief executive rather than into the function they review, and **their blocking
 findings are not overrulable by the department under review.**
 
+In Claude Code, installing `security@headcount` also registers the plugin-native reviewer
+`@agent-security:security-review`. Use it after a producing department has created the artifact to
+be reviewed. The reviewer runs in a separate context with a read-only tool allowlist, inspects the
+underlying artifact rather than accepting the producer's summary, and returns its findings to the
+orchestrator. A blocking finding sends the work back for correction and independent re-review; the
+producer cannot clear its own finding. The only alternate closure is explicit Chief Executive risk
+acceptance recorded with an owner and an expiry.
+
+This agent wiring is a Claude Code plugin capability. ChatGPT and Codex install the same security
+review skill and method, but the Codex manifest does not currently package Claude Code custom-agent
+wiring.
+
 In practice: when you ask a revenue question and the security review says the access model cannot
 support the control the deal requires, that is not a trade-off to price against the deal. The date
 moves or the control gets built. This is deliberate, and it is why those two are worth installing
